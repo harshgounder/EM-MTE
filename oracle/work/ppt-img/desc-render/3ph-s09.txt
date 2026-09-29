@@ -1,0 +1,33 @@
+YES
+
+**(1) Transcription of On-Slide Text:**
+
+**Header (Top Left):**
+MANIPAL UNIVERSITY JAIPUR
+UNIVERSITY BY ACT
+
+**Header (Top Right):**
+A+
+NAAC
+NAAC A+ GRADE WITH 3.28 SCORE
+
+**Title:**
+Open Delta Connection
+
+**Body Text:**
+• If one transformer of a delta-delta system is damaged, the system will continue to supply 3-phase power. If this defective transformer is disconnected and removed, the remaining two transformer continue to function as a 3-phase bank with rating reduced to about 57.7 % of that of the original delta-delta bank. This is known as open delta system
+
+**Diagram Labels:**
+*   **Top Right Diagram:** P, Q, A, B, C, 1, 2, 3, H₁, H₂, X₁, X₂
+*   **Middle Circuit Diagram:** G, B, A, C, 1, 2, 3, load, $I_P$, $I_s$, (b)
+*   **Bottom Phasor Diagrams:** $E_{AB}$, $E_{CA}$, $E_{BC}$, $E_{12}$, $E_{31}$, $E_{23}$
+
+**(2) Visual Elements Description:**
+
+*   **Header:** Includes the "Manipal University Jaipur" logo (a crest with an open book and lamp) on the left and a "NAAC A+" accreditation logo on the right.
+*   **Title:** Centered bold text "Open Delta Connection".
+*   **Text Block:** A single bullet point on the left side of the slide explains the concept of open delta connection resulting from transformer failure.
+*   **Top Right Schematic:** Shows two single-phase transformer units labeled **P** and **Q**.
+    *   Input terminals A, B, C connect to the high-voltage side ($H_1, H_2$).
+    *   Output terminals 1, 2, 3 connect to the low-voltage side ($X_1, X_2$).
+    *   The wiring shows Transformer P connected between A and B (primary) and 1 and 2 (secondary). Transformer Q connects between B and C (primary) and

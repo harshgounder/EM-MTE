@@ -1,0 +1,5 @@
+YES
+
+$P_A = I_A^2 R_A$
+
+There is no diagram, circuit, or graph in the image. The image contains a single mathematical formula printed in a serif font on a white background. There are no annotations, arrows, or labels other than the variables in the equation itself.

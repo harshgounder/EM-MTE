@@ -1,0 +1,23 @@
+YES
+
+**Transcription:**
+*   Labels on left side (top to bottom): A, B, C
+*   Labels on right side (top to bottom): 1, 2, 3
+*   Labels above the top block: P
+*   Labels above the bottom block: Q
+*   Inside block P (top left to bottom right): $H_1$, $X_1$, $H_2$, $X_2$
+*   Inside block Q (top left to bottom right): $H_1$, $X_1$, $H_2$, $X_2$
+
+**Diagram Description:**
+The image depicts a schematic diagram featuring two rectangular blocks, labeled **P** (top) and **Q** (bottom), representing multi-port networks. 
+
+*   **Inputs/Terminals (Left):** There are three input terminals on the left marked with small open circles, labeled **A**, **B**, and **C** from top to bottom.
+    *   Terminal **A** is connected to the upper-left port of block P, labeled **$H_1$**.
+    *   Terminal **B** branches at a junction (indicated by a solid black dot) to connect to the lower-left port of block P (**$H_2$**) and the upper-left port of block Q (**$H_1$**).
+    *   Terminal **C** is connected to the lower-left port of block Q, labeled **$H_2$**.
+*   **Outputs/Terminals (Right):** There are three output terminals on the right marked with small open circles, labeled **1**, **2**, and **3** from top to bottom.
+    *   Terminal **1** is connected to the upper-right port of block P, labeled **$X_1$**.
+    *   Terminal **2** branches at a junction (indicated by a solid black dot) to connect to the lower-right port of block P (**$X_2$**) and the upper-right port of block Q (**$X_1$**).
+    *   Terminal **3** is connected to the lower-right port of block Q, labeled **$X_2$**.
+*   **Internal Components:** Each block (P and Q) has four internal labels: **$H_1$** and **$H_2$** on the left (inputs) and **$X_1$** and **$X_2$** on the right (outputs).
+*   **Connections:** The lines are solid and thick, indicating electrical or signal connections. The layout shows a cascaded or shunt-series configuration where input B and output 2 are shared between the two stages.

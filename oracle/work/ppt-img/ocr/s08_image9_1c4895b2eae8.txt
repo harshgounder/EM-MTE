@@ -1,0 +1,9 @@
+If the armature rotates at IV rpm, then the time required for one revolution is:
+60
+t = — seconds
+N
+If the armature rotates at IV rpm, then the time required for one revolution is:
+
+60
+=N seconds
+

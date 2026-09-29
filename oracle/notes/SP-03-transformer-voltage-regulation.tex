@@ -1,0 +1,320 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+
+\definecolor{copper}{HTML}{8C4A2F}
+\definecolor{iron}{HTML}{262B33}
+\definecolor{muted}{HTML}{6B6B6B}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize\color{muted} SP-03 \textbar{} Transformer III: Voltage Regulation \textbar{} EM-MTE notes}
+\rhead{\footnotesize\color{muted} ELC2104 \textbar{} MTE}
+\cfoot{\footnotesize\color{muted} \thepage}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\qhead}[2]{\subsection*{\color{copper}#1\quad\color{iron}#2}}
+\newcommand{\tagline}[1]{\textbf{\color{copper}#1}}
+\newcommand{\keydist}[1]{\vspace{2pt}\textbf{\color{red}KEY DISTINCTION.} #1}
+\newcommand{\drawline}[1]{\textbf{\color{muted}[DRAW]} #1}
+\newcommand{\srcwrong}[1]{\textbf{\color{red}[SRC WRONG]} #1}
+\newcommand{\trap}[1]{\vspace{2pt}\textbf{\color{red}[TRAP]} #1}
+
+\begin{document}
+
+\begin{center}
+{\footnotesize\color{copper} ELC2104 \textbar{} ELECTRICAL MACHINES \textbar{} MTE}\\[6pt]
+{\LARGE\bfseries\color{iron} SP-03: Transformer III}\\[2pt]
+{\Large\color{copper} Voltage Regulation: Exact, Approximate, and the Percent-Drop Shortcut}\\[6pt]
+{\footnotesize\color{muted} Question-driven notes, dense-point standard. Covers T.6 of the locked syllabus.}
+\end{center}
+
+\vspace{2pt}
+\tagline{QUESTION SHAPES IN THIS FILE:} Q6 (explain regulation + derive at different power factors), Q8 (derive the approximate expression, lagging and leading). Numerics: WE-08, WE-09, D1-01, D1-02 (regulation and percent-drop families).
+\vspace{2pt}
+
+\keydist{Regulation is a statement about the \emph{internal drops}, not the load: same primary voltage, secondary open versus secondary loaded. Lagging loads make the output sag. Leading loads can make the output \emph{rise} past its no-load value (negative regulation), and there is one specific leading power factor where regulation is exactly zero.}
+
+\hrulefill
+
+% ============================================================ Q6
+\qhead{Q6 (verbatim):}{Explain voltage regulation of a transformer and derive the expression for voltage regulation at different power factors.}
+
+\tagline{WHAT TO WRITE:} definition (with the test condition: constant primary voltage) \textrightarrow{} why the drop exists \textrightarrow{} the phasor picture in words \textrightarrow{} the exact derivation \textrightarrow{} the percentage form and the denominator convention \textrightarrow{} the three power-factor cases.
+
+\tagline{DEFINITION AND PHYSICS (points 1 to 4).}
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Voltage regulation} is the change in secondary terminal voltage when the load is thrown off, with the \emph{primary supply voltage held constant}. Practically: the voltmeter at the secondary reads lower (usually) at load than at no load, because of the internal voltage drops.
+\item The cause is the two series effects in the equivalent circuit: the resistive drop ($I_2 R_{\text{eq}}$, in phase with the current) and the leakage-reactive drop ($I_2 X_{\text{eq}}$, leading the current by 90$^\circ$). Together they make the internal induced emf $E_2$ larger in magnitude than the terminal voltage $V_2$.
+\item Definition in symbols (absolute regulation):
+\[
+\text{Regulation} = E_2 - V_2
+\]
+where $V_2$ = secondary terminal voltage \emph{on load} and $E_2$ = secondary terminal voltage at \emph{no load} with the same primary voltage (equal to the induced emf, since at no load there is no drop).
+\item In percentage form (the exam's usual ask):
+\[
+\%\,\text{VR} = \frac{E_2 - V_2}{E_2} \times 100
+\qquad\text{(the deck's convention: divide by the no-load voltage)}
+\]
+\trap{the denominator war (H.3): the handwritten notes use $\%\,\text{VR} = \dfrac{E_2 - V_2}{V_2} \times 100$ (divide by the load voltage, treated as the rated secondary voltage), and some textbooks divide by the rated secondary voltage too. The numeric difference is small (a few percent of a few percent) but the marker wants \emph{one} convention used consistently and \emph{named}. Exam rule for this course: follow the deck convention (divide by the no-load value $E_2 = K V_1$), and state ``regulation referred to the no-load secondary voltage'' in one line. If you compute with the other one anyway, say so.}
+\end{enumerate}
+
+\tagline{DERIVATION OF THE EXACT EXPRESSION (lagging load).}
+
+\textbf{Step 1: set the phasor frame.} Take $V_2$ along the reference axis. The load current lags $V_2$ by the load angle $\phi$, so its components are $I_2\cos\phi$ (along $V_2$) and $I_2\sin\phi$ (behind $V_2$).
+
+\textbf{Step 2: place the drops.} The copper drop $I_2 R_{\text{eq}}$ is in phase with $I_2$; the reactive drop $I_2 X_{\text{eq}}$ leads $I_2$ by 90$^\circ$. Resolve both onto the $V_2$ axis and the perpendicular axis:
+\begin{align*}
+\text{along } V_2:&\quad V_2\cos\phi + I_2 R_{\text{eq}} \\
+\text{perpendicular, in the direction of } E_2:&\quad V_2\sin\phi + I_2 X_{\text{eq}}
+\end{align*}
+(the reactive drop, leading the current, lands in the same quadrant as the $V_2\sin\phi$ component for a lagging load)
+
+\textbf{Step 3: Pythagoras gives the exact result:}
+\[
+E_2 = \sqrt{\left(V_2\cos\phi + I_2 R_{\text{eq}}\right)^{2} + \left(V_2\sin\phi + I_2 X_{\text{eq}}\right)^{2}}
+\qquad\text{(lagging power factor)}
+\]
+
+\textbf{Step 4: leading power factor.} The current leads $V_2$ by $\phi$, so the reactive drop subtracts from the $V_2\sin\phi$ component:
+\[
+E_2 = \sqrt{\left(V_2\cos\phi + I_2 R_{\text{eq}}\right)^{2} + \left(V_2\sin\phi - I_2 X_{\text{eq}}\right)^{2}}
+\qquad\text{(leading power factor)}
+\]
+
+\textbf{Step 5: unity power factor.} $\sin\phi = 0$, so only the resistive term survives:
+\[
+E_2 = \sqrt{\left(V_2 + I_2 R_{\text{eq}}\right)^{2} + \left(I_2 X_{\text{eq}}\right)^{2}}
+\]
+
+\textbf{Step 6: regulation at each case} is then $\%\,\text{VR} = \dfrac{E_2 - V_2}{E_2} \times 100$ with $E_2$ from the matching line above.
+
+\tagline{THE THREE CASES, SUMMARISED (write this table in words).}
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Lagging pf:} regulation is positive and \emph{largest}. Both drop components push $E_2$ above $V_2$. Worse power factor (smaller $\cos\phi$) means worse regulation.
+\item \textbf{Unity pf:} regulation is positive but \emph{smaller}: only $I_2 R_{\text{eq}}$ and the quadrature bookkeeping of $I_2 X_{\text{eq}}$ enter the exact formula.
+\item \textbf{Leading pf:} regulation falls, can pass through \emph{zero}, and can go \emph{negative} (the load voltage rises above the no-load value: the capacitive current's magnetising effect supports the flux). Deep leading power factor is the classic ``voltage rises at the receiving end'' case.
+\end{enumerate}
+
+\drawline{phasor diagram for the lagging case: $V_2$ reference, $I_2$ behind it by $\phi$, $I_2 R_{\text{eq}}$ drawn along $I_2$, $I_2 X_{\text{eq}}$ perpendicular to $I_2$ (leading it), $E_2$ closing the polygon. Repeat the same figure with the current leading (and the reactive drop subtracting) for the leading case. Label checklist: $V_2$, $E_2$, $I_2$, $\phi$, both drop segments, the right angles.}
+
+\keydist{The definition's condition is \emph{constant primary voltage}. If the question says the primary sags too, regulation no longer describes the result: the source impedance joins the story. Keep the definition clean and the derivation clean.}
+
+% ============================================================ Q8
+\qhead{Q8 (verbatim):}{Derive the approximate expression for voltage regulation of a transformer for lagging and leading power factors.}
+
+\tagline{WHAT TO WRITE:} start from the exact squared relation \textrightarrow{} expand \textrightarrow{} argue which terms are negligible \textrightarrow{} the approximate drop \textrightarrow{} the percentage form with $\%R$ and $\%X$ \textrightarrow{} the shortcut corollaries.
+
+\tagline{DERIVATION.}
+
+\textbf{Step 1: the exact relation, squared (lagging).} From Q6:
+\[
+E_2^{2} = \left(V_2\cos\phi + I_2 R_{\text{eq}}\right)^{2} + \left(V_2\sin\phi + I_2 X_{\text{eq}}\right)^{2}
+\]
+
+\textbf{Step 2: expand.}
+\[
+E_2^{2} = V_2^{2}\cos^{2}\phi + 2 V_2 I_2 R_{\text{eq}}\cos\phi + I_2^{2} R_{\text{eq}}^{2} + V_2^{2}\sin^{2}\phi + 2 V_2 I_2 X_{\text{eq}}\sin\phi + I_2^{2} X_{\text{eq}}^{2}
+\]
+\[
+E_2^{2} = V_2^{2} + 2 V_2 I_2\left(R_{\text{eq}}\cos\phi + X_{\text{eq}}\sin\phi\right) + I_2^{2}\left(R_{\text{eq}}^{2} + X_{\text{eq}}^{2}\right)
+\]
+using $\cos^{2}\phi + \sin^{2}\phi = 1$ and $R_{\text{eq}}^{2} + X_{\text{eq}}^{2} = Z_{\text{eq}}^{2}$.
+
+\textbf{Step 3: the approximation argument (this sentence earns marks).} In a normal transformer the short-circuit impedance is 5 to 10 percent, so the drop terms $I_2 Z_{\text{eq}}$ are small against $V_2$. The squared drop $I_2^{2} Z_{\text{eq}}^{2}$ is second-order small compared with the product term $2 V_2 I_2 Z_{\text{eq}}$ and is neglected (equivalently: use $\sqrt{1 + \epsilon} \approx 1 + \dfrac{\epsilon}{2}$ with $\epsilon \ll 1$).
+
+\textbf{Step 4: the approximate drop.} Then $E_2 \approx V_2 + I_2 R_{\text{eq}}\cos\phi + I_2 X_{\text{eq}}\sin\phi$, so:
+\[
+\boxed{\;E_2 - V_2 \approx I_2 R_{\text{eq}}\cos\phi + I_2 X_{\text{eq}}\sin\phi\;}
+\qquad\text{(lagging)}
+\]
+For a \textbf{leading} load the reactive term subtracts:
+\[
+\boxed{\;E_2 - V_2 \approx I_2 R_{\text{eq}}\cos\phi - I_2 X_{\text{eq}}\sin\phi\;}
+\qquad\text{(leading)}
+\]
+
+\textbf{Step 5: percentage form.} Divide by the chosen reference voltage and multiply by 100. With the notes convention (divide by $V_2$):
+\[
+\%\,\text{VR} = \frac{I_2 R_{\text{eq}}}{V_2}\cos\phi \times 100 \;\pm\; \frac{I_2 X_{\text{eq}}}{V_2}\sin\phi \times 100
+\]
+Defining the \textbf{percent drops at full load}:
+\[
+\%\,R_{\text{drop}} = \frac{I_{2,\text{FL}} R_{\text{eq}}}{V_2} \times 100
+\qquad\qquad
+\%\,X_{\text{drop}} = \frac{I_{2,\text{FL}} X_{\text{eq}}}{V_2} \times 100
+\]
+the famous compact line (the exam's ``express regulation in terms of percent drops'' answer):
+\[
+\boxed{\;\%\,\text{VR} = \left(\%\,R_{\text{drop}}\right)\cos\phi \;\pm\; \left(\%\,X_{\text{drop}}\right)\sin\phi\;}
+\]
+at fractional load $x$ every drop scales linearly with $x$ (this is load current, not loss: the loss scales as $x^{2}$, the drop as $x$).
+
+\tagline{ZERO REGULATION (derive when asked, quote always).} Set the leading expression to zero:
+\[
+R_{\text{eq}}\cos\phi = X_{\text{eq}}\sin\phi
+\qquad\Longrightarrow\qquad
+\tan\phi = \frac{R_{\text{eq}}}{X_{\text{eq}}}
+\qquad\text{(leading, i.e. capacitive load)}
+\]
+At exactly this leading power factor the load voltage equals the no-load voltage. For a more capacitive load than this, regulation turns negative.
+
+\tagline{SHORTCUT COROLLARIES (the percent-impedance family).}
+\begin{enumerate}[label=\arabic*.]
+\item The percent resistive drop equals the copper loss as a percentage of the kVA rating:
+\[
+\%\,R_{\text{drop}} = \frac{P_{\text{cu,FL}}}{S_{\text{rated}}} \times 100
+\]
+(because $I_2 R_{\text{eq}} = \dfrac{I_2^{2} R_{\text{eq}}}{I_2} = \dfrac{P_{\text{cu,FL}}}{I_2}$ and $S = V_2 I_2$: dividing gives the identity).
+\item The percent impedance drop comes straight from the SC test voltage at rated current:
+\[
+\%\,Z_{\text{drop}} = \frac{V_{\text{sc}}}{V_{\text{rated, supplied side}}} \times 100
+\qquad\Longrightarrow\qquad
+\%\,X_{\text{drop}} = \sqrt{\left(\%\,Z_{\text{drop}}\right)^{2} - \left(\%\,R_{\text{drop}}\right)^{2}}
+\]
+\item With only percent numbers given (the D1-02 and WE-09 shape), no circuit is needed at all: plug straight into the compact line.
+\end{enumerate}
+
+\trap{do not confuse the drop scaling with the loss scaling: drops scale linearly with the load fraction $x$, copper losses scale as $x^{2}$. One is regulation, the other is efficiency (SP-04). Mixing them is a two-mistake freebie.}
+
+\drawline{the impedance triangle in percent form (horizontal $\%\,R$, vertical $\%\,X$, hypotenuse $\%\,Z$) and the zero-regulation phasor (leading current sized so that $I_2 X_{\text{eq}}$ exactly cancels the $V_2\sin\phi$ build-up).}
+
+\keydist{The exact expression is for computing. The approximate expression is for \emph{explaining} (it shows the two drop mechanisms add or subtract by power factor). The percent form is for fast exams. Know all three and say which one the numbers came from.}
+
+% ============================================================ NUMERICS
+\hrulefill
+\subsection*{\color{copper}WORKED NUMERICS: REGULATION FAMILIES (WE-08, WE-09, D1-01, D1-02)}
+
+\tagline{WE-08 (full method).} A 40 kVA, 6600/250 V transformer has $R_1 = 10\ \Omega$ (primary), $R_2 = 0.02\ \Omega$ (secondary), and total equivalent leakage reactance referred to the primary $X_{\text{eq,1}} = 35\ \Omega$. Find the full-load voltage regulation at 0.8 power factor lagging.
+
+\textbf{Givens:} $S = 40$ kVA, $V_1 = 6\,600$ V, $V_2 = 250$ V, $R_1 = 10\ \Omega$, $R_2 = 0.02\ \Omega$, $X_{\text{eq,1}} = 35\ \Omega$, $\cos\phi = 0.8$ lagging ($\sin\phi = 0.6$).
+
+\textbf{Solution. Work on the secondary side (it is where regulation lives).}
+\[
+a = \frac{6\,600}{250} = 26.4
+\qquad\Longrightarrow\qquad
+R_1' = \frac{R_1}{a^{2}} = 10 \times \left(\frac{250}{6\,600}\right)^{2} = 0.01435\ \Omega
+\qquad
+X_{\text{eq,2}} = 35 \times \left(\frac{250}{6\,600}\right)^{2} = 0.05022\ \Omega
+\]
+\[
+R_{\text{eq,2}} = 0.01435 + 0.02 = 0.03435\ \Omega
+\qquad\qquad
+I_{2,\text{FL}} = \frac{40\,000}{250} = 160\ \text{A}
+\]
+\[
+E_2 - V_2 \approx I_2\left(R_{\text{eq,2}}\cos\phi + X_{\text{eq,2}}\sin\phi\right) = 160\,(0.02748 + 0.03013) = 9.22\ \text{V}
+\]
+\[
+\%\,\text{VR} = \frac{9.22}{250} \times 100 = 3.69\%
+\qquad\text{(notes convention: divide by the load voltage)}
+\]
+One line for the deck convention (divide by the no-load voltage $E_2 = 250 + 9.22 = 259.22$ V): $\%\,\text{VR} = \dfrac{9.22}{259.22} \times 100 = 3.56\%$. \textbf{Answer:} regulation drop = 9.22 V, $\%\,\text{VR} = 3.69\%$ (or 3.56\% on the no-load denominator: whichever you use, name it).
+
+\vspace{2pt}
+
+\tagline{WE-09 (percent-drop method, errata E9).} The ohmic drop of a transformer is 1 percent of the rated voltage and the reactance drop is 5 percent. Find the regulation at (1) 0.8 power factor lagging, (2) 0.8 power factor leading.
+
+\textbf{Solution (no circuit needed, straight into the compact line).}
+\[
+\%\,\text{VR} = \left(\%\,R_{\text{drop}}\right)\cos\phi \pm \left(\%\,X_{\text{drop}}\right)\sin\phi
+\qquad\text{with}\quad \cos\phi = 0.8,\;\; \sin\phi = 0.6
+\]
+\[
+\text{(1) lagging:}\quad \%\,\text{VR} = 1 \times 0.8 + 5 \times 0.6 = 0.8 + 3 = 3.8\%
+\]
+\[
+\text{(2) leading:}\quad \%\,\text{VR} = 1 \times 0.8 - 5 \times 0.6 = 0.8 - 3 = -2.2\%
+\]
+\textbf{Answer:} 3.8\% lagging, $-2.2\%$ leading. The negative sign means the load voltage \emph{rises} about 2.2 percent above the no-load value. \srcwrong{the source labels these quantities as ``volts''. They are percentages (errata E9): the drops were given in percent, so the results are in percent.}
+
+\vspace{2pt}
+
+\tagline{D1-01 (percent drops at three power factors + the zero-regulation angle).} The ohmic drop of a transformer is 1 percent of output and the reactance drop is 5 percent of the voltage. Find the regulation at (a) 0.8 lagging, (b) unity, (c) 0.8 leading. Then find the leading power factor at which regulation is exactly zero.
+
+\textbf{Solution.}
+\[
+\text{(a)}\;\; 1 \times 0.8 + 5 \times 0.6 = 3.8\%
+\qquad
+\text{(b)}\;\; 1 \times 1 + 5 \times 0 = 1\%
+\qquad
+\text{(c)}\;\; 1 \times 0.8 - 5 \times 0.6 = -2.2\%
+\]
+\textbf{Zero regulation:}
+\[
+\tan\phi = \frac{\%\,R_{\text{drop}}}{\%\,X_{\text{drop}}} = \frac{1}{5}
+\qquad\Longrightarrow\qquad
+\phi = 11.31^\circ \text{ leading}
+\qquad\Longrightarrow\qquad
+\cos\phi = 0.981 \text{ leading}
+\]
+Check: $1 \times 0.9806 - 5 \times 0.1961 = 0.9806 - 0.9806 = 0$ $\checkmark$.
+\textbf{Answer:} (a) 3.8\%, (b) 1\%, (c) $-2.2\%$; zero regulation at 0.981 leading.
+
+\vspace{2pt}
+
+\tagline{D1-02 (the full circuit variant).} A 10 kVA, 2000/400 V transformer has $R_1 = 5.5\ \Omega$, $X_1 = 12\ \Omega$, $R_2 = 0.2\ \Omega$, $X_2 = 0.45\ \Omega$. Find the approximate secondary voltage at full load, 0.8 power factor lagging, when the primary is at 2000 V.
+
+\textbf{Solution.}
+\[
+a = \frac{2\,000}{400} = 5
+\qquad\Longrightarrow\qquad
+R_{\text{eq,1}} = 5.5 + 25 \times 0.2 = 10.5\ \Omega
+\qquad
+X_{\text{eq,1}} = 12 + 25 \times 0.45 = 23.25\ \Omega
+\]
+Refer to the secondary (divide by $a^{2} = 25$) and take the full-load secondary current:
+\[
+R_{\text{eq,2}} = \frac{10.5}{25} = 0.42\ \Omega
+\qquad
+X_{\text{eq,2}} = \frac{23.25}{25} = 0.93\ \Omega
+\qquad
+I_{2,\text{FL}} = \frac{10\,000}{400} = 25\ \text{A}
+\]
+The no-load secondary voltage with 2000 V applied is $\dfrac{2\,000}{5} = 400$ V, so:
+\[
+E_2 - V_2 \approx 25\,(0.42 \times 0.8 + 0.93 \times 0.6) = 25\,(0.336 + 0.558) = 22.35\ \text{V}
+\]
+\[
+V_2 \approx 400 - 22.35 = 377.65\ \text{V} \approx 377.7\ \text{V}
+\qquad\qquad
+\%\,\text{VR} = \frac{22.35}{400} \times 100 = 5.59\%
+\]
+\textbf{Answer:} about 377.7 V at full load 0.8 lagging (regulation 5.59\% on the no-load denominator here).
+
+% ============================================================ SHEET
+\hrulefill
+\subsection*{\color{copper}FORMULA SHEET FOR THIS FILE}
+\begin{align*}
+\text{definition:}\quad \text{Regulation} &= E_2 - V_2
+& \%\,\text{VR} &= \frac{E_2 - V_2}{E_2} \times 100 \;\; (\text{deck}) \\[4pt]
+\text{exact, lagging:}\quad E_2 &= \sqrt{(V_2\cos\phi + I_2 R_{\text{eq}})^{2} + (V_2\sin\phi + I_2 X_{\text{eq}})^{2}} \\[4pt]
+\text{exact, leading:}\quad E_2 &= \sqrt{(V_2\cos\phi + I_2 R_{\text{eq}})^{2} + (V_2\sin\phi - I_2 X_{\text{eq}})^{2}} \\[4pt]
+\text{approx:}\quad E_2 - V_2 &\approx I_2 R_{\text{eq}}\cos\phi \pm I_2 X_{\text{eq}}\sin\phi \\[4pt]
+\%\,\text{VR} &= (\%\,R_{\text{drop}})\cos\phi \pm (\%\,X_{\text{drop}})\sin\phi \\[4pt]
+\%\,R_{\text{drop}} &= \frac{P_{\text{cu,FL}}}{S} \times 100
+& \%\,X_{\text{drop}} &= \sqrt{(\%\,Z_{\text{drop}})^{2} - (\%\,R_{\text{drop}})^{2}} \\[4pt]
+\text{zero regulation:}\quad \tan\phi &= \frac{R_{\text{eq}}}{X_{\text{eq}}}
+& &\text{(leading pf)}
+\end{align*}
+
+\subsection*{\color{copper}CLOSED-BOOK CHECK (cover the file, answer out loud)}
+\begin{enumerate}[label=\arabic*.]
+\item Define regulation with its test condition and both percentage conventions (and say which one you will use and why).
+\item Derive the exact lagging expression: the phasor resolution in words, then the two squared terms.
+\item Get the approximate expression from the exact one and state the size argument that licenses the neglect.
+\item State the three cases (lag / unity / lead) and what each does to the regulation, including the sign.
+\item Derive the zero-regulation power factor and say what happens on either side of it.
+\item From memory: WE-08's drop and both percentage conventions; D1-02's $V_2$.
+\end{enumerate}
+
+\subsection*{\color{copper}MEMORY DUMP (write cold on blank paper)}
+Regulation = $E_2 - V_2$ at constant $V_1$. Exact lagging: $E_2 = \sqrt{(V_2\cos\phi + I_2 R_{\text{eq}})^{2} + (V_2\sin\phi + I_2 X_{\text{eq}})^{2}}$; leading flips the $X$ sign. Approximate: $E_2 - V_2 \approx I_2 R_{\text{eq}}\cos\phi \pm I_2 X_{\text{eq}}\sin\phi$ (neglect $(I_2 Z_{\text{eq}})^{2}$). Percent line: $\%\,\text{VR} = (\%\,R)\cos\phi \pm (\%\,X)\sin\phi$; $\%\,R = \dfrac{P_{\text{cu,FL}}}{S} \times 100$; $\%\,X = \sqrt{\%\,Z^{2} - \%\,R^{2}}$. Lag: positive and worst. Unity: small positive. Lead: shrinks, zero at $\tan\phi = \dfrac{R_{\text{eq}}}{X_{\text{eq}}}$, then negative (voltage rises). Drops scale as $x$, copper loss as $x^{2}$. Name the denominator convention every time.
+
+\end{document}

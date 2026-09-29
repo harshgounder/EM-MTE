@@ -1,0 +1,5 @@
+YES
+
+$V_T = E_A - I_A R_A$
+
+The image does not contain a diagram, circuit, or graph. It consists entirely of a single mathematical equation printed in a standard mathematical font. The equation defines a relationship between four variables: $V_T$ (terminal voltage), $E_A$ (generated or back EMF), $I_A$ (armature current), and $R_A$ (armature resistance), separated by an equals sign and a subtraction sign.

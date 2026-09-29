@@ -1,0 +1,29 @@
+For Lap winding
+For a simplex lap winding:
+
+A=P
+Therefore,
+
+®ZN
+
+For Wave winding
+For a simplex wave winding:
+
+A=2
+Therefore,
+
+P®ZN
+For Lap winding
+
+For a simplex lap winding:
+
+A=P
+Therefore,
+®ZN
+E,= 60
+For Wave winding
+For a simplex wave winding:
+A=2
+
+Therefore,
+

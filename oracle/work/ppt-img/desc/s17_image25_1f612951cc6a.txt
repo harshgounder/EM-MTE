@@ -1,0 +1,5 @@
+YES
+
+$I_{F}^{*} = I_{F} - \mathcal{F}_{AR}/N_{F}$
+
+This image contains only a single mathematical equation. There is no diagram, circuit, or graph present to describe.

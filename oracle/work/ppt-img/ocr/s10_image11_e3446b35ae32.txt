@@ -1,0 +1,29 @@
+The total number of conductors is Z, but they are divided into A parallel paths.
+Therefore, the number of conductors connected in series in each parallel path is:
+4
+A
+Hence, the generated EMF across one parallel path is:
+Z
+E;=ex N
+Substituting the value of e:
+PON Z
+E,=—x2
+Y760 A
+Therefore,
+P®ZN
+EBy=———
+60A
+The total number of conductors is Z, but they are divided into A parallel paths.
+
+Therefore, the number of conductors connected in series in each parallel path is:
+
+zZ
+A
+Hence, the generated EMF across one parallel path is:
+V4
+E;=ex N
+
+Substituting the value of e:
+
+Therefore,
+

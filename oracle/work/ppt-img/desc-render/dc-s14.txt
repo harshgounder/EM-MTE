@@ -1,0 +1,54 @@
+YES  
+
+### (1) Complete Text Transcription:  
+
+- **Top Left Logo/Text**: MANIPAL UNIVERSITY JAIPUR  
+- **Top Right Logo/Text**: NAAC A+ (logo)  
+- **Top Right Small Text**: NAAC A+ GRADE WITH 3.28 SCORE  
+- **Title**: Magnetizing curve of a DC Generator & performance  
+- **Bullet Points**:  
+  - The internal generated voltage EA of a dc generator is given by \( \boldsymbol{E_A = K \Phi \omega} \)  
+  - EA is directly proportional to the flux  
+  - The field current is directly proportional to the magnetomotive force and hence EA  
+  - Brush voltage drop is represented by a small battery  
+  - Performance of the DC generators are determined by terminal output parameter \( \boldsymbol{I_L} \) and \( \boldsymbol{V_T} \)  
+  - Voltage regulation also determines its performance  
+- **Graph Labels**:  
+  - Y - axis: \( \boldsymbol{E_A [ = K \phi \omega ]} \)  
+  - X - axis: \( \boldsymbol{I_F [ = \frac{V_F}{R_F} ]} \)  
+  - Annotations: \( \boldsymbol{\omega = \omega_0} \), \( \boldsymbol{n = n_0 (constant)} \)  
+
+
+### (2) Visual Element Description:  
+
+- **Logos**:  
+  - Top left: Manipal University Jaipur logo (with text).  
+  - Top right: NAAC A+ logo (with “NAAC A+ GRADE WITH 3.28 SCORE” below).  
+
+- **Graph (Right Side)**:  
+  - A 2D plot with a vertical Y - axis labeled \( E_A [ = K \phi \omega ] \) and a horizontal X - axis labeled \( I_F [ = \frac{V_F}{R_F} ] \).  
+  - The curve starts at the origin (0,0), rises linearly (magnetic region) then saturates (saturation region) — typical of a magnetizing curve.  
+  - Annotations near the curve: \( \omega = \omega_0 \) (constant angular velocity) and \( n = n_0 (constant) \) (constant speed).  
+
+- **Bullet Points (Left Side)**:  
+  - Six bullet - pointed statements on the left, summarizing DC generator principles (voltage generation, proportions, brush drop, performance parameters, voltage regulation).  
+
+
+### (3) ASCII Art of the Graph:  
+
+```
+Y-axis (E_A [ = K φ ω ])
+    ^
+    |
+    |        /
+    |       /
+    |      /
+    |     /
+    |    /
+    |   /
+    |  /
+    | /
+    |/___________> X-axis (I_F [ = V_F/R_F ])
+
+Annotations: ω = ω₀, n = n₀ (constant)
+```

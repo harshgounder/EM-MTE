@@ -1,0 +1,15 @@
+YES
+
+**Transcription:**
+
+$$I_{eq} = \frac{N_{SE}}{N_F} I_A - \frac{\mathcal{F}_{AR}}{N_F}$$
+
+**Description:**
+
+The image contains a single mathematical equation written in a serif font (resembling Times New Roman) on a white background. There is no diagram, circuit, or graph.
+
+*   **Left-hand side:** The variable $I_{eq}$ (I subscript eq).
+*   **Equals sign:** A standard equals sign ($=$). There is a thin blue horizontal line directly underneath the equals sign, likely an artifact from a hyperlink style (e.g., from a website where equations are links to LaTeX code).
+*   **First term:** A fraction with numerator $N_{SE}$ and denominator $N_F$, multiplied by the variable $I_A$.
+*   **Operator:** A minus sign ($-$).
+*   **Second term:** A fraction with numerator $\mathcal{F}_{AR}$ (a script/calligraphic F subscript AR) and denominator $N_F$.

@@ -1,0 +1,5 @@
+YES
+
+$E_A = \frac{ZP}{2\pi a} \frac{2\pi rlb}{P} \omega = \frac{ZP}{2\pi a} \Phi \omega$
+
+The image contains a single mathematical equation and does not feature a diagram, circuit, or graph. The equation consists of the variable $E_A$ (E with subscript A) followed by two equal signs. The middle expression is a product of three terms: a fraction with numerator $ZP$ and denominator $2\pi a$, a second fraction with numerator $2\pi rlb$ and denominator $P$, and the Greek letter $\omega$ (omega). The final expression on the right consists of the first fraction $\frac{ZP}{2\pi a}$ multiplied by the Greek letter $\Phi$ (Phi) and $\omega$. The text is printed in a black serif font on a plain white background.

@@ -1,0 +1,80 @@
+YES
+
+**1. Complete Text Transcription:**
+
+*   **Header Left:**
+    MANIPAL UNIVERSITY
+    JAIPUR
+*   **Header Right:**
+    NAAC A+ NAAC A+ GRADE WITH 3.28 SCORE
+*   **Title:**
+    The Equivalent Circuit of a DC Generator
+*   **Blue Heading (partially overlapped by title):**
+    Two circuits are involved in DC Generator
+*   **Blue Subheadings:**
+    Armature Circuit
+    Field circuit
+*   **Bullet Points:**
+    • Armature circuit represents Thevenin equivalent of the entire rotor.
+    • It cantain an ideal voltage source $E_A$ and a resistor $R_A$ . .
+    • Brush voltage drop is represented by a small battery
+    • The field coils, which produce the magnetic flux
+    • inductor $L_F$ and resistor $R_F$
+    • $R_{adj}$ for field current control
+*   **Diagram Labels:**
+    $R_{adj}$
+    $F_1$
+    $F_2$
+    $R_F$
+    $L_F$
+    $E_A$
+    + (plus sign)
+    - (minus sign)
+    $V_{brush}$
+    $R_A$
+    $I_A$ (with right-pointing arrow)
+    $A_1$
+    $A_2$
+
+**2. Visual Element Description:**
+
+*   **Header:** The slide has a white header containing the "MANIPAL UNIVERSITY JAIPUR" logo on the left and a "NAAC A+" logo on the right with a gold/yellow bar running across the width below the logos.
+*   **Circuit Diagram:** The diagram is located on the right side of the slide and consists of three distinct sections:
+    1.  **Leftmost Component:** A standalone variable resistor symbol (a zigzag line with a diagonal arrow pointing upwards through it) labeled $R_{adj}$ at the bottom left of the component. It has open terminals on both ends.
+    2.  **Middle Component (Field Circuit):** A vertical circuit branch representing the field winding. It has a terminal circle at the top labeled $F_1$ and a terminal circle at the bottom labeled $F_2$. Between them are a resistor symbol labeled $R_F$ and an inductor symbol (coil) labeled $L_F$.
+    3.  **Rightmost Component (Armature Circuit):**
+        *   A large circle representing the DC generator/armature with two small rectangular brushes. Inside the circle are "$+$" and "$-$" signs and the label $E_A$.
+        *   Connected to the top brush is a small battery symbol (two parallel vertical lines, one longer) labeled $V_{brush}$.
+        *   In series with the battery is a resistor symbol labeled $R_A$.
+        *   The wire continues to the right to an open terminal labeled $A_1$. An arrow points to the right above this wire, labeled $I_A$, indicating current direction.
+        *   The bottom brush connects directly to a wire leading to an open terminal labeled $A_2$.
+*   **Text:** The text is arranged in a left column. The title overlaps with the blue heading text below it.
+
+**3. ASCII Art Layout:**
+
+```text
++------------------------------------------------------+
+| LOGO                         LOGO (NAAC A+)          |
+| MANIPAL UNIVERSITY JAIPUR                            |
++------------------------------------------------------+
+|       The Equivalent Circuit of a DC Generator       |
+|                                                      |
+| Two circuits are involved in DC Generator            |
+|                                                      |
+|      Armature Circuit                                |
+|      Field circuit                                   |
+|                                                      |
+|  • Armature circuit...      (F1)                     |
+|  • It cantain...               |                     |
+|  • Brush voltage...            | (Rf)                |
+|  • The field coils...          |                     |
+|       • inductor...            | (Lf)                |
+|       • Radj...                |                     |
+|                                (F2)                  |
+|                                 (Ea)  +---Vbrush---Ra--o A1 ->
+|   /\/\/--o   Radj               |                     ^
+|  (arrow)                       |                    (IA)
+|                                 o----------------------+
+|                                                        o A2
++------------------------------------------------------+
+```

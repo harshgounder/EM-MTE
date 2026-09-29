@@ -1,0 +1,86 @@
+YES
+
+**1. Transcription of text:**
+
+**Header:**
+*   **MANIPAL UNIVERSITY JAIPUR** (logo text)
+*   **A+ NAAC NAAC A+ GRADE WITH 3.28 SCORE** (logo text)
+*   **Solutions to Problems with Commutation in Real Machines**
+
+**Bullet Points:**
+*   **• Compensating winding**
+*   • Solves the problem of flux weakening and neutral plane shift
+*   • Compensating windings are in series with the rotor windings
+*   • placing in slots carved in the faces of the poles parallel to the rotor conductors
+
+**Top Diagram Text:**
+*   --- Flux from compensating windings
+*   —— Rotor (armature) flux
+*   N
+*   S
+*   $\omega$
+
+**Bottom Diagram Text:**
+*   Neutral plane *not* shifted with load
+*   N
+*   S
+*   $\omega$
+
+**2. Visual Elements Description:**
+
+*   **Header:** A horizontal yellow bar separates the university logo (left) and the NAAC accreditation logo (right) from the slide content.
+*   **Body Text:** A bulleted list on the left side.
+    *   The first main bullet "Compensating winding" is in black.
+    *   Sub-points and subsequent bullets alternate colors between orange ("Solves the problem...", "placing in slots...") and blue ("Compensating windings are...").
+*   **Top Diagram (Right):** A cross-sectional schematic showing a DC machine pole face.
+    *   It displays flux lines: dashed lines representing "Flux from compensating windings" and solid lines representing "Rotor (armature) flux".
+    *   The lines curve around slots embedded in the pole face which contain conductors (indicated by circles with dots or crosses).
+    *   The left pole is labeled "N" and the right pole "S".
+    *   A curved arrow labeled "$\omega$" indicates clockwise rotation at the top.
+*   **Bottom Diagram (Right):** A similar cross-sectional schematic of a DC machine pole face.
+    *   It explicitly shows a vertical line passing through the center of the pole gap, labeled "Neutral plane *not* shifted with load".
+    *   It shows the pole faces with slots containing windings.
+    *   The commutator and brushes are visible in the center of the rotor.
+    *   Left pole "N", right pole "S".
+    *   A curved arrow labeled "$\omega$" indicates clockwise rotation.
+
+**3. ASCII Art Layout:**
+
+**Top Diagram (Flux Distribution):**
+```text
+      Flux from comp. windings
+      -------------------------
+      |                       |
+      |    Flux paths         |
+      N  \   /    \   /       S
+         \_/      \_/      ...
+         |O|      |O|      ...
+         |X|      |X|      ...
+         |O|      |O|      ...
+        /   \    /   \
+      /       \ /       \
+      -------------------------
+             w (arrow)
+```
+
+**Bottom Diagram (Neutral Plane):**
+```text
+       Neutral plane not
+       shifted with load
+             |
+             |
+      N      |      S
+         \   |   /
+          \  |  /
+           \ | /
+             |
+           /---\
+          | OO  |
+          | <-- |
+          | OO  |
+           \---/
+          / | \
+         /  |  \
+```
+
+:: "

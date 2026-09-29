@@ -1,0 +1,94 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+
+\definecolor{copper}{HTML}{8C4A2F}
+\definecolor{iron}{HTML}{262B33}
+\definecolor{muted}{HTML}{6B6B6B}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize\color{muted} OPT-02 \textbar{} Three-Phase Transformer \textbar{} ANSWER SHEET}
+\rhead{\footnotesize\color{muted} ELC2104 \textbar{} MTE}
+\cfoot{\footnotesize\color{muted} \thepage}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\q}[2]{\subsection*{\color{copper}#1\quad\color{iron}#2}}
+\newcommand{\w}[1]{\textbf{\color{copper}WRITE:} #1}
+\newcommand{\tr}[1]{\textbf{\color{red}[TRAP]} #1}
+\newcommand{\dw}[1]{\textbf{\color{muted}[DRAW]} #1}
+
+\begin{document}
+
+\begin{center}
+{\footnotesize\color{copper} ELC2104 \textbar{} ELECTRICAL MACHINES \textbar{} MTE}\\[6pt]
+{\LARGE\bfseries\color{iron} OPT-02: Three-Phase Transformer, ANSWER SHEET}\\[2pt]
+{\Large\color{copper} all three questions + open delta, answer-ready}\\[6pt]
+{\footnotesize\color{muted} not learning notes: what to write on the paper, in order.}
+\end{center}
+
+\hrulefill
+\subsection*{\color{copper}THE ALGEBRA (open every connection answer with this)}
+\[
+\textbf{star:}\quad V_L = \sqrt{3}\, V_{\text{ph}}\ (\text{line leads phase } 30^{\circ}),\ \ I_L = I_{\text{ph}}
+\qquad\qquad
+\textbf{delta:}\quad V_L = V_{\text{ph}},\ \ I_L = \sqrt{3}\, I_{\text{ph}}\ (\text{line lags phase } 30^{\circ})
+\]
+\[
+\text{per phase everywhere: } E_{\text{ph}} = 4.44\, f\, N\, \Phi_m
+\qquad\qquad
+\Phi_A + \Phi_B + \Phi_C = 0\ \text{(balanced, so yoke can be half area)}
+\]
+\tr{star puts $\sqrt{3}$ in the VOLTAGE, delta puts it in the CURRENT. Mixed pairs give a 30$^\circ$ line-voltage shift; same-kind pairs give 0$^\circ$.}
+
+\q{Q11b (verbatim):}{Explain the construction and working principle of a three-phase transformer.}
+\w{construction points:} (1) built as a bank of three single-phase units OR one single three-phase unit: one core, \textbf{three limbs}, one phase's HV and LV pair per limb, common top and bottom yoke, one tank and cooling set. (2) the three fluxes sum to zero at balance so the yoke carries no net flux and can run at about half the limb area (five-limb cores when neutral current or unbalance must be carried). (3) concentric LV-inner HV-outer winding placement per limb exactly as single-phase; shared oil, conservator, bushings (three or four with neutral).
+\w{working sequence:} (1) three-phase supply gives currents displaced 120$^\circ$ in time through windings displaced 120$^\circ$ in space (one per limb). (2) each limb gets its own alternating flux $\Phi_A$, $\Phi_B$, $\Phi_C$, displaced 120$^\circ$ in time and space. (3) their sum is zero so the yoke needs no return flux. (4) each flux induces an emf in the secondary on its own limb: $E_{\text{ph}} = 4.44 f N \Phi_m$, the three emfs displaced 120$^\circ$ (one limb = one transformer; all single-phase physics holds per phase). (5) the winding connection (star or delta) then sets the $\sqrt{3}$ factors and any 30$^\circ$ shift. (6) on load, currents reflect to the primary as in single-phase; balanced power = 3 times per-phase power.
+\dw{3-limb core with coil pairs per limb + flux arrows + the 120$^\circ$ flux phasor triplet with the zero-sum note.}
+
+\q{Q11c (verbatim):}{Discuss the advantages of three-phase transformers.}
+\w{8 points (unit versus bank):} (1) lower cost: one core, tank, oil volume and fitting set instead of three; the shared yoke at half area saves iron again. (2) about 20 to 30 percent lighter and smaller for the same rating: less floor space and foundation. (3) higher efficiency: less iron and fewer structural losses. (4) better regulation: matched impedances and shorter leakage paths inside one core. (5) fewer bushings, busbars and interconnections: less copper and contact hardware. (6) one cooling system, one conservator and breather: less oil, fewer leak points. (7) simpler installation and maintenance: one unit to place, connect and test. (8) simpler protection and tap gear: one Buchholz, one temperature set, one tap changer.
+\w{the honest counterpoint (2 lines):} banks keep three niches: spare fourth-unit economy on transmission systems, lighter transport per unit, and partial service at 57.7 percent via open delta when one unit is down.
+
+\q{Q15 (verbatim):}{Explain different three-phase transformer connections: Star-Star, Delta-Delta, Star-Delta, and Delta-Star, with suitable diagrams.}
+\w{STAR-STAR:} both sides star; neutrals can be brought out both sides; $V_L = \sqrt{3} V_{\text{ph}}$ both sides, $I_L = I_{\text{ph}}$; line shift \textbf{0$^\circ$}. Used: small HV units and transmission interconnectors wanting an earthed neutral. Limitation: no delta path so third-harmonic magnetising current cannot flow (flat-topped flux, distorted voltages) and an unearthed star floats its neutral on unbalance. Fixes: earth a neutral or add a tertiary delta winding.
+\w{DELTA-DELTA:} both sides delta (closed ring, no neutral); $V_L = V_{\text{ph}}$, $I_L = \sqrt{3} I_{\text{ph}}$ both sides; line shift \textbf{0$^\circ$}. Used: large currents at low voltage, unbalanced loads (each phase sits across two lines so unbalance circulates without disturbing voltages). Features: third harmonics circulate inside the ring (clean flux), and one unit can be lost and the bank continues in \textbf{open delta} at 57.7 percent.
+\w{STAR-DELTA:} star primary (neutral earthed), delta secondary; $V_{L1} = \sqrt{3} V_{\text{ph1}}$, $V_{L2} = V_{\text{ph2}}$; secondary line voltage shifted \textbf{30$^\circ$}. Used: step-down at receiving substations (66 or 132 kV class star side): star side insulation sees only $\dfrac{V_L}{\sqrt{3}}$ to neutral and the delta side cleans harmonics and handles unbalance.
+\w{DELTA-STAR:} delta primary, star secondary with neutral; $V_{L1} = V_{\text{ph1}}$, $V_{L2} = \sqrt{3} V_{\text{ph2}}$; shift \textbf{30$^\circ$} the other way. Used: step-up at generating stations (delta machine windings, earthed star line side) and three-phase four-wire distribution (neutral for lighting).
+\w{one closing comparison line:} same-kind pairs shift 0$^\circ$ and can parallel with each other; mixed pairs shift 30$^\circ$ and can only parallel with their own group. delta sides host third-harmonic circulation; star sides offer neutrals.
+\dw{four sketches (windings as coil pairs with terminal links): star point shown or absent per side, delta ring arrows consistent with polarity. Plus the shift phasor pair for the two mixed connections.}
+\tr{in connection figures keep $V_{\text{ph}}$ and $I_{\text{ph}}$ subscripts on every line: the deck's own slide 5 mixes $\sqrt{3}\, I_p$ symbols once (known errata); the marker reads labels.}
+
+\q{OPEN DELTA (V-V):}{the notes prompt: explain it and why 57.7 percent.}
+\w{what it is:} (1) remove one unit from a $\Delta$-$\Delta$ bank: the remaining two windings sit each across one line pair and meet at one corner, the opposite corner left \textbf{open} (a V shape, not a closed ring). (2) used in emergencies (one unit faulted: continuity at reduced capacity), for small or seasonal loads (two units now, third when load grows), and temporary substations. (3) no neutral exists in the connection: four-wire supply impossible; voltages stay balanced only for balanced load with identical units.
+\w{the 57.7 percent derivation (4 steps):} (1) unit rating $S_u = V_{\text{ph}} I_{\text{ph}}$. (2) full bank: $S_{\Delta\Delta} = \sqrt{3} V_L I_L = 3\, V_{\text{ph}} I_{\text{ph}} = 3\, S_u$. (3) open delta: each winding now carries the \emph{full line current} (no partner to split the $\sqrt{3}$ with) so the pair is limited to $I_L = I_{\text{ph}}$ at $V_L = V_{\text{ph}}$: $S_{VV} = \sqrt{3}\, V_{\text{ph}}\, I_{\text{ph}} = \sqrt{3}\, S_u$. (4) ratios:
+\[
+\dfrac{S_{VV}}{S_{\Delta\Delta}} = \dfrac{\sqrt{3}}{3} = 0.577 = 57.7\%
+\qquad\qquad
+\dfrac{S_{VV}}{2\, S_u} = \dfrac{\sqrt{3}}{2} = 0.866 = 86.6\%
+\]
+\w{the sentence to end on:} the surviving pair delivers 57.7 percent of the bank rating, which is 86.6 percent of the two units' own nameplate: shed load below that or the pair overheats. Each unit's actual loading also shifts with load power factor, so 57.7 is the balanced-load design figure.
+\dw{open-delta figure: two windings across three lines meeting at one corner, third unit ghosted and labelled ``removed'', the open corner marked.}
+\tr{figures: an open corner = open delta. A gap-less delta is the wrong figure for this question; mark the open corner explicitly.}
+
+\q{DRILLS:}{the three micro-numerics (answer shapes to memorize)}
+\[
+\text{star: } V_{\text{ph}} = 6.35\ \text{kV} \Rightarrow V_L = \sqrt{3} \times 6.35 = 11.0\ \text{kV},\quad I_L = I_{\text{ph}} = 100\ \text{A}
+\]
+\[
+\text{delta: } V_L = 400\ \text{V},\ I_{\text{ph}} = 50\ \text{A} \Rightarrow V_{\text{ph}} = 400\ \text{V},\quad I_L = \sqrt{3} \times 50 = 86.6\ \text{A}
+\]
+\[
+\text{open delta: } 3 \times 10\ \text{kVA bank} \Rightarrow S_{VV} = 0.577 \times 30 = 17.32\ \text{kVA} = 0.866 \times 20\ \text{kVA}
+\]
+
+\subsection*{\color{copper}MEMORY DUMP (write cold)}
+3-limb core, one phase per limb, fluxes sum zero so yoke half area. Star: $\sqrt{3}$ in voltage (30$^\circ$ lead), $I_L = I_{\text{ph}}$. Delta: $\sqrt{3}$ in current (30$^\circ$ lag), $V_L = V_{\text{ph}}$. Y-Y: neutrals, third-harmonic and float trouble, 0$^\circ$. $\Delta$-$\Delta$: heavy current, harmonics circulate, unbalance-proof, open-delta rescue, 0$^\circ$. Y-$\Delta$: 30$^\circ$, step-down substations. $\Delta$-Y: 30$^\circ$ reversed, step-up at generators, four-wire distribution. Open delta: $S_{VV} = \sqrt{3} S_u = 57.7\%$ bank = 86.6\% survivors. Parallel only same shift group.
+
+\end{document}

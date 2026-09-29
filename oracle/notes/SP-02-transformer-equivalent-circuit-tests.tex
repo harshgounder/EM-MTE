@@ -1,0 +1,449 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+
+\definecolor{copper}{HTML}{8C4A2F}
+\definecolor{iron}{HTML}{262B33}
+\definecolor{muted}{HTML}{6B6B6B}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize\color{muted} SP-02 \textbar{} Transformer II: Equivalent Circuit + Tests \textbar{} EM-MTE notes}
+\rhead{\footnotesize\color{muted} ELC2104 \textbar{} MTE}
+\cfoot{\footnotesize\color{muted} \thepage}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\qhead}[2]{\subsection*{\color{copper}#1\quad\color{iron}#2}}
+\newcommand{\tagline}[1]{\textbf{\color{copper}#1}}
+\newcommand{\keydist}[1]{\vspace{2pt}\textbf{\color{red}KEY DISTINCTION.} #1}
+\newcommand{\drawline}[1]{\textbf{\color{muted}[DRAW]} #1}
+\newcommand{\srcwrong}[1]{\textbf{\color{red}[SRC WRONG]} #1}
+\newcommand{\trap}[1]{\vspace{2pt}\textbf{\color{red}[TRAP]} #1}
+
+\begin{document}
+
+\begin{center}
+{\footnotesize\color{copper} ELC2104 \textbar{} ELECTRICAL MACHINES \textbar{} MTE}\\[6pt]
+{\LARGE\bfseries\color{iron} SP-02: Transformer II}\\[2pt]
+{\Large\color{copper} Equivalent Circuit, Referring, and the OC / SC Tests}\\[6pt]
+{\footnotesize\color{muted} Question-driven notes, dense-point standard. Covers T.4 to T.5 of the locked syllabus.}
+\end{center}
+
+\vspace{2pt}
+\tagline{QUESTION SHAPES IN THIS FILE:} Q4 (equivalent circuit + components), Q5 (methods to find the parameters), Q9 (SC test + derive the equivalent impedance parameters), Q10 (OC test + core loss and no-load parameters). Numerics: WE-01, WE-02, WE-07, D1-05, D1-06 (referring and test-data families).
+\vspace{2pt}
+
+\keydist{The two tests split the parameter set cleanly: the OC test feeds the \emph{shunt} branch ($R_0$, $X_0$, core loss), the SC test feeds the \emph{series} branch ($R_{\text{eq}}$, $X_{\text{eq}}$, copper loss). If a parameter is not in one of those two groups, the question is trying something on you.}
+
+\hrulefill
+
+% ============================================================ Q4
+\qhead{Q4 (verbatim):}{Draw and explain the equivalent circuit of a single-phase transformer and identify all its components.}
+
+\tagline{WHAT TO WRITE:} say the model is the ideal transformer plus the real-machine corrections \textrightarrow{} the diagram (your hand) \textrightarrow{} one full point per component (what it is, where it sits, what it models) \textrightarrow{} the exact / simplified / approximate variants \textrightarrow{} when each variant is used.
+
+\tagline{MODEL ANSWER (the text that must accompany the diagram).}
+\begin{enumerate}[label=\arabic*.]
+\item The equivalent circuit is the ideal transformer from Q3 with one circuit element added for each real-machine effect. Every physical phenomenon in the transformer becomes exactly one component, so all behaviour (drops, losses, regulation, efficiency) can be computed with circuit algebra instead of magnetic reasoning.
+\item \textbf{$R_1$ (primary winding resistance):} in series with the primary. It models the copper loss $I_1^2 R_1$ and the resistive part of the primary voltage drop. Its value is found by a DC resistance measurement of the winding.
+\item \textbf{$X_1$ (primary leakage reactance):} in series with $R_1$. It models the primary leakage flux (flux that links only the primary, not the secondary) as a reactive drop. No loss is associated with it: it only stores and returns energy.
+\item \textbf{$R_2'$ and $X_2'$ (secondary resistance and leakage reactance referred to the primary):} in series on the secondary side of the ideal transformer. Because the ideal transformer symbol carries the turns ratio $a$, the secondary quantities are referred to the primary first (see the referring block below) so the whole circuit sits at one voltage level and the ideal transformer symbol can be treated as a ratio bookkeeping device.
+\item \textbf{$R_0$ (core-loss resistance):} the resistive part of the shunt branch, across the induced-emf point. It draws the working current $I_w$ and models the real power of the iron losses (hysteresis + eddy): $I_w^{2}\, R_0 = \dfrac{V_0^{2}}{R_0} = W_0$ (the iron loss).
+\item \textbf{$X_0$ (magnetising reactance):} the reactive part of the shunt branch. It draws the magnetising current $I_m$ that creates the mutual flux. Because the core is nearly ideal this reactance is large, which is exactly why $I_m$ and $I_0$ are small (SP-01, Q17).
+\item \textbf{The shunt branch $R_0 \parallel X_0$:} together they draw the no-load current $I_0 = I_w + I_m$ (phasor sum). In the \textbf{exact} circuit this branch sits at the induced-emf point (after $R_1$ and $X_1$), because physically the core is excited by the induced emf, not the terminal voltage.
+\item \textbf{The ideal transformer + load:} at the far end, the ideal transformer with ratio $a = \dfrac{N_1}{N_2}$ transforms the referred load $Z_L' = a^2 Z_L$ (with $Z_L$ the actual secondary load) to what the primary side sees.
+\item \textbf{Simplified form:} the shunt branch is moved to the supply terminals. The error is tiny because at normal loads the drop across $R_1 + jX_1$ is small (a few percent), so the voltage feeding the shunt branch barely changes. This form makes parallel-operation and load-share algebra much cleaner (SP-05).
+\item \textbf{Approximate form:} on top of moving the shunt branch, the series elements are lumped: $R_{\text{eq}} = R_1 + R_2'$ and $X_{\text{eq}} = X_1 + X_2'$. This two-element series model ($R_{\text{eq}}$, $X_{\text{eq}}$) is what the SC test measures directly and what nearly every regulation and load-sharing calculation uses.
+\item \textbf{When to use which:} exact circuit for no-load and low-load behaviour and for locating the shunt branch precisely; simplified circuit for most load problems; approximate circuit for voltage regulation, efficiency and parallel operation, where the total series drop is all that matters.
+\end{enumerate}
+
+\drawline{three circuits in one figure column: (a) exact: source, $R_1$ $X_1$ in series, shunt $R_0$ $X_0$ at the emf point, then $R_2'$ $X_2'$ and the ideal-transformer symbol with ratio $a$ and the referred load $Z_L'$; (b) simplified: shunt at the supply terminals; (c) approximate: single series pair $R_{\text{eq}}$ $X_{\text{eq}}$ with the shunt at the terminals. Label checklist: every element above, plus the ratio $a$ and the current arrows $I_1$, $I_0$, $I_2'$.}
+
+\keydist{$R$ elements are lossy (real power), $X$ elements are lossless (reactive drop). The shunt branch is the \emph{iron} story ($R_0$ core loss, $X_0$ magnetising). The series elements are the \emph{copper + leakage} story. Never mix the groups: it costs the whole question.}
+
+% ============================================================ Q5
+\qhead{Q5 (verbatim):}{Explain the methods used to determine the equivalent circuit parameters of a transformer.}
+
+\tagline{MODEL ANSWER.}
+\begin{enumerate}[label=\arabic*.]
+\item The parameter set is six values on one chosen side: $R_1$, $X_1$, $R_2'$, $X_2'$ (series branch) and $R_0$, $X_0$ (shunt branch). Determination means: two standard tests (OC and SC) plus one small winding-resistance measurement plus arithmetic.
+\item \textbf{Open-circuit test} (Q10 in full): the \emph{low-voltage} winding is energised at rated voltage with the other winding open. The wattmeter reading is the core loss (the only real power drawn), and from $V_0$, $I_0$, $W_0$ one computes $\cos\phi_0$, $I_w$, $I_m$, $R_0$, $X_0$ and the iron loss. This fills the entire shunt branch.
+\item \textbf{Short-circuit test} (Q9 in full): the \emph{high-voltage} winding is short-circuited and a small voltage is raised until rated current flows. The wattmeter reads the copper loss at that current, and from $V_{\text{sc}}$, $I_{\text{sc}}$, $W_{\text{sc}}$ one computes $R_{\text{eq}}$, $X_{\text{eq}}$ and $Z_{\text{eq}}$ directly. This fills the lumped series branch.
+\item \textbf{Splitting the lumped series branch:} the SC test gives only $R_{\text{eq}} = R_1 + R_2'$ and $X_{\text{eq}} = X_1 + X_2'$. To separate them, first measure the DC resistance of each winding with a bridge or the voltmeter-ammeter method (then add a few percent for AC skin and proximity effects if the problem asks). Then $R_2' = R_{\text{eq}} - R_1$.
+\item For the leakage split the usual exam assumption is $X_1 = X_2'$ (equal leakage on the two windings), so $X_1 = X_2' = \dfrac{X_{\text{eq}}}{2}$. If the problem gives separate leakage figures (like WE-01 and WE-02 do), no assumption is needed: everything is already given per winding.
+\item \textbf{Transformation ratio:} $a$ is obtained from the turns counts or from the no-load voltage ratio $\dfrac{V_1}{V_2}$ (the ratio is exact at no load because the impedance drops are zero there).
+\item \textbf{The full-load copper loss} comes straight from the SC wattmeter reading scaled to rated current: $P_{\text{cu,FL}} = W_{\text{sc}}\left(\dfrac{I_{\text{rated}}}{I_{\text{sc}}}\right)^{2}$. If the SC test was run at exactly rated current (D1-06), the reading is $P_{\text{cu,FL}}$ already.
+\item \textbf{The iron loss} is the OC wattmeter reading at rated voltage, and it is treated as constant at fixed voltage and frequency (SP-04 for the full loss story).
+\item \textbf{Referring discipline (the exam's favourite trap):} every parameter is physically \emph{attached} to the side where it was measured. The OC test on the LV side gives $R_0$, $X_0$ at the LV side; the SC test on the HV side gives $R_{\text{eq}}$, $X_{\text{eq}}$ at the HV side. Before combining them into one circuit, refer everything to the side the question asks for and \textbf{label the side in every answer line} (the source itself gets this wrong once: WE-07, errata E4 below).
+\item \textbf{Sanity checks the answer should mention:} $R_0$ from $\dfrac{V_0}{I_w}$ must equal $\dfrac{V_0^{2}}{W_0}$ (two routes to the same number); $P_{\text{cu,FL}}$ computed on the primary side must equal the value computed on the secondary side when unrounded currents are used (WE-02 trap); and $Z_{\text{eq}} \geq R_{\text{eq}}$ always (else the numbers are inconsistent).
+\end{enumerate}
+
+\trap{a common exam kill: giving HV-side test numbers as the ``LV-side parameters'' (or the reverse). Always write the side as a subscript or a word: $R_{\text{eq,H}}$, ``referred to LV''.}
+
+\drawline{the two test circuits (covered in Q9/Q10 below) plus one phasor triangle from the OC data ($V_1$ reference, $I_w$ in phase, $I_m$ at 90$^\circ$, $I_0$ the hypotenuse).}
+
+\keydist{OC fills the shunt branch, SC fills the series branch, the DC resistance measurement splits the series branch, and referring moves things between sides. Four operations, six parameters, zero magic.}
+
+% ============================================================ Q9
+\qhead{Q9 (verbatim):}{Explain the short-circuit test of a transformer with a neat circuit diagram and derive the equivalent impedance parameters.}
+
+\tagline{WHAT TO WRITE:} circuit + which winding is shorted and why \textrightarrow{} procedure with the instruments \textrightarrow{} why the shunt branch is neglected (the physics) \textrightarrow{} the three derivations ($Z_{\text{eq}}$, $R_{\text{eq}}$, $X_{\text{eq}}$) \textrightarrow{} copper-loss scaling.
+
+\tagline{TEST SETUP (text for your diagram).} The \textbf{high-voltage} winding is the one supplied (through a variac/variable supply) with the \textbf{low-voltage} winding short-circuited by a thick link of negligible resistance. An ammeter is in series with the HV winding, a voltmeter across the supply, and a wattmeter (low power factor type) with its current coil in series and pressure coil across the supply. The variac is raised \emph{slowly} until the ammeter reads the rated current of the HV winding.
+
+\tagline{WHY IT WORKS (the physics points).}
+\begin{enumerate}[label=\arabic*.]
+\item The applied voltage needed to drive rated current through the transformer is small, typically 5 to 10 percent of rated voltage (it is just the rated current times the short impedance).
+\item Since the applied voltage is that small, the mutual flux is that small (from $E = 4.44 f N \Phi_m$, $\Phi_m$ scales with voltage at fixed $f$ and $N$), so the core works far below saturation and the iron loss is negligible (core loss scales roughly with $B_m^{1.6}$ to $B_m^{2}$).
+\item Correspondingly the shunt branch draws almost nothing ($I_0$ would be a tiny fraction of the rated current flowing through the series branch), so the circuit reduces to the series combination $R_{\text{eq}} + jX_{\text{eq}}$ alone. This is why the test reads the series branch directly.
+\item The wattmeter reading is then purely the copper loss at the test current: $W_{\text{sc}} = I_{\text{sc}}^{2}\, R_{\text{eq}}$ (iron loss is too small to matter at this voltage).
+\end{enumerate}
+
+\tagline{DERIVATION OF THE PARAMETERS.}
+\textbf{Step 1: equivalent impedance.} The circuit is $R_{\text{eq}}$ and $X_{\text{eq}}$ in series, so the magnitude of the short-circuit impedance is the applied voltage over the circulating current:
+\[
+Z_{\text{eq}} = \frac{V_{\text{sc}}}{I_{\text{sc}}}
+\qquad (\text{in ohms, on the supplied side})
+\]
+
+\textbf{Step 2: equivalent resistance.} The wattmeter measures the real power dissipated in the series resistance:
+\[
+W_{\text{sc}} = I_{\text{sc}}^{2}\, R_{\text{eq}}
+\qquad\Longrightarrow\qquad
+R_{\text{eq}} = \frac{W_{\text{sc}}}{I_{\text{sc}}^{2}}
+\]
+
+\textbf{Step 3: equivalent reactance.} The impedance triangle gives $Z_{\text{eq}}^{2} = R_{\text{eq}}^{2} + X_{\text{eq}}^{2}$, so:
+\[
+X_{\text{eq}} = \sqrt{Z_{\text{eq}}^{2} - R_{\text{eq}}^{2}}
+\]
+
+\textbf{Step 4: full-load copper loss (scaling rule).} The measured loss is at $I_{\text{sc}}$; the loss at any other current follows the square law:
+\[
+P_{\text{cu}}(x) = x^{2}\, P_{\text{cu,FL}},
+\qquad
+P_{\text{cu,FL}} = W_{\text{sc}}\left(\frac{I_{\text{rated}}}{I_{\text{sc}}}\right)^{2}
+\]
+and if $I_{\text{sc}} = I_{\text{rated}}$ then $P_{\text{cu,FL}} = W_{\text{sc}}$ directly.
+
+\textbf{Step 5: referring (when asked).} Everything above is on the supplied (usually HV) side. To move to the other side with $a = \dfrac{N_1}{N_2} = \dfrac{V_1}{V_2}$ (primary over secondary):
+\[
+R_{\text{eq}}' = \frac{R_{\text{eq}}}{a^{2}}, \qquad
+X_{\text{eq}}' = \frac{X_{\text{eq}}}{a^{2}}, \qquad
+Z_{\text{eq}}' = \frac{Z_{\text{eq}}}{a^{2}}
+\quad\text{(going to the side with fewer volts per turn ratio)}
+\]
+\[
+R_{\text{eq}}' = a^{2}\, R_{\text{eq}}, \qquad
+X_{\text{eq}}' = a^{2}\, X_{\text{eq}}
+\quad\text{(multiplying when referring to the higher-voltage side)}
+\]
+The safe exam sentence: \emph{impedance referred to a side is multiplied by the square of (turns on that side divided by turns where it was measured)}. State the side in every line.
+
+\tagline{PRECAUTIONS / EXTRA POINTS.}
+\begin{enumerate}[label=\arabic*.]
+\item The shorting link must have genuinely negligible resistance: any link resistance shows up as transformer resistance and inflates $R_{\text{eq}}$.
+\item Read all three meters \emph{simultaneously} at rated current (the variac drifts).
+\item A low-power-factor wattmeter is specified because the test power factor is $\dfrac{R_{\text{eq}}}{Z_{\text{eq}}}$, typically 0.1 to 0.2.
+\item One more parameter source: the short-circuit \emph{voltage} at rated current is called the percent impedance (or percent impedance voltage) of the transformer, and it is exactly the parameter that fixes load sharing in parallel operation (SP-05).
+\end{enumerate}
+
+\drawline{SC test circuit: variac from supply into ammeter into HV winding, wattmeter current coil in series and pressure coil across, voltmeter across, LV winding drawn with a thick shorting bar. Label checklist: supply, variac, A, W (both coils shown), V, HV winding ($R_{\text{eq}}$, $X_{\text{eq}}$ labels), shorted LV, and the reading list $V_{\text{sc}}$, $I_{\text{sc}}$, $W_{\text{sc}}$.}
+
+\keydist{SC reads the \emph{series} branch because the tiny applied voltage kills the shunt branch's excitation. OC reads the \emph{shunt} branch because the full rated voltage with no load current makes the series drops meaningless. Each test kills the branch the other one measures.}
+
+% ============================================================ Q10
+\qhead{Q10 (verbatim):}{Explain the open-circuit test and show how core loss and no-load parameters are determined.}
+
+\tagline{TEST SETUP (text for your diagram).} The \textbf{low-voltage} winding is supplied (through a variac) at its \textbf{rated voltage}; the \textbf{high-voltage} winding is left open. An ammeter in series with the LV winding reads $I_0$, a voltmeter across reads $V_0$, and a wattmeter (high power factor type, since the current is small and the test runs at normal voltage and power factor components) reads $W_0$. The variac is adjusted until the voltmeter reads exactly the rated LV voltage.
+
+\tagline{WHY IT WORKS (the physics points).}
+\begin{enumerate}[label=\arabic*.]
+\item The secondary carries no current, so there is no load power and no $I_2^2 R_2$ copper loss. The input power is spent almost entirely in the core.
+\item The primary current is only the no-load current $I_0$ (2 to 5 percent of rated), so the primary copper loss $I_0^2 R_1$ is negligibly small. Therefore: $W_0 \approx$ iron loss at rated voltage. This is the single most-used identity in the whole file.
+\item Because the load current is zero there are no impedance drops to speak of: the induced emf equals the applied voltage, and the parameters read off this condition belong to the winding being supplied.
+\end{enumerate}
+
+\tagline{DERIVATION OF THE NO-LOAD PARAMETERS.}
+\textbf{Step 1: the power factor of the test.} The wattmeter gives real power, so:
+\[
+W_0 = V_0\, I_0\, \cos\phi_0
+\qquad\Longrightarrow\qquad
+\cos\phi_0 = \frac{W_0}{V_0\, I_0}
+\]
+
+\textbf{Step 2: split $I_0$ into its two components} (the Q17 phasor picture):
+\[
+I_w = I_0\, \cos\phi_0
+\qquad\qquad
+I_m = I_0\, \sin\phi_0 = \sqrt{I_0^{2} - I_w^{2}}
+\]
+($I_w$ in phase with $V_0$: feeds core loss. $I_m$ at 90$^\circ$ behind $V_0$: creates the flux.)
+
+\textbf{Step 3: core-loss resistance.} $R_0$ is the resistance that would draw $I_w$ at voltage $V_0$:
+\[
+R_0 = \frac{V_0}{I_w}
+\]
+and equivalently, since the core loss is $W_0$:
+\[
+R_0 = \frac{V_0^{2}}{W_0}
+\qquad\text{(both routes must agree: a good check in numericals)}
+\]
+
+\textbf{Step 4: magnetising reactance.} $X_0$ is the reactance that would draw $I_m$ at voltage $V_0$:
+\[
+X_0 = \frac{V_0}{I_m}
+\]
+
+\textbf{Step 5: side discipline.} All four values ($R_0$, $X_0$, $I_w$, $I_m$) are on the \emph{supplied} winding's side. If the LV winding was supplied (the standard), these are LV-side values and must be referred by $a^{2}$ before joining HV-side SC results (worked out in WE-07 below).
+
+\tagline{EXTRA POINTS.}
+\begin{enumerate}[label=\arabic*.]
+\item Repeat at a couple of voltages if asked: the iron-loss curve versus voltage is how the hysteresis/eddy split is studied later, but a single rated-voltage reading is all a standard question wants.
+\item $W_0$ is the iron loss at \emph{rated voltage and rated frequency}. Change either and the loss changes (SP-04 formulas).
+\item The no-load current is drawn mostly reactive ($I_m \gg I_w$), which is why $\cos\phi_0$ reads terribly low (0.1 to 0.25) even though no load is served.
+\end{enumerate}
+
+\drawline{OC test circuit: supply into variac into ammeter into LV winding (wattmeter current coil in series, pressure coil across, voltmeter across), HV winding drawn open with the open terminals marked. Label checklist: supply, variac, A, W, V, LV winding, open HV, readings $V_0$, $I_0$, $W_0$. Plus the no-load phasor: $V_1$ reference arrow, $I_w$ along it, $I_m$ perpendicular at 90$^\circ$, $I_0$ along the hypotenuse, $\phi_0$ marked.}
+
+\keydist{$W_0$ is core loss because the two copper losses are both absent (one current is zero, the other is tiny). The identity $P_{\text{iron}} = W_0$ is what every efficiency question then leans on.}
+
+% ============================================================ NUMERICS
+\hrulefill
+\subsection*{\color{copper}WORKED NUMERICS: REFERRING + TEST DATA (WE-01, WE-02, WE-07, D1-05, D1-06)}
+
+\tagline{WE-01 (referring basics).} A 30 kVA, 2000/200 V, 50 Hz transformer has $R_1 = 3.5\ \Omega$, $X_1 = 4.5\ \Omega$, $R_2 = 0.015\ \Omega$, $X_2 = 0.02\ \Omega$. Find the equivalent resistance and reactance referred to the primary and the full-load copper loss.
+
+\textbf{Givens:} $S = 30$ kVA, $V_1 = 2000$ V, $V_2 = 200$ V, $R_1 = 3.5\ \Omega$, $X_1 = 4.5\ \Omega$, $R_2 = 0.015\ \Omega$, $X_2 = 0.02\ \Omega$.
+
+\textbf{Solution.}
+\[
+a = \frac{V_1}{V_2} = \frac{2\,000}{200} = 10
+\qquad\Longrightarrow\qquad
+R_2' = a^{2} R_2 = 100 \times 0.015 = 1.5\ \Omega
+\qquad
+X_2' = a^{2} X_2 = 100 \times 0.02 = 2\ \Omega
+\]
+\[
+R_{\text{eq}} = R_1 + R_2' = 3.5 + 1.5 = 5\ \Omega
+\qquad\qquad
+X_{\text{eq}} = X_1 + X_2' = 4.5 + 2 = 6.5\ \Omega
+\]
+\[
+Z_{\text{eq}} = 5 + j6.5\ \Omega
+\qquad\Longrightarrow\qquad
+\left|Z_{\text{eq}}\right| = \sqrt{5^{2} + 6.5^{2}} = \sqrt{67.25} = 8.20\ \Omega
+\]
+\[
+I_{1,\text{FL}} = \frac{S}{V_1} = \frac{30\,000}{2\,000} = 15\ \text{A}
+\qquad\Longrightarrow\qquad
+P_{\text{cu,FL}} = I_{1,\text{FL}}^{2}\, R_{\text{eq}} = 225 \times 5 = 1\,125\ \text{W}
+\]
+
+\textbf{Answer:} $R_2' = 1.5\ \Omega$, $X_2' = 2\ \Omega$, $R_{\text{eq}} = 5\ \Omega$, $X_{\text{eq}} = 6.5\ \Omega$, $|Z_{\text{eq}}| = 8.20\ \Omega$, $P_{\text{cu,FL}} = 1\,125$ W.
+
+\vspace{2pt}
+
+\tagline{WE-02 (both sides + the rounding trap).} A 50 kVA, 4400/220 V transformer has $R_1 = 3.45\ \Omega$, $X_1 = 5.2\ \Omega$, $R_2 = 0.009\ \Omega$, $X_2 = 0.015\ \Omega$. Find the equivalent resistance and reactance and the total impedance on \emph{both} sides, and the full-load copper loss.
+
+\textbf{Solution (primary side first).}
+\[
+a = \frac{4\,400}{220} = 20
+\qquad\Longrightarrow\qquad
+R_2' = a^{2} R_2 = 400 \times 0.009 = 3.6\ \Omega
+\qquad
+X_2' = a^{2} X_2 = 400 \times 0.015 = 6\ \Omega
+\]
+\[
+R_{\text{eq,1}} = 3.45 + 3.6 = 7.05\ \Omega
+\qquad
+X_{\text{eq,1}} = 5.2 + 6 = 11.2\ \Omega
+\qquad
+|Z_1| = \sqrt{7.05^{2} + 11.2^{2}} = 13.23\ \Omega
+\]
+
+\textbf{Solution (secondary side).} Now refer the primary values \emph{down} by dividing by $a^{2} = 400$:
+\[
+R_1' = \frac{3.45}{400} = 0.008625\ \Omega
+\qquad
+X_1' = \frac{5.2}{400} = 0.013\ \Omega
+\]
+\[
+R_{\text{eq,2}} = 0.008625 + 0.009 = 0.017625\ \Omega
+\qquad
+X_{\text{eq,2}} = 0.013 + 0.015 = 0.028\ \Omega
+\qquad
+|Z_2| = 0.03308\ \Omega
+\]
+
+\textbf{Full-load copper loss (compute it twice as the check).}
+\[
+I_{1,\text{FL}} = \frac{50\,000}{4\,400} = 11.3636\ \text{A}
+\qquad\Longrightarrow\qquad
+P_{\text{cu}} = I_{1,\text{FL}}^{2}\, R_{\text{eq,1}} = 129.13 \times 7.05 = 910.4\ \text{W}
+\]
+\[
+I_{2,\text{FL}} = \frac{50\,000}{220} = 227.27\ \text{A}
+\qquad\Longrightarrow\qquad
+P_{\text{cu}} = I_{2,\text{FL}}^{2}\, R_{\text{eq,2}} = 51\,653 \times 0.017625 = 910.4\ \text{W}
+\quad\checkmark
+\]
+\trap{the two sides agree only with unrounded currents. The source prints 909.80 W from $I_1 = 11.36$ A rounded to 2 decimals: a rounding artifact, not physics. Keep full precision until the last line.}
+
+\vspace{2pt}
+
+\tagline{WE-07 (the side-label trap, errata E4).} A 50 kVA, 2400/120 V transformer gives: OC on LV at 120 V: 9.65 A, 396 W. SC on HV at 20.8 A: 92 V, 810 W. Find the equivalent-circuit parameters referred to the \textbf{LV} side.
+
+\textbf{OC side (LV): shunt branch.}
+\[
+\cos\phi_0 = \frac{W_0}{V_0\, I_0} = \frac{396}{120 \times 9.65} = 0.342
+\]
+\[
+I_w = I_0 \cos\phi_0 = 9.65 \times 0.342 = 3.30\ \text{A}
+\qquad\qquad
+I_m = \sqrt{I_0^{2} - I_w^{2}} = \sqrt{93.12 - 10.89} = 9.07\ \text{A}
+\]
+\[
+R_0 = \frac{V_0}{I_w} = \frac{120}{3.30} = 36.36\ \Omega
+\qquad\qquad
+X_0 = \frac{V_0}{I_m} = \frac{120}{9.07} = 13.23\ \Omega
+\qquad\text{(both already LV side)}
+\]
+
+\textbf{SC side (HV): series branch.}
+\[
+Z_{\text{eq,H}} = \frac{V_{\text{sc}}}{I_{\text{sc}}} = \frac{92}{20.8} = 4.423\ \Omega
+\qquad
+R_{\text{eq,H}} = \frac{W_{\text{sc}}}{I_{\text{sc}}^{2}} = \frac{810}{20.8^{2}} = 1.872\ \Omega
+\]
+\[
+X_{\text{eq,H}} = \sqrt{Z_{\text{eq,H}}^{2} - R_{\text{eq,H}}^{2}} = \sqrt{19.56 - 3.50} = 4.007\ \Omega
+\]
+
+\textbf{Refer to LV:} $a = \dfrac{2\,400}{120} = 20$, so divide by $a^{2} = 400$:
+\[
+R_{\text{eq,L}} = \frac{1.872}{400} = 0.00468\ \Omega
+\qquad\qquad
+X_{\text{eq,L}} = \frac{4.007}{400} = 0.01002\ \Omega
+\]
+
+\textbf{Answer (LV side):} $R_0 = 36.36\ \Omega$, $X_0 = 13.23\ \Omega$, $R_{\text{eq}} = 0.00468\ \Omega$, $X_{\text{eq}} = 0.01002\ \Omega$. \srcwrong{the source labels 1.872 $\Omega$ and 4 $\Omega$ as the LV values. Those are the HV-side numbers straight from the test (errata E4). This is THE test-side trap of the corpus: always state which side each number lives on.}
+
+\vspace{2pt}
+
+\tagline{D1-05 (test data to parameters to efficiency + regulation).} A 5 kVA, 250/500 V transformer: OC on LV at 250 V: 1 A, 80 W. SC on HV: 20 V, 12 A, 100 W. Find the circuit constants, the full-load efficiency, and the voltage regulation at full load and 0.9 power factor lagging.
+
+\textbf{OC side (LV):} $\cos\phi_0 = \dfrac{80}{250 \times 1} = 0.32$,
+\[
+I_w = 0.32\ \text{A}, \qquad
+I_m = \sqrt{1 - 0.1024} = 0.9474\ \text{A}
+\]
+\[
+R_0 = \frac{250}{0.32} = 781.25\ \Omega
+\qquad\qquad
+X_0 = \frac{250}{0.9474} = 263.9\ \Omega
+\qquad\text{(LV side)}
+\]
+
+\textbf{SC side (HV) and the errata.} The rated HV current is $\dfrac{5\,000}{500} = 10$ A, yet the SC row says 12 A (errata E14). Two defensible routes:
+\[
+Z_{\text{eq,H}} = \frac{20}{12} = 1.667\ \Omega
+\qquad
+R_{\text{eq,H}} = \frac{100}{144} = 0.6944\ \Omega
+\qquad
+X_{\text{eq,H}} = \sqrt{1.667^{2} - 0.6944^{2}} = 1.515\ \Omega
+\]
+\textbf{Route A (keep 12 A, scale the loss):} $P_{\text{cu,FL}} = 100 \left(\dfrac{10}{12}\right)^{2} = 69.44$ W.
+\[
+\eta_{\text{FL}} = \frac{4\,500}{4\,500 + 80 + 69.44} = \frac{4\,500}{4\,649.44} = 96.79\%
+\]
+\[
+\text{drop} = I_2\left(R_{\text{eq,H}}\cos\phi + X_{\text{eq,H}}\sin\phi\right) = 10\,(0.6944 \times 0.9 + 1.515 \times 0.4359) = 12.85\ \text{V}
+\]
+\[
+\%\,\text{VR} = \frac{12.85}{500} \times 100 = 2.57\%
+\]
+\textbf{Route B (treat 12 A as a typo for 10 A):} then $Z_{\text{eq,H}} = 2\ \Omega$, $R_{\text{eq,H}} = 1\ \Omega$, $X_{\text{eq,H}} = \sqrt{3} = 1.732\ \Omega$, $P_{\text{cu,FL}} = 100$ W, $\eta_{\text{FL}} = \dfrac{4\,500}{4\,680} = 96.15\%$, and $\%\,\text{VR} = 3.31\%$.
+\textbf{Answer:} give Route A as the computed answer and state Route B in one line as the typographical alternative. Examiners credit the flag.
+
+\vspace{2pt}
+
+\tagline{D1-06 (clean test pair, both families).} A 100 kVA, 11 kV/220 V, 50 Hz transformer: OC on LV at 220 V: 45 A, 2 kW. SC on HV at 500 V, 9.09 A: 3 kW. Find the equivalent-circuit parameters referred to the LV side.
+
+\textbf{OC side (LV):}
+\[
+\cos\phi_0 = \frac{2\,000}{220 \times 45} = 0.202
+\qquad
+I_w = 45 \times 0.202 = 9.09\ \text{A}
+\qquad
+I_m = \sqrt{45^{2} - 9.09^{2}} = 44.07\ \text{A}
+\]
+\[
+R_0 = \frac{V_0}{I_w} = \frac{220}{9.09} = 24.2\ \Omega
+\qquad
+\left(\text{check: } \frac{V_0^{2}}{W_0} = \frac{220^{2}}{2\,000} = 24.2\ \Omega\ \checkmark\right)
+\qquad
+X_0 = \frac{220}{44.07} = 4.99\ \Omega
+\]
+
+\textbf{SC side (HV):}
+\[
+Z_{\text{eq,H}} = \frac{500}{9.09} = 55.0\ \Omega
+\qquad
+R_{\text{eq,H}} = \frac{3\,000}{9.09^{2}} = 36.31\ \Omega
+\qquad
+X_{\text{eq,H}} = \sqrt{55.0^{2} - 36.31^{2}} = 41.31\ \Omega
+\]
+\textbf{Refer to LV:} $a = \dfrac{11\,000}{220} = 50$, $a^{2} = 2\,500$:
+\[
+R_{\text{eq,L}} = \frac{36.31}{2\,500} = 0.01452\ \Omega
+\qquad\qquad
+X_{\text{eq,L}} = \frac{41.31}{2\,500} = 0.01653\ \Omega
+\]
+\textbf{Answer (LV side):} $R_0 = 24.2\ \Omega$, $X_0 = 4.99\ \Omega$, $R_{\text{eq}} = 0.0145\ \Omega$, $X_{\text{eq}} = 0.0165\ \Omega$. Side note worth one line in the exam: the rated HV current is $\dfrac{100\,000}{11\,000} = 9.09$ A, so the SC test was run at exactly rated current and the wattmeter reading \emph{is} $P_{\text{cu,FL}} = 3$ kW.
+
+\vspace{2pt}
+
+\tagline{WE-03 (flagged, do not chase).} The corpus starts a 30 kVA, 2000/200 V problem ($R_1 = 3.5\ \Omega$, $X_1 = 4.4\ \Omega$) and ends with ``the rest continues on the next image'', but the next page is a different problem entirely. The continuation does not exist in the course material. Treat it as a transcription wobble of the WE-01 family and move on.
+
+% ============================================================ SHEET
+\hrulefill
+\subsection*{\color{copper}FORMULA SHEET FOR THIS FILE}
+\begin{align*}
+\text{referring:}\quad R_2' &= a^{2} R_2, \quad X_2' = a^{2} X_2, \quad Z_L' = a^{2} Z_L,
+& a &= \frac{N_1}{N_2} = \frac{V_1}{V_2} \\[4pt]
+\text{going the other way:}\quad R_1' &= \frac{R_1}{a^{2}}, \quad X_1' = \frac{X_1}{a^{2}} \\[4pt]
+R_{\text{eq}} &= R_1 + R_2'
+& X_{\text{eq}} &= X_1 + X_2' \\[4pt]
+\text{SC test:}\quad Z_{\text{eq}} &= \frac{V_{\text{sc}}}{I_{\text{sc}}}
+& R_{\text{eq}} &= \frac{W_{\text{sc}}}{I_{\text{sc}}^{2}} \\[4pt]
+X_{\text{eq}} &= \sqrt{Z_{\text{eq}}^{2} - R_{\text{eq}}^{2}}
+& P_{\text{cu,FL}} &= W_{\text{sc}}\left(\frac{I_{\text{rated}}}{I_{\text{sc}}}\right)^{2} \\[4pt]
+\text{OC test:}\quad \cos\phi_0 &= \frac{W_0}{V_0\, I_0}
+& I_w &= I_0\cos\phi_0, \quad I_m = I_0\sin\phi_0 \\[4pt]
+R_0 &= \frac{V_0}{I_w} = \frac{V_0^{2}}{W_0}
+& X_0 &= \frac{V_0}{I_m} \\[4pt]
+P_{\text{cu}}(x) &= x^{2}\, P_{\text{cu,FL}}
+& P_{\text{iron}} &= W_0 \text{ at rated voltage}
+\end{align*}
+
+\subsection*{\color{copper}CLOSED-BOOK CHECK (cover the file, answer out loud)}
+\begin{enumerate}[label=\arabic*.]
+\item Name all six equivalent-circuit components and which physical effect each models.
+\item Which test fills which branch, and why does the other branch vanish in each test? Give the voltage-scaling argument for both.
+\item Derive $Z_{\text{eq}}$, $R_{\text{eq}}$, $X_{\text{eq}}$ from the three SC readings, and $R_0$, $X_0$, $I_w$, $I_m$ from the three OC readings. Every formula, no notes.
+\item Why is the OC test run on the LV side and the SC test on the HV side?
+\item WE-07's trap in one sentence: what went wrong in the source and how your answer avoids it.
+\item From memory: WE-01's $P_{\text{cu,FL}}$, D1-06's four LV-side parameters.
+\end{enumerate}
+
+\subsection*{\color{copper}MEMORY DUMP (write cold on blank paper)}
+Six elements: $R_1$ $X_1$ $R_2'$ $X_2'$ series (copper + leakage), $R_0$ $X_0$ shunt (core loss + magnetising). $a = \dfrac{N_1}{N_2}$; referring multiplies by $a^{2}$ toward the higher-voltage side and divides going down. SC test (supply on HV, short on LV) gives $Z_{\text{eq}} = \dfrac{V_{\text{sc}}}{I_{\text{sc}}}$, $R_{\text{eq}} = \dfrac{W_{\text{sc}}}{I_{\text{sc}}^{2}}$, $X_{\text{eq}} = \sqrt{Z_{\text{eq}}^{2} - R_{\text{eq}}^{2}}$, and $P_{\text{cu,FL}}$ by the current-squared rule. OC (supply on LV at rated volts, HV open) gives $\cos\phi_0 = \dfrac{W_0}{V_0 I_0}$, $I_w$, $I_m$, $R_0 = \dfrac{V_0}{I_w} = \dfrac{V_0^{2}}{W_0}$, $X_0 = \dfrac{V_0}{I_m}$, and $P_{\text{iron}} = W_0$. Label the side of every number. Keep full precision until the last line.
+
+\end{document}

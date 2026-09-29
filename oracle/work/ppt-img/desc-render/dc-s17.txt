@@ -1,0 +1,61 @@
+YES
+
+**(1) Transcription:**
+
+**Header (Top Left):**
+[Logo] MANIPAL UNIVERSITY JAIPUR
+
+**Header (Top Right):**
+[Logo] NAAC A+ GRADE WITH 3.28 SCORE
+
+**Title:**
+The Separately Excited Generator
+
+**Body Text:**
+It is not possible to predict analytically the value of $E_A$ to be expected from a given field current.
+
+*   Magnetization curve of the generator must be used to calculte $E_A$ accurately.
+*   Net mmf is $\mathcal{F}_{net} = N_F I_F - \mathcal{F}_{AR}$ and $I_F$ equivalent is $I_F - \mathcal{F}_{AR}/N_F$
+*   (Empty bullet point)
+*   The magnetization curves for a generator are drawn for a particular speed, usually the rated speed of the machine.
+*   If the machine is turning at other speeds than the rated speed, $E_A$ in a machine is related to speed by $\frac{E_A}{E_{A0}} = \frac{n}{n_0}$
+    *(Note: In the final bullet, "rated speed" overlaps with "$E_A$ in a machine is", and "related to" overlaps with the equation $\frac{E_A}{E_{A0}} = \frac{n}{n_0}$)*.
+
+**(2) Visual Description:**
+*   **Header:** A white background with a Manipal University Jaipur logo and text on the far left. On the far right, there is an NAAC A+ logo with the text "NAAC A+ GRADE WITH 3.28 SCORE" underneath. A thin yellow horizontal line separates the header from the main slide content.
+*   **Title:** Centered at the top of the main area in a large, black sans-serif font: "The Separately Excited Generator".
+*   **Body Text:** A block of text in a standard black serif font, consisting of an introductory sentence followed by five bullet points.
+*   **Mathematical Elements:** The text includes several mathematical expressions:
+    *   $E_A$ (appears multiple times).
+    *   $\mathcal{F}_{net} = N_F I_F - \mathcal{F}_{AR}$ (Net mmf equation).
+    *   $I_F - \mathcal{F}_{AR}/N_F$ (Equivalent $I_F$ equation).
+    *   $\frac{E_A}{E_{A0}} = \frac{n}{n_0}$ (Speed relationship equation).
+*   **Overlaps:** There are significant visual overlaps in the second and fifth bullet points where equations and text segments are printed on top of one another, likely due to a rendering error in the slide deck.
+*   **Empty Bullet:** There is a visible bullet point between the second and fourth bullet points with no accompanying text.
+*   **Diagrams/Graphs:** There are no diagrams, circuits, graphs, or phasor diagrams present on this slide.
+
+**(3) ASCII Art:**
+
+```text
++-----------------------------------------------------------------------+
+| [MU Logo] MANIPAL UNIVERSITY                   [NAAC A+ Logo]         |
+|             JAIPUR                             NAAC A+ GRADE WITH...  |
+|=======================================================================+
+|                                                                       |
+|           The Separately Excited Generator                            |
+|                                                                       |
+| It is not possible to predict analytically the value of E_A to be     |
+| expected from a given field current.                                  |
+|                                                                       |
+| • Magnetization curve of the generator must be used to calculte       |
+|   E_A accurately.                                                     |
+| • Net mmf is F_net = N_F I_F - F_AR   and  I_F equivalent is I_F - F_AR/N_F |
+| •                                                                     |
+| • The magnetization curves for a generator are drawn for a particular |
+|   speed, usually the rated speed of the machine.                      |
+| • If the machine is turning at other speeds than the rated speed,     |
+|   E_A in a machine is related to speed by  E_A/E_A0 = n/n_0          |
+|   (Note: text and equations overlap significantly here)               |
+|                                                                       |
++-----------------------------------------------------------------------+
+```

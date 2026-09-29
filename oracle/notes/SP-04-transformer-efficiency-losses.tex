@@ -1,0 +1,343 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+
+\definecolor{copper}{HTML}{8C4A2F}
+\definecolor{iron}{HTML}{262B33}
+\definecolor{muted}{HTML}{6B6B6B}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize\color{muted} SP-04 \textbar{} Transformer IV: Efficiency + Losses \textbar{} EM-MTE notes}
+\rhead{\footnotesize\color{muted} ELC2104 \textbar{} MTE}
+\cfoot{\footnotesize\color{muted} \thepage}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\qhead}[2]{\subsection*{\color{copper}#1\quad\color{iron}#2}}
+\newcommand{\tagline}[1]{\textbf{\color{copper}#1}}
+\newcommand{\keydist}[1]{\vspace{2pt}\textbf{\color{red}KEY DISTINCTION.} #1}
+\newcommand{\drawline}[1]{\textbf{\color{muted}[DRAW]} #1}
+\newcommand{\srcwrong}[1]{\textbf{\color{red}[SRC WRONG]} #1}
+\newcommand{\trap}[1]{\vspace{2pt}\textbf{\color{red}[TRAP]} #1}
+
+\begin{document}
+
+\begin{center}
+{\footnotesize\color{copper} ELC2104 \textbar{} ELECTRICAL MACHINES \textbar{} MTE}\\[6pt]
+{\LARGE\bfseries\color{iron} SP-04: Transformer IV}\\[2pt]
+{\Large\color{copper} Efficiency, Maximum Efficiency, and the Loss Story}\\[6pt]
+{\footnotesize\color{muted} Question-driven notes, dense-point standard. Covers T.7 and the losses half of T.9.}
+\end{center}
+
+\vspace{2pt}
+\tagline{QUESTION SHAPES IN THIS FILE:} Q7 (derive efficiency + max-efficiency condition), Q11a (max-efficiency condition + the corresponding expression), Q18 (why the core is laminated), Q19 (why the rating is kVA), Q20 (losses + reduction methods). Numerics: WE-10, WE-11, D1-03, D1-04 (efficiency and maximum-efficiency families).
+\vspace{2pt}
+
+\keydist{The loss taxonomy has exactly two real branches (copper and iron) plus stray. Copper tracks the load \emph{current}, iron tracks the supply \emph{voltage and frequency}. Maximum efficiency happens where the two are equal, which is a load point you can compute, not a property of the iron.}
+
+\hrulefill
+
+% ============================================================ Q7
+\qhead{Q7 (verbatim):}{Derive the expression for transformer efficiency and explain the condition for maximum efficiency.}
+
+\tagline{WHAT TO WRITE:} the loss taxonomy (2 lines) \textrightarrow{} efficiency definition \textrightarrow{} the derived expression at load current $I_2$ \textrightarrow{} the load-fraction form \textrightarrow{} the differentiation \textrightarrow{} the condition and its meaning \textrightarrow{} the maximum-efficiency expression.
+
+\tagline{POINTS BEFORE THE DERIVATION.}
+\begin{enumerate}[label=\arabic*.]
+\item Efficiency is output over input. Since a transformer is a static machine, its losses are copper plus iron plus small stray losses (no mechanical losses ever):
+\[
+\eta = \frac{\text{output power}}{\text{input power}} = \frac{\text{output power}}{\text{output power} + \text{losses}}
+\]
+\item The output at secondary voltage $V_2$, current $I_2$ and load power factor $\cos\phi$ is $V_2 I_2\cos\phi$ (watts). The losses at that load are: iron loss $P_i$ (constant at fixed voltage and frequency) and copper loss $I_2^{2} R_{\text{eq2}}$ (following the current squared).
+\end{enumerate}
+
+\tagline{DERIVATION OF THE EXPRESSION.}
+\[
+\boxed{\;\eta = \frac{V_2\, I_2\, \cos\phi}{V_2\, I_2\, \cos\phi + P_i + I_2^{2}\, R_{\text{eq2}}}\;}
+\]
+In percentage form multiply by 100. In terms of the \textbf{load fraction} $x$ (fraction of rated kVA) with $P_{\text{cu,FL}}$ = copper loss at rated current, the copper loss scales as $x^{2}$ and the delivered power as $x$:
+\[
+\boxed{\;\eta(x) = \frac{x\, S\, \cos\phi}{x\, S\, \cos\phi + P_i + x^{2}\, P_{\text{cu,FL}}}\;}
+\]
+($S$ = rated kVA as watts at the same power factor; keep the power factor explicit: it is in the numerator twice and never in the loss terms.)
+
+\tagline{CONDITION FOR MAXIMUM EFFICIENCY (the differentiation).}
+\textbf{Step 1:} efficiency is maximum when $\dfrac{d\eta}{dI_2} = 0$. Write $\eta = \dfrac{k I_2}{k I_2 + P_i + I_2^{2} R_{\text{eq2}}}$ with $k = V_2\cos\phi$ (a constant in this differentiation).
+
+\textbf{Step 2:} quotient rule:
+\[
+\frac{d\eta}{dI_2} = \frac{k\left(k I_2 + P_i + I_2^{2} R_{\text{eq2}}\right) - k I_2\left(k + 2 I_2 R_{\text{eq2}}\right)}{\left(k I_2 + P_i + I_2^{2} R_{\text{eq2}}\right)^{2}} = \frac{k\left(P_i - I_2^{2} R_{\text{eq2}}\right)}{\left(k I_2 + P_i + I_2^{2} R_{\text{eq2}}\right)^{2}}
+\]
+
+\textbf{Step 3:} set the numerator to zero:
+\[
+\boxed{\;P_i = I_2^{2}\, R_{\text{eq2}} = P_{\text{cu}}\;}
+\qquad\textbf{iron loss = copper loss at the load of maximum efficiency.}
+\]
+
+\textbf{Step 4: the load point.} Solving for the current and the load fraction:
+\[
+I_{2,\text{max}\eta} = \sqrt{\frac{P_i}{R_{\text{eq2}}}}
+\qquad\qquad
+x_{\text{max}\eta} = \sqrt{\frac{P_i}{P_{\text{cu,FL}}}}
+\]
+
+\textbf{Step 5: the maximum-efficiency expression.} At that load the two losses are both $P_i$, so total loss = $2 P_i$:
+\[
+\boxed{\;\eta_{\text{max}} = \frac{x\, S\, \cos\phi}{x\, S\, \cos\phi + 2\, P_i}\;}
+\qquad\text{with } x = x_{\text{max}\eta}
+\]
+
+\tagline{MEANING (write these as the closing points).}
+\begin{enumerate}[label=\arabic*.]
+\item Before the peak, the iron loss dominates: the fixed loss is being paid on a small output, so efficiency rises as load grows. After the peak, the copper loss (growing as $x^{2}$) outruns the output (growing as $x$), so efficiency falls again.
+\item Maximum efficiency rarely sits at full load. Distribution transformers are designed with $P_{\text{cu,FL}}$ a few times $P_i$ (commonly 2 to 4 times), so the peak lands at roughly 50 to 70 percent of full load, where a distribution transformer actually operates most hours.
+\item $\eta_{\text{max}}$ depends on the power factor: at the same kVA load a lower $\cos\phi$ delivers less watts through the same losses, so the numeric efficiency is lower. The \emph{load} of maximum efficiency (the kVA value) does not move with power factor: the condition is about losses only.
+\end{enumerate}
+
+\keydist{``Maximum efficiency'' is two different questions wearing one hat: the \emph{load at which} (found from $P_i = P_{\text{cu}}$, independent of power factor) and the \emph{value of} (which depends on $\cos\phi$). Answer both when the question asks for ``maximum efficiency''.}
+
+% ============================================================ Q11a
+\qhead{Q11a (verbatim, single-phase half):}{Explain the condition for maximum efficiency of a transformer and derive the corresponding expression.}
+
+\tagline{MODEL ANSWER (self-contained variant, differentiated with respect to the load fraction).}
+
+\textbf{The condition, stated first.} The efficiency of a transformer is maximum at the load where its \textbf{copper loss equals its iron loss}:
+\[
+P_{\text{cu}} = P_i
+\]
+At any lower load the constant iron loss drags the ratio down; at any higher load the quadratically growing copper loss drags the ratio down. Equality of the two is the unique balance point.
+
+\textbf{Derivation of the corresponding expression.}
+\textbf{Step 1:} write efficiency at load fraction $x$:
+\[
+\eta = \frac{x\, S\, \cos\phi}{x\, S\, \cos\phi + P_i + x^{2}\, P_{\text{cu,FL}}}
+\]
+\textbf{Step 2:} differentiate with respect to $x$ and set it to zero (same quotient rule as Q7, now with $k = S\cos\phi$):
+\[
+\frac{d\eta}{dx} = \frac{k\left(P_i - x^{2} P_{\text{cu,FL}}\right)}{\left(k x + P_i + x^{2} P_{\text{cu,FL}}\right)^{2}} = 0
+\qquad\Longrightarrow\qquad
+P_i = x^{2}\, P_{\text{cu,FL}}
+\]
+\textbf{Step 3:} solve for the load fraction at maximum efficiency:
+\[
+x_{\text{max}\eta} = \sqrt{\frac{P_i}{P_{\text{cu,FL}}}}
+\qquad\Longrightarrow\qquad
+S_{\text{max}\eta} = S\,\sqrt{\frac{P_i}{P_{\text{cu,FL}}}}
+\]
+\textbf{Step 4:} substitute back. At this load $x^{2} P_{\text{cu,FL}} = P_i$, so the loss column reads $2 P_i$:
+\[
+\boxed{\;\eta_{\text{max}} = \frac{S\,\sqrt{\dfrac{P_i}{P_{\text{cu,FL}}}}\;\cos\phi}{S\,\sqrt{\dfrac{P_i}{P_{\text{cu,FL}}}}\;\cos\phi + 2\, P_i}\;}
+\]
+equivalently, dividing the expression through by $x$:
+\[
+\eta_{\text{max}} = \frac{S\,\cos\phi}{S\,\cos\phi + 2\sqrt{P_i\, P_{\text{cu,FL}}}}
+\qquad\text{(tidy form worth remembering)}
+\]
+
+\textbf{Worked micro-example to anchor it (WE-11 numbers):} $P_i = 350$ W, $P_{\text{cu,FL}} = 400$ W, $S = 25$ kVA: $x = \sqrt{\dfrac{350}{400}} = 0.9354$, so maximum efficiency occurs at 23.4 kVA load, and there $\eta_{\text{max}} = 97.1\%$ at unity power factor (96.4\% at 0.8 lagging: same load point, different numeric efficiency).
+
+\keydist{If the question gives $P_i$ and $P_{\text{cu,FL}}$ and asks ``find the load for maximum efficiency'': answer in kVA ($S\sqrt{\dfrac{P_i}{P_{\text{cu,FL}}}}$), not amperes, unless it asks for the current.}
+
+% ============================================================ Q18
+\qhead{Q18 (verbatim):}{Why is the transformer core laminated?}
+
+\tagline{MODEL ANSWER.}
+\begin{enumerate}[label=\arabic*.]
+\item The core itself is a block of conducting iron sitting inside an alternating magnetic field. By Faraday's law the alternating flux induces emfs \emph{inside the core material}, exactly as it does in the windings.
+\item Those internal emfs drive circulating currents inside the solid iron: the \textbf{eddy currents}. They close in loops whose plane is perpendicular to the flux, in the yoke and limb cross-sections.
+\item Eddy currents dissipate real power as heat by $I^{2}R$ inside the core: this is the \textbf{eddy-current loss}. In a solid core the loop paths are wide, their resistance is low (iron is a conductor), and the loss is enormous: the core would overheat and the efficiency would collapse.
+\item \textbf{The fix:} build the core not from a solid block but from \textbf{thin sheets (laminations)}, about 0.27 to 0.35 mm thick, stacked and pressed together, with a thin layer of insulation (varnish, oxide, paper) between every two sheets.
+\item Laminations fight the eddy currents two ways at once. (a) They \emph{chop} the wide loops into narrow per-sheet loops: any loop trying to cross between sheets meets insulation, so the loop cross-section shrinks to one sheet's thickness. (b) Each loop's path is thin and therefore \emph{higher resistance}, so less current flows in it.
+\item The loss formula makes the win quantitative: the eddy loss per unit volume is
+\[
+P_e = k_e\, f^{2}\, B_m^{2}\, t^{2}
+\]
+where $t$ is the lamination thickness. The loss falls with the \emph{square} of the thickness: halving $t$ cuts eddy loss to one quarter. This is why modern transformer steel is pressed as thin as mechanically practical.
+\item The sheets are also usually \textbf{grain-oriented silicon steel (CRGO)}: the grain orientation narrows the hysteresis loop (cutting the hysteresis loss, the other iron loss) and the silicon raises the electrical resistivity of the steel, which suppresses eddy currents a second time.
+\item The cost of laminating is that the iron no longer fills the whole window: with insulation between sheets the \textbf{stacking factor} is about 0.90 to 0.95, so the net cross-sectional area $A_c$ is a few percent below the gross limb area (which is why the EMF equation uses the \emph{net} area).
+\item Orientation detail worth one line: the laminations are stacked with their \textbf{long direction along the flux} and the sheets insulated across the flux path's loop plane, so the useful flux passes through the metal unimpeded (flux crosses thin insulation gaps with little reluctance penalty only where unavoidable: in practice butt and lap joints are arranged to keep the flux travelling \emph{along} sheet directions).
+\end{enumerate}
+
+\trap{``laminated'' answers the \emph{eddy} loss only. Hysteresis loss is answered by the \emph{material} choice (silicon steel, grain orientation). Q20 wants both reduction stories told separately.}
+
+\keydist{The core is laminated to raise the resistance of the eddy-current loops and shrink their area, and the payoff is quadratic in the sheet thickness ($P_e \propto t^{2}$).}
+
+% ============================================================ Q19
+\qhead{Q19 (verbatim):}{Why are transformers rated in kVA rather than kW? Justify your answer considering transformer losses.}
+
+\tagline{MODEL ANSWER.}
+\begin{enumerate}[label=\arabic*.]
+\item A rating is a \emph{thermal} promise: the manufacturer guarantees the machine will run at its rated load without the insulation temperature exceeding its limit. The limit is set by the \emph{losses}, so the rating must be expressed in the quantities that fix the losses.
+\item The two loss branches are fixed by two different quantities. \textbf{Iron loss} is fixed by the voltage and frequency (it depends on the flux density $B_m$, and $B_m$ follows $V$ at fixed $f$): $P_h = k_h f B_m^{1.6}$, $P_e = k_e f^{2} B_m^{2} t^{2}$. \textbf{Copper loss} is fixed by the current: $P_{\text{cu}} = I^{2} R$.
+\item Therefore the heating of the transformer depends only on $V$ and $I$, and \emph{not} on the load power factor. The product $V \times I$ is apparent power in VA (kVA): that is exactly the quantity whose rating keeps the losses inside the guarantee.
+\item Real power in kW is $\text{kVA} \times \cos\phi$. The manufacturer cannot know what power factor the buyer's load will run at, so a kW promise would be a promise about someone else's equipment.
+\item The same physical machine can safely deliver \emph{different kW} at different power factors: at 0.8 pf a 100 kVA transformer delivers 80 kW; at unity pf the same 100 kVA delivers 100 kW. In both cases $V$ and $I$ (and so both losses, and so the temperature) are identical. A kW rating would forbid the first case or overrate the second.
+\item Efficiency and regulation \emph{do} depend on the power factor (their formulas contain $\cos\phi$), which is why those are always asked ``at'' a stated power factor. But the nameplate rating speaks about losses and temperature, hence kVA.
+\item Compact closing line for the exam: \emph{losses depend on voltage and current only, the load's power factor is not the transformer's business, so the rating is in volt-amperes (kVA).}
+\end{enumerate}
+
+\keydist{kW is a promise about the load. kVA is a promise about the transformer. Ratings are about the transformer.}
+
+% ============================================================ Q20
+\qhead{Q20 (verbatim):}{Explain the losses in a transformer and discuss methods for reducing each type of loss.}
+
+\tagline{MODEL ANSWER.}
+
+\textbf{The taxonomy (both branches, then stray, then the explicit non-loss).}
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Total loss = copper loss + iron (core) loss + stray losses.} A transformer is static, so there are \emph{no} mechanical losses (no friction, no windage, no bearing loss): say this explicitly, examiners like it.
+\item \textbf{Copper loss (winding loss):} $P_{\text{cu}} = I_1^{2} R_1 + I_2^{2} R_2 = I^{2} R$ in the equivalent-circuit lumped form. It exists in both windings, it is real power dissipated as heat in the copper, and it varies with the \emph{square of the load current}: at load fraction $x$, $P_{\text{cu}}(x) = x^{2}\, P_{\text{cu,FL}}$.
+\item \textbf{Hysteresis loss:} the alternating flux repeatedly re-orients the magnetic domains in the steel. Each B-H cycle spends energy flipping domain walls against friction, dissipated as heat. It depends on the loop area of the material:
+\[
+P_h = k_h\, f\, B_m^{1.6}
+\]
+(the 1.6 is the Steinmetz exponent; $k_h$ depends on the material). Proportional to frequency (more cycles per second), strongly proportional to peak flux density.
+\item \textbf{Eddy-current loss:} circulating currents induced inside the core conductive iron itself (the full story is Q18):
+\[
+P_e = k_e\, f^{2}\, B_m^{2}\, t^{2}
+\]
+Quadratic in frequency, quadratic in flux density, quadratic in lamination thickness.
+\item \textbf{Stray losses:} small losses in tank walls, clamps, bolts and frame parts caused by stray leakage flux inducing eddy currents in those structural pieces. Conventionally estimated as a small percentage of output (the deck's construction slide allows 10 to 20 percent of total weight in accessories, and stray loss is taken as a small fraction in calculations).
+\item \textbf{Load scaling summary (the graph in words):} iron loss is a horizontal line versus load (constant at fixed $V$, $f$); copper loss is a parabola from the origin (proportional to $x^{2}$); total loss is the vertical sum and is a parabola sitting on the iron-loss height. Efficiency is output over (output + this total), so it peaks where the parabola crosses the horizontal line: $P_{\text{cu}} = P_i$ (Q7).
+\end{enumerate}
+
+\textbf{Reduction methods (one bundle per loss).}
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Hysteresis loss down:} use a soft magnetic material with a \emph{narrow} B-H loop (low loop area): silicon steel, CRGO (cold-rolled grain-oriented) sheet. Operate the core below the saturation knee (keep $B_m$ in design range, about 1.2 to 1.8 T). Improving the material shrinks $k_h$.
+\item \textbf{Eddy-current loss down:} laminate the core with thin insulated sheets (the $t^{2}$ lever: 0.27 to 0.35 mm typical), and use silicon steel whose added resistivity lowers the loop currents further. The stacking trade-off is a few percent of net iron area.
+\item \textbf{Copper loss down:} lower the winding resistance: thicker conductor (more copper cross-section), high-conductivity (oxygen-free) copper, shorter mean turn per winding (tighter core window design), and good joint/termination design. The trade-off is cost, weight and window space.
+\item \textbf{Stray loss down:} careful winding geometry (reduce leakage fringing), non-magnetic clamps/tank parts where the stray flux lands, magnetic shielding or shunts to steer stray flux away from structural steel.
+\item \textbf{One integrated design note:} iron loss is decided by the core design and material (the voltage side), copper loss by the winding design (the current side). The designer chooses the balance so that at the transformer's expected operating load $P_{\text{cu}} \approx P_i$: the maximum-efficiency point is placed where the machine will actually live (Q7 meaning point 2).
+\end{enumerate}
+
+\drawline{(a) loss-versus-load graph: horizontal line labelled $P_i$ (iron, constant), parabola from the origin labelled $P_{\text{cu}} = x^{2} P_{\text{cu,FL}}$, total curve = the sum; mark the crossing point ``$P_{\text{cu}} = P_i$: max efficiency''. (b) power-flow diagram: input at left, arrows for iron loss and copper loss dropping down, output at right (input = output + losses). Label checklist on both: axes, all three curves/arrows, the crossing point.}
+
+\keydist{Hysteresis: material and $B_m$ (narrow loop). Eddy: geometry and $t$ (laminations, $t^{2}$). Copper: conductor size and length ($I^{2}R$). Stray: structure and shielding. Never merge the two iron-loss reduction stories: they are different physics and the question wants both.}
+
+% ============================================================ NUMERICS
+\hrulefill
+\subsection*{\color{copper}WORKED NUMERICS: EFFICIENCY FAMILIES (WE-10, WE-11, D1-03, D1-04)}
+
+\tagline{WE-10 (efficiency at two loads).} A 500 kVA, 6000/400 V transformer has $R_1 = 0.4\ \Omega$, $R_2 = 0.0015\ \Omega$ and an iron loss of 3.2 kW. Find the efficiency at full load and at half load, both at 0.8 power factor.
+
+\textbf{Givens:} $S = 500$ kVA, $V_1 = 6\,000$ V, $V_2 = 400$ V, $R_1 = 0.4\ \Omega$, $R_2 = 0.0015\ \Omega$, $P_i = 3\,200$ W, $\cos\phi = 0.8$.
+
+\textbf{Solution. Full-load copper loss (both windings, real currents):}
+\[
+I_{1,\text{FL}} = \frac{500\,000}{6\,000} = 83.333\ \text{A}
+\qquad\qquad
+I_{2,\text{FL}} = \frac{500\,000}{400} = 1\,250\ \text{A}
+\]
+\[
+P_{\text{cu,FL}} = 83.333^{2} \times 0.4 + 1\,250^{2} \times 0.0015 = 2\,777.8 + 2\,343.8 = 5\,121.5\ \text{W}
+\]
+\textbf{Full load:}
+\[
+\eta = \frac{500\,000 \times 0.8}{500\,000 \times 0.8 + 3\,200 + 5\,121.5} = \frac{400\,000}{408\,321.5} = 97.96\%
+\]
+\textbf{Half load} (copper loss quarters, iron loss holds):
+\[
+P_{\text{cu}}(0.5) = \frac{5\,121.5}{4} = 1\,280.4\ \text{W}
+\qquad
+\eta = \frac{200\,000}{200\,000 + 3\,200 + 1\,280.4} = \frac{200\,000}{204\,480.4} = 97.81\%
+\]
+\textbf{Answer:} 97.96\% at full load, 97.81\% at half load. \trap{the source's second page rounds $P_{\text{cu,FL}}$ to 5119.3 W (an internal rounding path): same 97.8\% class answer. Keep precision like WE-02.}
+
+\vspace{2pt}
+
+\tagline{WE-11 (maximum efficiency, both halves).} A 25 kVA, 2000/200 V transformer has an iron loss of 350 W and a full-load copper loss of 400 W. (1) Find the full-load efficiency at 0.8 power factor lagging. (2) Find the maximum efficiency and the load at which it occurs.
+
+\textbf{Solution (1).}
+\[
+\eta_{\text{FL}} = \frac{25\,000 \times 0.8}{25\,000 \times 0.8 + 350 + 400} = \frac{20\,000}{20\,750} = 96.39\%
+\]
+\textbf{Solution (2). Load of maximum efficiency:}
+\[
+x = \sqrt{\frac{P_i}{P_{\text{cu,FL}}}} = \sqrt{\frac{350}{400}} = 0.9354
+\qquad\Longrightarrow\qquad
+S_{\text{max}\eta} = 25 \times 0.9354 = 23.385\ \text{kVA}
+\]
+At this load both losses equal 350 W. Taking the source's unity-power-factor assumption for the value:
+\[
+\eta_{\text{max}} = \frac{23\,385}{23\,385 + 350 + 350} = \frac{23\,385}{24\,085} = 97.09\%
+\]
+\trap{the load point (23.385 kVA) does not move with power factor, but the value does. At 0.8 lagging on the same load: $\eta = \dfrac{23\,385 \times 0.8}{23\,385 \times 0.8 + 700} = \dfrac{18\,708}{19\,408} = 96.40\%$. If the question states a power factor, use it; if it does not, say which one you assumed.}
+\textbf{Answer:} (1) 96.39\%; (2) $\eta_{\text{max}} = 97.09\%$ at unity (96.40\% at 0.8) at a load of 23.385 kVA.
+
+\vspace{2pt}
+
+\tagline{D1-03 (the three-question classic).} A 50 kVA, 11 kV/400 V transformer has an iron loss of 500 W and a copper loss of 600 W at rated load. Find: (a) the full-load efficiency at unity power factor, (b) the load for maximum efficiency, (c) the iron and copper losses at that load.
+
+\textbf{Solution.}
+\[
+\text{(a)}\qquad
+\eta_{\text{FL}} = \frac{50\,000}{50\,000 + 500 + 600} = \frac{50\,000}{51\,100} = 97.85\%
+\]
+\[
+\text{(b)}\qquad
+x = \sqrt{\frac{500}{600}} = 0.9129
+\qquad\Longrightarrow\qquad
+S_{\text{max}\eta} = 50 \times 0.9129 = 45.6\ \text{kVA}
+\]
+\[
+\text{(c)}\qquad
+P_i = 500\ \text{W (unchanged)}
+\qquad
+P_{\text{cu}} = x^{2} P_{\text{cu,FL}} = \frac{500}{600} \times 600 = 500\ \text{W}
+\]
+\textbf{Answer:} (a) 97.85\%, (b) 45.6 kVA, (c) iron 500 W and copper 500 W: equal, as the condition demands. Writing ``copper = iron = 500 W'' is itself a half-mark.
+
+\vspace{2pt}
+
+\tagline{D1-04 (max efficiency at a stated power factor).} A 200/50 V, 10 kVA transformer has a core loss of 100 W and a full-load copper loss of 200 W. Find the maximum efficiency at 0.8 power factor lagging and the load at which it occurs.
+
+\textbf{Solution.}
+\[
+x = \sqrt{\frac{100}{200}} = 0.7071
+\qquad\Longrightarrow\qquad
+S_{\text{max}\eta} = 10 \times 0.7071 = 7.071\ \text{kVA}
+\]
+At this load the copper loss is $0.7071^{2} \times 200 = 100$ W (equal to core loss $\checkmark$).
+\[
+\eta_{\text{max}} = \frac{7\,071 \times 0.8}{7\,071 \times 0.8 + 100 + 100} = \frac{5\,656.8}{5\,856.8} = 96.59\%
+\]
+\textbf{Answer:} $\eta_{\text{max}} = 96.59\%$ at 0.8 lagging, occurring at 7.07 kVA load (70.7 percent of rating).
+
+% ============================================================ SHEET
+\hrulefill
+\subsection*{\color{copper}FORMULA SHEET FOR THIS FILE}
+\begin{align*}
+\eta &= \frac{V_2 I_2 \cos\phi}{V_2 I_2 \cos\phi + P_i + I_2^{2} R_{\text{eq2}}}
+& \eta(x) &= \frac{x S \cos\phi}{x S \cos\phi + P_i + x^{2} P_{\text{cu,FL}}} \\[4pt]
+\text{max-eff condition:}\quad P_{\text{cu}} &= P_i
+& x_{\text{max}\eta} &= \sqrt{\frac{P_i}{P_{\text{cu,FL}}}} \\[4pt]
+S_{\text{max}\eta} &= S\,\sqrt{\frac{P_i}{P_{\text{cu,FL}}}}
+& \eta_{\text{max}} &= \frac{x S \cos\phi}{x S \cos\phi + 2 P_i} \\[4pt]
+P_{\text{cu}}(x) &= x^{2}\, P_{\text{cu,FL}}
+& P_i &= \text{const at fixed } V, f \\[4pt]
+P_h &= k_h\, f\, B_m^{1.6}
+& P_e &= k_e\, f^{2}\, B_m^{2}\, t^{2}
+\end{align*}
+
+\subsection*{\color{copper}CLOSED-BOOK CHECK (cover the file, answer out loud)}
+\begin{enumerate}[label=\arabic*.]
+\item Derive the efficiency expression and the load-fraction form from the loss taxonomy.
+\item Differentiate and land the maximum-efficiency condition. Say in one sentence why equality is the balance point.
+\item Give the load-of-max-efficiency formula and the $\eta_{\text{max}}$ formula, and separate the power-factor dependence of each.
+\item Why is the core laminated? Include the loss formula and what happens when $t$ halves.
+\item Why kVA and not kW? Give the loss-driver argument and the same-machine-different-kW example.
+\item All losses with one formula each and one reduction bundle each. Include the non-loss sentence.
+\item From memory: WE-11's $\eta_{\text{max}}$ load, D1-04's answer pair.
+\end{enumerate}
+
+\subsection*{\color{copper}MEMORY DUMP (write cold on blank paper)}
+Losses: copper ($I^{2}R$, both windings, scales $x^{2}$), iron = hysteresis ($P_h = k_h f B_m^{1.6}$, narrow-loop steel) + eddy ($P_e = k_e f^{2} B_m^{2} t^{2}$, laminations, $t^{2}$ lever), stray (tank and clamps). Static machine: no mechanical loss. $\eta = \dfrac{x S \cos\phi}{x S \cos\phi + P_i + x^{2} P_{\text{cu,FL}}}$. Max eff when $P_{\text{cu}} = P_i$ at $x = \sqrt{\dfrac{P_i}{P_{\text{cu,FL}}}}$ (kVA load: $S x$), value $\eta_{\text{max}} = \dfrac{x S \cos\phi}{x S \cos\phi + 2 P_i}$. Load point independent of power factor, value is not. Rating is kVA because losses track $V$ and $I$ only, never $\cos\phi$.
+
+\end{document}

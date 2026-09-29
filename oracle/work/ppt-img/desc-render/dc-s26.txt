@@ -1,0 +1,62 @@
+### 1. Image Reception  
+YES  
+
+
+### 2. Complete On-Slide Text Transcription (Exactly as Printed)  
+
+- **Top Left**:  
+  `MANIPAL UNIVERSITY JAIPUR` (with a circular logo)  
+
+- **Top Right**:  
+  NAAC logo (with “A+”) and `NAAC A++ GRADE WITH 3.30 SCORE` (small text)  
+
+- **Title**:  
+  `The Compound Generator` (large, centered)  
+
+- **Heading**:  
+  `The Terminal Characteristic of a Cumulatively Compounded DC Generator` (blue, left-aligned)  
+
+- **Bullet Points**:  
+  1. `Since I_A = I_F + I_L ↑, the armature current I_A increases too. At this point two effects occur in the generator:`  
+  2. `As I_A increases, V_T = NΦ - I_A (R_A + R_SE) + F_SE ↑ + F_SH`  
+  3. `As I_A increases, , increasing`  
+  4. `The field resistance R_F, which is just equal to V_T / I a straight line`  
+  5. `V_T = E_A ↑ - I_A(R_A + R_s) rise.`  
+
+- **Graph Caption**:  
+  `Terminal characteristics of cumulatively compounded dc generators`  
+
+
+### 3. Visual Elements Description  
+
+#### Graph (Right Side):  
+- **Axes**:  
+  - Y-axis: Labeled `V_T` (vertical, terminal voltage).  
+  - X-axis: Labeled `I_L` (horizontal, load current), with a marked point `I_FLL` (full-load field current).  
+- **Curves**:  
+  - `Overcompounded`: Rises slightly then stabilizes.  
+  - `Flat compounded`: Remains constant (flat line) as `I_L` increases.  
+  - `Undercompounded`: Falls slightly as `I_L` increases.  
+  - `Shunt`: Falls more steeply (labeled, though text is small).  
+- **Layout**: The graph starts at a common `V_T` value when `I_L = 0` (no load), then diverges for each compounding type.  
+
+
+#### Logos:  
+- **Top Left**: Manipal University logo (circular, with text).  
+- **Top Right**: NAAC logo (with “A+” and grading text).  
+
+
+### 4. ASCII Art of the Graph  
+
+```
+V_T
+|           ~~~~ Overcompounded
+|          ~~ Flat compounded
+|         ~~ Undercompounded
+|        ~~ Shunt
+|
+|__________I_FLL__________I_L
+```  
+
+
+(Note: Text with apparent typos/overlaps is transcribed exactly as printed, per instructions.)

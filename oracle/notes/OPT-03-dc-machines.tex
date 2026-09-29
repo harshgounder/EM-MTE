@@ -1,0 +1,357 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+
+\definecolor{copper}{HTML}{8C4A2F}
+\definecolor{iron}{HTML}{262B33}
+\definecolor{muted}{HTML}{6B6B6B}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize\color{muted} OPT-03 \textbar{} DC Machines \textbar{} ANSWER SHEET}
+\rhead{\footnotesize\color{muted} ELC2104 \textbar{} MTE}
+\cfoot{\footnotesize\color{muted} \thepage}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\q}[2]{\subsection*{\color{copper}#1\quad\color{iron}#2}}
+\newcommand{\w}[1]{\textbf{\color{copper}WRITE:} #1}
+\newcommand{\fx}[1]{\par\textbf{\color{iron}FORMULA:} #1}
+\newcommand{\kd}[1]{\textbf{\color{red}DISTINGUISH:} #1}
+\newcommand{\tr}[1]{\textbf{\color{red}[TRAP]} #1}
+\newcommand{\dw}[1]{\textbf{\color{muted}[DRAW]} #1}
+
+\begin{document}
+
+\begin{center}
+{\footnotesize\color{copper} ELC2104 \textbar{} ELECTRICAL MACHINES \textbar{} MTE}\\[6pt]
+{\LARGE\bfseries\color{iron} OPT-03: DC Machines, ANSWER SHEET}\\[2pt]
+{\Large\color{copper} all 45 assignment questions in writing order, answer-ready}\\[6pt]
+{\footnotesize\color{muted} not learning notes: each block says exactly what to put on the paper. motor questions M1 to M30, generator questions G1 to G15. derivations have full steps; why-questions have point stacks; numerics have the substitution ready.}
+\end{center}
+
+\hrulefill
+\subsection*{\color{copper}A. THE FOUR MACHINE-EQUATION DERIVATIONS (every other answer feeds off these)}
+
+\q{[G3 + M15]}{EMF equation derived; back EMF derived and its importance}
+\w{EMF generated (generator side), 5 steps, then state the motor twin.}
+\begin{enumerate}[label=S\arabic*.]
+\item $\Phi$ = flux per pole (Wb), $P$ = number of poles, $Z$ = total armature conductors, $A$ = parallel paths, $N$ = speed in rpm.
+\item One conductor cuts a total flux of $P\,\Phi$ per revolution (it sweeps every pole once per rev).
+\item One revolution takes $\dfrac{60}{N}$ seconds, so the average emf induced in \emph{one conductor} is $\dfrac{P\,\Phi}{\dfrac{60}{N}} = \dfrac{P\,\Phi\, N}{60}$ volts.
+\item The $Z$ conductors are arranged in $A$ parallel paths, so each path has $\dfrac{Z}{A}$ conductors in series and the emf across each path is the path count times the per-conductor emf.
+\item All $A$ paths are in parallel across the brushes, so the terminal emf is:
+\[
+\boxed{E_g = \dfrac{P\,\Phi\, Z\, N}{60\, A}\ \text{V}}
+\]
+\end{enumerate}
+\w{then the two winding cases and the two motor lines (all 4 marks live here):}
+\[
+\text{lap: } A = P \Rightarrow E_g = \dfrac{\Phi\, Z\, N}{60}
+\qquad\qquad
+\text{wave: } A = 2 \Rightarrow E_g = \dfrac{P\,\Phi\, Z\, N}{120}
+\]
+\[
+\text{motor form: } \boxed{E_b = \dfrac{P\,\Phi\, Z\, N}{60\, A}}\ \ (\text{same equation, called back emf})
+\qquad\qquad
+E = K'\, \Phi\, n,\quad K' = \dfrac{Z P}{60\, A},\ n \text{ in rps}
+\]
+\w{back emf importance [M15], 6 points:} (1) $E_b$ opposes the applied voltage by Lenz's law: $V = E_b + I_a R_a$, so $I_a = \dfrac{V - E_b}{R_a}$. (2) At standstill $E_b = 0$ and $I_a = \dfrac{V}{R_a}$ is huge: this is exactly why a starter is needed. (3) As the motor speeds up, $E_b$ rises, $I_a$ falls automatically: the motor is \textbf{self-regulating}, it draws only the current its load needs. (4) The load rises $\rightarrow$ speed dips slightly $\rightarrow$ $E_b$ dips $\rightarrow$ more $I_a$ flows $\rightarrow$ more torque: the load match is automatic through $E_b$ alone. (5) Power converted from electrical to mechanical is precisely $E_b\, I_a$. (6) If $E_b$ is lost (field loss), $I_a$ runs away (the shunt-motor runaway case).
+\tr{write $E_g$ for generators, $E_b$ for motors and say once: ``same expression, opposite role'' (generated vs opposing). One formula, two names, both marks.}
+
+\q{[M1 + M16]}{Working principle of DC motor and torque derived; torque versus armature current}
+\w{principle (3 points):} (1) A current-carrying conductor in a magnetic field experiences a force $F = B\, I\, L$ (Fleming's left hand), torque = force times radius. (2) The commutator reverses the conductor current every half revolution so the torque stays unidirectional. (3) This electromagnetic torque drives the load; mechanical power developed is $E_b\, I_a$.
+\w{torque derivation (the boxed line chain):} power converted = electrical power in the armature = $E_b\, I_a$. Also mechanical power = $\tau\, \omega$ with $\omega = \dfrac{2\pi N}{60}$. Equate and substitute the EMF equation:
+\[
+\tau\, \omega = E_b\, I_a \quad\Longrightarrow\quad \tau \times \dfrac{2\pi N}{60} = \dfrac{P\,\Phi\, Z\, N}{60\, A}\, I_a
+\]
+\[
+\boxed{\tau = \dfrac{1}{2\pi}\,\dfrac{P\,\Phi\, Z\, I_a}{A} = 0.159\,\dfrac{P\,\Phi\, Z\, I_a}{A} = K\,\Phi\, I_a\ \ \text{N-m}}
+\qquad K = \dfrac{P Z}{2\pi A}
+\]
+\w{torque versus $I_a$ [M16], 5 points:} (1) $\tau \propto I_a$ \emph{at constant flux}: straight line through the origin. (2) If the machine saturates, $\Phi$ stops growing and the line bends toward the $I_a$ axis at the top end. (3) Direction: torque reverses if either $\Phi$ or $I_a$ reverses (both reverse = same direction: the motor-reversal rule). (4) Developed torque must equal load torque + friction at steady speed; excess torque accelerates the rotor ($\tau_{\text{net}} = J\,\dfrac{d\omega}{dt}$). (5) Starting torque is limited only by the current the windings and commutator survive, which is the starter's whole job.
+\tr{the constant $\dfrac{1}{2\pi} = 0.159$: the deck quotes both. Write the fraction form in the derivation and the 0.159 as its decimal; whichever the marker expects is on the page.}
+
+\q{[M26]}{Why does back EMF rise with speed, and how does it control armature current?}
+\w{(1) $E_b = \dfrac{P \Phi Z N}{60 A}$: at constant flux, $E_b$ is directly proportional to speed $N$, so any speed rise raises $E_b$. (2) The circuit law $V = E_b + I_a R_a$ rearranges to $I_a = \dfrac{V - E_b}{R_a}$: $E_b$ sits in the denominator of nothing but subtracts from the driving voltage. (3) So as $E_b$ climbs toward $V$, the numerator shrinks and $I_a$ falls to whatever the load demands. (4) Conversely a load increase drops the speed first, $E_b$ drops with it, and $I_a$ rises to produce the needed torque: current is governed by the gap $(V - E_b)$. (5) The two exceptions to state: at starting ($N = 0$, gap is the full $V$) and at field loss ($\Phi \rightarrow 0$, $E_b \rightarrow 0$, gap is again the full $V$): both are exactly when $I_a$ explodes.}
+
+\q{[G8]}{Why does the generated EMF of a DC generator increase with speed?}
+\w{(1) From the EMF equation $E_g = \dfrac{P \Phi Z N}{60 A}$, with the machine's $P$, $Z$, $A$ fixed and $\Phi$ set by the field, $E_g$ is directly proportional to $N$. (2) Physically: faster rotation means conductors cut the flux lines faster, so the rate of flux cut per conductor $\dfrac{d\Phi}{dt}$ grows and so does the induced emf (Faraday). (3) Doubling the speed doubles $E_g$ linearly \emph{as long as $\Phi$ holds}: the OCC at two speeds shows parallel straight lines before saturation. (4) The saturation caveat: at high field currents the knee softens the proportionality in the \emph{field} direction, but the \emph{speed} scaling itself stays linear at any given $\Phi$. (5) This is also why a shunt generator fails to build up below a critical speed.}
+
+\hrulefill
+\subsection*{\color{copper}B. CONSTRUCTION AND WINDING (M2, M19, M20, M21, G2)}
+
+\q{[M2 and G2]}{Construction of the DC machine and functions of yoke, poles, field winding, armature, commutator, brushes}
+\w{write the 6 parts with these functions, one sentence of function each, then one assembly line:}
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Yoke (frame):} outermost cylindrical steel casting; carries the magnetic flux (return path between poles), supports the poles mechanically, protects the machine from dust and moisture, and forms part of the magnetic circuit. For \textbf{shunt} machines a cast-steel yoke; for \textbf{series} machines cast iron is acceptable (lower flux).
+\item \textbf{Poles (pole core + pole shoe):} pole core carries the winding and conducts flux to the air gap; the wider \textbf{pole shoe} spreads the flux over the armature periphery, reduces reluctance of the air gap and supports the field coils.
+\item \textbf{Field winding (field coils):} wound on the pole cores and connected in the excitation circuit (shunt = many turns of thin wire, high resistance, parallel to armature; series = few turns of thick wire, low resistance, in series with armature). Its only job: produce the main flux $\Phi$ per pole.
+\item \textbf{Armature:} the rotating cylinder of slotted laminated silicon-steel discs (laminated to kill eddy currents); carries the armature winding where the working emf is induced; the laminated core with slots also reduces hysteresis and eddy loss.
+\item \textbf{Commutator:} a cylinder of hard-drawn copper segments insulated from each other by mica; it is a mechanical rectifier: converts the armature's generated alternating emf to unidirectional emf at the brushes (generator) or reverses armature current at the right instants to keep torque unidirectional (motor).
+\item \textbf{Brushes and brush gear:} carbon brushes ride the commutator and carry current between the rotating armature and the external circuit; they are set at the \textbf{magnetic neutral axis} (MNA) for sparkless collection.
+\item \textbf{Bearings and shaft} (one closing line): support the rotor, carry the output (motor) or drive (generator) torque.
+\end{enumerate}
+\dw{one sectional view: yoke, pole core + shoe, field coil, armature + slots, commutator segments, brushes, shaft, air gap. Label checklist: all 6 named parts + air gap + MNA mark.}
+
+\q{[M20 + M21]}{Armature winding construction; lap versus wave (parallel paths, applications, ratings)}
+\w{construction (5 points):} (1) Armature winding = insulated coils placed in the rotor slots, connected to commutator segments in a repeating pattern. (2) Winding data identities: let $C$ = number of coils, $N_c$ = turns per coil; then total conductors $Z = 2\, C\, N_c$ and commutator segments = $C$. (3) Coil sides are placed under adjacent poles (full-pitch coil) so emfs add around the path. (4) Two standard patterns decide how the coils are joined into \textbf{parallel paths}: lap and wave. (5) The number of parallel paths $A$ is the key machine constant: it fixes both the EMF equation and the current rating.
+\w{lap versus wave, table in words (the comparison to write):}
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Progression:} lap: the coil ``laps back'', each coil connects to the commutator segment one pole-pitch away (yoke pitch $\approx$ 1 segment, back pitch $\approx$ front pitch); wave: the coil ``waves'' forward two pole pitches before closing (front pitch $\approx$ back pitch, connection advances around the armature like a wave).
+\item \textbf{Parallel paths:} lap: $A = P$ (or generally $A = m P$ with $m$ = multiplicity); wave: $A = 2$ always (or $A = 2 m$). This is THE line the marker wants.
+\item \textbf{EMF consequence:} wave ($A = 2$): higher voltage per conductor group $\Rightarrow$ \textbf{high voltage, low current} machines. Lap ($A = P$): more paths share the current $\Rightarrow$ \textbf{high current, low voltage} machines.
+\item \textbf{Applications:} lap: electrolysis, welding, traction?? \textbf{no:} lap = heavy-current work (electroplating supplies, welding generators, low-voltage high-current supplies); wave: medium- and high-voltage machines (general-purpose generators, traction motors' higher-voltage frames, small machines up to the voltage limit of insulation).
+\item \textbf{Extra property to state:} wave winding has no resultant voltage between the two brush sets even with unequal voltages, so it is the more fault-tolerant of the two and works with only two brush arms.
+\end{enumerate}
+\kd{lap: $A = P$, current machine. wave: $A = 2$, voltage machine. memorize as ``lap is parallel, wave is voltage''.}
+
+\q{[M19]}{Role of commutator and brushes in a DC motor}
+\w{(1) The armature winding sees \emph{alternating} emf and current internally (each conductor's emf flips every time it passes a pole). (2) The commutator, with the brushes, performs \textbf{mechanical rectification}: at the moment a coil passes the MNA and its emf would reverse, the commutator segment swaps the brush it contacts, flipping the coil's connection to the line. (3) Result in a motor: current in every conductor under a north pole keeps one direction and every conductor under a south pole the other, so the torque contribution of every conductor keeps the same sign: unidirectional torque. (4) In a generator the same action rectifies the internal alternating emf into unidirectional terminal voltage: the commutator is the DC machine's rectifier. (5) Brushes collect the current at the rotating interface, are set at the MNA for minimum sparking and are graded carbon for lubrication and arc quenching.}
+
+\hrulefill
+\subsection*{\color{copper}C. GENERATOR CORE (G1, G4, G5, G6, G7 + the build-up why-pack G9, G10, G12, G13, G15)}
+
+\q{[G1]}{Working principle of DC generator}
+\w{(1) Prime mover rotates the armature conductors inside the pole flux. (2) By Faraday's law each conductor has an emf induced ($e = B L v$), direction by Fleming's right hand. (3) The induced emf in the armature coil is alternating as the conductor passes north then south poles. (4) The commutator and brushes rectify it: each coil is switched from one brush to the other as its emf reverses, so the external circuit sees unidirectional (DC) voltage. (5) The value is the EMF equation $E_g = \dfrac{P \Phi Z N}{60 A}$, and on load the terminal voltage is $V = E_g - I_a R_a$ (generator drop equation).}
+\dw{the classic generator figure: armature loop between pole faces N and S, split-ring commutator with two brushes and an external load lamp or resistor. Label checklist: N, S, conductor arrows, split ring segments, brushes, load, current direction.}
+
+\q{[G4]}{Types of DC generators and their characteristics compared}
+\w{classification first, then one comparative line each:}
+\[
+\text{DC generators: } \textbf{separately excited}\ \text{or}\ \textbf{self-excited} \Big( \textbf{shunt},\ \textbf{series},\ \textbf{compound} (\text{cumulative and differential}) \Big)
+\]
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Separately excited:} field from an external DC source; terminal voltage falls with load only by $I_a R_a$ + armature reaction drop; used where fine voltage control is wanted (exciters, labs).
+\item \textbf{Shunt:} field winding (many turns thin wire) across its own armature. Approximately constant flux: terminal voltage droops only modestly with load (the droop chain: $I_a R_a$ drop + armature reaction + field current falls as terminal voltage falls). Used for battery charging, lighting, general supplies where voltage is wanted roughly flat.
+\item \textbf{Series:} field (few turns thick wire) in series with the armature: flux \emph{grows} with load current so voltage rises with load up to saturation, then falls by the $I_a (R_a + R_{se})$ drop. Used for constant-current service: series lighting circuits, boosters.
+\item \textbf{Compound:} both windings. \textbf{Cumulative} (series flux aids shunt): terminal voltage flat or rising (``level'' or ``over'' compounding) with load: the workhorse for DC distribution. \textbf{Differential} (series flux opposes shunt): voltage collapses with load: a protection device or arc-welding specialty, not a supply.
+\end{enumerate}
+\w{the characteristics set to draw for this question:} for each type, external characteristic (terminal voltage versus load current): shunt: gently drooping; series: rising then falling; cumulative compound: level or rising; differential: steeply drooping.
+
+\q{[G5]}{Voltage build-up in a self-excited shunt generator, explained}
+\w{the 6-step loop (write as a chain of arrows and explain each):}
+\begin{enumerate}[label=\arabic*.]
+\item Residual magnetism in the poles leaves a small flux present at rest.
+\item The prime mover spins the armature: this residual flux induces a small emf ($E \propto N \Phi$).
+\item The field winding is connected \emph{across} the armature (that is what self-excitation means), so this small emf drives a small current through the field circuit.
+\item If that field current's mmf \emph{aids} the residual flux (correct polarity), total flux rises, so the induced emf rises, so the field current rises further: a positive feedback loop.
+\item The loop stops at the intersection of the generator's OCC and the field resistance line: the magnetisation curve bends (saturation) while the $I_f R_f$ line stays straight, so the rising emf can no longer force proportionally more field current: equilibrium voltage.
+\item The equilibrium is stable: if the voltage nudges up, the operating point cannot sustain it (beyond the intersection the required field voltage exceeds what is generated) and it settles back.
+\end{enumerate}
+\dw{the build-up figure: OCC (magnetisation curve: straight air-gap line from origin, then knee), plus 3 field resistance lines: $R_f$ below critical (cuts OCC at high voltage = success), $R_{\text{critical}}$ tangent through the origin, $R$ above critical cutting nothing (failure). Label checklist: axes ($V$ vs $I_f$), residual emf intercept, the knee, $R_{\text{critical}}$ tangent, the stable operating point.}
+
+\q{[G6]}{Factors required to build up voltage in a self-excited DC generator}
+\w{the checklist answer (7 points):} (1) There must be \textbf{residual magnetism} in the poles (if lost: flash the field from a battery). (2) The \textbf{field winding must connect with the right polarity} so its current aids the residual flux; if it opposes, the residual is wiped: reverse either the field terminals or the rotation direction. (3) The \textbf{field circuit resistance must be below the critical resistance} ($R_f < R_{\text{critical}}$: the resistance whose line is tangent to the OCC) at the operating speed. (4) The \textbf{speed must be above the critical speed} for that $R_f$ (a lower $R_{\text{critical}}$ line at low speed squashes the OCC down). (5) The \textbf{total circuit resistance must be low}: brushes seated, armature circuit intact, no open field connection (an open field = no feedback loop at all). (6) The \textbf{brushes must be at the MNA} and make good contact (film resistance breaks the loop). (7) Speed must be reasonably steady while it builds (it converges in a second or so at rated speed).
+
+\q{[G7 + G15]}{OCC drawn and explained; why it is linear first and nonlinear later}
+\w{definition and axes:} the OCC (open-circuit characteristic, also called the magnetisation curve or no-load saturation curve) is terminal voltage versus field current at \emph{fixed speed and no load}.
+\w{shape explanation [G15], 5 points:} (1) The curve starts slightly above zero at $I_f = 0$: the \textbf{residual emf} from residual magnetism. (2) The first region is nearly a straight line through (and parallel to) the origin region: this is the \textbf{air-gap line}: the iron is far from saturation, so reluctance is set by the (constant) air gap and $\Phi \propto I_f$ exactly. (3) As $I_f$ grows the iron parts approach \textbf{magnetic saturation}: permeability falls, reluctance becomes iron-dominated and flux grows slower than mmf: the curve bends (the knee). (4) Deep in saturation the curve is almost horizontal (flat-topped): more ampere-turns buy almost no flux. (5) The OCC is drawn at one fixed speed; at another speed the whole curve scales up or down proportionally ($E \propto N$): every speed has its own parallel OCC.
+\w{uses (one line):} the OCC is where the field-resistance line cuts that fixes the build-up voltage, and it is the base graph of the generator external characteristics.
+
+\q{[G9 + G12]}{Why residual magnetism is required; and the logical fault list when a shunt generator will not build up at rated speed}
+\w{G9:} repeat the build-up chain (residual $\rightarrow$ seed emf $\rightarrow$ seed field current $\rightarrow$ feedback). State: without residual flux there is no seed emf, so the feedback loop has nothing to start from and the voltage stays at exactly zero however long it runs. One repair line: ``restore residual by briefly exciting the field from a battery in the correct direction (flashing the field)''.
+\w{G12 (the fault-find list the examiner wants), 8 candidates:} (1) Residual magnetism lost (or very weak). (2) Field winding connected with \emph{wrong polarity} (feedback becomes negative: the seed emf drives current that kills the residual). (3) Field circuit resistance \emph{above critical} ($R_f > R_{\text{critical}}$: rheostat left out too far). (4) Speed below the critical speed (OCC squashed under the $R_f$ line). (5) Open circuit anywhere in the field circuit (broken wire, bad rheostat contact, loose brush lead) so no field current can flow. (6) Field circuit shorted (current too small to magnetise) or shorted between turns. (7) Brushes not making contact or not at the MNA (the armature circuit is open or collection is so poor the loop breaks). (8) Armature rotating the wrong way \emph{with} a polarity-sensitive field connection (equivalent to case 2).
+
+\q{[G13]}{Why many turns of thin wire for the shunt field, but few turns of thick wire for the series field}
+\w{(1) The shunt field runs \emph{across} the supply voltage (full terminal voltage): to keep its current and copper loss small it needs a \textbf{high resistance}, and resistance scales as $\dfrac{\rho\, \ell}{\text{area}}$: thin wire and long length (many turns) deliver that. (2) The shunt field's job is a steady mmf ($N_f\, I_f$) with negligible loss and voltage disturbance: high $N_f$ means the needed ampere-turns come from a small current. (3) The series field runs \emph{in series with the armature current} (the full load current): it must have \textbf{negligible resistance} or its voltage drop and copper loss would wreck regulation, so thick wire with few turns. (4) Both windings need the same mmf class ($N_f I_f$ or $N_{se} I_a$), so the current-squared trade decides the copper: same power dissipation means $N$ versus thickness is a straight trade of turns for area. (5) Mechanical line: the series winding carries load current so it is mechanically braced; the shunt winding carries only exciting current so it is finer wire.}
+
+\q{[G14]}{Why the commutator is required to get DC output from the armature}
+\w{(1) The emf induced in an armature conductor is \emph{alternating}: each conductor passes north poles and south poles in turn, so its emf flips sign every half electrical cycle (this is plain AC in the coils). (2) Brushes alone would therefore deliver AC. (3) The commutator is a \textbf{rotating mechanical switch}: exactly at the instant a coil's induced emf would reverse (coil passing the MNA), the commutator segments connected to that coil swap which brush they touch. (4) Each brush therefore always collects from conductors under poles of the same sign: the internal reversal is switched out and the terminal voltage is unidirectional pulsating DC (six-pole machines and lap and wave multi-path versions smooth it to near-flat DC). (5) So: the armature generates AC, the commutator rectifies it: the commutator is the DC generator's built-in rectifier and its segments must be insulated with mica to stop short-circuiting between the switched coils.}
+
+\hrulefill
+\subsection*{\color{copper}D. MOTOR CORE: TYPES, CHARACTERISTICS, STARTERS, SPEED CONTROL (M3, M4, M10, M11, M12, M13, M14, M23, M24)}
+
+\q{[M3]}{Types of DC motors, classified, with diagrams}
+\w{classification (same tree as generators):}
+\[
+\textbf{shunt}\qquad\textbf{series}\qquad\textbf{compound} \big( \text{cumulative},\ \text{differential} \big)
+\]
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Shunt motor:} field winding (high resistance, many turns thin) across the supply in parallel with the armature. Nearly constant flux. Application: lathes, fans, pumps, machine tools: anything wanting near-constant speed.
+\item \textbf{Series motor:} field (low resistance, few turns thick) in series with the armature: same current in both. Flux depends on load current. Application: cranes, hoists, electric traction, starters of large engines: anything wanting huge starting torque and a wide speed range.
+\item \textbf{Compound motor:} both windings on each pole. \textbf{Cumulative} (series aids shunt): intermediate behaviour, used for hoists, lifts, rolling mills, heavy planers. \textbf{Differential} (series opposes shunt): unstable speed behaviour (see M29): rarely used, mostly as a limiting machine.
+\end{enumerate}
+\dw{three small circuit sketches: shunt (field across line), series (field in line), compound (both, with the cumulative and differential arrow marks). Label checklist: supply, armature with $R_a$, field with $R_{sh}$ or $R_{se}$, current arrows.}
+
+\q{[M4]}{Compare shunt, series and compound motors: construction, characteristics, starting torque, speed regulation, applications}
+\w{one comparison in parallel rows (write as a table):}
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Construction:} shunt: fine long field winding parallel to armature. series: heavy short field in series with armature. compound: both windings on the same poles.
+\item \textbf{Flux behaviour:} shunt: $\Phi$ almost constant. series: $\Phi$ rises with $I_a$ (till saturation). compound: between the two, depending on compounding.
+\item \textbf{Torque versus $I_a$:} shunt: $\tau \propto I_a$ (straight). series: $\tau \propto I_a^2$ (parabola) below saturation, then bends toward linear. compound: between straight and parabola (cumulative).
+\item \textbf{Speed behaviour:} shunt: nearly constant ($\dfrac{V - I_a R_a}{K' \Phi}$ with $\Phi$ fixed: small droop), speed regulation 5 to 15 percent. series: sharply falling hyperbola ($n \propto \dfrac{V - I_a(R_a + R_{se})}{\Phi}$ with $\Phi$ growing: speed falls fast as load rises), regulation very poor but range huge. compound: between (cumulative droops moderately).
+\item \textbf{Starting torque:} series: \textbf{very high} ($\tau \propto I_a^2$ at high starting current) = its headline feature. compound: high (cumulative). shunt: moderate (linear, limited by starting current the commutator survives).
+\item \textbf{No-load behaviour:} shunt: safe at no load. series: \textbf{dangerous} (speed runs away: M25 and M28). compound (cumulative): safe-ish (the shunt flux sets a speed ceiling).
+\item \textbf{Applications:} shunt: lathes, centrifugal pumps, fans, machine tools (constant speed). series: traction, cranes, hoists, elevators (high starting torque). compound: rolling mills, lifts, heavy planers, conveyors (high torque + bounded speed).
+\end{enumerate}
+
+\q{[M10 + M23]}{Shunt motor characteristics drawn and explained (torque versus $I_a$, speed versus $I_a$; torque versus speed)}
+\w{the two equations first (they generate the curves):}
+\[
+\tau = K\,\Phi\, I_a\ (\Phi \text{ constant}), \qquad n = \dfrac{V - I_a\, R_a}{K'\, \Phi}
+\]
+\w{torque versus $I_a$:} a straight line through the origin ($\tau \propto I_a$), slightly bending at high current where saturation trims $\Phi$ a hair.
+\w{speed versus $I_a$:} nearly horizontal, slightly drooping: the drop is just $\dfrac{I_a R_a}{K' \Phi}$ and $R_a$ is small (0.05 to 0.1 p.u.), so full-load speed is typically 5 to 15 percent below no-load.
+\w{torque versus speed [M23]:} substitute $I_a = \dfrac{\tau}{K \Phi}$ in the speed equation: $n = \dfrac{V}{K' \Phi} - \dfrac{R_a}{K\, K'\, \Phi^{2}}\, \tau$: a straight line with a \textbf{small negative slope}: speed falls slightly as torque rises: ``nearly constant speed''.
+\dw{three axes sets, labels: torque versus $I_a$ (straight), speed versus $I_a$ (slight droop), torque versus speed (straight, shallow fall). Mark on each: no load, full load, breakdown point where saturation bends.}
+
+\q{[M11 + M24 + M27]}{Series motor characteristics; why its starting torque is very high; applications}
+\w{equations:} series field carries $I_a$, so below saturation $\Phi = c\, I_a$ (constant $c$). Then:
+\[
+\tau = K\,\Phi\, I_a = K\, c\, I_a^2 \ \ (\text{torque parabola})
+\qquad\qquad
+n = \dfrac{V - I_a\,(R_a + R_{se})}{K'\, \Phi} = \dfrac{V - I_a\,(R_a + R_{se})}{K'\, c\, I_a}
+\]
+\w{torque versus $I_a$ [M11 and M27]:} a \textbf{parabola} ($\tau \propto I_a^{2}$) until the iron saturates (beyond that $\Phi$ freezes and the curve bends to linear). At the starting instant $I_a$ is several times full load and $\tau \propto I_a^{2}$, so torque is \emph{many} times full-load torque: this is exactly why series motors dominate traction and crane duty. The shunt motor at the same starting current produces only $\tau \propto I_a$.
+\w{speed versus torque [M24]:} hyperbola: expand the speed equation as $n = \dfrac{V}{K' c\, I_a} - \dfrac{R_a + R_{se}}{K' c}$: as load (and $I_a$) rises, speed falls steeply; light load = very high speed. Wide speed range is the trade for the torque.
+\w{applications [M24]:} electric traction (locomotives, tramways, EMUs), cranes and hoists, elevator and lift drives, electric motors for heavy starting duty (starter motors of ICEs).
+\w{the high-starting-torque sentence to end on:} ``series torque is the square of armature current while shunt torque is the first power: at the identical starting current the series motor delivers the square factor more torque, and the magnetisation supports it until saturation.''
+
+\q{[M25 + M28]}{Why a series motor must never run without mechanical load}
+\w{(1) With no load shaft torque required is only friction, tiny. (2) The speed equation $n = \dfrac{V - I_a(R_a + R_{se})}{K' c\, I_a}$ says as $I_a \rightarrow$ small, the speed rises without bound: the only thing capping speed is the load torque balance. (3) Physical chain: tiny load $\rightarrow$ motor speeds up $\rightarrow$ $E_b$ rises $\rightarrow$ $I_a$ falls $\rightarrow$ flux ($\Phi = c\, I_a$) falls with it $\rightarrow$ to keep $E_b \approx V$ the speed must rise \emph{again} (since $E_b = K' \Phi n$ and $\Phi$ is collapsing): a runaway positive feedback. (4) The mechanical consequences: centrifugal forces can throw the armature winding out of the slots, commutator segments lift, bearings and coupling fail: mechanical destruction is the risk, not just inefficiency. (5) Practical rule: series motors are always coupled to their load \emph{before} starting (belt or geared, non-detachable coupling) and never belted off. (6) Contrast line: the shunt motor has constant $\Phi$, so its no-load speed settles at $n = \dfrac{V}{K' \Phi}$: finite and safe.}
+
+\q{[M29]}{Why shunt motor speed stays nearly constant with load, from the motor equations}
+\w{(1) $n = \dfrac{V - I_a R_a}{K' \Phi}$: the whole load dependence is the term $I_a R_a$. (2) In a shunt motor $\Phi$ is fixed by the constant supply voltage across the high-resistance field: it does not move with load. (3) $R_a$ is deliberately small (0.05 to 0.1 p.u.) so even full $I_a$ drops only a few volts out of the supply: the numerator shrinks by a few percent. (4) Therefore the full-load speed sits only 5 to 15 percent below no-load: ``nearly constant''. (5) The load-matching happens through current, not speed: more load torque $\rightarrow$ tiny speed dip $\rightarrow$ tiny $E_b$ dip $\rightarrow$ more $I_a$ $\rightarrow$ more $\tau = K \Phi I_a$: the equilibrium speed barely moves while the current swings widely.}
+
+\q{[M30]}{Why weakening the field of a shunt motor raises its speed}
+\w{(1) Start from $E_b = K'\, \Phi\, n$ and $E_b = V - I_a R_a \approx V$ (small drop). (2) Re-arranged: $n = \dfrac{V - I_a R_a}{K' \Phi}$: speed is inversely proportional to flux. (3) Field weakening is done by inserting resistance in the shunt field circuit: field current falls, $\Phi$ falls. (4) $E_b$ cannot fall much (it is pinned near $V$), so if $\Phi$ falls then $n$ must rise to keep the product $K' \Phi n$ at the needed emf: the rotor literally accelerates until the smaller flux at higher speed restores $E_b$. (5) This is the basis of \textbf{above-rated speed control} (field control): the range runs from rated speed up to where mechanical commutation and balance limit it (roughly 2 to 3 times rated on standard frames). (6) Caveat one-liner: at constant power output the torque falls as speed rises ($P = \tau \omega$), so field weakening is a constant-power, not constant-torque, range.}
+
+\q{[M12]}{Why a starter is needed; three-point starter explained}
+\w{why (3 points):} (1) At standstill $E_b = 0$ so the starting current would be $I_a = \dfrac{V}{R_a}$: with $R_a$ around 0.05 p.u. this is 15 to 30 times full-load current. (2) Consequences: heavy flash and pitting at the commutator, overheated armature windings, huge line voltage dip and torque shock to couplings. (3) Therefore an external \textbf{starting resistance} is inserted in the armature circuit at switch-on and cut out in steps as $E_b$ builds up and $I_a$ settles: the starter is a variable resistance plus a step-cutout mechanism.
+\w{three-point starter construction (6 points):} (1) A starting resistance in steps, connected in series with the armature. (2) A spring-loaded \textbf{handle} (with an arc-shaped copper over-load contact) that moves over the studs, cutting out steps. (3) The \textbf{no-volt coil (NVC)}: an electromagnet in \emph{series with the field circuit}, holding the handle in the ON position against the spring. (4) The \textbf{overload release}: a small electromagnet in the line that, on heavy current, trips the NVC and drops the handle. (5) The three terminals: L (line), F (field), A (armature) hence the name. (6) The spring ensures that if supply fails the handle flies back to OFF instantly.
+\w{operation (4 points):} (1) On switching on, full starting resistance is in the armature circuit: current limited to about 1.5 times full load. (2) As the motor accelerates and $E_b$ grows, the handle is moved stud by stud, cutting resistance out in steps and keeping $I_a$ within limits. (3) At the final stud the resistance is fully out and the NVC, energised by the field current, holds the handle ON: the motor runs normally. (4) On overload the series release pulls the lever and the handle drops to OFF; on supply failure the NVC de-energises and the handle also drops: the restart cannot happen with resistance out.
+\w{the one drawback line (examiners love it):} in a \emph{three}-point starter the NVC is in the field circuit, so field control (speed control by field rheostat) is limited: weakening the field weakens the NVC and it may drop the handle at high speeds. The fix is the \textbf{four-point starter} (NVC across the line with its own limiting resistor), which permits full field-rheostat speed control.
+\dw{the starter diagram: supply L, handle + spring, stepped resistance studs in the armature path, NVC coil in series with the field rheostat, overload coil in the line, terminals L F A. Label checklist: every part named above.}
+
+\q{[M13 + M14]}{Speed control methods of DC motors (armature voltage, field, armature resistance) compared for shunt and series}
+\w{the master equation first: $n = \dfrac{V - I_a\, R_{a,\text{total}}}{K'\, \Phi}$: three knobs: $V$, $R$ in the armature loop, $\Phi$.}
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Armature resistance control:} add resistance in series with the armature. \emph{Below} rated speed only (it can only increase the drop). Cheap and simple. Limitations: copper loss in the added resistor (wasteful), poor speed regulation as load varies (the drop varies with $I_a$), cooling cost. Uses: cranes, hoists (where the waste is intermittent and torque duty dominates).
+\item \textbf{Armature voltage control (Ward Leonard set or DC chopper):} vary the voltage applied to the armature while keeping field fixed. \emph{Below} rated speed, smooth stepless control, \textbf{good regulation} at any speed (the droop scales with the small $R_a$). Limitations: the Ward Leonard set is a motor-generator on its own: costly, bulky, lower overall efficiency. Uses: paper mills, steel rolling, elevators, wide-range lathes.
+\item \textbf{Field (flux) control:} vary the field current with a rheostat in the field circuit. \emph{Above} rated speed (weakening field raises speed, M30). Very efficient (the field circuit carries little power). Limitations: speed ceiling (commutation and mechanical limits, roughly 2 to 3 times base), and the torque falls at constant power. Uses: machine tool spindle drives, traction (field weakening for cruising speed).
+\end{enumerate}
+\w{series-motor variant sentence:} a series motor can also be controlled by (a) resistance in series with the armature (below rated, wasteful), (b) a \textbf{diverter} across the series field (weakens the field $\rightarrow$ raises speed: above rated), (c) \textbf{tapped field and series-parallel control} for multi-motor trains (two motors series on starting, parallel at running speed), (d) chopper/variable-voltage supply (modern traction).
+\kd{below rated: armature voltage or armature resistance. above rated: field weakening. efficient: voltage and field. wasteful: armature resistance.}
+
+\hrulefill
+\subsection*{\color{copper}E. POWER FLOW, LOSSES, EFFICIENCY (M17, M18)}
+
+\q{[M17]}{Power flow diagram of a DC motor and its power losses}
+\w{the flow chain (write as a staircase):}
+\[
+\underbrace{V\, I_L}_{\text{electrical input}} \;\rightarrow\; \underbrace{-\, I_a^2 R_a \;-\; I_f^2 R_f \;-\; \text{brush contact loss}}_{\text{copper losses + brush drop}} \;\rightarrow\; \underbrace{E_b\, I_a}_{\text{power converted (mechanical)}} \;\rightarrow\; \underbrace{-\, \text{iron loss} \;-\; \text{friction \& windage}}_{\text{rotational losses}} \;\rightarrow\; \underbrace{\tau_{\text{shaft}}\, \omega}_{\text{shaft output}}
+\]
+\w{the three loss families to name:} (1) \textbf{Copper losses} (electrical): armature $I_a^2 R_a$, series and shunt field $I^2 R$, and brush contact drop loss. (2) \textbf{Iron (core or magnetic) losses}: hysteresis (narrow-loop steel) + eddy currents (laminations) in the rotating armature core: they are the constant-loss part at fixed speed and flux. (3) \textbf{Mechanical losses}: friction (bearings + brushes) and windage (rotor drag in air).
+\w{useful equation line:} $E_b I_a$ is the \emph{exact} converted power; input minus output is the loss sum; at steady state $\tau_{\text{developed}}\,\omega = E_b I_a$.
+\dw{the staircase power-flow diagram with 3 descending boxes: Input VI, Converted Eb Ia, Output shaft. Label checklist: the three arrow labels (copper + brush loss, iron + friction and windage loss) and the two named quantities at every stage.}
+
+\q{[M18]}{Losses in a DC machine and how efficiency is improved}
+\w{loss taxonomy (4 groups):} (1) copper: armature circuit, field circuit(s), brush contact. (2) iron: hysteresis + eddy in the armature core. (3) mechanical: friction + windage. (4) stray (stray-load) losses: distortion losses in the conductors and eddy in structural parts: usually lumped into iron + mechanical at exam level.
+\w{efficiency equation:}
+\[
+\eta = \dfrac{\text{output}}{\text{output} + \text{losses}} = 1 - \dfrac{\text{losses}}{\text{input}}
+\qquad\qquad
+\boxed{\eta_{\text{max}}: \ \ \text{variable losses} = \text{constant losses} \ \ (I_a^2 R_a = P_i + P_{\text{mech}})}
+\]
+\w{improvement methods (one per loss family):} (1) copper loss: use larger cross-section conductors (lower $R$), keep brush contact clean and properly seated, keep field currents to design values. (2) hysteresis: silicon or CRGO steel with a narrow hysteresis loop (small $k_h$), operate at moderate $B_m$ below the knee. (3) eddy: thin laminations (with the $t^{2}$ lever) and high-resistivity steel. (4) mechanical: good bearings and lubrication, streamlined rotor (fan shapes) to cut windage, properly graded and pressure-adjusted brushes to cut friction. (5) design angle: run the machine near the load at which \textbf{variable losses equal constant losses}: that is the efficiency peak (the standard max-efficiency condition, same logic as the transformer).
+\tr{DC machine losses have \emph{mechanical} losses (it rotates) while the transformer's answer said ``static machine: no mechanical loss''. The M18 question wants the rotating-machine version: keep them distinct in the paper.}
+
+\hrulefill
+\subsection*{\color{copper}F. ARMATURE REACTION, COMMUTATION, INTERPOLES (M5, M6, M7, M8, M9, M22)}
+
+\q{[M5 + M6]}{Armature reaction explained; its effects (flux distortion and flux weakening) with diagrams}
+\w{definition (3 points):} (1) The \textbf{main field} is produced by the field winding (mmf along the pole axis, i.e. the interpolar axis is the MNA). (2) When load current flows, the \textbf{armature conductors carry current too and produce their own mmf} (armature mmf), along the axis of the brushes (the MNA axis). (3) The interaction of these two mmfs (\textbf{cross-magnetisation} of the flux pattern) is \textbf{armature reaction}.
+\w{effects (M6, 5 points):} (1) \textbf{Flux distortion:} the resultant flux wave is shifted and skewed: one half of each pole tip saturates more, the other less; the flux distribution is no longer symmetric about the pole axis. (2) \textbf{Flux weakening (net reduction):} saturation on the crowded half cannot be undone on the weak half (the iron is nonlinear), so the \textbf{total flux per pole falls}: generated emf and torque fall slightly with load. (3) \textbf{MNA shift:} the magnetic neutral axis shifts \emph{forward} in a generator (opposite to rotation) and \emph{backward} in a motor (with rotation) by an angle that grows with load; the brushes sitting at the \emph{old} MNA now short-circuit coils with emf in them: sparking. (4) \textbf{Sparking and poor commutation} at the brushes (the direct practical symptom). (5) \textbf{Voltage regulation worsens} (generator) and speed characteristic softens (motor): both because of the flux loss with load.
+\dw{diagram (M6): pole flux lines with (a) no load (symmetric) and (b) full load (distorted, crowded top tip, weakened net flux) + the MNA shift arrow. Label checklist: main field axis, armature mmf axis (brush axis), old and new MNA, the saturation-marked tip.}
+
+\q{[M7]}{Methods to reduce armature reaction}
+\w{(1) \textbf{Brush shift} (conventional machines): move the brushes to the new (load-shifted) MNA so the short-circuited coil has near-zero emf: reduces sparking, but a fixed shift only suits one load direction and magnitude. (2) \textbf{Interpoles (commutating poles):} small auxiliary poles placed \emph{on the MNA} between the main poles, wound with few thick turns in \emph{series with the armature}: their mmf opposes the armature mmf \emph{exactly at the brush zone}, neutralising cross-magnetisation locally where commutation happens and inducing a commutating emf in the coil undergoing reversal. (3) \textbf{Compensating windings:} conductors embedded in slots in the \emph{pole faces}, connected in series with the armature and carrying the opposite current: they cancel the armature mmf \emph{pole by pole} across the whole pole face, so the flux distribution stays clean at every load (the heavy-duty fix for traction and steel-mill machines subject to violent load swings). (4) \textbf{Design angles:} use low-remanence laminated pole shoes, keep saturation low in the pole tips, larger air gaps under pole tips, keep the machine's rating honest for its duty. (5) Point to state: interpoles fix the \emph{commutation zone}; compensating windings fix the \emph{whole pole face}. That hierarchy is the marks.}
+
+\q{[M8 + M9 + M22]}{Commutation explained (process, causes of poor commutation); improving commutation; interpoles and compensating windings}
+\w{definition (2 points):} commutation is the process of \textbf{reversing the current in an armature coil} as it passes the MNA (under the brush), moving the coil's current from $+I$ to $-I$ (and back every half revolution), by switching the coil between parallel paths via the commutator segments and brushes.
+\w{process (4 points):} (1) A coil short-circuited by a brush as its two commutator segments bridge the brush is the coil being commutated. (2) In the ideal case the current in that coil reverses completely within the short-circuit period (the time one segment pair passes the brush, a few hundred microseconds). (3) The coil has \textbf{self-inductance}, so a rapidly changing current induces a \textbf{reactance voltage} ($L\,\dfrac{di}{dt}$) that opposes the change and leaves the current un-reversed at the moment the segments leave the brush. (4) That un-reversed current then jumps the gap as a spark: this is \textbf{poor commutation} (blackening and pitting of brushes and segments).
+\w{causes of poor commutation (M8, 5 points):} (1) reactance voltage from coil self-inductance. (2) armature reaction distorting the field at the MNA (there is \emph{some} voltage in the shorted coil because the flux zero has moved: M5 tie-in). (3) brush position off the true MNA. (4) brush contact resistance too low (a high-resistance brush forces current reversal by drop: see M9). (5) mechanical causes: uneven commutator surface, worn segments, wrong brush pressure, mica protruding (high bars).
+\w{improving commutation (M9):} (1) \textbf{Resistance commutation:} carbon (high-resistance) brushes: the contact drop helps force the current change. (2) \textbf{Voltage (EMF) commutation with interpoles:} the interpole winding (in series with the armature) induces in the commutating coil a voltage that \emph{opposes} the reactance voltage and cancels it (and it reverses polarity automatically with load because it is in series). (3) \textbf{Compensating windings} for machines with violent load swings: they cancel the pole-face distortion that voltage commutation alone cannot track. (4) Good maintenance: true commutator, correct brush grade and pressure, brush rig at MNA.
+\w{the functions line [M22] to close:} interpoles: (a) produce the commutating emf that neutralises the reactance voltage, (b) neutralise cross-magnetisation locally at the MNA, and (c) both effects are self-adjusting with load (series connection). compensating windings: cancel the armature mmf over the pole faces so the main flux is preserved under sudden load changes, removing the MNA shift and the attendant sparking at the source.
+\dw{commutation figure (the classic 3-panel time sequence): the coil under the brush with segment pair at start of short circuit, mid, and end; the current direction arrows flipping. Plus a small interpole figure: main pole, interpole between poles, brush on MNA, series connection through the brush arm. Label checklist: coil, two segments, brush, current arrow states, interpole winding, MNA.}
+
+\hrulefill
+\subsection*{\color{copper}G. NUMERICS (ready substitutions; WE numbers verified against report 05)}
+
+\q{WE-12}{lap-winding machine: $P = 6$, $Z = 700$, $\Phi = 25$ mWb, $N = 500$ rpm. Find $E_g$.}
+\[
+E_g = \dfrac{P \Phi Z N}{60\, A},\quad \text{lap: } A = P = 6 \ \Rightarrow\ E_g = \dfrac{\Phi Z N}{60} = \dfrac{0.025 \times 700 \times 500}{60} = \dfrac{8750}{60} = 145.83\ \text{V}
+\]
+
+\q{WE-13}{wave-winding machine: $P = 4$, $Z = 600$, $\Phi = 20$ mWb, $N = 400$ rpm. Find $E_g$.}
+\[
+E_g = \dfrac{P \Phi Z N}{60\, A},\quad \text{wave: } A = 2 \ \Rightarrow\ E_g = \dfrac{4 \times 0.02 \times 600 \times 400}{120} = \dfrac{19200}{120} = 160\ \text{V}
+\]
+
+\q{WE-15}{series motor: $V = 230$ V, $R_a = 0.3\ \Omega$, $R_{se} = 0.2\ \Omega$. Find $E_b$ and $I_a$ at output 4 kW and $\eta = 88\%$.}
+\[
+\text{Input} = \dfrac{4000}{0.88} = 4545.5\ \text{W} \ \Rightarrow\ I_a = \dfrac{4545.5}{230} = 19.76\ \text{A}
+\qquad
+E_b = V - I_a(R_a + R_{se}) = 230 - 19.76 \times 0.5 = 220.12\ \text{V}
+\]
+
+\q{WE-16}{4-pole, wave, $Z = 600$, $N = 1200$ rpm, $\Phi = 25$ mWb. (a) find $E_g$; (b) find $\Phi$ per pole to give $E_g = 300$ V at 1000 rpm.}
+\[
+\text{(a)}\ E_g = \dfrac{P \Phi Z N}{120} = \dfrac{4 \times 0.025 \times 600 \times 1200}{120} = 600\ \text{V}
+\qquad\qquad
+\text{(b)}\ \Phi = \dfrac{E\, A\, 60}{P Z N} = \dfrac{300 \times 2 \times 60}{4 \times 600 \times 1000} = 0.015\ \text{Wb}
+\]
+
+\q{WE-17}{shunt generator, $V = 250$ V, $R_a = 0.3\ \Omega$, load 25 A. (a) $E_g$; (b) $E_g$ at 12.5 A.}
+\[
+\text{(a)}\ E_g = V + I_a R_a = 250 + 25 \times 0.3 = 257.5\ \text{V}
+\qquad\qquad
+\text{(b)}\ E_g = 250 + 12.5 \times 0.3 = 253.75\ \text{V}
+\]
+
+\q{WE-18}{series generator, $R_a = 0.5\ \Omega$, $R_{se} = 1\ \Omega$, load 12 A, $E_g = 250$ V. Find terminal voltage (consistency check flagged in report 05).}
+\[
+V = E_g - I_a\,(R_a + R_{se}) = 250 - 12 \times 1.5 = 232\ \text{V}
+\]
+\tr{report 05 flags the source's wording as self-inconsistent (the model answer 232 V is the standard reading: $E_g$ given, drop subtracted). State the reading you use.}
+
+\q{WE-19}{shunt motor, $R_a = 0.4\ \Omega$, $I_L = 25$ A, $I_f = 1$ A, $V = 250$ V. (a) $E_b$; (b) initial current at start.}
+\[
+\text{(a)}\ I_a = I_L - I_f = 24\ \text{A}\ \Rightarrow\ E_b = V - I_a R_a = 250 - 24 \times 0.4 = 240.4\ \text{V}
+\qquad\qquad
+\text{(b)}\ I_{\text{start}} = \dfrac{V}{R_a} = \dfrac{250}{0.4} = 625\ \text{A}
+\]
+
+\q{WE-20}{shunt motor with series field winding (compound given as such): $R_a = 0.25\ \Omega$, $I_L = 20$ A, $V = 250$ V. Find $E_b$.}
+\[
+E_b = V - I_a\, (R_a + R_{se}) = 250 - 20 \times (0.25 + 0.2) = 250 - 9 = 241\ \text{V}
+\]
+\tr{report 05's own wording glitch: the ``shunt motor with series field'' phrasing is the compound case; the two drop terms both apply as shown.}
+
+\hrulefill
+\subsection*{\color{copper}FORMULA SHEET (the whole block)}
+\begin{align*}
+E_g = E_b &= \dfrac{P\,\Phi\, Z\, N}{60\, A}
+& \tau &= \dfrac{1}{2\pi}\,\dfrac{P\,\Phi\, Z\, I_a}{A} = 0.159\,\dfrac{P\,\Phi\, Z\, I_a}{A} = K \Phi I_a \\[4pt]
+\text{lap: } A = P \Rightarrow E &= \dfrac{\Phi Z N}{60}
+& \text{wave: } A = 2 \Rightarrow E &= \dfrac{P \Phi Z N}{120} \\[4pt]
+Z &= 2\, C\, N_c
+& E &= K' \Phi n,\quad K' = \dfrac{ZP}{60A} \\[4pt]
+\text{motor: } V &= E_b + I_a R_a
+& \text{generator: } V &= E_g - I_a R_a \\[4pt]
+\text{shunt: } n &= \dfrac{V - I_a R_a}{K' \Phi}\ (\Phi \text{ fixed})
+& \text{series: } n &= \dfrac{V - I_a (R_a + R_{se})}{K' c\, I_a}\ (\Phi = c\, I_a) \\[4pt]
+\text{series torque} &\propto I_a^2 \ (\text{till saturation})
+& \eta_{\text{max}} &: \text{variable losses} = \text{constant losses}
+\end{align*}
+
+\subsection*{\color{copper}MEMORY DUMP (write cold)}
+EMF: $\dfrac{P \Phi Z N}{60 A}$ (lap $A = P$, wave $A = 2$). Torque: $\dfrac{0.159\, P \Phi Z I_a}{A}$. Motor: $V = E_b + I_a R_a$. Gen: $V = E_g - I_a R_a$. Shunt: $\tau \propto I_a$, speed nearly flat. Series: $\tau \propto I_a^{2}$, hyperbolic speed, never unloaded. Compound cumulative: between both. Build-up: residual + right polarity + $R_f < R_{\text{critical}}$ + speed $>$ critical + intact circuit. OCC: air-gap line then knee then saturation. Armature reaction: cross-distortion, weakening, MNA shift, sparking. Commutation: reactance voltage sparks; fixed by brush shift, interpoles (series, on MNA), compensating windings (pole faces, series). Starter: $\dfrac{V}{R_a}$ huge at rest; 3-point: NVC in field circuit, overload release, spring return; 4-point frees field control. Speed control: below rated = armature (voltage or resistance), above rated = field weakening. Losses: copper, iron, mechanical; max efficiency when variable = constant.
+
+\end{document}

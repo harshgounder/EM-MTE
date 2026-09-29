@@ -1,0 +1,54 @@
+YES
+
+**1. Complete Text Transcription:**
+
+**Top Header:**
+MANIPAL UNIVERSITY JAIPUR
+NAAC A+ GRADE WITH 3.28 SCORE
+
+**Body:**
+**REFERENCE BOOK**
+    1.  M. G. Say, *Alternating Current Machines* (5e), ELBS.
+    2.  2. E. H. Langsdorf, *Theory of Alternating Current Machine* (2e), TMH.
+    3. A. E. Clayton, *Performance and Design of DC Machines* (3e), O& IBH,
+
+**TEXT BOOKS**
+    1. P. S. Bhimbra, “Electrical Machinery”, Seventh Edition, 1995,Khanna Publishers.
+    2. I. J. Nagrath, , D. P.Kothari, “Electric Machines”, Third Edition, Tata McGraw-Hill Publishing Company Ltd.
+    3. A. E.Fitzgerald, Charles Kingsley, Jr. Stephen D. Umans, “Electric Machinery”, Fifth Edition, Tata McGraw-
+**Hill Video Links:** https://www.youtube.com/watch?v=xvL4rYUM4kA&list=PLp6ek2hDcoNCANsWM2mw3qi0387BhfLyV&index=6
+https://www.youtube.com/watch?v=KAI4yJBASbc&list=PLp6ek2hDcoNCANsWM2mw3qi0387BhfLyV&index=7
+https://www.youtube.com/watch?v=VdiocL2RAMc&list=PLp6ek2hDcoNCANsWM2mw3qi0387BhfLyV&index=8
+https://www.youtube.com/watch?v=xT89C6CvqX8&list=PLp6ek2hDcoNCANsWM2mw3qi0387BhfLyV&index=9
+https://www.youtube.com/watch?v=K_S1e06FAKc&list=PLp6ek2hDcoNCANsWM2mw3qi0387BhfLyV&index=10
+
+**2. Visual Element Description:**
+*   **Header:** The top left contains the Manipal University Jaipur logo and text. The top right contains a circular "A+ NAAC" logo with text "NAAC A+ GRADE WITH 3.28 SCORE".
+*   **Divider:** A thick yellow horizontal bar spans the width of the slide immediately below the header.
+*   **Lists:** The main body contains two numbered lists ("REFERENCE BOOK" and "TEXT BOOKS") written in black serif font. The book titles are italicized.
+*   **Formatting Quirks:** The second item under Reference Books has a double numbering ("2. 2. E. H..."). The text under Text Books has specific spacing irregularities (e.g., ", ,", "P.Kothari").
+*   **Overlap:** At the bottom of the text block, the word "Hill" (wrapping from the previous sentence) overlaps significantly with the text "Video Links:". This creates a visual collision where the black text merges.
+*   **Links:** Below the collision, there is a block of five YouTube URLs formatted in blue, underlined text. They are broken across lines due to length.
+*   **Background:** Solid white.
+
+**3. ASCII Art Layout:**
+
+```text
++----------------------------------------------------------------------+
+| [Logo] MANIPAL UNIVERSITY                     [Logo] A+ NAAC          |
+|           JAIPUR                             NAAC A+ GRADE WITH 3.28  |
++======================================================================+
+| [==== YELLOW BAR ==================================================] |
++----------------------------------------------------------------------+
+|                                                                      |
+|      REFERENCE BOOK                                                  |
+|          1. M. G. Say, Alternating Current Machines (5e), ELBS.       |
+|          2. 2. E. H. Langsdorf, Theory of Alternating Current...      |
+|          3. A. E. Clayton, Performance and Design of DC Machines...   |
+|      TEXT BOOKS                                                      |
+|          1. P. S. Bhimbra, "Electrical Machinery", Seventh Ed...     |
+|          2. I. J. Nagrath, , D. P.Kothari, "Electric Machines...     |
+|          3. A. E.Fitzgerald, Charles Kingsley... Tate McGraw-         |
+|   Hill Video Links: https://www.youtube.com/watch?v=xvL4rYUM...      |
+|   https://www.youtube.com/watch?v=KAI4yJBASbc&list=PLp6ek...         |
+|   https://www.youtube.com/watch

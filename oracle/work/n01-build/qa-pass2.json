@@ -1,0 +1,12 @@
+{
+ "1": "SLIDE 1: CLEAN",
+ "2": "SLIDE 2: CLEAN",
+ "3": "ERR: The read operation timed out",
+ "4": "SLIDE 4: CLEAN",
+ "5": "ERR: empty content",
+ "6": "SLIDE 6: low contrast text overlapping diagram elements\n\n- \"big loops = big I\u00b2R heating\" text at top of solid core diagram is nearly invisible (dark gray on dark gray background).\n- \"airsheet between sheets blocks the loops\" text overlaps and collides with the laminated core diagram bars, making both illegible.",
+ "7": "SLIDE 7: CLEAN",
+ "8": "ERR: The read operation timed out",
+ "9": "SLIDE 9: 1 text overlap defect at slide bottom\nBottom red text (\"NO mechanical losses: the transformer is a STATIC machine (no rotor no bearings).\") overlaps with the bold italic conclusion line directly below it, causing text collision at the slide's bottom edge.",
+ "10": "SLIDE 10: BROKEN DIAGRAM\n- Graph: Dashed line labeled \"Pcu = I^2 R (parabola)\" is drawn horizontally (straight) instead of a curve.\n- Graph: The label \"Pcu = I^2 R (parabola)\" overlaps and sits directly on the dashed line."
+}

@@ -1,0 +1,38 @@
+YES.
+
+**(1) Transcription:**
+
+MANIPAL UNIVERSITY JAIPUR
+NAAC A+ GRADE WITH 3.28 SCORE
+
+Solutions to Problems with Commutation in Real Machines
+- Brush shifting
+- Commutating poles or interpoles
+- Compensating windings
+
+**(2) Visual Elements:**
+
+*   **Logos:** In the top left corner is the Manipal University Jaipur logo (a stylized 'M' emblem next to the text). In the top right corner is a NAAC accreditation seal with "A+" and the text "NAAC A+ GRADE WITH 3.28 SCORE" printed below it.
+*   **Header Bar:** A solid yellow horizontal line separates the top logo area from the main content.
+*   **Layout:** The main title is centered in the upper third of the slide. Below it, three bullet points are left-aligned but centered as a block relative to the slide's width.
+*   **Diagrams:** There are no diagrams, circuits, graphs, or pictures on this slide.
+
+**(3) ASCII Art:**
+
+```text
++------------------------------------------------------------------+
+| (Logo) MANIPAL UNIVERSITY      (Seal) A+                          |
+|         JAIPUR                                     NAAC A+ GRADE  |
+|                                                    WITH 3.28 SCORE|
++==================================================================+
+|                                                                  |
+|                 Solutions to Problems with                       |
+|               Commutation in Real Machines                       |
+|                                                                  |
+|          • Brush shifting                                        |
+|          • Commutating poles or interpoles                       |
+|          • Compensating windings                                 |
+|                                                                  |
+|                                                                  |
++------------------------------------------------------------------+
+```

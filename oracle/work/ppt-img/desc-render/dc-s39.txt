@@ -1,0 +1,84 @@
+YES
+
+### 1. Complete Text Transcription
+
+**Top Left Logo:**
+MANIPAL UNIVERSITY
+JAIPUR
+
+**Top Right Logo:**
+A+
+NAAC
+NAAC A+ GRADE WITH 3.28 SCORE
+
+**Main Title (Yellow Bar):**
+The Induce Torque Equations Of Real Machines
+
+**Left Column Text:**
+The torque in any dc machine depends on three factors:
+*   The flux $\Phi$ in the machine
+*   The armature (or rotor) current $I_A$ in the machine
+*   A constant depending on the construction of the machine
+
+**Right Column Formula Box 1 (Top):**
+$\tau_{ind} = \frac{ZP}{2\pi a} \Phi I_A = K \Phi I_A$
+$K = \frac{ZP}{2\pi a}$
+
+**Right Column Formula Box 2 (Middle):**
+$Z = 2CN_c$
+
+**Right Column Formula Box 3 (Bottom):**
+$a = 2m \text{ for wave winding}$
+$a = mP \text{ for lap winding}$
+
+**Bottom Center Text:**
+The torque on the armature of a real machine =**the number of conductors $Z$ x the torque on each conductor**
+*(Note: "=the number of conductors $Z$ x the torque on each conductor" is printed in red)*
+
+---
+
+### 2. Visual Element Description
+
+*   **Header:** The top of the slide features a white background with two university logos. On the left is the "Manipal University Jaipur" logo featuring a torch and book emblem. On the right is the "NAAC A+" accreditation logo.
+*   **Title Bar:** A thick horizontal bar with a yellow-to-orange gradient runs across the top third of the slide. The main title is centered on this bar in black, sans-serif font.
+*   **Main Content Area:** The body of the slide has a plain white background.
+*   **Text Blocks:** On the left side, there is a bulleted list in a large, dark-blue sans-serif font.
+*   **Formula Boxes:** On the right side, there are three distinct light-blue rectangular boxes with soft drop shadows. These boxes contain mathematical equations and definitions written in a serif font (likely LaTeX style).
+*   **Emphasis Text:** At the bottom left-center, there is a concluding sentence. The first part is black, and the remainder of the sentence starting with "=the number of conductors..." is highlighted in bright red text.
+
+---
+
+### 3. ASCII Art Layout
+
+```text
++------------------------------------------------------------------+
+| [Logo] MANIPAL UNIVERSITY      [NAAC Logo] A+ NAAC               |
+|         JAIPUR                          GRADE WITH 3.28 SCORE    |
++==================================================================+
+|                                                                  |
+|        The Induce Torque Equations Of Real Machines              |
+| +--------------------------------------------------------------+ |
+| | The torque in any dc machine depends on three factors:       | |
+| |                                                              | |
+| | * The flux Φ in the machine       +------------------------+ | |
+| |                                   | τ_ind = (ZP/2πa)ΦI_A   | | |
+| | * The armature (or rotor)         |         = KΦI_A        | | |
+| |   current I_A in the machine      | K = ZP / 2πa           | | |
+| |                                   +------------------------+ | |
+| | * A constant depending on the                             |   |
+| |   construction of the machine      +------------------------+ | |
+| |                                   |     Z = 2CN_c           | | |
+| |                                   +------------------------+ | |
+| |                                                              | |
+| |                                   +------------------------+ | |
+| |                                   | a = 2m for wave winding| | |
+| |                                   | a = mP for lap winding | | |
+| |                                   +------------------------+ | |
+| |                                                              | |
+| |        The torque on the armature of a real machine          | |
+| |        =the number of conductors Z x the torque on each      | |
+| |        conductor                                             | |
+| +--------------------------------------------------------------+ |
+|                                                                  |
++------------------------------------------------------------------+
+```

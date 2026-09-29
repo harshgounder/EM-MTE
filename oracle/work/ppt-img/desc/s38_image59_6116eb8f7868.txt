@@ -1,0 +1,9 @@
+YES
+
+**Transcription:**
+
+$E_A = K' \Phi n$
+
+**Description:**
+
+The image contains a single mathematical equation printed in black text on a white background. There is no diagram, circuit, or graph present. The equation relates several variables: an electromotive force or voltage term labeled $E_A$ (E subscript A), an equals sign, a constant or coefficient labeled $K'$ (K prime), the Greek letter Phi ($\Phi$) representing magnetic flux, and a variable $n$ representing speed or frequency, typically implying multiplication between them.

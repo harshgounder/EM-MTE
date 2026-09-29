@@ -1,0 +1,29 @@
+===== SLIDE 1 (images: 0) =====
+Three Phase Transformer Electrical machines– ELC2104
+
+===== SLIDE 2 (images: 0) =====
+REFERENCE BOOK M. G. Say, Alternating Current Machines (5e) , ELBS. 2. E. H. Langsdorf , Theory of Alternating Current Machine (2e), TMH. 3. A. E. Clayton , Performance and Design of DC Machines (3e), O&amp; IBH, TEXT BOOKS 1. P. S. Bhimbra , “Electrical Machinery”, Seventh Edition, 1995,Khanna Publishers. 2. I. J. Nagrath , , D. P.Kothari , “Electric Machines”, Third Edition, Tata McGraw-Hill Publishing Company Ltd. 3. A. E.Fitzgerald , Charles Kingsley, Jr. Stephen D. Umans , “Electric Machinery”, Fifth Edition, Tata McGraw-Hill. Video Links: https://www.youtube.com/watch?v=xvL4rYUM4kA&amp;list=PLp6ek2hDcoNCANsWM2mw3qi0387BhfLyV&amp;index=6 https://www.youtube.com/watch?v=KAI4yJBASbc&amp;list=PLp6ek2hDcoNCANsWM2mw3qi0387BhfLyV&amp;index=7 https://www.youtube.com/watch?v=VdiocL2RAMc&amp;list=PLp6ek2hDcoNCANsWM2mw3qi0387BhfLyV&amp;index=8 https://www.youtube.com/watch?v=xT89C6CvqX8&amp;list=PLp6ek2hDcoNCANsWM2mw3qi0387BhfLyV&amp;index=9 https://www.youtube.com/watch?v=K_S1e06FAKc&amp;list=PLp6ek2hDcoNCANsWM2mw3qi0387BhfLyV&amp;index=10
+
+===== SLIDE 3 (images: 0) =====
+Three-Phase Transformer In the operation of power systems, transformers are required to change the voltage levels throughout the network - three-phase circuits use three-phase transformers can be achieved by using a bank of three single-phase transformers may be a 3-phase unit having three primary windings and three secondary windings on a 3-legged core using a bank of three single phase transformers, the windings may be connected in a variety of ways the primary side may be connected in a wye or delta configuration independent of the secondary connection the secondary side may be connected in a wye or delta configuration independent of the primary connection
+
+===== SLIDE 4 (images: 0) =====
+In the operation of power systems, transformers are required to change the voltage levels throughout the network - three-phase circuits use three-phase transformers can be achieved by using a bank of three single-phase transformers may be a 3-phase unit having three primary windings and three secondary windings on a 3-legged core using a bank of three single phase transformers, the windings may be connected in a variety of ways the primary side may be connected in a wye or delta configuration independent of the secondary connection the secondary side may be connected in a wye or delta configuration independent of the primary connection Transformer Bank
+
+===== SLIDE 5 (images: 2) =====
+Delta- Delta Connection Three single-phase transformers connected in delta-delta This arrangement is generally used in systems which carry large currents on low voltage and especially when continually of service must be maintained even though one of the phase develops faults. the primary-side line voltage is transformed to the secondary-side line voltage There is no phase displacement between the primary and secondary voltages.
+
+===== SLIDE 6 (images: 2) =====
+Delta-Star Connection Three single-phase transformers connected in delta-wye This type of connection is generally used where it is necessary to step up the voltage ( generating Points). In this system the line voltage ratio is √3 times of transformer turn-ratio. the primary-side line voltage is transformed to the secondary-side phase voltage the delta-wye connection produces a 30° phase shift between the primary and secondary voltages and currents
+
+===== SLIDE 7 (images: 0) =====
+Star- Delta Connection The currents in a star (wye)-delta connection are identical to those in the delta-wye connection This type of transformer connection is used where the voltage is to be stepped down. In this system line voltage ratio is 1/ √3 times the transformer turn ratio. Again, the connection results in a 30° phase shift between the primary and secondary voltages and currents the primary-side phase voltage is transformed to the secondary- side line voltage
+
+===== SLIDE 8 (images: 1) =====
+Star- Star Connection Three single-phase transformers connected wye-wye This type of transformer is most economical for small current and high voltage transformer. The number of turns per phase and the amount of insulation is minimum because phase voltage 1/ √3 of line voltage. There is no phase displacement between the primary and secondary voltages. the primary-side phase voltage is transformed to the secondary-side phase voltage the neutral terminal of the primary side of the transformer must be connected back to the source with a low impedance path to avoid secondary voltage magnitude distortion with unbalanced loads
+
+===== SLIDE 9 (images: 2) =====
+Open Delta Connection If one transformer of a delta-delta system is damaged, the system will continue to supply 3-phase power. If this defective transformer is disconnected and removed, the remaining two transformer continue to function as a 3-phase bank with rating reduced to about 57.7 % of that of the original delta-delta bank. This is known as open delta system
+
+===== SLIDE 10 (images: 0) =====
+Lecture series outcome “UNDERSTAND the principle ,  construction of Three phase Transformer”

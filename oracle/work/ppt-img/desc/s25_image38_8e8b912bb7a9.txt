@@ -1,0 +1,14 @@
+YES
+
+$I_P^* = I_F + \frac{N_{SE}}{N_{SH}} I_A - \frac{\mathcal{F}_{AR}}{N_{SH}}$
+
+The image contains only a single mathematical equation; there is no circuit, graph, diagram, or phasor to describe. The text consists of the following elements:
+- On the left side of the equals sign: the variable $I$ with a subscript $P$ and a superscript asterisk ($*$).
+- An equals sign ($=$).
+- On the right side, the first term is the variable $I$ with a subscript $F$.
+- A plus sign ($+$).
+- A fraction with $N$ and subscript $SE$ in the numerator and $N$ and subscript $SH$ in the denominator, multiplied by the variable $I$ with a subscript $A$.
+- A minus sign ($-$).
+- A final fraction with a script $\mathcal{F}$ and subscript $AR$ in the numerator and $N$ with subscript $SH$ in the denominator.
+
+All text and symbols are printed in a standard mathematical serif font.

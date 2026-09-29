@@ -1,0 +1,79 @@
+### Confirmation
+**YES**
+
+---
+
+### (1) Complete Text Transcription
+#### Top Logos/Headers
+Top-left:
+```
+MANIPAL UNIVERSITY
+JAIPUR
+```
+Top-right:
+```
+A+
+NAAC
+NAAC A+ GRADE WITH 3.28 SCORE
+```
+
+#### Slide Content
+Title:
+```
+The Shunt Generator
+```
+
+Main descriptive text:
+```
+A shunt dc generator is a dc generator that supplies its own field current by having its field connected directly across the terminals of the machine.
+```
+
+Bulleted points:
+```
+• The armature current of the machine supplies both the field circuit and the load
+$I_A = I_F + I_L$
+• $V_T = E_A - I_A R_A$
+•
+```
+
+Equations printed below the circuit diagram:
+```
+$I_A = I_F + I_L$
+$V_T = E_A - I_A R_A$
+$I_F = \frac{V_T}{R_F}$
+```
+
+Diagram caption:
+```
+The equivalent circuit of a shunt de generator
+```
+
+---
+
+### (2) Visual Elements
+The slide contains an **equivalent circuit diagram for a shunt DC generator**, located on the lower-right portion of the slide:
+1.  Components:
+    - Armature voltage source: a circle with `+` (top) and `-` (bottom) labels, marked $E_A$
+    - Armature resistance: a zigzag resistor symbol, marked $R_A$, in series with $E_A$
+    - Parallel shunt field branch: a series combination of an adjustable (variable) zigzag resistor marked $R_F$ (with an arrow indicating adjustability) and an inductor coil symbol marked $L_F$, connected directly across the generator's output terminals (shunt connection)
+    - Output terminals: open terminals on the right, with terminal voltage $V_T$ labeled between them (`+` on top terminal, `-` on bottom terminal)
+2.  Current labels with arrows:
+    - $I_A$: arrow pointing right, indicating armature current flowing through $R_A$ toward the central node
+    - $I_F$: arrow pointing down, indicating field current flowing into the parallel shunt branch ($R_F$ and $L_F$)
+    - $I_L$: arrow pointing right, indicating load current flowing from the central node to the positive output terminal
+3.  Below the circuit, three equations are printed (transcribed in full above).
+
+---
+
+### (3) ASCII Art of the Circuit Diagram
+```
+  ( [E_A] ) ----[R_A]----+----[I_L →]----[ + V_T ]
+      |                  |                |
+      |                 [I_F ↓]           |
+      |                  |                |
+      |               [R_F var]           |
+      |                  |                |
+      |               [L_F coil]          |
+      |                  |                |
+      +------------------+----------------[ -  ]
+```

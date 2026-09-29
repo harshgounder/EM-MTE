@@ -1,0 +1,38 @@
+According to Faraday’s law:
+Flux cut
+e=—
+Time
+Therefore,
+PP
+e=——
+60/N
+P®N
+e=——
+60
+Thus, the EMF induced in one conductor is:
+P®N
+e=——
+60
+According to Faraday's law:
+
+Flux cut
+e=—
+Time
+
+Therefore,
+
+_ P®
+~ 60/N
+P&N
+
+e=——
+
+60
+
+Thus, the EMF induced in one conductor is:
+
+P®N
+e=——
+
+60
+

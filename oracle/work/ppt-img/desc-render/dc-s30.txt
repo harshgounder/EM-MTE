@@ -1,0 +1,71 @@
+YES
+
+(1) Complete exact transcription:
+- Top left:
+  **MANIPAL UNIVERSITY**
+  **JAIPUR**
+- Top right:
+  **A+**
+  **NAAC**
+  **NAAC A+ GRADE WITH 3.28 SCORE**
+- Main heading: **Commutation Process**
+- Red text:
+  **The machine at time**
+  (partially obscured line): **\(\omega t=45^\circ\) .**
+- Left diagram (a):
+  \(\boldsymbol{\omega}\) (rotation arrow label)
+  **B** (top left arc), **B** (top right arc)
+  **3**, **1'**, **b**, **c**, **E** (with **+**, **-**), **x**, **y**, **a**, **d**, **3'**, **1**
+  **\(\boldsymbol{\omega t = 45^\circ}\)**
+  **N** (left), **S** (right)
+  **2**, **4'**, **4**, **2'**
+  Label: **(a)**
+- Right diagram:
+  **2  + e  -   + e  -  2'**
+  **1'**, **3**
+  **0 V** (left), **0 V** (right)
+  **1**, **3'**
+  **4'  + e  -   + e  -  4**
+  Center: **E**, **+**, **-**, **x**, **y**, **a**, **b**, **c**, **d**
+  Right side: **\(\boldsymbol{E = 2e}\)**
+
+---
+
+(2) Visual Elements:
+1.  **Left Diagram (a): Rotating Electrical Machine Cross-Section**
+    - **Stator**: Curved magnetic pole pieces: top poles marked *B*, left stator pole marked *N*, right stator pole marked *S*. Magnetic flux arrows point **inward** from stator poles toward the rotor center.
+    - **Rotor**: 4 armature poles/windings labeled *1/1'*, *3/3'*, *4/4'*, *2/2'*, connected to a segmented commutator shaded segments, with brush contacts marked *x* and *y*.
+    - **Polarity/Voltage**: A voltage source *E* with **+** left, on *x* and **-** right, on *y* polarity is marked between the brushes.
+    - **Rotation**: A curved arrow labeled \(\omega\) top indicates counter-clockwise rotational direction, left-pointing arrow at the top.
+    - **Position Annotation**: \(\boldsymbol{\omega t = 45^\circ}\) states the rotor is at a 45-degree angular position from a reference point.
+    - **Rotor Labels**: Inner edges of rotor windings have labels *a*, *b*, *c*, *d*.
+
+2.  **Right Diagram: Equivalent Circuit of the Machine**
+    - This is a square/wing-shaped circuit model matching the machine state:
+    - **Coil/Inductor Elements**: 4 coil symbols, top and bottom arms each have two coils, each labeled \(+ e -\) to show voltage *e* across the coil, with polarity markers.
+    - **Nodes**: Labeled *1'*, *3*, *3'*, *4*, *2'*, *2*, *4'*, *1*.
+    - **Reference Nodes**: *0 V* markers on left and right middle nodes, indicating ground/reference voltage.
+    - **Center**: A symbol matching the left diagram's commutator, with brush contacts *x*, *y*, voltage source *E* with **+**, **-** polarity, and rotor labels *a*, *b*, *c*, *d*.
+    - **Output Voltage**: Marked on the right as \(\boldsymbol{E = 2e}\), meaning total output voltage equals 2 times the per-coil voltage *e*.
+
+---
+
+(3) ASCII Art:
+Left Diagram (a):
+```
+        ω (counter-clockwise arrow)
+       B             B
+      /   \       /   \
+     /     \     /     \
+    |   3   1'  |       |
+    |    \ /    |       |
+    |   2 ---   --- 4   |
+    |  4'  E+,-  2'     |
+    |     x  y          |
+    |      a b c d      |
+     \     3'        /
+      \     1       /
+       \           /
+        (a)
+```
+*(Implied:

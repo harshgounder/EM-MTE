@@ -1,0 +1,5 @@
+YES
+
+$I_A = I_F + I_L$
+
+There is no diagram, circuit, or graph in this image. The image contains only a single mathematical equation.

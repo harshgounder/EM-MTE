@@ -1,0 +1,78 @@
+YES
+
+### 1. On-Slide Text (Transcription)
+**Header:**
+*   (Logo) MANIPAL UNIVERSITY JAIPUR
+*   (Logo) NAAC A+ GRADE WITH 3.28 SCORE
+
+**Main Title:**
+Problems with Commutation in Real Machines
+
+**Body Text (Left Column):**
+*   • Armature reaction
+    The current though the armature conductors set up a magnetic field surrounding it which has the following effects
+    •Weakens the main flux
+    •Distorts the main flux
+    Neutral plane shift (Note: This line is partially cut off at the bottom of the image).
+
+**Diagram Labels (Right Column):**
+*   Magnetic neutral plane
+*   Pole field
+*   Armature field
+*   New neutral plane
+*   Old neutral plane
+*   $\omega$ (Angular velocity symbol with curved arrows)
+*   N, S (North and South pole labels)
+*   (a), (b), (c), (d), (e) (Sub-figure labels)
+
+---
+
+### 2. Visual Element Description
+The slide features a series of five technical diagrams illustrating the effect of **Armature Reaction** in a DC machine.
+
+*   **Diagram (a):** Shows the main magnetic field from two poles (N on the left, S on the right) acting on a circular armature. A vertical line represents the **Magnetic neutral plane**. A curved arrow labeled **$\omega$** at the top indicates counter-clockwise rotation. Conductors are represented by small circles: dots (current coming out) on the left half and crosses (current going in) on the right half.
+*   **Diagram (b):** Shows only the magnetic field produced by the armature current (**Armature field**), with flux lines forming a horizontal pattern passing through the armature.
+*   **Diagram (c):** Shows the **resultant magnetic field**, which is a combination of the pole field and armature field. The flux lines are distorted and the density is reduced under the poles (weakening the flux).
+*   **Diagram (d):** Shows the two fields superimposed, specifically labeling the **Pole field** (vertical flux between poles) and the **Armature field** (horizontal flux).
+*   **Diagram (e):** Shows the shift in the neutral plane. The **Old neutral plane** (vertical) is compared to the **New neutral plane**, which has rotated in the direction of rotation.
+
+---
+
+### 3. ASCII Art Layout
+
+```text
++-------------------------------------------------------------------+
+| [Logo] MANIPAL UNIVERSITY               [Logo] NAAC A+ GRADE       |
+|         JAIPUR                                                 WITH 3.28 SCORE |
++-------------------------------------------------------------------+
+|                                                                   |
+|           Problems with Commutation in Real Machines              |
+|                                                                   |
+|  • Armature reaction                                              |
+|    The current though the armature conductors set up a magnetic    |
+|    field surrounding it which has the following effects            |
+|    •Weakens the main flux                                         |
+|    •Distorts the main flux                                        |
+|    Neutral plane shift                                            |
+|                                                                   |
+|                            [Image Area]                           |
+|                                                                   |
+|      (a) Main Field       (d) Superimposed Fields                |
+|         / \                    / \                               |
+|   N ---+--- S              N --+--- S                            |
+|        |  @                  |  @                                 |
+|       / \                  / Pole \                               |
+|          [Armature]       [Armature]                               |
+|                                               [Image Area]        |
+|                                                                   |
+|   (b) Armature Field     (e) Shifted Neutral Plane                |
+|       --- + ---                  /  |  \                         |
+|          / \                     /   |   \                        |
+|       [Armature]              [Armature]                          |
+|                                New / | \ Old                      |
+|   (c) Resultant Field                                                |
+|          --- + ---                                                 |
+|           \ /   \ /                                                |
+|          [Armature]                                                |
++-------------------------------------------------------------------+
+```

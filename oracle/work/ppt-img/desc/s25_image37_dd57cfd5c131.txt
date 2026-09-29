@@ -1,0 +1,5 @@
+YES
+
+$F_{net} = F_{SH} + F_{SE} - F_{AR}$
+
+There is no diagram, circuit, or graph in the image; it contains only the single equation above.

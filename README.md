@@ -1,8 +1,8 @@
 # EM MTE
 
-Study material for the Electrical Machines (ELC 2104) course: syllabus, lecture slides, handwritten notes, assignments, and the course handout.
+Study material for the Electrical Machines (ELC 2104) course: syllabus, lecture slides, handwritten notes, assignments, course handout, plus the `oracle/` project that turns all of it into exam-targeted notes.
 
-## Contents
+## Source material (repo root)
 
 | Path | What it is |
 |---|---|
@@ -20,6 +20,13 @@ Study material for the Electrical Machines (ELC 2104) course: syllabus, lecture 
 
 The original slide decks are kept alongside their markdown conversions on purpose, so the `.pptx` files stay the source of truth.
 
-## Note
+## Generated notes (`oracle/`)
 
-`.directory` is a KDE folder icon setting that was already in the folder. It is committed because nothing was left out of the original folder.
+`oracle/` is the exam notes build: the analysis reports, the finished topic notes as PDF, PPTX and LaTeX, and the JS/TS builders that produce them from the decks above. See [`oracle/README.md`](oracle/README.md).
+
+Nothing in `oracle/` duplicates anything at the repo root, verified by sha256. The reasoning is written up in [`OVERLAP-AUDIT.md`](OVERLAP-AUDIT.md).
+
+## Notes on this repo
+
+- `.directory` is a KDE folder icon setting that was already in the source folder. It is committed because nothing was left out.
+- `node_modules` is excluded via `.gitignore`. `package.json` and `package-lock.json` are committed, so `npm install` restores it pinned.

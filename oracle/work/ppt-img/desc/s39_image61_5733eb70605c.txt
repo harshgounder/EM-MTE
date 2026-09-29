@@ -1,0 +1,13 @@
+NO
+
+The image contains the following mathematical expression:
+
+$$\tau_{ind} = \frac{Z P}{2 \pi a} \Phi I_A = K \Phi I_A$$
+
+**Description of content:**
+The image displays a single line containing a physics or engineering formula related to torque ($\tau_{ind}$). The equation defines torque in terms of several variables:
+*   $\tau_{ind}$ on the left-hand side.
+*   A fraction $\frac{Z P}{2 \pi a}$ multiplied by $\Phi I_A$.
+*   This is equated to a constant $K$ multiplied by $\Phi I_A$.
+
+There are no diagrams, circuits, graphs, axes, or other visual elements present in this image.

@@ -1,0 +1,112 @@
+YES.
+
+### 1. On-Slide Text Transcription
+
+**Header:**
+*   **Left:** MANIPAL UNIVERSITY JAIPUR
+*   **Right:** NAAC A+ GRADE WITH 3.28 SCORE
+
+**Title:**
+DC Machine Construction
+
+**Body Text:**
+*   The rotor coils are connected in series through the commutator segments.
+*   The ends of each coil are connected to a commutator segment.
+*   The commutator consists of insulated copper segments mounted on an insulated tube.
+*   Two brushes are pressed to the commutator to permit current flow and they are placed in neutral zone.
+
+**Image Annotations (Top Right Photo):**
+*   Mica insulation
+*   Copper conductors
+*   Mica Insulation between segments
+*   Copper segment
+
+**Diagram Annotations (Bottom Right Schematic):**
+*   Rotation
+*   $I_{r\_dc}/2$ (Top left label)
+*   $I_{r\_dc}$ (Center top label)
+*   $I_{r\_dc}/2$ (Top right label)
+*   Brush
+*   Shaft
+*   Pole winding
+*   N
+*   S
+*   Insulation
+*   Rotor Winding
+*   $I_{r\_dc}$ (Bottom label)
+*   Copper segment
+*   (Numbered segments inside circle: 1, 2, 3, 4, 5, 6, 7, 8)
+
+### 2. Visual Element Description
+
+**Layout:**
+The slide has a white background with a yellow header bar. Logos for Manipal University Jaipur and NAAC are in the top corners.
+
+**Left Side (Text):**
+Four bullet points describe the construction of a DC machine, alternating between blue and black text.
+
+**Top Right Image:**
+A close-up photograph of a DC armature. It shows copper windings wrapped around iron core slots (left side of photo) and the commutator (right side of photo). The commutator is a cylinder made of copper bars (segments) separated by insulating material (mica). Arrows point to specific parts:
+*   "Mica insulation" points to the insulator between windings/segments.
+*   "Copper conductors" points to the wires.
+*   "Mica Insulation between segments" points to the vertical lines between copper bars.
+*   "Copper segment" points to a single bar on the commutator.
+
+**Bottom Right Diagram:**
+A schematic cross-section of a DC machine.
+*   **Center:** A black circle representing the "Shaft".
+*   **Surrounding Shaft:** A ring divided into 8 numbered segments (1 through 8), representing the commutator.
+*   **Radial Components:** Eight shapes extending outward represent the "Rotor Winding" or coils.
+*   **Outer Circle:** The armature core boundary.
+*   **Stator Poles:**
+    *   Left side: A rectangular block labeled "N" (North Pole) with red circles on top representing "Pole winding" coils.
+    *   Right side: A rectangular block labeled "S" (South Pole) with red circles on top representing "Pole winding" coils.
+*   **Brushes:**
+    *   Top brush: A black rectangle contacting segment 8 and 1 area. Labeled "Brush".
+    *   Bottom brush: A black rectangle contacting segment 4 and 5 area.
+*   **Current/Flow Indicators:**
+    *   Arrows labeled $I_{r\_dc}/2$ point away from the brush.
+    *   Arrow labeled $I_{r\_dc}$ points into the brush from the shaft/brush connection.
+    *   An arrow labeled "Rotation" indicates clockwise movement.
+*   **Labels:** Various parts are labeled with lines pointing to them (Shaft, Insulation, Copper segment, etc.).
+
+### 3. ASCII Art of Diagrams
+
+**Top Right Photo Layout:**
+```
++---------------------------------------+
+| [CORE/WINDINGS]   [COMMUTATOR BARS]   |
+|  |||||||||||       |||||||||||||||     |
+|  |||||||||||       |||||||||||||||     |
+|  |||||||||||       |||||||||||||||     |
+|  ^  ^              ^             ^     |
+|  |  |              |             |     |
+| (Mica Ins.)  (Cu Conductors)  (Mica)   |
+|                                        |
+|                              (Cu Seg.) |
++---------------------------------------+
+```
+
+**Bottom Right Schematic:**
+```
+      Pole Winding (Top)      Pole Winding (Top)
+    o o o o                o o o o
+      |                       |
+      +-----------+   +-----------+
+      |     N     |   |     S     |
+      |           |   |           |
+      +-----+     |   |     +-----+
+            |     +-----+     |
+      Ir/2->|--(Brush)--<Ir/2 |
+      |     |  |  |  |  |     |
+      |     +--|8|1|--+     |
+      Shaft    |--|2|--|    |
+               |--|3|--|  |
+               |--|4|--| <-Brush
+               |--|5|--|
+               |--|6|--|
+               +--|7|--+
+                  +--+
+                  ^ Insulation
+         (Rotation: Clockwise)
+```

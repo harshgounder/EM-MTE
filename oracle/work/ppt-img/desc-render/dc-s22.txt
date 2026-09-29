@@ -1,0 +1,75 @@
+YES
+
+(1) COMPLETE TEXT TRANSCRIPTION:
+Top header:
+- Left: `MANIPAL UNIVERSITY JAIPUR`
+- Right: `NAAC` logo with `A+` inside, below it: `NAAC A+ GRADE WITH 3.28 SCORE`
+
+Slide Title:
+`Shunt Generator`
+
+Blue Subheading:
+`If armature reaction is present in a shunt generator`
+
+Bullet points:
+1.  `• There is demagnetizing magnetomotive force and $I_A R_A$ drop $I_F = I_F - \mathcal{F}_{AR}/N_F$`
+2.  `•` (empty bullet point)
+
+Graph & Caption Text:
+Graph Y-axis: `E_A and V_T`
+Graph X-axis: `I_F`
+Graph annotations:
+- `E_A = V_T at no load`
+- `E_A with load`
+- `V_T with load`
+- `$I_A R_A$ drop`
+- `V_T versus I_F`
+- `E_A versus I_F`
+- `Demagnetizing mmf (converted to an equivalent field current)`
+- `$R_F = \frac{V_T}{I_F}$`
+
+Caption below graph:
+`graphical analysis of shunt generators with armature reaction`
+
+---
+
+(2) Visual Elements Description:
+- **Header**: Two logos: left is the Manipal University Jaipur circular emblem with text, right is the NAAC accreditation A+ logo with score text.
+- **Text Blocks**: A large main title, a colored blue subheading, two bullet points, one with text and one empty.
+- **Graph**: A 2D Cartesian plot:
+  - Y-axis: Measures $E_A$ (induced voltage) and $V_T$ (terminal voltage)
+  - X-axis: Measures $I_F$ (field current)
+  - Curves:
+    1.  A higher curve for $E_A$ vs $I_F$ (no-load voltage curve)
+    2.  A lower curve for $V_T$ vs $I_F$ (terminal voltage curve, sits below $E_A$ curve due to armature drop)
+  - Annotations:
+    - A horizontal gap labeled `$I_A R_A$ drop` showing the voltage drop between $E_A$ and $V_T$ under load
+    - An annotation for `Demagnetizing mmf` showing the shift in load curves due to armature reaction
+    - A straight line from the origin labeled `$R_F = \frac{V_T}{I_F}$` representing the shunt field resistance line
+    - Labels for no-load and load voltage levels ($E_A$ and $V_T$ at no load/with load)
+
+---
+
+(3) ASCII Art of Graph Layout:
+```
+      ↑ E_A, V_T
+      |
+      |          E_A (no load) ---/  ← V_T vs I_F curve (below E_A)
+      |                              /
+      |             E_A (with load) /
+      |                            /
+      |        V_T (with load)   /
+      |                           /
+      |                  ← I_A R_A drop (gap between E_A and V_T at load)
+      |                ← Demagnetizing mmf (shifted load curves)
+      |              /
+      |            /
+      |          /
+      |        /  $R_F = V_T/I_F$ (straight line from origin)
+      |      /
+      |    /
+      |  /
+      |/
+      +----------------------------------→ I_F
+          (Origin: 0,0)
+```

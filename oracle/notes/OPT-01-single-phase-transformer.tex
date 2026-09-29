@@ -1,0 +1,180 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+
+\definecolor{copper}{HTML}{8C4A2F}
+\definecolor{iron}{HTML}{262B33}
+\definecolor{muted}{HTML}{6B6B6B}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize\color{muted} OPT-01 \textbar{} Single-Phase Transformer \textbar{} ANSWER SHEET}
+\rhead{\footnotesize\color{muted} ELC2104 \textbar{} MTE}
+\cfoot{\footnotesize\color{muted} \thepage}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\q}[2]{\subsection*{\color{copper}#1\quad\color{iron}#2}}
+\newcommand{\w}[1]{\textbf{\color{copper}WRITE:} #1}
+\newcommand{\tr}[1]{\textbf{\color{red}[TRAP]} #1}
+\newcommand{\dw}[1]{\textbf{\color{muted}[DRAW]} #1}
+\newcommand{\kd}[1]{\textbf{\color{red}DISTINGUISH:} #1}
+
+\begin{document}
+
+\begin{center}
+{\footnotesize\color{copper} ELC2104 \textbar{} ELECTRICAL MACHINES \textbar{} MTE}\\[6pt]
+{\LARGE\bfseries\color{iron} OPT-01: Single-Phase Transformer, ANSWER SHEET}\\[2pt]
+{\Large\color{copper} A1 Q1 to Q20 (single-phase parts), answer-ready}\\[6pt]
+{\footnotesize\color{muted} not learning notes: exactly what to put on the paper, in order. Q11b and Q11c and Q15 (three-phase) live in OPT-02.}
+\end{center}
+
+\hrulefill
+\q{Q1 (verbatim):}{Explain the construction and working principle of a single-phase transformer with a neat diagram.}
+\w{construction (6 parts):} (1) \textbf{core:} laminated CRGO silicon steel (0.35 to 0.5 mm insulated sheets), magnetic path for the flux; built core-type (windings around limbs) or shell-type (core around windings), with butt or lap interlocked joints. (2) \textbf{windings:} concentric on the core limbs, cylindrical in disc or helical or crossover form: LV winding inner (low insulation to core), HV outer; insulation class defines the conductor varnish and wrapping. (3) \textbf{insulation:} paper, mica, pressboard, enamel: class by temperature capability. (4) \textbf{tank} (sheet steel) with \textbf{transformer oil} for insulation and cooling, plus radiator tubes. (5) \textbf{conservator tank} (oil expansion cushion with air) and \textbf{silica-gel breather} (dry the entering air). (6) \textbf{bushings} (porcelain, HV out top and LV often at the bottom) and protection fittings (Buchholz relay on larger units).
+\w{working (3 lines):} (1) AC supply to the primary gives an alternating mmf $N_1 i_1$ and an alternating mutual flux $\Phi_m$ in the core. (2) Faraday: this flux induces $e_1 = -N_1\,\dfrac{d\Phi}{dt}$ (back emf) and $e_2 = -N_2\,\dfrac{d\Phi}{dt}$ (load emf); the emf ratio is $\dfrac{E_1}{E_2} = \dfrac{N_1}{N_2}$. (3) With the secondary loaded, current $I_2$ flows and $I_1$ adjusts (mmf balance $N_1 I_1 \approx N_2 I_2$): power transfers by mutual induction, no electrical contact.
+\dw{core-type sectional view: laminated core, LV and HV concentric coils, tank, oil, conservator, breather, bushings. Label checklist: all 6 parts + $\Phi_m$ arrow + terminal marks.}
+
+\q{Q2 (verbatim):}{Derive the EMF equation of a single-phase transformer and explain the significance of each parameter.}
+\w{derivation (the standard chain):} (1) let the flux be $\Phi = \Phi_m\, \sin(\omega t)$ through a winding of $N$ turns. (2) induced emf $e = -N\,\dfrac{d\Phi}{dt} = -N\, \omega\, \Phi_m\, \cos(\omega t)$. (3) peak value $E_{\text{max}} = 2\pi f\, N\, \Phi_m$. (4) rms $E = \dfrac{E_{\text{max}}}{\sqrt{2}} = \dfrac{2\pi}{\sqrt{2}}\, f\, N\, \Phi_m = 4.44\, f\, N\, \Phi_m$. (5) generalise with the core area: $\Phi_m = B_m\, A$, giving $\boxed{E = 4.44\, f\, N\, B_m\, A}$. (6) turns ratio line: $\dfrac{E_1}{E_2} = \dfrac{N_1}{N_2} = a$.
+\w{parameter significance (6 lines):} $f$ = supply frequency (Hz): induction needs changing flux. $N$ = turns on that winding: emf scales with turns (the ratio knob). $\Phi_m$ = maximum mutual flux (Wb). $B_m$ = maximum flux density in the core (T): set by the saturation knee of the steel. $A$ = net iron cross-section ($\text{m}^{2}$, net = stacking factor times gross). $4.44 = \dfrac{2\pi}{\sqrt{2}}$: the sinusoidal-waveform constant (4.0 for square waves, per the deck's variants note). E per turn $= \dfrac{E}{N} = 4.44 f \Phi_m$ is identical for both windings: the core design law.
+
+\q{Q3 (verbatim):}{Explain the ideal and practical transformer and discuss the assumptions made in an ideal transformer.}
+\w{ideal (the 5 assumptions):} (1) no winding resistance (zero copper loss in coils). (2) no leakage flux: all flux links both windings (no leakage reactance drops). (3) lossless core: zero hysteresis and eddy (no iron loss). (4) infinite permeability: zero magnetising current needed to establish flux (mmf $= 0$). (5) perfect coupling (coefficient of coupling $k = 1$).
+\w{practical (the mapping, 5 lines):} real copper resistance gives $I^{2}R$ drop and heating; real leakage gives $X_1$, $X_2$ drops and regulation; real steel gives hysteresis and eddy loss (core loss, tested by OC); real finite permeability means a magnetising current of about 2 to 5 percent of full-load current flows at no load; coupling is essentially 1 in well-built cores (the textbook $k$-splits are pedagogy). Efficiency, regulation and the equivalent circuit (Q4) are exactly the corrections for these five imperfections.
+\kd{ideal = five ``zeros and infinities'' (no $R$, no leakage, no iron loss, infinite $\mu$, perfect coupling). practical = five real effects that generate the equivalent circuit's six components.}
+
+\q{Q4 (verbatim):}{Draw and explain the equivalent circuit of a single-phase transformer and identify all its components.}
+\w{component map (6 items):} (1) $R_1$: primary winding resistance (copper). (2) $X_1$: primary leakage reactance (flux linking primary only). (3) $R_2'$: secondary resistance referred to primary ($R_2 \times a^{2}$). (4) $X_2'$: secondary leakage reactance referred ($X_2 \times a^{2}$). (5) $R_0$: core-loss resistance across the supply (carries $I_w$, the core-loss current). (6) $X_0$: magnetising reactance (carries $I_m$ and creates $\Phi_m$). The no-load current phasor splits: $\vec{I_0} = \vec{I_w} + \vec{I_m}$ with $\cos\phi_0 = \dfrac{I_w}{I_0}$ small (0.1 to 0.25).
+\w{three forms (draw or state):} exact circuit (shunt branch at the supply terminals), simplified (series $R_{\text{eq}} = R_1 + R_2'$ and $X_{\text{eq}} = X_1 + X_2'$ with the shunt branch at the input), approximate (shunt branch moved to the supply terminals and the drop computed on the load current alone: the workhorse of regulation and efficiency sums). Impedance transfer law: $Z' = Z \times a^{2}$.
+\dw{the standard approximate circuit: shunt $R_0$, $X_0$ at the input, series $R_{\text{eq}}$, $X_{\text{eq}}$ in the top lead, ideal 1:$a$ transformer at the end with load.}
+
+\q{Q5 (verbatim):}{Explain the methods used to determine the equivalent circuit parameters of a transformer.}
+\w{(1) The two standard tests: the \textbf{open-circuit test} finds the shunt branch ($R_0$, $X_0$, core loss); the \textbf{short-circuit test} finds the series branch ($R_{\text{eq}}$, $X_{\text{eq}}$, full-load copper loss). (2) Winding resistances can also be measured directly by direct-current resistance test (voltmeter-ammeter) at the machine terminals. (3) OC and SC together give every parameter without loading the transformer to its rating: that is their whole point. (4) State which side each result is referred to (the supply side used in the test), and use the $a^{2}$ law to move sides (Q10, Q9 give the formulas). (5) Verification line: the two tests' losses add to the total loss used in efficiency sums.}
+
+\q{Q6 (verbatim):}{Explain voltage regulation of a transformer and derive the expression for voltage regulation at different power factors.}
+\w{definition:} regulation = the rise in secondary terminal voltage when the rated load (at stated power factor) is thrown off, the primary voltage held constant:
+\[
+\text{regulation} = \dfrac{|V_{2,\text{no load}}| - |V_{2,\text{full load}}|}{|V_{2,\text{no load}}|}\ \ (\text{deck convention})
+\]
+\tr{three conventions exist in the literature (divide by $V_{2,\text{no load}}$, by $V_{2,\text{full load}}$, or using referred values). Name the convention you use and state the constant-$V_1$ condition: those two clauses carry a mark each.}
+\w{derivation (phasor resolution, the chain to write):} (1) refer all to the secondary (or primary): $V_1' = V_2 + \vec{I_2}\, (R_{\text{eq}} + j X_{\text{eq}})$ with $|V_1'|$ fixed at no-load value. (2) resolve along $V_2$: for load p.f. $\cos\phi$ (lagging $\phi$ positive), the drop components along $V_2$ are $I_2 R_{\text{eq}} \cos\phi + I_2 X_{\text{eq}} \sin\phi$ (lagging) or $I_2 R_{\text{eq}} \cos\phi - I_2 X_{\text{eq}} \sin\phi$ (leading). (3) transverse components ($I_2 X \cos\phi \mp I_2 R \sin\phi$) are small second-order: their squares are negligible against $V^2$ (this neglect licenses Q8's approximation). (4) exact squared form: $|V_1'|^{2} = (V_2 + I_2 R \cos\phi \pm I_2 X \sin\phi)^{2} + (I_2 X \cos\phi \mp I_2 R \sin\phi)^{2}$, then take the root and subtract. (5) the three-case summary:
+\[
+\text{lagging: } \Delta V \approx I_2\,(R_{\text{eq}} \cos\phi + X_{\text{eq}} \sin\phi)
+\qquad
+\text{leading: } \Delta V \approx I_2\,(R_{\text{eq}} \cos\phi - X_{\text{eq}} \sin\phi)
+\]
+\[
+\text{unity: } \Delta V \approx I_2\, R_{\text{eq}}
+\]
+\w{the zero-regulation line:} at a sufficiently leading power factor $\Delta V$ can hit zero when $\tan\phi = \dfrac{R_{\text{eq}}}{X_{\text{eq}}}$ (leading) and can even go negative (voltage rises on load): regulation range is negative to positive with leading p.f.
+
+\q{Q8 (verbatim):}{Derive the approximate expression for voltage regulation of a transformer for lagging and leading power factors.}
+\w{the derivation from Q6's step 4 (write it fully, it is its own question):} (1) start at the exact squared equation above. (2) drop the transverse square (order of magnitude: drops are 5 to 10 percent of $V$, so their squares are 0.25 to 1 percent against $V^{2}$). (3) take the square root: $|V_1'| \approx V_2 + I_2 R \cos\phi \pm I_2 X \sin\phi$. (4) subtract and divide:
+\[
+\boxed{\text{regulation (lagging)} \approx \dfrac{I_2\,(R_{\text{eq}} \cos\phi + X_{\text{eq}} \sin\phi)}{V_{2,\text{no load}}}}
+\qquad
+\boxed{\text{regulation (leading)} \approx \dfrac{I_2\,(R_{\text{eq}} \cos\phi - X_{\text{eq}} \sin\phi)}{V_{2,\text{no load}}}}
+\]
+\w{the three corollary forms (shortcut marks):} (1) percent drop form: $\% \text{drop} \approx \% R\, \cos\phi \pm \% X\, \sin\phi$ where $\% R = \dfrac{I_2 R_{\text{eq}}}{V_2} \times 100$ and $\% X = \dfrac{I_2 X_{\text{eq}}}{V_2} \times 100$ at rated current. (2) percentage relations: $\% R = \dfrac{P_{\text{cu,FL}}}{S} \times 100$ (from the SC test watt reading!) and $\% Z = \dfrac{V_{sc}}{V_{\text{rated}}} \times 100$, $\% X = \sqrt{\% Z^{2} - \% R^{2}}$: regulation from test data without circuit solving. (3) zero regulation: leading at $\tan\phi = \dfrac{R_{\text{eq}}}{X_{\text{eq}}}$ (Q6 step 5).
+
+\q{Q9 (verbatim):}{Explain the short-circuit test of a transformer with a neat circuit diagram and derive the equivalent impedance parameters.}
+\w{setup (5 points):} (1) supply to the \textbf{high-voltage winding}, the \textbf{low-voltage winding short-circuited} by a thick link (the standard: because the LV current would be too large to measure, the HV current is small and safe; also less supply needed). (2) instruments on the HV side: voltmeter, ammeter, wattmeter (pressure coil before current coil). (3) the applied voltage is a small percentage of rated (2 to 12 percent) so the flux in the core is tiny and the \textbf{shunt branch draws negligible current}: the circuit is effectively just the series impedances. (4) raise the voltage slowly until the ammeter reads \emph{rated HV current}: now the loss measured is the full-load copper loss. (5) this way full-load copper loss, equivalent impedance and regulation all follow from one small test.
+\w{derivation (the 3-parameter chain):} with readings $V_{sc}$, $I_{sc}$, $W_{sc}$ at the HV (primary) side:
+\[
+Z_{\text{eq}} = \dfrac{V_{sc}}{I_{sc}}, \qquad
+R_{\text{eq}} = \dfrac{W_{sc}}{I_{sc}^{2}}, \qquad
+X_{\text{eq}} = \sqrt{Z_{\text{eq}}^{2} - R_{\text{eq}}^{2}}
+\]
+and the load-loss law: $P_{\text{cu}}$ at any current $= I^{2} R_{\text{eq}}$, so at load fraction $x$: $P_{\text{cu}} = x^{2}\, P_{\text{cu,FL}}$. To move to the secondary: multiply the referred values by $\dfrac{1}{a^{2}}$.
+\w{precautions (4):} (1) use a thick shorting link: thin links add unmeasured resistance and inflate $R_{\text{eq}}$. (2) measure on the HV side and record which side the numbers are referred to. (3) wait for temperature stabilisation if repeated (resistance drifts). (4) the wattmeter reading is small and cos $\phi$ is tiny (impedance angle near 90$^\circ$): use a low-power-factor wattmeter.
+
+\q{Q10 (verbatim):}{Explain the open-circuit test of a transformer and show how core loss and no-load parameters are determined.}
+\w{setup (5 points):} (1) supply to the \textbf{low-voltage winding} at rated voltage and frequency, the \textbf{HV winding open} (the standard: rated voltage is small and safe on the LV side and the small no-load current is easily measured on the LV; on the HV side the ammeter would read too little). (2) three instruments on the LV side: voltmeter, ammeter (low-reading), wattmeter (low-power-factor type). (3) at no load the secondary current is zero so the series drops vanish: the wattmeter reads exactly the \textbf{core (iron) loss} at rated voltage (hysteresis + eddy, scale-free from load). (4) the applied voltage fixes $\Phi_m$ and $B_m$ (from the EMF equation), so the reading is the rated-flux iron loss. (5) copper loss at no load ($I_0^{2} R_1$) is tiny and neglected (or estimated).
+\w{derivation (the parameter chain):} readings $V_0$, $I_0$, $W_0$ at the LV side:
+\[
+\cos\phi_0 = \dfrac{W_0}{V_0 I_0}
+\qquad\qquad
+I_w = I_0\, \cos\phi_0\ \ (\text{core-loss component}), \qquad
+I_m = I_0\, \sin\phi_0\ \ (\text{magnetising component})
+\]
+\[
+R_0 = \dfrac{V_0}{I_w} = \dfrac{V_0^{2}}{W_0}\ \ (\text{two routes: use both and cross-check})
+\qquad\qquad
+X_0 = \dfrac{V_0}{I_m}
+\]
+\w{outputs to state:} core loss $P_i = W_0$ (feeds the efficiency sums), and the no-load branch $R_0$, $X_0$ on the \emph{LV} side (multiply by $a^{2}$ for the HV side). The no-load power factor $\cos\phi_0$ is small (0.1 to 0.25): that is why $I_m$ dominates $I_0$ and the magnetising role question (Q17) matters.
+
+\q{Q7 (verbatim):}{Derive the expression for transformer efficiency and explain the condition for maximum efficiency.}
+\w{derivation (the chain):} (1) $\eta = \dfrac{\text{output}}{\text{output} + \text{losses}} = \dfrac{V_2 I_2 \cos\phi}{V_2 I_2 \cos\phi + P_i + P_{\text{cu}}}$. (2) at load fraction $x$ of rated kVA $S$: $P_{\text{cu}} = x^{2}\, P_{\text{cu,FL}}$ (the scaling law) and $P_i$ stays constant at rated $V$, $f$:
+\[
+\boxed{\eta(x) = \dfrac{x\, S\, \cos\phi}{x\, S\, \cos\phi + P_i + x^{2}\, P_{\text{cu,FL}}}}
+\]
+(3) maximum: differentiate wrt $I_2$ (or $x$). With $k = V_2 \cos\phi$: $\eta = \dfrac{k I_2}{k I_2 + P_i + I_2^{2} R_{\text{eq2}}}$; the quotient rule gives $\dfrac{d\eta}{dI_2} \propto P_i - I_2^{2} R_{\text{eq2}}$. (4) set to zero: $\boxed{P_i = I_2^{2} R_{\text{eq2}} = P_{\text{cu}}}$: \textbf{maximum efficiency when copper loss equals iron loss}. (5) the load point and the peak value:
+\[
+I_{2,\text{max}\eta} = \sqrt{\dfrac{P_i}{R_{\text{eq2}}}}
+\qquad\qquad
+x_{\text{max}\eta} = \sqrt{\dfrac{P_i}{P_{\text{cu,FL}}}}
+\qquad\qquad
+\eta_{\text{max}} = \dfrac{x\, S\, \cos\phi}{x\, S\, \cos\phi + 2 P_i}
+\]
+(6) why it lands below rated load: design $P_i$ slightly under $P_{\text{cu,FL}}$ so the peak sits where the transformer actually runs (distribution units: 50 to 70 percent loading; power transformers: nearer 80 to 90). (7) $\cos\phi$ scales the output and the peak's height but not the \emph{load fraction} $x$ of the peak.
+
+\q{Q11a (verbatim, part 1 of the 3-parter):}{Explain the condition for maximum efficiency of a transformer and derive the corresponding expression.}
+\w{short self-contained version (destination identical to Q7):} (1) losses: constant iron $P_i$ + load-squared copper $x^{2} P_{\text{cu,FL}}$. (2) write $\eta(x)$ as in Q7 and set $\dfrac{d\eta}{dx} = 0$: the algebra lands on $P_i = x^{2} P_{\text{cu,FL}}$. (3) state the condition: \textbf{copper loss equals iron loss} at the load of maximum efficiency. (4) then $x = \sqrt{\dfrac{P_i}{P_{\text{cu,FL}}}}$ and
+\[
+\eta_{\text{max}} = \dfrac{x\, S\, \cos\phi}{x\, S\, \cos\phi + 2 P_i} = \dfrac{S\, \cos\phi}{S\, \cos\phi + 2\sqrt{P_i\, P_{\text{cu,FL}}}}
+\]
+(5) worked shape: $P_i = 350$ W, $P_{\text{cu,FL}} = 400$ W $\Rightarrow x = 0.935$ (93.5 percent load) and $\eta_{\text{max}} = 97.09$ percent at unity p.f. (96.40 percent at 0.8: the peak \emph{load} does not move with p.f.).
+
+\q{Q12 (verbatim):}{What are the necessary conditions for the parallel operation of transformers? Explain each condition.}
+\w{the split answer (essential first, then desirable, explaining each):}
+\textbf{essential (without these the bank is destroyed or dead):} (1) \textbf{same polarity:} opposite polarity closes a dead short across the pair at the instant of connection: massive circulating current and burnout. (2) \textbf{same voltage ratio (and phase sequence in 3-phase):} unequal ratios leave a voltage difference around the closed loop driving a circulating current even at no load (Q13). (3) \textbf{same frequency} (inherent, one line).
+\textbf{desirable (without these it runs but shares badly):} (4) \textbf{same percent (per-unit) impedance magnitudes} on each transformer's own rating: currents then divide inversely to impedance exactly in proportion to rating: neither unit overloads before the bank is full. (5) \textbf{same impedance angles (same $\dfrac{X}{R}$ ratio):} otherwise the two share currents of different phase angles: one carries more kVA and worse power factor than its share. (6) \textbf{identical construction and size} where possible: keeps resistances, reactances and temperature rise matched over the load range.
+
+\q{Q13 (verbatim):}{Explain the causes and effects of circulating current in transformers operating in parallel and suggest methods to avoid it.}
+\w{causes (3 points):} (1) unequal voltage ratios: the two induced secondary emfs do not match, and around the closed parallel loop the unbalanced difference drives a current with no load attached at all:
+\[
+I_{\text{circ}} = \dfrac{\vec{E_A} - \vec{E_B}}{\vec{Z_A} + \vec{Z_B}}
+\]
+(2) wrong polarity (extreme case: the emfs add around the loop instead of opposing: short-circuit current). (3) unequal per-unit impedances aggravate the sharing problem once any emf mismatch exists (the circulating current adds to one unit and subtracts from the other).
+\w{effects (5 points):} (1) copper loss at \emph{no load}: wasted energy and heat with zero useful output. (2) reduced kVA capacity: part of each winding's rating is consumed by the circulating current before any load is served. (3) distorted load sharing: one unit overloads while the other under-loads at a much lower bank limit. (4) temperature rise and insulation aging above design. (5) protection may trip (overcurrent relays see the sum).
+\w{remedies (4 points):} (1) manufacture to tight turns-ratio tolerances. (2) correct residual ratio error with \textbf{tap changers} (adjust taps until the circulating current vanishes). (3) keep equal per-unit impedances so any small emf mismatch meets enough impedance to limit the circulating current. (4) verify polarity and connection marks ($H_1$ with $H_1$, $X_1$ with $X_1$) before closing the bank.
+
+\q{Q14 (verbatim):}{Explain the load sharing between transformers connected in parallel and derive the condition for proper load sharing.}
+\w{derivation (4 steps):} (1) two units in parallel across one bus: equal voltage across both branches: $\vec{I_A}\, \vec{Z_A} = \vec{I_B}\, \vec{Z_B}$, and KCL: $\vec{I_L} = \vec{I_A} + \vec{I_B}$. (2) solve (phasor divider): $\vec{I_A} = \vec{I_L}\, \dfrac{\vec{Z_B}}{\vec{Z_A} + \vec{Z_B}}$ and $\vec{I_B} = \vec{I_L}\, \dfrac{\vec{Z_A}}{\vec{Z_A} + \vec{Z_B}}$. (3) magnitudes, same impedance angles: $\dfrac{I_A}{I_B} = \dfrac{Z_B}{Z_A}$ (inverse impedance sharing) and the kVA shares follow the currents (same voltage): $\dfrac{S_A}{S_B} = \dfrac{Z_B}{Z_A}$. (4) with unequal ratios add the circulating term to each (the Q13 current, opposite signs): $\vec{I_A} = \vec{I_L}\,\dfrac{\vec{Z_B}}{\vec{Z_A} + \vec{Z_B}} + \vec{I_{\text{circ}}}$, $\vec{I_B} = \vec{I_L}\,\dfrac{\vec{Z_A}}{\vec{Z_A} + \vec{Z_B}} - \vec{I_{\text{circ}}}$.
+\w{proper (proportional) sharing condition:} each unit's kVA must reach its nameplate together, i.e. $\dfrac{S_A}{S_B} = \dfrac{S_{A,\text{rated}}}{S_{B,\text{rated}}}$, which by step 3 requires $\boxed{\dfrac{Z_A}{Z_B} = \dfrac{S_{B,\text{rated}}}{S_{A,\text{rated}}}}$ with equal angles: in per-unit terms: equal percent impedance on own base. Bigger unit must own the smaller impedance.
+\w{the worked shape (D1-07):} $Z_A = 0.5 + j3\ \Omega$, $Z_B = 0.6 + j10\ \Omega$, 100 kW at 0.8 p.f. (125 kVA): shares 0.768 and 0.233 of the current phasors (angles 1.4$^\circ$ and $-4.6^{\circ}$): 96 kVA and 29 kVA: a 77 : 23 split showing the unequal-impedance distortion live.
+
+\q{Q16 (verbatim):}{Why does a transformer not work on DC supply? Explain using the principle of electromagnetic induction.}
+\w{(1) induction law: $e = -N\,\dfrac{d\Phi}{dt}$: only \emph{changing} flux induces emf. (2) direct current at steady state produces a \textbf{constant} flux: $\dfrac{d\Phi}{dt} = 0$, so $E_2 = 0$: no output whatever the current in the primary. (3) with no back emf ($E_1 = 0$ too), the primary becomes a pure resistance: $I_1 = \dfrac{V}{R_1}$ with $R_1$ tiny: the current is enormous, the winding overheats and burns (this is the DC short-circuit case). (4) also no reactive power transfer mechanism: the whole transformer action (mmf balance with induced emfs) rests on alternating flux. (5) the transient caveat line: at the \emph{instant} of switching DC on there is a brief induction spike ($\dfrac{d\Phi}{dt}$ exists once), after which flux is constant and the collapse to the resistive state follows.}
+
+\q{Q17 (verbatim):}{Why does a transformer draw a small current even when its secondary is open-circuited? Explain the role of the magnetizing component.}
+\w{(1) with the secondary open, no load power is drawn, but the primary still must \textbf{create the alternating mutual flux} $\Phi_m$ that makes the back emf $E_1 \approx V_1$: an mmf is needed even at no load because the steel has finite permeability. (2) that current is the \textbf{no-load current} $I_0$: only about 2 to 5 percent of full-load current in a normal transformer. (3) it splits into two components: $\vec{I_0} = \vec{I_w} + \vec{I_m}$: the \textbf{magnetising component} $I_m$ (wattless, in quadrature with the flux) builds and sustains the flux $\Phi_m$; the \textbf{core-loss (working) component} $I_w$ (in phase with the supply voltage) feeds the hysteresis and eddy losses in the core. (4) the magnetising role sentence: $I_m$ is the current whose ampere-turns $N_1 I_m$ balance the core's reluctance drop and establish $B_m$ (the mmf across the magnetic circuit is $H\, \ell$ and the steel needs real current for it). (5) since $\cos\phi_0$ is small (0.1 to 0.25), $I_m$ dominates $I_0$: the no-load current is mostly magnetising, which is exactly why $X_0$ (not $R_0$) is the big-impedance branch at no load.}
+
+\q{Q18 (verbatim):}{Why is the transformer core laminated?}
+\w{(1) alternating flux induces emfs \emph{in the core iron itself} (it is a conductor in a changing field): these drive circulating currents in closed loops in the core cross-section: \textbf{eddy currents}. (2) eddy currents dissipate $I^{2}R$ heat inside the core: wasted power and dangerous hot spots (and they distort flux). (3) eddy loss magnitude: $P_e = k_e\, f^{2}\, B_m^{2}\, t^{2}$ (per unit mass): it scales with the \emph{square} of the conductor (sheet) thickness $t$. (4) laminating: build the core of thin insulated sheets (0.35 to 0.5 mm, varnish or oxide coated) stacked to the required area: each eddy loop is confined to one sheet, its path cross-section shrinks, its resistance rises, and the loop area collapses: the loss falls as $t^{2}$. (5) halving the sheet thickness quarters the eddy loss: the whole lamination payoff in one sentence. (6) trade-offs to state: insulation varnish costs stacking factor (net iron area about 0.9 to 0.95 of gross: slightly larger core for the same $\Phi$) and adds manufacturing cost. (7) companion line: the other iron loss, hysteresis, is cut by \emph{material} choice (CRGO silicon steel, narrow loop) not by lamination: keep the two losses and their remedies distinct.}
+
+\q{Q19 (verbatim):}{Why are transformers rated in kVA rather than kW? Justify your answer considering transformer losses.}
+\w{(1) rating = a \textbf{thermal promise}: the output is limited by heat, which is limited by losses. (2) the two loss families track two different quantities: core (iron) loss is fixed by \emph{voltage} ($V$ sets $\Phi_m$ and $B_m$: $P_h = k_h f B_m^{1.6}$, $P_e = k_e f^{2} B_m^{2} t^{2}$); copper loss is fixed by \emph{current} ($P_{\text{cu}} = I^{2}R$). (3) neither loss knows the load power factor: at the same rated $V$ and $I$ the heating is identical whether the load is unity or 0.5 p.f. (4) $\text{kW} = \text{kVA} \times \cos\phi$ would vary with the \emph{user's} power factor at identical heating: a kW rating would be wrong at one p.f. or the other. (5) the only p.f.-independent quantity that captures both limits is the apparent power $S = V\, I$: hence \textbf{rated kVA} $= \dfrac{V_{\text{rated}}\, I_{\text{rated}}}{1000}$. (6) illustration: one unit happily serving 100 kW at unity p.f. (100 kVA) would be fully loaded at 50 kW when $\cos\phi = 0.5$ (still 100 kVA, same $I$, same heating). (7) efficiency and regulation \emph{do} depend on p.f. (they are always asked ``at 0.8 lag''), but the \emph{rating} is thermal: kVA.}
+
+\q{Q20 (verbatim):}{Explain the losses in a transformer and discuss methods for reducing each type of loss.}
+\w{loss map (4 items) with one reduction bundle each:} (1) \textbf{copper loss} ($I^{2}R$ in both windings, $P_{\text{cu}} = x^{2} P_{\text{cu,FL}}$ with load): reduce by thicker (lower-resistance) conductors, lower-resistivity copper, shorter mean turn length. (2) \textbf{hysteresis loss} ($P_h = k_h\, f\, B_m^{1.6}$: energy spent re-orienting domains each cycle): reduce by narrow-loop material (CRGO silicon steel), operating $B_m$ below the saturation knee, lower frequency if variable. (3) \textbf{eddy loss} ($P_e = k_e\, f^{2}\, B_m^{2}\, t^{2}$: circulating currents in the iron): reduce by lamination (thin $t$, the $t^{2}$ lever), insulated sheets, higher-resistivity steel alloy. (4) \textbf{stray loss} (leakage-flux eddy currents in windings, tank, clamps): reduce by interleaved winding, non-magnetic tank parts, magnetic shielding, proper conductor transposition.
+\w{the closing laws (3 lines):} at constant supply, iron loss is \textbf{constant} and copper loss varies with the \textbf{square} of load current. Total loss curve $= P_i + x^{2} P_{\text{cu,FL}}$: the drop-versus-loss trap ($V$-drop scales with $x$, copper loss with $x^{2}$). Static machine: no mechanical (friction and windage) loss at all: that line distinguishes this answer from the DC machine version. Efficiency peak: variable = constant losses (Q7).
+
+\hrulefill
+\subsection*{\color{copper}NUMERIC ANSWER STRIP (all 17 verified against report 05)}
+\textbf{WE-01} 100 kVA SC: $Z_{\text{eq}} = 5.8\ \Omega$, $R_{\text{eq}} = 1.2\ \Omega$, $X_{\text{eq}} = 5.67\ \Omega$; $\eta$: 98.21 (FL u.p.), 98.03 (FL 0.8), 98.62 (half u.p.). \textbf{WE-02} 20 kVA, 2000 V to 200 V: $R_{\text{eq2}} = 0.909\ \Omega$; $\eta$: 93.74 (FL 0.8), 92.75 (half), max 93.82 at 93.5 percent load. \textbf{WE-03} [dangling: continuation missing, unanswerable]. \textbf{WE-04} 100 kVA, 11000 V to 220 V: emf per turn 25 V; $N_1 = 440$, $N_2 = 50$. \textbf{WE-05} 200 V 50 Hz 100 turns: $\Phi_m = 0.08$ Wb. \textbf{WE-06} $E_1 = 5000$, $N_1 = 500$, $N_2 = 50$: $E_2 = 500$ V [errata E5 and E6: source prints 1200 V and a phantom 0.026 T: wrong]. \textbf{WE-07} 50 kVA, 2200 V to 250 V: HV-referred $R_{\text{eq}} = 27.23$, $X_{\text{eq}} = 27.06$ ($Z$ 38.3 class), LV-referred $R_{\text{eq2}} = 0.351$, $X_{\text{eq2}} = 0.349$ [errata E4: label which side every number lives on]. \textbf{D1-01} 100 kVA, 2000 V to 400 V ($R$ 0.04, $X$ 0.07 p.u. class): reg 3.42 percent (0.8 lag), 2.53 (0.8 lead), 1.39 (unity); zero regulation at 0.981 leading. \textbf{D1-02} 50 kVA, 2000 V to 500 V: loaded secondary $V_2 = 377.7$ V. \textbf{D1-05} 5 kVA, 2000 V to 100 V OC 100 V 25 W 0.7 A, SC 60 V 180 W 2.5 A: route A $Z_{01} = 391.7$, $R_{01} = 80$, $X_{01} = 383.4$; route B 392, 88, 382 [errata E14: both routes defensible: state the shorting assumption]; $\eta$ 96.68 (FL 0.8), 97.45 (FL u.p.), 97.62 (max); reg 6.17 percent (0.8 lag). \textbf{D1-06} 25 kVA, 2200 V to 250 V OC 250 150 W 3 A, SC 90 550 W 10 A: $Z_{02} = 4.686\ \Omega$, $R_{02} = 1.35\ \Omega$, $X_{02} = 4.485\ \Omega$ (values on LV side: E4 rule); reg 4.82 percent (0.8 lag) and 3.33 percent (0.8 lead); $\eta$ 95.58 percent (0.8 lag). \textbf{WE-08} 40 kVA, 6600 V to 250 V: drop 9.22 V at 0.8 lag = 3.69 percent (deck convention) and 3.56 percent (LV full-load convention) [denominator war: name yours]. \textbf{WE-09} 63 kVA, 2200 V to 400 V: drop 8.25 V = 3.75 percent fall at 0.8 lag; at 0.8 \emph{lead}: 2.2 percent \emph{rise} [errata E9: the source's labels confuse percent with volts]. \textbf{D1-07} see Q14 worked shape.
+
+\subsection*{\color{copper}FORMULA STRIP}
+$E = 4.44 f N \Phi_m = 4.44 f N B_m A$. $\dfrac{E_1}{E_2} = \dfrac{N_1}{N_2} = a$, $Z' = Z a^{2}$. $Z_{\text{eq}} = \dfrac{V_{sc}}{I_{sc}}$, $R_{\text{eq}} = \dfrac{W_{sc}}{I_{sc}^{2}}$, $X_{\text{eq}} = \sqrt{Z_{\text{eq}}^{2} - R_{\text{eq}}^{2}}$. $\cos\phi_0 = \dfrac{W_0}{V_0 I_0}$, $I_w = I_0 \cos\phi_0$, $I_m = I_0 \sin\phi_0$, $R_0 = \dfrac{V_0^{2}}{W_0}$, $X_0 = \dfrac{V_0}{I_m}$. Reg $\approx \dfrac{I_2 (R_{\text{eq}} \cos\phi \pm X_{\text{eq}} \sin\phi)}{V_{2,\text{nl}}}$; $\%$drop $= \%R \cos\phi \pm \%X \sin\phi$. $\eta = \dfrac{x S \cos\phi}{x S \cos\phi + P_i + x^{2} P_{\text{cu,FL}}}$; max at $P_i = P_{\text{cu}}$, $x = \sqrt{\dfrac{P_i}{P_{\text{cu,FL}}}}$. Parallel: $\dfrac{I_A}{I_B} = \dfrac{Z_B}{Z_A}$; proper sharing $\dfrac{Z_A}{Z_B} = \dfrac{S_{B,\text{rated}}}{S_{A,\text{rated}}}$. $I_{\text{circ}} = \dfrac{\vec{E_A} - \vec{E_B}}{\vec{Z_A} + \vec{Z_B}}$. $P_h = k_h f B_m^{1.6}$, $P_e = k_e f^{2} B_m^{2} t^{2}$.
+
+\subsection*{\color{copper}MEMORY DUMP (write cold)}
+$E = 4.44 f N B_m A$; per turn common. Ideal = five zeros and infinities $\mu$. SC on HV: series params. OC on LV: $R_0$, $X_0$, core loss, $\cos\phi_0$ split. Regulation: constant $V_1$, name the denominator; lag $(R\cos\phi + X\sin\phi)$, lead minus; zero reg at $\tan\phi = \dfrac{R}{X}$. Efficiency: $P_{\text{cu}}$ scales $x^{2}$, $P_i$ flat; max at equal losses, $x = \sqrt{\dfrac{P_i}{P_{\text{cu,FL}}}}$. Parallel: same polarity and ratio (essential), equal per-unit $R$, $X$, angle (sharing). Circulating current: $\Delta E$ over $Z_A + Z_B$, kills at no load. No DC: constant flux, no $E$, primary shorts. No-load current: $I_w$ (loss) + $I_m$ (flux), 2 to 5 percent. Laminated: eddy dies as $t^{2}$. kVA: losses track $V$ and $I$, not $\cos\phi$. Losses: copper, hysteresis, eddy, stray; static machine: no mechanical loss.
+
+\end{document}

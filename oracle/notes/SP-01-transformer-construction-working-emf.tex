@@ -1,0 +1,330 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+
+\definecolor{copper}{HTML}{8C4A2F}
+\definecolor{iron}{HTML}{262B33}
+\definecolor{muted}{HTML}{6B6B6B}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize\color{muted} SP-01 \textbar{} Single Phase Transformer I \textbar{} EM-MTE notes}
+\rhead{\footnotesize\color{muted} ELC2104 \textbar{} MTE}
+\cfoot{\footnotesize\color{muted} \thepage}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\qhead}[2]{\subsection*{\color{copper}#1\quad\color{iron}#2}}
+\newcommand{\tagline}[1]{\textbf{\color{copper}#1}}
+\newcommand{\keydist}[1]{\vspace{2pt}\textbf{\color{red}KEY DISTINCTION.} #1}
+\newcommand{\drawline}[1]{\textbf{\color{muted}[DRAW]} #1}
+\newcommand{\fix}[1]{\textbf{\color{red}[FIX]} #1}
+\newcommand{\srcwrong}[1]{\textbf{\color{red}[SRC WRONG]} #1}
+
+\begin{document}
+
+\begin{center}
+{\footnotesize\color{copper} ELC2104 \textbar{} ELECTRICAL MACHINES \textbar{} MTE}\\[6pt]
+{\LARGE\bfseries\color{iron} SP-01: Single Phase Transformer I}\\[2pt]
+{\Large\color{copper} Construction, Working Principle, and the EMF Equation}\\[6pt]
+{\footnotesize\color{muted} Question-driven notes. Answers are precise and dense: many full points, the standard is ``explain it in the paper''. Covers T.1 to T.3 of the locked syllabus.}
+\end{center}
+
+\vspace{2pt}
+\tagline{QUESTION SHAPES IN THIS FILE:} Q1 (construction + working, diagram), Q2 (derive the EMF equation, significance of each parameter), Q3 (ideal vs practical, assumptions), Q16 (why not on DC), Q17 (why small no-load current). Numerics: WE-04, WE-05, WE-06 (EMF-equation family).
+\vspace{2pt}
+
+\keydist{A transformer is a \emph{static} machine: no rotor, no bearings, no air gap. Every drop of its loss story is copper + iron. If a question tries to import mechanical loss from the DC block, refuse it.}
+
+\hrulefill
+
+% ============================================================ Q1
+\qhead{Q1 (verbatim):}{Explain the construction and working principle of a single-phase transformer with a neat diagram.}
+
+\tagline{WHAT TO WRITE (mark components, in order):} definition (2 lines) \textrightarrow{} labeled diagram \textrightarrow{} every part with its function (the bulk of the marks) \textrightarrow{} working sequence naming Faraday \textrightarrow{} one-line conclusion.
+
+\tagline{MODEL ANSWER.}
+
+\textbf{Definition.}
+\begin{enumerate}[label=\arabic*.]
+\item A single-phase transformer is a \textbf{static} (non-rotating) electrical machine that transfers AC power from one circuit to another \textbf{at the same frequency} but a \textbf{different voltage}, by \textbf{mutual induction}.
+\item The two circuits (primary and secondary) are electrically isolated from each other and are coupled only by a common alternating magnetic flux.
+\end{enumerate}
+
+\textbf{Construction (each part + why it exists).}
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Core:} laminated CRGO (cold-rolled grain-oriented) silicon steel sheets, typically 0.27 to 0.35 mm thick, insulated from one another. The laminations suppress eddy-current loss; the grain-oriented steel narrows the hysteresis loop and cuts hysteresis loss. The core carries the windings and provides a low-reluctance path for the mutual flux.
+\item \textbf{Yoke:} the top and bottom return section of the core. It closes the magnetic circuit so the flux has one continuous low-reluctance loop, and it mechanically braces the limbs.
+\item \textbf{Core type vs shell type:} in the core type the winding surrounds the core (two limbs, windings on both limbs, concentric cylindrical coils, preferred for high voltage). In the shell type the core surrounds the winding (three limbs, windings on the centre limb only, sandwich coils, preferred for low voltage and high current because the outer limbs shield the winding mechanically and the magnetic path is shorter).
+\item \textbf{Windings:} primary and secondary, insulated copper. The LV winding uses \textbf{few turns of thick wire} (high current, low voltage); the HV winding uses \textbf{many turns of thin wire} (low current, high voltage).
+\item \textbf{Winding placement:} concentric, with the LV winding next to the core limb and the HV winding over it. Since the core is at earth potential, thin insulation suffices between core and LV, and the largest insulation distance (HV to earth) is on the outside: total insulation volume is minimum this way. In shell-type machines sandwich coils (LV and HV discs stacked alternately) are used instead.
+\item \textbf{Insulation:} enamel on the conductors, paper or pressboard between windings and core, and transformer oil filling the tank. HV bushings of porcelain bring the terminals out through the tank cover.
+\item \textbf{Tank and accessories:} a sheet-steel tank holds the assembly in transformer oil, which both insulates and cools (carries heat to the tank walls). A conservator drum gives the oil room to expand with temperature so the tank never pressurises. A silica-gel breather dries the air that enters as the oil level moves, because moisture is the enemy of insulation.
+\end{enumerate}
+
+\textbf{Working principle (the sequence to write).}
+\begin{enumerate}[label=\arabic*.]
+\item An AC supply is connected to the primary of $N_1$ turns, so an alternating current $i_1$ flows through it.
+\item This produces an alternating magnetomotive force, $\text{MMF} = N_1 i_1$, around the core.
+\item Because the core has high permeability and a closed iron path (low reluctance), the MMF sets up an alternating \textbf{mutual flux} $\Phi_m$ confined to the core.
+\item The same flux links the secondary of $N_2$ turns. This coupling is called \textbf{mutual induction}.
+\item By \textbf{Faraday's law} an emf is induced in any winding whose flux linkage changes:
+\[
+e = -N\,\frac{d\Phi}{dt}
+\]
+and since the flux is alternating, both windings have induced emfs $E_1$ and $E_2$ (the full derivation is Q2 below).
+\item When the secondary circuit is closed on a load, the induced $E_2$ drives a current through the load: power is delivered at the transformed voltage, and the primary draws extra current from the supply to feed that power.
+\end{enumerate}
+
+\textbf{Voltage transformation.} The voltages transform in the turns ratio while the frequency never changes:
+\[
+\frac{E_1}{E_2} = \frac{N_1}{N_2}
+\qquad\text{and}\qquad
+k = \frac{E_2}{E_1} = \frac{N_2}{N_1}
+\]
+If $N_2 > N_1$ then $V_2 > V_1$: a \textbf{step-up} transformer. If $N_2 < N_1$: a \textbf{step-down} transformer.
+
+\drawline{transformer front view (yoke, two limbs, LV winding, HV winding, insulation layer, bushings, tank + oil, conservator, flux-path arrows); core type vs shell type side by side. Label checklist: yoke, limb, LV (thick, few turns), HV (thin, many turns), insulation, bushing, tank/oil, conservator, flux arrows.}
+
+\keydist{Power crosses at unchanged frequency. Only voltage and current transform, and they transform inversely to each other.}
+
+% ============================================================ Q2
+\qhead{Q2 (verbatim):}{Derive the EMF equation of a single-phase transformer and explain the significance of each parameter.}
+
+\tagline{WHAT TO WRITE:} sinusoidal-flux assumption \textrightarrow{} Faraday applied \textrightarrow{} peak value \textrightarrow{} rms value (show where 4.44 comes from) \textrightarrow{} flux-density form \textrightarrow{} significance of every symbol.
+
+\tagline{DERIVATION (full chain).}
+
+\textbf{Step 1: assumption.} The applied voltage is sinusoidal, so the mutual flux is sinusoidal:
+\[
+\Phi = \Phi_m \sin(\omega t), \qquad \omega = 2\pi f
+\]
+($\Phi_m$ = maximum flux in weber, $f$ = supply frequency in hertz.)
+
+\textbf{Step 2: Faraday's law.} The emf induced in a winding of $N$ turns is
+\[
+e = -N\,\frac{d\Phi}{dt}
+  = -N\,\frac{d}{dt}\bigl(\Phi_m \sin(\omega t)\bigr)
+  = -N\,\omega\,\Phi_m \cos(\omega t)
+\]
+
+\textbf{Step 3: peak value.} The cosine has amplitude 1, so the maximum induced emf is
+\[
+E_{\text{max}} = \omega\, N\, \Phi_m = 2\pi f\, N\, \Phi_m
+\]
+
+\textbf{Step 4: rms value.} For a sinusoid the rms value is the peak divided by $\sqrt{2}$:
+\[
+E = \frac{E_{\text{max}}}{\sqrt{2}}
+  = \frac{2\pi f\, N\, \Phi_m}{\sqrt{2}}
+  = 4.44\, f\, N\, \Phi_m
+\qquad\text{since}\quad \frac{2\pi}{\sqrt{2}} \approx 4.44
+\]
+
+\textbf{Step 5: flux-density form.} Since the maximum flux is $\Phi_m = B_m\, A_c$ (maximum flux density times the core cross-sectional area):
+\[
+\boxed{\,E = 4.44\, f\, N\, B_m\, A_c\,}
+\]
+and separately for the two windings:
+\[
+E_1 = 4.44\, f\, N_1\, \Phi_m
+\qquad\qquad
+E_2 = 4.44\, f\, N_2\, \Phi_m
+\]
+
+\textbf{Step 6: emf per turn (corollary).} Dividing by $N$:
+\[
+\text{emf per turn} = \frac{E}{N} = 4.44\, f\, \Phi_m
+\]
+so both windings have the same emf per turn, which is why the voltage ratio equals the turns ratio.
+
+\tagline{SIGNIFICANCE OF EACH PARAMETER (one full point each).}
+\begin{enumerate}[label=\arabic*.]
+\item $E$: the rms induced emf per winding in volts. This is what the terminal voltage is built from (minus or plus the small impedance drop of the winding under load).
+\item $4.44$: the constant $\dfrac{2\pi}{\sqrt{2}}$. It exists because the flux is sinusoidal (the $2\pi$ from differentiation of $\sin\omega t$ at frequency $f$) and we quote rms rather than peak (the $\sqrt{2}$). It is dimensionless.
+\item $f$: the supply frequency in hertz. The induced emf is directly proportional to $f$, which is exactly why DC (where $f = 0$ after the transient) gives zero induced emf. This also fixes why a transformer cannot change the frequency.
+\item $N$: the number of turns on that winding. $E$ is proportional to $N$, so the two windings can be given any voltage ratio simply by choosing $N_1$ and $N_2$.
+\item $\Phi_m$: the maximum mutual flux in weber. $E$ is proportional to $\Phi_m$: the flux is the medium of energy transfer, and all of it links both windings (ideal coupling assumed in the derivation).
+\item $B_m$: the maximum flux density in the core material, in tesla. It is limited by saturation of the steel (working values roughly 1.2 to 1.8 T). Push $B_m$ past the knee and the magnetising current shoots up (Q16/Q3).
+\item $A_c$: the net cross-sectional area of the core, in square metres (net = stacking factor times the gross limb area). $E$ is proportional to $A_c$: doubling the iron doubles the flux the machine can carry at the same $B_m$.
+\end{enumerate}
+
+\drawline{flux sine wave $\Phi = \Phi_m\sin\omega t$ and induced emf wave lagging it by 90$^\circ$ (the $-\cos\omega t$ shape); phasor diagram with $\Phi_m$ horizontal and $E_1$, $E_2$ pointing down (or up, consistently) at 90$^\circ$. Label checklist: axes (time), $\Phi_m$, $E_{\text{max}}$, the 90$^\circ$ lag.}
+
+\keydist{The negative sign in Faraday's law is Lenz's law: the induced emf opposes the change that produced it. The 90-degree lag of the emf behind the flux is a direct consequence of the derivative: $\sin$ becomes $\cos$ (up to sign).}
+
+% ============================================================ Q3
+\qhead{Q3 (verbatim):}{Explain the ideal and practical transformer and discuss the assumptions made in an ideal transformer.}
+
+\tagline{MODEL ANSWER.}
+
+\textbf{Ideal transformer: definition and the four assumptions.}
+\begin{enumerate}[label=\arabic*.]
+\item An ideal transformer is a lossless, perfectly coupled, imaginary reference machine. The practical transformer is a real one whose departures from it are small and quantifiable. The ideal model exists so the basic relations can be stated cleanly before corrections are added.
+\item \textbf{Assumption 1: zero winding resistance.} Both windings have $R_1 = R_2 = 0$, so there is no copper loss and no resistive voltage drop. Terminal voltage equals induced emf exactly.
+\item \textbf{Assumption 2: perfect coupling, zero leakage flux.} All the flux produced by one winding links the other (coupling coefficient 1). There is no leakage reactance, so no reactive drop and no load-dependent regulation.
+\item \textbf{Assumption 3: infinite core permeability.} The reluctance of the magnetic path is zero, so the magnetising current needed to create $\Phi_m$ is zero: the transformer draws no current at no load.
+\item \textbf{Assumption 4: lossless core.} No hysteresis loss and no eddy-current loss (a perfectly laminated, non-dissipative steel), and no stray losses. Efficiency is exactly 100 percent.
+\end{enumerate}
+
+\textbf{Ideal transformer behaviour that follows from these.}
+\begin{enumerate}[label=\arabic*.]
+\item $\dfrac{V_1}{V_2} = \dfrac{E_1}{E_2} = \dfrac{N_1}{N_2}$ with no drops and no phase displacement between input and output voltages.
+\item Currents transform inversely: $\dfrac{I_1}{I_2} = \dfrac{N_2}{N_1}$.
+\item Power is conserved exactly: $V_1 I_1 = V_2 I_2$ (apparent power, and also real power since the device is lossless and adds no phase shift of its own).
+\item Input impedance reflects as $\dfrac{Z_1}{Z_2} = \left(\dfrac{N_1}{N_2}\right)^{2}$: a load on the secondary looks to the supply like a resistance scaled by the square of the turns ratio. This impedance-transfer rule survives into the practical circuit and is the backbone of the equivalent circuit (SP-02).
+\end{enumerate}
+
+\textbf{Practical transformer: the departures and their consequences.}
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Finite winding resistance} ($R_1$, $R_2$ exist): copper loss $I_1^2 R_1 + I_2^2 R_2$ appears, the terminal voltage droops under load, and efficiency falls below unity.
+\item \textbf{Leakage flux} (imperfect coupling): part of each winding's flux links only its own winding. It is modelled as a series leakage reactance $X_1$, $X_2$ in the equivalent circuit. It causes a load-dependent voltage drop, so regulation is not zero.
+\item \textbf{Finite permeability} (the steel is good, not infinite): a small magnetising current $I_m$ must flow to create $\Phi_m$. It lags the supply voltage by nearly 90$^\circ$, so the no-load power factor is very low (this is the subject of Q17).
+\item \textbf{Core losses} (hysteresis and eddy currents in the steel): they are present whenever flux alternates, even at no load, and are modelled by a resistor $R_0$ (the core-loss branch) fed by the active component $I_w$.
+\item \textbf{Small stray losses} in tank, frame and clamps from stray leakage flux (taken conventionally as a small percentage of output).
+\item Consequence summary: $V_2$ is not exactly $\dfrac{N_2 V_1}{N_1}$ under load (regulation exists), efficiency is slightly under 100 percent (95 to 99 percent at full load for ordinary power transformers), the current ratio is only approximately the inverse turns ratio, and there is a small phase displacement between the primary and secondary voltages.
+\end{enumerate}
+
+\keydist{Ideal: zero $R$, zero leakage, infinite permeability, zero core loss. Practical: each broken assumption adds exactly one circuit element ($R_1$, $R_2$, $X_1$, $X_2$, $R_0$, $X_0$). The equivalent circuit in SP-02 is literally the ideal transformer with those six elements bolted on.}
+
+% ============================================================ Q16
+\qhead{Q16 (verbatim):}{Why does a transformer not work on DC supply? Explain using the principle of electromagnetic induction.}
+
+\tagline{MODEL ANSWER.}
+\begin{enumerate}[label=\arabic*.]
+\item The transformer works on \textbf{mutual induction}: an emf appears only when the flux linking a winding \emph{changes}, $e = -N\,\dfrac{d\Phi}{dt}$. The device therefore needs an alternating flux to function.
+\item With a DC supply the flux rises to a constant value and then stops changing: $\dfrac{d\Phi}{dt} = 0$, so the induced emf in both windings is zero. The secondary delivers nothing.
+\item In an AC machine the induced emf $E_1$ acts as a \textbf{back emf} that almost cancels the applied voltage (the balance $V_1 \approx E_1$ holds for a good transformer). With DC there is no back emf at all, so nothing opposes the supply.
+\item The primary current is then limited only by the small winding resistance: $I = \dfrac{V_1}{R_1}$. For a winding designed for, say, 230 V and a fraction of an ohm, this current is hundreds of times the rated current.
+\item That enormous current produces copper loss $I^2 R_1$ far beyond the winding's rating. The temperature rises until the insulation fails and the winding burns out, typically within seconds to minutes.
+\item There is also \textbf{core saturation}: DC drives the operating point to the knee of the B-H curve and beyond, where the permeability collapses. Since the inductance is proportional to permeability, the coil's opposition to current collapses with it, making the current even larger.
+\item At the instant of switching DC on there is a brief transient in which flux does change and a spike of voltage is induced in the secondary, but it lasts only while the current is building up. Steady state is the dangerous condition described above.
+\item Also, the transformer's rated voltage equation $E = 4.44 f N \Phi_m$ contains $f$. At DC, $f = 0$, so the equation says zero emf: consistent with the Faraday argument.
+\item \textbf{Conclusion:} a transformer cannot transform DC (no mutual induction), and if DC is applied it is destroyed by overcurrent and saturation. Transformers are therefore rated and used on AC only.
+\end{enumerate}
+
+\keydist{Two independent failures stack: (a) no output (zero induced emf) and (b) destruction of the input side (no back emf $+$ saturation). State both: the first alone only says it would not work, the second is why it burns.}
+
+% ============================================================ Q17
+\qhead{Q17 (verbatim):}{Why does a transformer draw a small current even when its secondary is open-circuited? Explain the role of the magnetizing component.}
+
+\tagline{MODEL ANSWER.}
+\begin{enumerate}[label=\arabic*.]
+\item With the secondary open, $I_2 = 0$ and there is no power delivered to any load. The primary still draws a small current called the \textbf{no-load current} $I_0$, typically 2 to 5 percent of the rated full-load primary current.
+\item $I_0$ has two perpendicular components: the \textbf{core-loss (active or working) component} $I_w$, in phase with the supply voltage $V_1$, and the \textbf{magnetising (reactive) component} $I_m$, lagging $V_1$ by 90$^\circ$:
+\[
+I_0 = I_w + I_m \ \ \text{(phasor sum)}, \qquad
+I_0 = \sqrt{I_w^{\,2} + I_m^{\,2}}, \qquad
+I_w = I_0\cos\phi_0, \quad I_m = I_0\sin\phi_0
+\]
+\item \textbf{Role of $I_m$:} it is the current whose sole job is to create the mutual flux $\Phi_m$ in the core (it provides the magnetising ampere-turns $N_1 I_m$). No power is consumed by it in an ideal inductance: it only stores and returns energy in the magnetic field each cycle.
+\item $I_m$ is small because the core is made of high-permeability steel and forms a \emph{closed} iron path with no air gap. Reluctance is low, so a small magnetising ampere-turn is enough to produce the working flux density $B_m$. (This is the same physics as Q18: an air gap or poor steel would force a large $I_m$.)
+\item \textbf{Role of $I_w$:} it supplies the core losses (hysteresis plus eddy currents), which are real power dissipated as heat in the core whenever the flux alternates. $I_w$ is small because these losses are small in good laminated steel.
+\item Magnitudes: $I_m$ is usually 5 to 10 times $I_w$, so $I_0$ lags $V_1$ at a large angle $\phi_0$ (around 70$^\circ$ to 80$^\circ$) and the \textbf{no-load power factor is very poor}, about 0.1 to 0.25.
+\item The input power at no load is therefore just the core loss (plus a negligible $I_0^2 R_1$ copper loss): $P_0 = V_1 I_0 \cos\phi_0 \approx$ iron loss. This identity is exactly what the open-circuit test exploits (SP-02).
+\item \textbf{Why the drawn current is small overall:} the primary takes only what the core demands (a little magnetising current) plus what the core dissipates (a little loss current). With the secondary open there is no reflected load current at all, so $I_1 = I_0$ and nothing else.
+\end{enumerate}
+
+\keydist{``Small current'' is two small currents: $I_m$ (energises the core, dissipates nothing) and $I_w$ (feeds the core losses). At no load the transformer is almost a pure inductor: reactive current dominates and the power factor is terrible.}
+
+% ============================================================ NUMERICS
+\hrulefill
+\subsection*{\color{copper}WORKED NUMERICS: EMF-EQUATION FAMILY (WE-04, WE-05, WE-06)}
+
+\tagline{WE-04.} A 200 kVA, 6600/400 V, 50 Hz single-phase transformer has 80 secondary turns. Find the rated currents, the primary turns, and the maximum flux.
+
+\textbf{Givens:} $S = 200\ \text{kVA}$, $V_1 = 6600\ \text{V}$, $V_2 = 400\ \text{V}$, $f = 50\ \text{Hz}$, $N_2 = 80$.
+
+\textbf{Solution.}
+\[
+I_1 = \frac{S}{V_1} = \frac{200\,000}{6\,600} = 30.30\ \text{A}
+\qquad\qquad
+I_2 = \frac{S}{V_2} = \frac{200\,000}{400} = 500\ \text{A}
+\]
+\[
+\frac{N_1}{N_2} = \frac{V_1}{V_2}
+\qquad\Longrightarrow\qquad
+N_1 = N_2\,\frac{V_1}{V_2} = 80 \times \frac{6\,600}{400} = 1\,320\ \text{turns}
+\]
+\[
+E_1 = 4.44\,f\,N_1\,\Phi_m
+\qquad\Longrightarrow\qquad
+\Phi_m = \frac{E_1}{4.44\,f\,N_1} = \frac{6\,600}{4.44 \times 50 \times 1\,320} = 0.02252\ \text{Wb}
+\]
+
+\textbf{Answer:} $I_1 = 30.30$ A, $I_2 = 500$ A, $N_1 = 1\,320$ turns, $\Phi_m = 0.0225$ Wb.
+
+\vspace{2pt}
+
+\tagline{WE-05.} A 10 kVA, 2200/220 V, 50 Hz transformer has an emf per turn of 10 V. Find the number of turns of each winding and the net core area for a maximum flux density of 1.8 T.
+
+\textbf{Givens:} $V_1 = 2200$ V, $V_2 = 220$ V, $f = 50$ Hz, emf per turn $E_{\text{per turn}} = 10$ V, $B_m = 1.8$ T.
+
+\textbf{Solution.}
+\[
+N_1 = \frac{V_1}{E_{\text{per turn}}} = \frac{2\,200}{10} = 220\ \text{turns}
+\qquad\qquad
+N_2 = \frac{V_2}{E_{\text{per turn}}} = \frac{220}{10} = 22\ \text{turns}
+\]
+\[
+E_1 = 4.44\,f\,N_1\,B_m\,A_c
+\qquad\Longrightarrow\qquad
+A_c = \frac{E_1}{4.44\,f\,N_1\,B_m} = \frac{2\,200}{4.44 \times 50 \times 220 \times 1.8} = 0.0250\ \text{m}^2
+\]
+\[
+A_c = 0.0250\ \text{m}^2 = 250\ \text{cm}^2
+\]
+
+\textbf{Answer:} $N_1 = 220$, $N_2 = 22$, $A_c = 0.0250\ \text{m}^2$ (250 cm$^2$). \srcwrong{the source prints 0.03 m$^2$. Direct substitution into its own formula gives 0.0250. Use 0.0250 (errata E3).}
+
+\vspace{2pt}
+
+\tagline{WE-06.} A transformer has 380 primary turns and 1080 secondary turns on a core of net area 550 cm$^2$. The primary is connected to 400 V, 50 Hz. Find the maximum flux density and the secondary emf.
+
+\textbf{Givens:} $N_1 = 380$, $N_2 = 1080$, $A_c = 550\ \text{cm}^2 = 0.055\ \text{m}^2$, $V_1 = 400$ V, $f = 50$ Hz.
+
+\textbf{Solution.}
+\[
+E_1 = 4.44\,f\,N_1\,B_m\,A_c
+\qquad\Longrightarrow\qquad
+B_m = \frac{E_1}{4.44\,f\,N_1\,A_c} = \frac{400}{4.44 \times 50 \times 380 \times 0.055} = 0.0860\ \text{T}
+\]
+\[
+E_2 = E_1\,\frac{N_2}{N_1} = 400 \times \frac{1\,080}{380} = 1\,136.8\ \text{V} \approx 1\,137\ \text{V}
+\]
+
+\textbf{Answer:} $B_m = 0.086$ T, $E_2 \approx 1\,137$ V. \srcwrong{the source prints $E_2 = 1200$ V, which contradicts its own substitution (errata E5); its intermediate 0.026 T also does not follow from the written data (errata E6). Trust the substitution above.}
+
+% ============================================================ SHEET
+\hrulefill
+\subsection*{\color{copper}FORMULA SHEET FOR THIS FILE}
+\begin{align*}
+\Phi &= \Phi_m \sin(\omega t), \qquad \omega = 2\pi f &
+e &= -N\,\frac{d\Phi}{dt} \\
+E_{\text{max}} &= 2\pi f\,N\,\Phi_m &
+E &= \frac{E_{\text{max}}}{\sqrt{2}} = 4.44\,f\,N\,\Phi_m = 4.44\,f\,N\,B_m\,A_c \\[4pt]
+\text{emf per turn} &= 4.44\,f\,\Phi_m &
+\frac{E_1}{E_2} &= \frac{N_1}{N_2}, \qquad k = \frac{N_2}{N_1} = \frac{I_1}{I_2} \\[4pt]
+\frac{Z_1}{Z_2} &= \left(\frac{N_1}{N_2}\right)^{2} &
+I_0 &= \sqrt{I_w^{\,2} + I_m^{\,2}}, \quad I_w = I_0\cos\phi_0, \quad I_m = I_0\sin\phi_0
+\end{align*}
+
+\subsection*{\color{copper}CLOSED-BOOK CHECK (cover the file, answer out loud)}
+\begin{enumerate}[label=\arabic*.]
+\item Give the 6-step working sequence, naming Faraday's law and the emf formula at the right step.
+\item Derive $E = 4.44 f N \Phi_m$ from $\Phi = \Phi_m\sin\omega t$ with every step visible, and say where the 4.44 comes from.
+\item Name the four ideal assumptions and one circuit element each breaks into.
+\item Why does a transformer fail on DC? Give the no-output and the burn-out argument both.
+\item Why is the no-load current small, and what do its two components each do?
+\item Quick numerics from memory: WE-04's $\Phi_m$, WE-05's $A_c$ (and the errata), WE-06's $E_2$.
+\end{enumerate}
+
+\subsection*{\color{copper}MEMORY DUMP (write cold on blank paper)}
+Static machine, mutual induction, frequency unchanged. $E = 4.44\,f\,N\,\Phi_m = 4.44\,f\,N\,B_m\,A_c$ from $e = -N\,\dfrac{d\Phi}{dt}$ on $\Phi_m \sin\omega t$; $\dfrac{2\pi}{\sqrt{2}} = 4.44$; emf lags flux 90$^\circ$. $\dfrac{E_1}{E_2} = \dfrac{N_1}{N_2} = \dfrac{1}{k}$; $\dfrac{I_1}{I_2} = \dfrac{N_2}{N_1}$; $\dfrac{Z_1}{Z_2} = \left(\dfrac{N_1}{N_2}\right)^{2}$. Ideal breaks into $R_1$, $R_2$, $X_1$, $X_2$, $R_0$, $X_0$. DC: $f = 0 \Rightarrow$ no emf $\Rightarrow$ no back emf $\Rightarrow I = \dfrac{V}{R} \Rightarrow$ burn. No load: $I_0$ small ($I_m$ tiny thanks to closed high-permeability core; $I_w$ = core loss), power factor terrible.
+
+\end{document}

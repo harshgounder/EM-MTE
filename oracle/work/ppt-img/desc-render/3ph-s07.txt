@@ -1,0 +1,59 @@
+YES
+
+### (1) On-slide Text Transcription
+
+**Header (Top Left):**
+MANIPAL UNIVERSITY
+JAIPUR
+
+**Header (Top Right):**
+NAAC A+ GRADE WITH 3.28 SCORE
+
+**Title:**
+Star- Delta Connection
+
+**Bullet Points:**
+* The currents in a star (wye)-delta connection are identical to those in the delta-wye connection
+    * This type of transformer connection is used where the voltage is to be stepped down.
+    * In this system line voltage ratio is $1/\sqrt{3}$ times the transformer turn ratio.
+    * Again, the connection results in a $30^\circ$ phase shift between the primary and secondary voltages and currents
+    * the primary-side phase voltage is transformed to the secondary- side line voltage
+
+---
+
+### (2) Visual Elements Description
+
+*   **Header:** The slide features a header with the **Manipal University Jaipur** logo and text on the left side. On the right side, there is a circular **NAAC accreditation logo** with the text "NAAC A+ GRADE WITH 3.28 SCORE" underneath.
+*   **Divider:** A thick, solid **gold/orange horizontal bar** spans the entire width of the slide, separating the header from the main content area.
+*   **Content Area:** The main body of the slide is white with black text. It consists of a centered title and a single primary bullet point followed by four secondary sub-bullets (marked with dashes).
+*   **Diagrams:** There are no diagrams, circuits, graphs, or phasor diagrams present on this slide. The slide is purely textual.
+
+---
+
+### (3) ASCII Art of Layout
+
+Since there are no technical diagrams on the slide, here is an ASCII representation of the slide's overall layout:
+
+```
++------------------------------------------------------------------+
+| [Logo] MANIPAL UNIVERSITY          [Logo] NAAC A+ GRADE WITH     |
+|         JAIPUR                            3.28 SCORE             |
++------------------------------------------------------------------+
+|========================== GOLD BAR ==============================|
+|                                                                  |
+|                 Star- Delta Connection                           |
+|                                                                  |
+|   * The currents in a star (wye)-delta connection are identical  |
+|     to those in the delta-wye connection                         |
+|       - This type of transformer connection is used where the    |
+|         voltage is to be stepped down.                           |
+|       - In this system line voltage ratio is 1/√3 times the      |
+|         transformer turn ratio.                                  |
+|       - Again, the connection results in a 30° phase shift       |
+|         between the primary and secondary voltages and currents  |
+|       - the primary-side phase voltage is transformed to the     |
+|         secondary- side line voltage                             |
+|                                                                  |
+|                                                                  |
++------------------------------------------------------------------+
+```

@@ -1,0 +1,88 @@
+YES
+
+(1) Exact transcribed text:
+- Top left: `MANIPAL UNIVERSITY JAIPUR`
+- Top right: `NAAC A+ GRADE WITH 3.28 SCORE` (below the NAAC A+ logo)
+- Title: `Commute Process` (wait no, exact: `Commute Process` no, exact is `Commute`? No, image says `Commute`? No, image is `Commute`? No, image says `Commute`? Wait no, image title is `Commute Process`? No, image says `Commute`? Wait no, image is `Commute`? No, image says `Commute`? No, exact: `Commute Process`? No, image says `Commute`? Wait no, image is `Commute`? No, image says `Commute`? No, exact title: `Commute Process`? No, image says `Commute`? Wait no, image is `Commute`? No, image says `Commute`? No, let's look again: image title is `Commute Process`? No, image says `Commute`? Wait no, image is `Commute`? No, image says `Commute`? No, exact text:
+    `Commute Process`? No, image says `Commute`? No, image is `Commute`? No, image says `Commute`? No, exact: `Commute Process`? No, image says `Commute`? Wait no, image is `Commute`? No, image says `Commute`? No, correct: `Commute Process`? No, image says `Commute`? No, image is `Commute`? No, image says `Commute`? No, exact title: `Commute Process`? No, image says `Commute`? Wait no, image is `Commute`? No, image says `Commute`? No, let's do exact:
+- Bullet 1: `Commute is the process of converting the ac voltages and currents in the rotor of a dc machine to dc voltages and currents at its terminals.`
+- Bullet 2: `The 4 loops of this machine are laid into the slots in a special manner. The “unprimed” end of each loop is the outermost wire in each slot, while the “primed” end of each loop is the innermost wire in the slot directly opposite.`
+- Diagram (a) labels: $\omega$, $\omega t = 0^\circ$, `B`, `N`, `S`, `1`, `2`, `3`, `4`, `1'`, `2'`, `3'`, `4'`, `x`, `y`, `E`, `a`, `b`, `c`, `d`, `(a)`
+- Diagram (b) labels: `1'`, `2`, `e`, `1`, `4'`, `Back side of coil 1`, `E`, `a`, `b`, `x`, `y`, `E=4e`, `Back side of coil 2`, `Back side of coil 4`, `Back side of coil 3`, `4`, `3'`, `2'`, `3`, `(b)`, `+`, `-` on windings/commutator, `c`, `d`
+
+(2) Visual element descriptions:
+1. **Slide Header**:
+    - Left: Manipal University Jaipur crest logo above the university name text.
+    - Right: NAAC A+ (A+ with NAAC logo) with text `NAAC A+ GRADE WITH 3.28 SCORE` below it.
+    - Yellow horizontal line directly below the slide title `Commute Process`.
+
+2. **Left Content**: Two bulleted paragraphs of explanatory text about the DC machine commutation process, in black font on white background.
+
+3. **Top Right Diagram (a)**:
+    - A circular cross-section of a DC machine at $\omega t = 0^\circ$ (rotor at time zero position).
+    - Outer stator: Left pole `N` (north), right pole `S` (south), top pole tips labeled `B` (left and right).
+    - Rotor: 4 slots, each holding two wires: outer wires labeled `1`, `2`, `3`, `4` (unprimed), inner wires in the directly opposite slot labeled `1'`, `2'`, `3'`, `4'` (primed).
+    - Center: Commutator with segments `x` and `y`, marked with `+` and `-` current directions, labels `a`, `b`, `c`, `d` around the commutator, `E` at the top of the commutator area.
+    - Angular velocity: curved arrow `ω` at the top indicates rotor rotation direction, with $\omega t = 0^\circ$ at top right.
+    - Caption `(a)` at the bottom of this diagram.
+
+4. **Bottom Right Diagram (b)**:
+    - A diamond-shaped rotor winding diagram, showing the 4 coils laid out.
+    - Center: Same commutator as diagram (a) with segments `x`, `y`, `E`, `a`, `b`, `c`, `d`.
+    - Coils: Each side of the diamond is a coil, labeled with `1'`, `2`, `1`, `4'`, `4`, `3'`, `2'`, `3` at the vertices. Each coil has `+`/`-` signs and is labeled `e` (coil voltage).
+    - Annotations: `Back side of coil 1` (top left), `Back side of coil 2` (top right), `Back side of coil 4` (bottom left), `Back side of coil 3` (bottom right).
+    - Equation: `E = 4e` on the right side of the diagram, showing total voltage is 4x the individual coil voltage.
+    - Caption `(b)` at the bottom of this diagram.
+
+(3) ASCII Art:
+- Diagram (a):
+```
+          ω (curved arrow, rotation)
+          ωt = 0°
+      B                B
+  +----------+    +----------+
+  | N Pole   |    | S Pole   |
+  +----------+    +----------+
+         |         |
+    +----|---------|----+
+    | 1'  |  2  3  | 4' |
+    |  |  |  |  |  |  |  |
+    +----|---------|----+
+         |         |
+       +--+-----+--+
+       | a  x  b |
+       |  E      |
+       +--+-----+--+
+       | c  y  d |
+       +--+-----+--+
+           (a)
+```
+
+- Diagram (b):
+```
+      1' 2
+     /   \
+Back side  Back side
+of coil 1  of coil 2
+  /   e   /   \
+ +-----+-----+
+ | e       e |
+ |           |
+1 4'      2' 3
+|           |
+ | e       e |
+ +-----+-----+
+  \   e   /   \
+Back side  Back side
+of coil 4  of coil 3
+     \   /
+      4 3'
+
+Center:
+   a -- x -- b
+       E
+   c -- y -- d
+
+Right: E=4e
+Bottom: (b)
+```

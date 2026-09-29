@@ -1,0 +1,125 @@
+### YES (I received and saw the image)  
+
+
+#### (1) Complete Transcription of On-Slide Text:  
+
+**Header:**  
+- Top left: *MANIPAL UNIVERSITY*  
+  *JAIPUR*  
+- Top right: *A+ NAAC* (logo)  
+  *NAAC A+ GRADE WITH 3.28 SCORE*  
+
+**Title:**  
+*Delta- Delta Connection* (note: space after “Delta-”)  
+
+**Bullet Points:**  
+• Three single-phase transformers connected in delta-delta  
+–This arrangement is generally used in systems which carry large currents on low voltage and especially when continually of service must be maintained even though one of the phase develops faults.  
+–the primary-side line voltage is transformed to the secondary-side line voltage  
+–There is no phase displacement between the primary and secondary voltages.  
+
+
+**Diagram Annotations (Top Right):**  
+- Transformers: *P* (top), *Q* (middle), *R* (bottom)  
+- Primary terminals: *A*, *B*, *C* (left of each transformer)  
+- Primary winding terminals: *H₁*, *H₂*  
+- Secondary winding terminals: *X₁*, *X₂*  
+- Secondary terminals: *1*, *2*, *3* (right of each transformer)  
+- Load: *balanced three-phase load* (dashed box)  
+
+
+**Diagram Annotations (Middle):**  
+- Generator: *G*  
+- Primary delta (triangle) labels: *primary of P*, *primary of Q*, *primary of R* (windings: *H₁-H₂*)  
+- Secondary delta (triangle) labels: *secondary of P*, *secondary of Q*, *secondary of R* (windings: *X₁-X₂*)  
+- Current annotations: *√3 Iᵣ* (primary), *√3 Iᵣ* (secondary)  
+- Lines: *B*, *C* (primary), *1*, *2*, *3* (secondary)  
+- Load: *load* (box)  
+
+
+**Phasor Diagrams (Bottom):**  
+- Left phasor: *E_AB*, *E_BC*, *E_CA* (delta-shaped, arrows on phasors)  
+- Right phasor: *E_12*, *E_23*, *E_31* (delta-shaped, arrows on phasors)  
+
+
+#### (2) Description of Visual Elements:  
+
+1. **Top Right Transformer Diagram:**  
+   - Three single-phase transformers (*P*, *Q*, *R*) stacked vertically.  
+   - Primary terminals (*A*, *B*, *C*) on the left; secondary terminals (*1*, *2*, *3*) on the right.  
+   - Each transformer has primary (*H₁*, *H₂*) and secondary (*X₁*, *X₂*) windings.  
+   - Primary terminals *A*, *B*, *C* connect to the primary windings (*H₁-H₂*) of *P*, *Q*, *R* respectively.  
+   - Secondary terminals *1*, *2*, *3* connect to the secondary windings (*X₁-X₂*) of *P*, *Q*, *R* respectively, leading to a dashed-box “balanced three-phase load.”  
+
+
+2. **Middle Diagram (Generator + Delta Coils):**  
+   - **Left (Primary Delta):** A generator (*G*) connects to a delta (triangle) of primary windings (*H₁-H₂*), labeled *primary of P/Q/R*. Lines *B* and *C* are visible.  
+   - **Right (Secondary Delta):** A delta (triangle) of secondary windings (*X₁-X₂*), labeled *secondary of P/Q/R*, connects to a “load” box. Lines *1, 2, 3* are visible.  
+   - Current annotations: *√3 Iᵣ* (arrow above primary/secondary windings, indicating line current = √3 × phase current).  
+
+
+3. **Phasor Diagrams (Bottom):**  
+   - **Left:** Delta-shaped phasor diagram with *E_AB* (top), *E_BC* (right), *E_CA* (left). Arrows indicate phasor directions (e.g., clockwise).  
+   - **Right:** Delta-shaped phasor diagram with *E_12* (top), *E_23* (right), *E_31* (left). Arrows on each phasor, forming a delta (triangle) of secondary line voltages.  
+
+
+#### (3) ASCII Art of Diagrams:  
+
+##### Top Right Transformer Diagram:  
+```
+        P
+      H₁ X₁ 1
+      H₂ X₂
+        Q
+      H₁ X₁ 2
+      H₂ X₂
+        R
+      H₁ X₁ 3
+      H₂ X₂
+A --- H₁ --- H₂ --- X₁ --- 1
+B --- H₁ --- H₂ --- X₁ --- 2
+C --- H₁ --- H₂ --- X₁ --- 3
+          [balanced three-phase load (dashed)]
+```  
+
+
+##### Middle Diagram (Primary + Secondary Delta):  
+- **Primary Delta (Left):**  
+  ```
+        B
+        |
+        H₁ --- H₂ (primary of P)
+        |     |
+        H₁ --- H₂ (primary of Q)
+        |     |
+        H₁ --- H₂ (primary of R)
+        |
+        A --- C
+        |
+        G (generator)
+  ```  
+
+- **Secondary Delta (Right):**  
+  ```
+        1
+        |
+        X₁ --- X₂ (secondary of P)
+        |     |
+        X₁ --- X₂ (secondary of Q)
+        |     |
+        X₁ --- X₂ (secondary of R)
+        |
+        2 --- 3
+        |
+        load (box)
+  ```  
+
+
+##### Phasor Diagrams:  
+- **Left Phasor:**  
+  ```
+      E_AB
+      / \
+  E_CA/   \E_BC
+      \ /
+       \

@@ -1,0 +1,23 @@
+YES
+
+**Transcription:**
+
+Let:
+- $P =$ number of poles
+- $\Phi =$ flux produced by each pole in weber (Wb)
+- $Z =$ total number of armature conductors
+- $N =$ armature speed in rpm
+- $A =$ number of parallel paths
+
+Total flux produced by all poles:
+
+$$P\Phi$$
+
+During **one revolution**, each armature conductor cuts the flux from all $P$ poles. Therefore, flux cut by one conductor per revolution is:
+
+$$\boxed{P\Phi}$$
+
+***
+
+**Description:**
+There is no diagram, circuit, or graph present in this image. The image consists entirely of printed text and mathematical expressions defining parameters for an electrical machine and deriving expressions for magnetic flux. The text defines five variables ($P, \Phi, Z, N, A$) using a bulleted list. It then states the total flux produced by all poles as the product $P\Phi$, followed by a sentence explaining that one revolution cuts flux from all poles, leading to the final boxed result $\boxed{P\Phi}$. The phrase "one revolution" is printed in bold.

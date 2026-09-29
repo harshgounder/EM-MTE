@@ -1,0 +1,51 @@
+YES
+
+### (1) Transcription of On-Slide Text
+
+**Top Left Logo Area:**
+*   [Logo Emblem]
+*   MANIPAL UNIVERSITY
+*   JAIPUR
+*   [Small text in logo: UNIRANK BY LIU]
+
+**Top Right Logo Area:**
+*   [Logo Emblem with A+ NAAC inside]
+*   NAAC A+ GRADE WITH 3.28 SCORE
+
+**Main Content:**
+*   Lecture series
+*   outcome
+*   “UNDERSTAND the
+*   principle, construction of
+*   Three phase Transformer”
+
+### (2) Visual Element Description
+
+*   **Header Bar:** A thick, solid yellow horizontal bar spans the entire width of the slide near the top, separating the logos from the main body.
+*   **Logos:**
+    *   The **Manipal University Jaipur** logo is located in the top-left corner. It consists of a red/maroon circular emblem and black text.
+    *   The **NAAC** logo is in the top-right corner. It features a gold and red circular badge with "A+ NAAC" and small text below it.
+*   **Main Text:**
+    *   The phrase **"Lecture series outcome"** is centered vertically on the left side of the slide. It is written in a large, dark navy blue sans-serif font.
+    *   The text **“UNDERSTAND the principle, construction of Three phase Transformer”** is on the right side, enclosed in curly double quotes. It is written in a slightly smaller, medium-blue sans-serif font.
+*   **Layout:** The slide is minimalist with a white background. There are no diagrams, circuits, or phasor diagrams on this specific slide.
+
+### (3) ASCII Art of Layout
+
+```text
++-----------------------------------------------------------------------+
+| [MJU Logo]        MANIPAL UNIVERSITY    [NAAC Logo]                   |
+|                  JAIPUR                NAAC A+ GRADE WITH 3.28 SCORE   |
++======================== YELLOW HORIZONTAL BAR =========================+
+|                                                                       |
+|                                                                       |
+|                       Lecture series                                  |
+|                          outcome                                      |
+|                                                                       |
+|                               “UNDERSTAND the                         |
+|                                 principle, construction of            |
+|                                 Three phase Transformer”              |
+|                                                                       |
+|                                                                       |
++-----------------------------------------------------------------------+
+```

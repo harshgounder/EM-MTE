@@ -1,0 +1,4 @@
+YES
+$E_A = K \Phi_{\text{res}}(\omega)$
+
+There is no diagram, circuit, or graph present in this image; only the single mathematical equation shown above is included.

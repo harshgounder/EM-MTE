@@ -1,0 +1,99 @@
+YES, I received and viewed the image.
+
+---
+
+### 1. Exact On-Slide Text (Transcribed as Printed)
+```
+[Top Left: Logo + Text]
+MANIPAL UNIVERSITY
+JAIPUR
+
+[Top Right: Logo + Text]
+NAAC A+ GRADE WITH 3.28 SCORE
+
+[Slide Title]
+Problems with Commutation in Real Machines
+
+[Body Text]
+• L(di/dt) Voltage
+Occurs in the commutator segments being shorted
+out by the brushes > inducti (text cut off by diagram)
+
+These effects causes
+• Arcing and sparking at the brushes
+• Flashover
+    • Reduce brush life
+    • Pitting of the commutator segment
+
+[Diagram Text - all three stacked diagrams]
+Direction of commutator motion
+400 A
+200 A (repeated across coils, with one '?' in middle diagram)
+commutator segments: a, b, c, d
+```
+
+---
+
+### 2. Visual Element Description
+1.  **Header**:
+    - A horizontal yellow bar runs across the slide top.
+    - Left: Circular "M" logo, paired with "MANIPAL UNIVERSITY JAIPUR" text.
+    - Right: Gold circular "A+ NAAC" logo, with text below: `NAAC A+ GRADE WITH 3.28 SCORE`.
+
+2.  **Text Formatting**:
+    - Main title: Large, black, centered font.
+    - `L(di/dt) Voltage`: Blue, bold, bulleted text.
+    - Explanatory text: Black, bold.
+    - Bullet points for effects: Orange/red text, nested hierarchy.
+
+3.  **Stacked Commutator Diagrams (right side)**:
+    These are three sequential diagrams showing commutator/brush interaction:
+    - Each has a horizontal commutator bar split into segments labeled `a`, `b`, `c`, `d`.
+    - A shaded rectangle (brush) with a downward arrow labeled `400 A` sits above the commutator.
+    - A left-pointing arrow to the left of each commutator is labeled `Direction of commutator motion`.
+    - Curved coil symbols sit below each commutator segment, with arrows indicating current direction:
+      - **Top Diagram**: Brush is on segment `a`; all 4 coils have right-pointing arrows labeled `200 A`.
+      - **Middle Diagram**: Brush spans segment `a` and approaches `b`; 2 left-pointing `200 A` coils, 1 coil marked `?`, 2 right-pointing `200 A` coils.
+      - **Bottom Diagram**: Brush is on segment `b`; 3 left-pointing `200 A` coils, 3 right-pointing `200 A` coils.
+
+---
+
+### 3. ASCII Art for Each Diagram
+#### Top Diagram
+```
+Direction of
+commutator motion  ←
+                ┌───┐  ┌───┐  ┌───┐  ┌───┐
+                 │a  │  │b  │  │c  │  │d  │
+                └───┘  └───┘  └───┘  └───┘
+                 ↓ 400 A
+    Coil1    Coil2    Coil3    Coil4
+    ~~→      ~~→      ~~→      ~~→
+  200 A     200 A     200 A     200 A
+```
+
+#### Middle Diagram
+```
+Direction of
+commutator motion  ←
+                ┌───┐  ┌───┐  ┌───┐  ┌───┐
+                 │a  │  │b  │  │c  │  │d  │
+                └───┘  └───┘  └───┘  └───┘
+                 ↓ 400 A
+    Coil1    Coil2    Coil3    Coil4    Coil5
+    ~~←      ~~←      ~~?      ~~→      ~~→
+  200 A     200 A     ?       200 A     200 A
+```
+
+#### Bottom Diagram
+```
+Direction of
+commutator motion  ←
+                ┌───┐  ┌───┐  ┌───┐  ┌───┐
+                 │a  │  │b  │  │c  │  │d  │
+                └───┘  └───┘  └───┘  └───┘
+                 ↓ 400 A
+    Coil1    Coil2    Coil3    Coil4    Coil5    Coil6
+    ~~←      ~~←      ~~←      ~~→      ~~→      ~~→
+  200 A     200 A     200 A     200 A     200 A     200 A
+```

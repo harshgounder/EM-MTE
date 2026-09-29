@@ -1,0 +1,42 @@
+YES
+
+All text in the image, exactly as printed:
+- \( q\text{-axis} \)
+- Commutating pole
+- Commutating field winding
+- Commutator
+- Series field winding
+- Pole shoe
+- Main pole core
+- \( N \)
+- \( S \)
+- Brush
+- Stator yoke
+- Armature core
+- Armature winding
+- Rotor shaft
+- Air gap
+- Compensating winding
+- Shunt field winding
+- \( d\text{-axis} \)
+- \( N \) (lower commutating pole)
+- \( S \) (upper commutating pole)
+
+Diagram description:
+This is a cross-sectional schematic of a DC electric machine, split into stator (fixed outer) and rotor (rotating inner) components:
+
+1.  **Stator (Outer Fixed Assembly):**
+    - Outer boundary: *Stator yoke*, the large circular outer ring.
+    - **Main Poles:** Two radial main pole cores, left labeled \( N \), right labeled \( S \). Each main pole has a curved *Pole shoe* facing the rotor. The right main pole has three windings: *Shunt field winding*, *Series field winding*, and embedded *Compensating winding* in the pole shoe.
+    - **Commutating Poles:** Two radial poles top and bottom, with the top pole labeled \( S \) and bottom labeled \( N \), each surrounded by *Commutating field winding*.
+
+2.  **Rotor (Rotating Assembly):**
+    - Central axis: *Rotor shaft*, a dark circular element at the center.
+    - *Armature core*, the circular core surrounding the shaft, with *Armature winding*, represented by circular conductors: marked with \( + \) indicating current direction into the page, near the left \( N \) pole, and \( \cdot \) indicating current direction out of the page, near the right \( S \) pole, plus \( + \) in upper/lower quadrants.
+    - *Commutator*, segmented radial ring surrounding the armature core, in contact with two *Brushes*, black rectangular elements at top/bottom.
+
+3.  **Axes & Annotations:**
+    - \( q\text{-axis} \): Vertical dashed line with an upward arrow, aligned with the commutating poles.
+    - \( d\text{-axis} \): Horizontal dashed line with a rightward arrow, aligned with the main poles (\( N \) left, \( S \) right).
+    - A curved clockwise arrow on the upper-left armature indicates the rotor's direction of rotation.
+    - *Air gap* labels the space between rotor and stator components.

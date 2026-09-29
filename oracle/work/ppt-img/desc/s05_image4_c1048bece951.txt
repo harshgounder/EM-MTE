@@ -1,0 +1,75 @@
+YES
+
+### Transcribed text (exact, no corrections):
+#### Primary circuit (left diagram):
+- \( \sqrt{3}I_p \)
+- B
+- A
+- C
+- G
+- \( H_1 \)
+- \( I_p \)
+- \( H_2 \)
+- primary of P
+- primary of Q
+- primary of R
+- \( H_1 \)
+- \( H_2 \)
+- \( H_1 \)
+- \( H_2 \)
+- \( H_2 \)
+- \( H_1 \)
+
+#### Secondary circuit (right diagram):
+- \( \sqrt{3}I_s \)
+- 1
+- 2
+- 3
+- load
+- \( X_1 \)
+- \( I_s \)
+- \( X_2 \)
+- secondary of P
+- secondary of Q
+- secondary of R
+- \( X_1 \)
+- \( X_2 \)
+- \( X_1 \)
+- \( X_2 \)
+- \( X_2 \)
+- \( X_1 \)
+
+#### Phasor diagrams:
+- Left triangle:
+  - \( E_{AB} \)
+  - \( E_{BC} \)
+  - \( E_{CA} \)
+- Right triangle:
+  - \( E_{12} \)
+  - \( E_{23} \)
+  - \( E_{31} \)
+
+---
+
+### Detailed diagram description:
+1.  **Primary (left):** A three-phase generator (circular symbol marked `G`) connects to a **delta (Δ)-connected primary transformer bank**. Three primary windings (labeled *primary of P*, *primary of Q*, *primary of R*) form a delta loop, with each winding having `H₁`/`H₂` terminals:
+    - Line `B` carries line current \( \sqrt{3}I_p \) (rightward arrow) into the delta bank.
+    - Phase current \( I_p \) (rightward arrow) flows through *primary of P*.
+    - Lines `A`, `B`, `C` connect the generator to the delta windings, forming the closed delta configuration.
+
+2.  **Secondary (right):** A **delta (Δ)-connected secondary transformer bank** supplies a rectangular load block marked `load`. Three secondary windings (labeled *secondary of P*, *secondary of Q*, *secondary of R*) form a delta loop, with each winding having `X₁`/`X₂` terminals:
+    - Line `1` carries line current \( \sqrt{3}I_s \) (rightward arrow) into the load.
+    - Phase current \( I_s \) (leftward arrow, opposite direction to primary phase current) flows through *secondary of P*.
+    - Lines `1`, `2`, `3` connect the delta bank to the load, forming the closed delta configuration.
+
+3.  **Phasor diagrams (bottom):**
+    - **Left (primary line-to-line voltages):** A closed delta phasor triangle:
+      - \( E_{AB} \): horizontal rightward arrow (top side)
+      - \( E_{BC} \): down-right arrow (right side)
+      - \( E_{CA} \): up-left arrow (left side)
+      This forms a balanced three-phase voltage set, closing in a loop.
+    - **Right (secondary line-to-line voltages):** An identical orientation closed delta phasor triangle:
+      - \( E_{12} \): horizontal rightward arrow (top side)
+      - \( E_{23} \): down-right arrow (right side)
+      - \( E_{31} \): up-left arrow (left side)
+      This matches the primary voltage phase relationship, showing phase alignment between primary and secondary voltages.

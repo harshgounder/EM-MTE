@@ -1,0 +1,71 @@
+YES
+
+### (1) Text Transcription
+
+**Header Area:**
+*   Left: **MANIPAL UNIVERSITY JAIPUR**
+*   Right: **NAAC A+ GRADE WITH 3.28 SCORE**
+
+**Body Content:**
+*   **For Lap winding**
+*   For a simplex lap winding:
+    $$A = P$$
+*   Therefore,
+    $$E_g = \frac{\Phi Z N}{60}$$  *(Enclosed in a rectangular box)*
+
+*   **For Wave winding**
+*   For a simplex wave winding:
+    $$A = 2$$
+*   Therefore,
+    $$E_g = \frac{P \Phi Z N}{120}$$  *(Enclosed in a rectangular box)*
+
+---
+
+### (2) Visual Description
+
+*   **Layout:** The slide has a white background with a structured, text-heavy layout divided into two main sections separated vertically.
+*   **Header:** A top band contains the university logo and name on the left ("MANIPAL UNIVERSITY JAIPUR") and an accreditation badge on the right ("NAAC A+ GRADE WITH 3.28 SCORE"). A thick, yellow/orange horizontal line runs across the entire width of the slide, separating the header from the body.
+*   **Content Sections:**
+    *   **Top Section:** Titled "**For Lap winding**" in bold. It lists a condition for simplex lap winding ($A=P$) followed by the resulting induced EMF equation ($E_g$). The final equation is framed by a thin black rectangular border.
+    *   **Bottom Section:** Titled "**For Wave winding**" in bold. It lists a condition for simplex wave winding ($A=2$) followed by the resulting induced EMF equation ($E_g$). This final equation is also framed by a thin black rectangular border.
+*   **Typography:** Headings are bold and sans-serif. Explanatory text is regular weight. Variables and formulas are in a serif mathematical font (likely Times New Roman or similar LaTeX rendering).
+
+---
+
+### (3) ASCII Art Layout
+
+```text
++----------------------------------------------------------------------+
+|  [Logo]  MANIPAL UNIVERSITY              [Logo]                      |
+|           JAIPUR                                  NAAC A+ GRADE...   |
+|======================================================================|
+|                                                                      |
+|  For Lap winding                                                     |
+|  For a simplex lap winding:                                          |
+|                                                                      |
+|                         A = P                                        |
+|                                                                      |
+|  Therefore,                                                          |
+|                                                                      |
+|                    +------------------+                               |
+|                    |      Phi Z N     |                               |
+|                    |  E_g = ---------  |                               |
+|                    |        60        |                               |
+|                    +------------------+                               |
+|                                                                      |
+|                                                                      |
+|  For Wave winding                                                    |
+|  For a simplex wave winding:                                         |
+|                                                                      |
+|                         A = 2                                        |
+|                                                                      |
+|  Therefore,                                                          |
+|                                                                      |
+|                    +----------------------+                           |
+|                    |       P Phi Z N      |                           |
+|                    |  E_g = ------------  |                           |
+|                    |         120          |                           |
+|                    +----------------------+                           |
+|                                                                      |
++----------------------------------------------------------------------+
+```

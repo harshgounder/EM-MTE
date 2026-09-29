@@ -1,0 +1,58 @@
+YES
+
+**(1) Complete Transcription of On-Slide Text:**
+
+*   **Top Left:** MANIPAL UNIVERSITY JAIPUR
+*   **Top Right:** A+ NAAC (logo) / NAAC A+ GRADE WITH 3.28 SCORE
+*   **Title:** CUMULATIVELY COMPOUNDED DC GENERATOR
+*   **Intro Text:** A cumulatively compounded dc generator is a dc generator with both series and shunt fields, connected so that the magnetomotive forces from the two fields are additive.
+*   **Bullet 1:** Voltage and current relationships for this generator are
+*   **Equations in box (Bullet 2):**
+    *   $I_A = I_F + I_L$
+    *   $V_T = E_A - I_A(R_A + R_S)$
+    *   $I_F = \frac{V_T}{R_F}$
+*   **Circuit Labels:**
+    *   $I_A$, $R_A$, $R_S$, $L_S$, $I_L$, $I_F$, $R_F$, $L_F$, $V_T$, $E_A$
+    *   (Bottom of circuit): $I_A = I_L + I_F$
+*   **Text next to circuit:** The equivalent circuit of a compound dc generator
+*   **Bullet 3:** Since there are series and shunt field coils, the equivalent effective shunt field current for this machine is given by
+*   **Bottom Equations:**
+    *   $\mathcal{F}_{net} = \mathcal{F}_{SH} + \mathcal{F}_{SE} - \mathcal{F}_{AR}$
+    *   $I_F^* = I_F + \frac{N_{SE}}{N_{SH}} I_A - \frac{\mathcal{F}_{AR}}{N_{SH}}$
+
+**(2) Description of Visual Elements:**
+
+*   **Header:** Features the Manipal University Jaipur logo on the left and a NAAC A+ grade badge on the right. A thick yellow horizontal line separates the header from the body.
+*   **Text Blocks:** The introductory paragraph is in blue font. Bulleted lists use standard black circular bullets.
+*   **Equation Box (Left):** A rectangular framed image containing three basic electrical relationships for the generator.
+*   **Circuit Diagram (Right):** Shows an equivalent circuit. It includes a DC voltage source ($E_A$), series armature and series field resistance/inductance ($R_A, R_S, L_S$), and a parallel shunt field branch containing a variable resistor ($R_F$) and inductor ($L_F$). Arrows indicate current directions ($I_A, I_F, I_L$).
+*   **Bottom Section:** Contains two complex equations involving script 'F' (MMF) and equivalent current terms.
+
+**(3) ASCII Art Layout:**
+
+```text
++-------------------------------[MANIPAL LOGO]--------------------------------+ [NAAC LOGO]
+|                                                                              |
++=====================================YELLOW LINE==============================+
+|                     CUMULATIVELY COMPOUNDED DC GENERATOR                     |
+|                                                                              |
+|  A cumulatively compounded dc generator is a dc generator with both series   |
+|  and shunt fields, connected so that the magnetomotive forces from the       |
+|  two fields are additive.                                                    |
+|                                                                              |
+|  • Voltage and current relationships for this generator are                 |
+|  • +---------------------------+      I_A ----^-- R_A -- R_S --. L_S --+     |
+|    | I_A = I_F + I_L           |                            | I_F v  |---> I_L
+|    | V_T = E_A - I_A(R_A+R_S)  |     (+)            R_F (var) |      |     |
+|    |        V_T                |      E_A --          L_F -+   |     |
+|    |        I_F = ---          |                            |   V_T (+)    |
+|    |        R_F                |      <---------------------+---+ (-)     |
+|    +---------------------------+      I_A = I_L + I_F                       |
+|                                      The equivalent circuit of a            |
+|                                      compound dc generator                  |
+|  • Since there are series and shunt field coils, the equivalent effective   |
+|    shunt field current for this machine is given by                         |
+|                                                                              |
+|     F_net = F_SH + F_SE - F_AR            I_F* = I_F + (N_SE/N_SH) I_A - F_AR/N_SH |
++------------------------------------------------------------------------------+
+```

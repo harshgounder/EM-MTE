@@ -1,0 +1,5 @@
+YES
+
+$E_A - V_T = I_A R_A$
+
+The image contains a single mathematical equation written in a black serif font on a white background. The equation relates four electrical variables: $E_A$ (armature electromotive force), $V_T$ (terminal voltage), $I_A$ (armature current), and $R_A$ (armature resistance). The "A" and "T" are formatted as subscripts. There are no diagrams, circuits, graphs, axes, arrows, or other annotations present in the image.

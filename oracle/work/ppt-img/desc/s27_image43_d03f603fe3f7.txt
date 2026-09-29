@@ -1,0 +1,5 @@
+YES
+
+$I_F^* = I_F - I_{eq}$
+
+The image contains no diagram, circuit, or graph. It displays a single line of mathematical text: the equation "$I_F^* = I_F - I_{eq}$" centered on a white background.

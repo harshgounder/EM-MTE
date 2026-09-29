@@ -1,0 +1,258 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+
+\definecolor{copper}{HTML}{8C4A2F}
+\definecolor{iron}{HTML}{262B33}
+\definecolor{muted}{HTML}{6B6B6B}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize\color{muted} SP-05 \textbar{} Transformer V: Parallel Operation + Roll-up \textbar{} EM-MTE notes}
+\rhead{\footnotesize\color{muted} ELC2104 \textbar{} MTE}
+\cfoot{\footnotesize\color{muted} \thepage}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\qhead}[2]{\subsection*{\color{copper}#1\quad\color{iron}#2}}
+\newcommand{\tagline}[1]{\textbf{\color{copper}#1}}
+\newcommand{\keydist}[1]{\vspace{2pt}\textbf{\color{red}KEY DISTINCTION.} #1}
+\newcommand{\drawline}[1]{\textbf{\color{muted}[DRAW]} #1}
+\newcommand{\trap}[1]{\vspace{2pt}\textbf{\color{red}[TRAP]} #1}
+
+\begin{document}
+
+\begin{center}
+{\footnotesize\color{copper} ELC2104 \textbar{} ELECTRICAL MACHINES \textbar{} MTE}\\[6pt]
+{\LARGE\bfseries\color{iron} SP-05: Transformer V}\\[2pt]
+{\Large\color{copper} Parallel Operation: Conditions, Circulating Current, Load Sharing}\\[6pt]
+{\footnotesize\color{muted} Question-driven notes, dense-point standard. Covers T.8 and the closing roll-up.}
+\end{center}
+
+\vspace{2pt}
+\tagline{QUESTION SHAPES IN THIS FILE:} Q12 (conditions for parallel operation), Q13 (circulating current: causes, effects, remedies), Q14 (load sharing + derive the condition for proper sharing). Numeric: D1-07 (phasor load sharing). Closing: the 20-question cold-reproduction checklist for the whole single-phase block.
+\vspace{2pt}
+
+\keydist{Two failure families live in this topic and the exam wants them kept apart. \textbf{Wrong ratio} produces a \emph{circulating current} that flows even at no load (a closed-loop KVL problem). \textbf{Unequal per-unit impedances} produce \emph{unequal sharing} under load (a current-divider problem). Different physics, different remedies.}
+
+\hrulefill
+
+% ============================================================ Q12
+\qhead{Q12 (verbatim):}{What are the necessary conditions for the parallel operation of transformers? Explain each condition.}
+
+\tagline{OPENING POINTS (why parallel at all).}
+\begin{enumerate}[label=\arabic*.]
+\item Transformers are run in parallel to supply a load larger than one unit's rating, to keep part of the plant alive during maintenance or fault of one unit, and to add capacity as the load grows (a spare small unit can be added instead of replacing the big one).
+\item ``Parallel operation'' means the primaries share one supply bus and the secondaries share one load bus. Because the secondaries now form a closed loop through the two buses, \emph{Kirchhoff's laws around that loop decide everything} below.
+\end{enumerate}
+
+\tagline{THE CONDITIONS, IN TWO GRADES (the exam's expected structure).}
+
+\textbf{Essential conditions (without these the pair is damaged or cannot operate at all).}
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Same polarity.} The secondary terminals must be connected in the same polarity sense (H1 with H1, X1 with X1). Reverse one transformer and its full no-load induced voltage appears \emph{directly} across the low impedance of the other secondary: a dead short across the pair with enormous circulating current and immediate damage. Polarity marks on the bushings exist for exactly this connection step.
+\item \textbf{Same voltage transformation ratio (and same frequency).} If the ratios differ, the two no-load secondary voltages are unequal even with identical supplies, and the difference drives a \textbf{circulating current} around the closed secondary loop at \emph{no load} (Q13). Same frequency is structural in a single-phase system but state it: transformers in parallel must be on the same supply.
+\end{enumerate}
+
+\textbf{Desirable conditions (without these the pair works, but shares badly).}
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Same percentage (per-unit) resistance} and \textbf{same percentage (per-unit) reactance}, each expressed on the transformer's own kVA base. Then the load current divides in inverse proportion to the ratings and both units reach full load at the same moment (Q14's ``proper sharing'').
+\item \textbf{Same impedance angle (same $\dfrac{X}{R}$ ratio).} If the angles differ, the two currents are not in phase with each other, so the kVA shares are not exactly proportional even when the impedance magnitudes look right, and one unit runs at a worse internal power factor than the other (its copper loss grows for the same delivered kVA).
+\item \textbf{Identical size and construction (when possible).} Units of the same design track each other's impedance with temperature and load; mixing a big unit with a small one without per-unit matching means the small one reaches its thermal limit long before the big one is full (see D1-07: the sharing numbers can be brutally unequal).
+\item \textbf{Same phase sequence and phase shift} (the three-phase extension: the Y-D and D-Y pairs can only parallel when their phase-shift groups match). One line for the single-phase file, full treatment in the three-phase notes.
+\end{enumerate}
+
+\trap{the wording trap: ``necessary'' versus ``desirable''. Many textbooks grade polarity and voltage ratio as \emph{necessary}, and equal per-unit impedances as \emph{desirable} (needed for good sharing, not for survival). Open the answer by splitting the two grades: that split is itself marks.}
+
+\drawline{parallel circuit: one supply bus into two primaries (transformer symbols A and B with ratios $a_A$, $a_B$), secondaries joined to one load bus with the load $Z_L$ and load current $I_L$, plus the loop arrows $I_A$, $I_B$ and the closed secondary loop marked with the circulating-current arrow $I_{\text{circ}}$. Label checklist: buses, both units, both impedances $Z_A$, $Z_B$, all current arrows, $V_1$ and $V_2$.}
+
+\keydist{Polarity and ratio decide \emph{whether} parallel operation is safe. Per-unit impedance and $\dfrac{X}{R}$ decide \emph{how well} it shares. Write the two grades separately.}
+
+% ============================================================ Q13
+\qhead{Q13 (verbatim):}{Explain the causes and effects of circulating current in transformers operating in parallel and suggest methods to avoid it.}
+
+\tagline{MODEL ANSWER.}
+
+\textbf{Cause.}
+\begin{enumerate}[label=\arabic*.]
+\item When two transformers in parallel have \emph{unequal transformation ratios}, their no-load secondary voltages differ, even though both primaries sit on the same bus: $E_A = K_A V_1$ and $E_B = K_B V_1$ with $K = \dfrac{N_2}{N_1}$.
+\item The secondaries form a closed loop (through the common bus), so Kirchhoff's voltage law around that loop must hold. The voltage difference $\Delta E = E_A - E_B$ cannot appear as a voltage anywhere: it can only drive a current around the loop through the two transformers' internal impedances.
+\item That current is the \textbf{circulating current}:
+\[
+I_{\text{circ}} = \frac{E_A - E_B}{Z_A + Z_B} = \frac{V_1\left(K_A - K_B\right)}{Z_A + Z_B}
+\]
+It flows \emph{inside} the pair, out of one secondary and into the other, and it exists even when \textbf{no load} is connected at all.
+\item Note the size control: the sum of the two short-circuit impedances $Z_A + Z_B$ sits in the denominator. Even a percent or two of ratio mismatch stays survivable only because the transformers' impedances limit the loop current (this is also why the percent-impedance figure matters here).
+\item A secondary cause class: unequal \emph{phase} of the internal drops (different $\dfrac{X}{R}$ angles) makes the circulating current slightly reactive and distorts the sharing even at equal ratios, but the primary textbook cause is the ratio mismatch.
+\end{enumerate}
+
+\textbf{Effects.}
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Copper loss at no load:} $I_{\text{circ}}^{2}\left(R_A + R_B\right)$ is dissipated in the windings with no load being served at all: the transformers warm up while doing nothing.
+\item \textbf{Lost kVA capacity:} each winding's current budget is $I_{\text{load share}} \pm I_{\text{circ}}$ (the circulating current \emph{adds} in one transformer and \emph{subtracts} in the other). The loaded unit reaches its rated current earlier than the load's own size suggests, so the pair's usable kVA is smaller than the sum of the nameplates.
+\item \textbf{Unequal and distorted sharing:} one transformer is pushed toward overload while the other is underused, and their power factors seen from the bus diverge slightly.
+\item \textbf{Worse regulation and heating margin:} the extra reactive part of $I_{\text{circ}}$ increases the reactive drop in the loaded unit.
+\item \textbf{Protection upset:} a large circulating current can trip relays or blow fuses meant for load faults, shutting a healthy pair down.
+\end{enumerate}
+
+\textbf{Remedies.}
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Manufacture to one ratio:} use transformers of identical design and turns ratio (the practical standard: same make and model in parallel).
+\item \textbf{Correct with taps:} adjust the off-circuit or on-load tap changers of one unit until the two no-load secondary voltages match at the bus, killing $\Delta E$ and so $I_{\text{circ}}$.
+\item \textbf{Match the polarity exactly} at connection time (marked bushings, and the ``flick test'' on the secondaries before closing the paralleling breaker): reversed polarity is the catastrophic extreme of circulating current.
+\item \textbf{Design with reasonable percent impedance} (equal per-unit impedances also help the residual loop current stay symmetric) and verify ratio tolerance on the test certificate before paralleling.
+\end{enumerate}
+
+\keydist{Circulating current exists at \textbf{no load} and is caused by \textbf{ratio mismatch} ($\Delta E$ in a closed loop). Load sharing exists only \textbf{under load} and is decided by the \textbf{impedance divider}. If a question says ``at no load, current still circulates'', the cause is ratio or polarity, full stop.}
+
+% ============================================================ Q14
+\qhead{Q14 (verbatim):}{Explain the load sharing between transformers connected in parallel and derive the condition for proper load sharing.}
+
+\tagline{DERIVATION (two transformers, secondary side referred to one voltage).}
+
+\textbf{Step 1: the two laws.} Let both units deliver onto the same load bus at secondary voltage $V_2$, with referred secondary impedances $Z_A$ and $Z_B$, and load current $I_L$. Then:
+\[
+\text{KCL:}\quad I_A + I_B = I_L
+\qquad\qquad
+\text{equal drops across parallel branches:}\quad I_A\, Z_A = I_B\, Z_B
+\]
+(both branches sit across the same bus voltage, so the voltage they each drop across their internal impedance is the same).
+
+\textbf{Step 2: solve the pair} (equal ratios assumed, so no circulating term):
+\[
+\boxed{\;I_A = \frac{Z_B}{Z_A + Z_B}\, I_L
+\qquad\qquad
+I_B = \frac{Z_A}{Z_A + Z_B}\, I_L\;}
+\]
+The branch with the \emph{larger} impedance carries the \emph{smaller} share: currents divide inversely to impedance.
+
+\textbf{Step 3: with a ratio mismatch} an extra circulating term appears on top of the divider (the Q13 current added to one unit and subtracted from the other). Using $a = \dfrac{N_1}{N_2}$ per unit and $V_1$ the common primary voltage:
+\[
+I_A = \frac{Z_B}{Z_A + Z_B}\, I_L + \frac{V_1\left(a_B - a_A\right)}{a_A\, a_B\, \left(Z_A + Z_B\right)}
+\qquad
+I_B = \frac{Z_A}{Z_A + Z_B}\, I_L - \frac{V_1\left(a_B - a_A\right)}{a_A\, a_B\, \left(Z_A + Z_B\right)}
+\]
+(the second term is exactly $I_{\text{circ}}$, equal and opposite in the two units: it changes their internal loading without changing what the load receives).
+
+\textbf{Step 4: kVA sharing.} Both units deliver at the same bus voltage, so apparent power shares follow current magnitudes:
+\[
+\frac{S_A}{S_B} = \frac{\left|I_A\right|}{\left|I_B\right|} = \frac{\left|Z_B\right|}{\left|Z_A\right|}
+\qquad\text{(equal impedance angles assumed)}
+\]
+
+\textbf{Step 5: the condition for proper (proportional) sharing.} ``Proper'' means each unit carries a share of the load proportional to its own rating:
+\[
+\frac{S_A}{S_B} = \frac{S_{A,\text{rated}}}{S_{B,\text{rated}}}
+\]
+Comparing with Step 4, this needs:
+\[
+\boxed{\;\frac{\left|Z_A\right|}{\left|Z_B\right|} = \frac{S_{B,\text{rated}}}{S_{A,\text{rated}}}\;}
+\qquad\text{with equal impedance angles}
+\]
+Equivalently in the exam's favourite phrasing: \textbf{the per-unit (percent) impedances must be equal on each transformer's own rating base}, and the $\dfrac{X}{R}$ ratios must be equal. Under that condition both transformers reach full load at the same total load, and no unit overheats first.
+
+\tagline{EXPLANATION POINTS TO CLOSE WITH.}
+\begin{enumerate}[label=\arabic*.]
+\item Physical reading of the condition: a bigger transformer must have a \emph{smaller} impedance (in ohms) so it naturally swallows the bigger share. Rating-proportional sharing is the same statement as ohmic-impedance-inversely-proportional ratings.
+\item If only the magnitudes match and the angles do not, the currents are phase-shifted against each other: the real and reactive shares both skew, and the unit with the worse internal power factor runs hotter per kVA delivered.
+\item Unequal-per-unit case (the small-plus-big pair, D1-07 next): the unit with the lower per-unit impedance does more than its rating share and trips first. The fix at planning level is to pick units with equal percent impedance.
+\item If the question asks for ``sharing'' always give: (a) the divider formula, (b) the numbers or ratios, (c) one sentence on which unit is more heavily loaded and whether that is proper.
+\end{enumerate}
+
+\trap{mixing the two terms is the classic lost marks: the \emph{circulating} current (ratio mismatch, present at no load, sum of impedances in the denominator) is not the \emph{sharing} skew (impedance ratio, present only under load). Write both formulas and label which effect each describes.}
+
+\drawline{the parallel pair again (same as Q12) but now with $I_A$ and $I_B$ resolved along the common $I_L$ direction and the two divider fractions written beside the branches; add the small circulating loop arrow for the unequal-ratio case.}
+
+\keydist{Sharing is a current divider. Proper sharing needs the divider to mimic the ratings: per-unit impedances equal, $\dfrac{X}{R}$ equal. Everything else in this topic is loop algebra.}
+
+% ============================================================ NUMERIC
+\hrulefill
+\subsection*{\color{copper}WORKED NUMERIC: D1-07 (phasor load sharing)}
+
+\tagline{D1-07.} Two single-phase transformers of \textbf{equal turns ratio} are run in parallel, with secondary-referred impedances $Z_A = 0.5 + j3\ \Omega$ and $Z_B = 0.6 + j10\ \Omega$. They share a load of 100 kW at 0.8 power factor lagging. Find how the load is shared.
+
+\textbf{Givens:} equal ratios (so no circulating current: the Step 3 correction term is zero), $Z_A = 0.5 + j3\ \Omega$, $Z_B = 0.6 + j10\ \Omega$, load 100 kW at 0.8 lagging (so the load apparent power is $\dfrac{100}{0.8} = 125$ kVA).
+
+\textbf{Solution (phasor divider, load current as reference).}
+\[
+Z_A = 0.5 + j3 = 3.041\,\angle\,80.54^{\circ}\ \Omega
+\qquad
+Z_B = 0.6 + j10 = 10.018\,\angle\,86.57^{\circ}\ \Omega
+\]
+\[
+Z_A + Z_B = 1.1 + j13 = 13.047\,\angle\,85.18^{\circ}\ \Omega
+\]
+\[
+\frac{I_A}{I_L} = \frac{Z_B}{Z_A + Z_B} = \frac{10.018\,\angle\,86.57^{\circ}}{13.047\,\angle\,85.18^{\circ}} = 0.768\,\angle\,1.39^{\circ}
+\]
+\[
+\frac{I_B}{I_L} = \frac{Z_A}{Z_A + Z_B} = \frac{3.041\,\angle\,80.54^{\circ}}{13.047\,\angle\,85.18^{\circ}} = 0.233\,\angle\,-4.64^{\circ}
+\]
+So transformer A carries 76.8 percent of the load current (almost exactly in phase with $I_L$) and transformer B carries 23.3 percent (slightly behind $I_L$). Since both deliver at the same bus voltage, the kVA shares are the same fractions:
+\[
+S_A \approx 0.768 \times 125 = 96.0\ \text{kVA}
+\qquad\qquad
+S_B \approx 0.233 \times 125 = 29.1\ \text{kVA}
+\]
+
+\textbf{Answer:} A takes about 96 kVA and B about 29.1 kVA of the 125 kVA load (77 : 23 split). \trap{closing analysis for full credit: the share is \emph{not} proportional to any sensible rating pair (77 : 23 while the impedances differ by only about 3 : 1 in magnitude, because the \emph{angles} differ: 80.5$^\circ$ versus 86.6$^\circ$). If A's rating were anywhere near 100 kVA and B's near 25 kVA this would be proper sharing; if the ratings were equal, this pairing violates the equal-per-unit condition and A would overload first. Also note the two share currents are phase-shifted by about 6$^\circ$ against each other: the unequal $\dfrac{X}{R}$ ratios showing up exactly as the desirable condition predicts.}
+
+% ============================================================ ROLL-UP
+\hrulefill
+\subsection*{\color{copper}THE 20-QUESTION COLD-REPRODUCTION CHECKLIST (whole single-phase block)}
+
+Answer each from memory in one breath before opening SP-01 to SP-04. Bracket = the file with the full model answer.
+
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+\item (SP-01) Construction + working: parts with functions; 6-step Faraday sequence; core vs shell. [DIAG: front view]
+\item (SP-01) EMF derivation: $\Phi_m\sin\omega t \Rightarrow e = -N\dfrac{d\Phi}{dt} \Rightarrow E = 4.44 f N \Phi_m = 4.44 f N B_m A_c$; significance of every parameter; where 4.44 comes from.
+\item (SP-01) Ideal vs practical: 4 assumptions, 6 departures, the $R_1 R_2 X_1 X_2 R_0 X_0$ mapping.
+\item (SP-02) Equivalent circuit: 6 components + what each models; exact, simplified, approximate. [DIAG: 3 circuits]
+\item (SP-02) Parameter methods: OC fills shunt, SC fills series, DC resistance splits $R_{\text{eq}}$, refer with $a^{2}$, label the side.
+\item (SP-03) Regulation: definition (constant $V_1$), exact lagging and leading forms, percentage form, denominator convention named.
+\item (SP-04) Efficiency derive + maximum-efficiency condition: $P_i = P_{\text{cu}}$, $x = \sqrt{\dfrac{P_i}{P_{\text{cu,FL}}}}$, $\eta_{\text{max}}$ expression.
+\item (SP-03) Approximate regulation, lag and lead: $I_2 R_{\text{eq}}\cos\phi \pm I_2 X_{\text{eq}}\sin\phi$ and the percent-drop line.
+\item (SP-02) SC test: setup on HV, shorted LV, why the shunt branch dies, the $Z_{\text{eq}}$, $R_{\text{eq}}$, $X_{\text{eq}}$ derivations, $P_{\text{cu,FL}}$ scaling. [DIAG: SC circuit]
+\item (SP-02) OC test: setup on LV, open HV, why $W_0$ = iron loss, $\cos\phi_0$, $I_w$, $I_m$, $R_0$ (two routes), $X_0$. [DIAG: OC circuit + no-load phasor]
+\item (SP-04) Max-efficiency condition again (the question repeats on purpose: derivation + $\eta_{\text{max}}$ + the load point in kVA).
+\item (SP-05) Parallel conditions: two essential (polarity, ratio), three desirable (percent $R$, percent $X$, $\dfrac{X}{R}$) plus size matching.
+\item (SP-05) Circulating current: cause (ratio mismatch in a closed loop), formula, five effects, four remedies.
+\item (SP-05) Load sharing: divider derivation, proper-sharing condition, the ratings-vs-impedances reading.
+\item [3ph file] Three-phase connections (Y-Y, D-D, Y-D, D-Y with diagrams): lives in the three-phase file, not here.
+\item (SP-01) Why not on DC: no $\dfrac{d\Phi}{dt}$ (no output) + no back emf and saturation (burn).
+\item (SP-01) Why small no-load current: $I_m$ tiny (closed high-permeability core) + $I_w$ = core loss; terrible power factor.
+\item (SP-04) Why laminated: eddy loops, $P_e = k_e f^{2} B_m^{2} t^{2}$, the $t^{2}$ lever, stacking factor cost.
+\item (SP-04) Why kVA: losses track $V$ and $I$ only, never $\cos\phi$; same machine, different kVA at different power factors.
+\item (SP-04) Losses + reduction: copper, hysteresis, eddy, stray, one formula and one reduction bundle each; the static-machine line.
+\end{enumerate}
+
+\subsection*{\color{copper}FORMULA SHEET FOR THIS FILE}
+\begin{align*}
+I_{\text{circ}} &= \frac{V_1\left(K_A - K_B\right)}{Z_A + Z_B}
+& K &= \frac{N_2}{N_1} \\[4pt]
+I_A &= \frac{Z_B}{Z_A + Z_B}\, I_L \pm\, I_{\text{circ}}
+& I_B &= \frac{Z_A}{Z_A + Z_B}\, I_L \mp\, I_{\text{circ}} \\[4pt]
+\frac{S_A}{S_B} &= \frac{\left|Z_B\right|}{\left|Z_A\right|}
+& \text{proper sharing:}\;\; \frac{\left|Z_A\right|}{\left|Z_B\right|} &= \frac{S_{B,\text{rated}}}{S_{A,\text{rated}}},\;\; \angle Z_A = \angle Z_B \\[4pt]
+&& \text{(i.e. equal per-unit impedance on own base, equal } \dfrac{X}{R}\text{)}
+\end{align*}
+
+\subsection*{\color{copper}CLOSED-BOOK CHECK (cover the file, answer out loud)}
+\begin{enumerate}[label=\arabic*.]
+\item Split the parallel conditions into essential and desirable and say what failure each one prevents.
+\item Where does the circulating current come from, why does it exist at no load, and what limits its size? Give the formula.
+\item Five effects of circulating current, four remedies.
+\item Derive the load-share divider from KCL and equal drops. Then add the circulating term and say which physical mismatch each term encodes.
+\item State and interpret the proper-sharing condition. Why must the bigger transformer have the smaller ohmic impedance?
+\item From memory, run the 20-question checklist above at talking speed. Mark anything that stalls and reread that file's answer.
+\end{enumerate}
+
+\subsection*{\color{copper}MEMORY DUMP (write cold on blank paper)}
+Parallel: essential = polarity + ratio; desirable = equal per-unit $R$, per-unit $X$, $\dfrac{X}{R}$ angle (then equal sharing). Ratio mismatch $\Rightarrow$ circulating current at no load: $I_{\text{circ}} = \dfrac{V_1(K_A - K_B)}{Z_A + Z_B}$, causes copper loss and lost kVA and trips, fixed by identical ratios, tap correction, correct polarity. Sharing under load = current divider: $I_A = \dfrac{Z_B}{Z_A + Z_B} I_L$, bigger impedance takes smaller share; proper sharing means per-unit impedances equal on own bases and equal angles. Never confuse the loop term (ratio) with the divider term (impedance).
+
+\end{document}

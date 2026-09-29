@@ -1,0 +1,5 @@
+YES
+
+$E_A = K\Phi\omega$
+
+The image contains a single mathematical formula printed in dark blue text on a white background. The formula consists of the characters $E_A$, an equals sign, and the product of $K$, the Greek letter $\Phi$, and the Greek letter $\omega$. There are no diagrams, circuits, graphs, axes, arrows, or phasor relationships present in the image.

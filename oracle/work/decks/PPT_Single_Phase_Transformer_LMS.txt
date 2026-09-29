@@ -1,0 +1,143 @@
+===== SLIDE 1 (images: 0) =====
+Single Phase Transformer Electrical machines– ELC2104
+
+===== SLIDE 2 (images: 0) =====
+REFERENCE BOOK M. G. Say, Alternating Current Machines (5e) , ELBS. 2. E. H. Langsdorf , Theory of Alternating Current Machine (2e), TMH. 3. A. E. Clayton , Performance and Design of DC Machines (3e), O&amp; IBH, TEXT BOOKS 1. P. S. Bhimbra , “Electrical Machinery”, Seventh Edition, 1995,Khanna Publishers. 2. I. J. Nagrath , , D. P.Kothari , “Electric Machines”, Third Edition, Tata McGraw-Hill Publishing Company Ltd. 3. A. E.Fitzgerald , Charles Kingsley, Jr. Stephen D. Umans , “Electric Machinery”, Fifth Edition, Tata McGraw-Hill. Video Links: https://www.youtube.com/watch?v=xvL4rYUM4kA&amp;list=PLp6ek2hDcoNCANsWM2mw3qi0387BhfLyV&amp;index=6 https://www.youtube.com/watch?v=KAI4yJBASbc&amp;list=PLp6ek2hDcoNCANsWM2mw3qi0387BhfLyV&amp;index=7 https://www.youtube.com/watch?v=VdiocL2RAMc&amp;list=PLp6ek2hDcoNCANsWM2mw3qi0387BhfLyV&amp;index=8 https://www.youtube.com/watch?v=xT89C6CvqX8&amp;list=PLp6ek2hDcoNCANsWM2mw3qi0387BhfLyV&amp;index=9 https://www.youtube.com/watch?v=K_S1e06FAKc&amp;list=PLp6ek2hDcoNCANsWM2mw3qi0387BhfLyV&amp;index=10
+
+===== SLIDE 3 (images: 1) =====
+A transformer is a static device that transferred electrical energy from one circuit to another circuit. without changing the frequency. Transformer They are used to step-up generator voltage to an appropriate voltage level for power transfer. Stepping down the transmission voltage at various levels for distribution and power utilization.
+
+===== SLIDE 4 (images: 1) =====
+A transformer in its simplest form will consist of a rectangular laminated magnetic structure on which two coils of different number of turns are wound as shown in Figure Principle of Operation The winding to which AC voltage is impressed is called the primary of the transformer and the winding across which the load is connected is called the secondary of the transformer.
+
+===== SLIDE 5 (images: 1) =====
+Principle of Operation Depending upon the number of turns of the primary (N 1 ) and secondary (N 2 ), an alternating emf (E 2 ) is induced in the secondary. This induced emf (E 2 ) in the secondary causes a secondary current I 2 . Consequently, terminal voltage V 2 will appear across the load. If V 2 &gt; V 1 , it is called a step up-transformer. On the other hand, if V 2 &lt; V 1 , it is called a step-down transformer. When an alternating voltage V 1 is applied to the primary, an alternating flux Φ is set up in the core. This alternating flux links both the windings and induces emfs E 1 and E 2 in them according to Faraday’s laws of electromagnetic induction. The emf E 1 is termed as primary emf and emf E 2 is termed as Secondary emf.
+
+===== SLIDE 6 (images: 1) =====
+Principle of Operation The magnitudes of E 2 and E 1 depend upon the number of turns on the secondary and primary respectively.. If N 2 &gt;N 1 , then E 2 &gt;E 1 (or V 2 &gt;V 1 ) and we get step-up transformer. On the other hand, if N 2 &lt;N 1 , then E 2 &lt;E 1 (or V 2 &lt;V 1 ) and we get a step-down transformer. If load is connected across the secondary winding, the secondary e.m.f E 2 will cause a current I 2 to flow through the load. Thus, a transformer enables us to transfer a c power from one circuit to another with a change in voltage level.
+
+===== SLIDE 7 (images: 0) =====
+Transformer The following points may be noted carefully: The transformer action is based on the laws of electromagnetic induction. There is no electrical connection between the primary and secondary. There is no change in frequency i.e., output power has the same frequency as the input power. Note: The DC supply cannot be used for the transformers. This is because the transformer works on the principle of mutual induction, for which current in one coil must change uniformly. If DC supply is given, the current will not change due to constant supply and transformer will not work There can be saturation of the core due to which transformer draws very large current from the supply when connected to DC.
+
+===== SLIDE 8 (images: 1) =====
+Construction The following design features are incorporated in power transformer: ( i ) The core is made of silicon steel which has low hysteresis loss and high permeability. Further, core is laminated in order to reduce eddy current loss. These features considerably reduce the iron losses and the no-load current. (ii) Instead of placing primary on one limb and secondary on the other, it is a usual practice to wind one-half of each winding on one limb. This ensures tight coupling between the two windings. Consequently, leakage flux is considerably reduced. (iii) The winding resistances are minimized to reduce Copper loss and resulting rise in temperature and to ensure high efficiency.
+
+===== SLIDE 9 (images: 2) =====
+Classification Transformers are of two types: ( i ) Core-type transformer and (ii) Shell-type transformer Core-Type Transformer: In a core-type transformer, half of the primary winding and half of the secondary winding are placed round each limb to reduce the leakage flux. Shell-Type Transformer: This method of construction involves the use of a double magnetic circuit. Both the windings are placed round the central limb to ensure a low-reluctance flux path Core Type Shell Type
+
+===== SLIDE 10 (images: 0) =====
+Comparison of Core and Shell Type Transforms Core Type Shell Type 1. The winding encircles the core. 2. It has single magnetic circuit. 3. The core has two limbs . 4. The cylindrical coils are used. 5. The winding are uniformly distributed on two limbs hence natural cooling is effective. 6. Preferred for low voltage transformers. 1. The core encircles most part of the winding . 2. It has double magnetic circuit. 3. The core has three limbs. 4. The multilayer disc or sandwich type coils are used. 5. The natural cooling does not exist as the windings are surrounded by the core. 6. Preferred for high voltage transformers.
+
+===== SLIDE 11 (images: 2) =====
+EMF Equation of a Transformer Consider that an alternating voltage V 1 of frequency f is applied to the primary as shown in Fig. The sinusoidal flux Φ produced by the primary can be represented as:
+
+===== SLIDE 12 (images: 2) =====
+E M F Equation Note: It I clear from exp. above that e m f E 1 induced in the primary lags behind the flux Φ by 90 °. Like wise, e m f E 2 induced in the secondary lags behind flux Φ by 90 °. Voltage Transformation Ratio
+
+===== SLIDE 13 (images: 0) =====
+Ideal Transformer A transformer is said to be ideal if it satisfies following properties: i ) It has no losses. ii) Its windings have zero resistance. iii) Leakage flux is zero i.e. 100 % flux produced by primary links with the secondary. iv) Permeability of core is so high that negligible current is required to establish the flux in it. NOTE: For an ideal transformer, the primary applied voltage V 1 is same as the primary induced emf E 1 as there are no voltage drops.
+
+===== SLIDE 14 (images: 1) =====
+Ideal Transformer For ideal transformer
+
+===== SLIDE 15 (images: 2) =====
+Ideal Transformer on No-load Consider an ideal transformer in Fig. For no load I 2 =0. I 1 is just necessary to produce flux in the core, which is called magnetizing current denoted as I m . I m is very small and lags  V 1 by 90 ° as the winding is purely inductive. According to Lenz's law, the induced e.m.f. opposes the cause producing it which is supply voltage V 1 . Hence E 1 and E 2 are in antiphase with V 1 but equal in magnitude and E 1 and E 2 are in phase. Phasor diagram
+
+===== SLIDE 16 (images: 4) =====
+Ideal Transformer on load Let us connect a load Z L across the secondary of an ideal transformer as shown in Figure below: The secondary emf E 2 will cause a current I 2 to flow through the load:
+
+===== SLIDE 17 (images: 2) =====
+The secondary current I2 lags behind V2 (or E2) by Φ. It causes a primary current I1 = KI2 = I2 (for K=1) which is in antiphase with it.
+
+===== SLIDE 18 (images: 2) =====
+Practical Transformer A practical transformer differs from the ideal transformer in many respects. The practical transformer has ( i ) iron losses (ii) winding resistances and (iii) magnetic leakage, giving rise to leakage reactance. Iron losses. Since the iron core is subjected to alternating flux, there occurs eddy current and hysteresis loss in it. Winding resistances. Since the windings consist of copper conductors, it immediately follows that both primary and secondary will have winding resistance. The primary resistance R 1 and secondary resistance R 2 act in series with the respective windings as shown below: Leakage reactance. Both primary and secondary currents produce flux. The flux Φ which links both the windings is the useful flux However, primary current would produce some flux Φ which would not link the secondary winding and is called mutual flux.
+
+===== SLIDE 19 (images: 3) =====
+Practical Transformer on No-load The primary will draw a small current I 0 to supply ( i ) the iron losses and (ii) a very small amount of copper loss in the primary. Hence the primary no load current I 0 is not 90° behind the applied voltage V 1 but lags it by an angle Φ 0 &lt; 90° as shown in the phasor diagram. The no-load primary current I 0 can be resolved into two rectangular components:
+
+===== SLIDE 20 (images: 3) =====
+Practical Transformer on No-load
+
+===== SLIDE 21 (images: 4) =====
+Practical Transformer on load
+
+===== SLIDE 22 (images: 2) =====
+Practical Transformer on load Note that counter emf that opposes the applied voltage V 1 is -E 1 . Therefore, if we add I 1 R 1 (in phase with I1) and I 1 X 1 (90° ahead of I 1 ) to -E 1 , we get the applied primary voltage V 1 . The phasor E 2 represents the induced emf in the secondary by the mutual flux. The secondary terminal voltage V 2 will be what is left over after subtracting I 2 R 2 and I 2 X 2 from E 2 .
+
+===== SLIDE 23 (images: 2) =====
+Impedance Ratio Consider a transformer having impedance Z2 in the secondary as shown in the figure below:
+
+===== SLIDE 24 (images: 4) =====
+Equivalent Circuit diagram of Transformer
+
+===== SLIDE 25 (images: 1) =====
+Simplified Equivalent Circuit of a Loaded Transformer If I 0 of a transformer is small as compared to the rated primary current I 1 , voltage drops in R 1 and X1 due to I 0 are negligible. Hence, the exact equivalent circuit can be simplified by transferring the shunt circuit R 0 - X 0 to the input terminals as shown below:
+
+===== SLIDE 26 (images: 5) =====
+If all the secondary quantities are referred to the primary , we can get the simplified equivalent circuit of the transformer referred to the primary as shown below Simplified Equivalent Circuit of a Loaded Transformer
+
+===== SLIDE 27 (images: 5) =====
+Simplified Equivalent Circuit of a Loaded Transformer If all the primary quantities are referred to the secondary , we can get the simplified equivalent circuit of the transformer referred to the secondary as shown below
+
+===== SLIDE 28 (images: 3) =====
+Approximate Equivalent Circuit of a Loaded Transformer The no-load current I0 in a transformer is only 1-3% of the rated primary current and may be neglected without any serious error. The transformer can then be shown as in the figure below: If all the secondary quantities are referred to the primary, we can get the approximate equivalent circuit of the transformer referred to the primary as shown below If all the primary quantities are referred to the secondary, we can get the approximate equivalent circuit of the transformer referred to the secondary as shown below
+
+===== SLIDE 29 (images: 2) =====
+Approximate Voltage Drop in a Transformer The approximate equivalent circuit of transformer referred to secondary is shown below At no-load, the secondary voltage is K V1. When a load having a lagging p.f . cos 2 is applied, the secondary carries a current I2 and voltage drops occur in (R2 + K2R1) and (X2 + K2 X1). Consequently, the secondary voltage falls from KV1 to V2.
+
+===== SLIDE 30 (images: 4) =====
+Practical Transformer on load It is clear from the phasor diagram below that drop in secondary voltage is AC = I 2 Z 02 .
+
+===== SLIDE 31 (images: 2) =====
+Voltage Regulation The voltage regulation of a transformer is the arithmetic difference (not phasor difference) between the no-load secondary voltage (0V2) and the secondary voltage V2 on load expressed as percentage of no-load voltage i.e. where 0V2 = No-load secondary voltage = K V1 V2 = Secondary voltage on load The + ve sign is for lagging p.f . and - ve sign for leading p.f .
+
+===== SLIDE 32 (images: 1) =====
+Losses in Transformer The power losses in a transformer are of two types, namely; 1. Core or Iron losses 2. Copper losses NOTE: The above losses appear in the form of heat and produce ( i ) an increase in temperature and (ii) a drop in efficiency Core or Iron losses (Pi ) : These consist of hysteresis and eddy current losses and occur in the transformer core due to the alternating flux. Both hysteresis and eddy current losses depend upon ► Maximum flux density Bm in the core and ► Supply frequency f.
+
+===== SLIDE 33 (images: 3) =====
+Copper losses (PC) :These losses occur in both the primary and secondary windings due to their ohmic resistance. These can be determined by short-circuit test Total copper Cu losses: Losses in Transformer Hence, total losses in a transformer are: NOTE: Since transformers are connected to constant-frequency, constant voltage supply, both f and Bm are constant. Hence, core or iron losses are practically the same at all loads. Hence,
+
+===== SLIDE 34 (images: 2) =====
+Efficiency The efficiency of a transformer is defined as the ratio of output power (in watts or kW) to input power (watts or kW) i.e. In practice, open-circuit and short-circuit tests are carried out to find the efficiency, In practice, open-circuit and short-circuit tests are carried out to find the efficiency,
+
+===== SLIDE 35 (images: 1) =====
+Condition for Maximum Efficiency
+
+===== SLIDE 36 (images: 2) =====
+Output kVA corresponding to Maximum Efficiency Hence efficiency of a transformer will be maximum when copper losses are equal to constant or iron losses. From above, the load current I 2 corresponding to maximum efficiency is:
+
+===== SLIDE 37 (images: 3) =====
+Transformer Test The circuit constants, efficiency and voltage regulation of a transformer can be determined by two simple tests: ( i ) open-circuit test and (ii) short-circuit test Open-Circuit Test : This test is conducted to determine: ► The iron losses (or core losses) and ► Parameters R 0 and X 0 of the transformer. In this test (see Figure below), the rated voltage is applied to the primary (usually low-voltage winding) while the secondary is left open-circuited. As the normal rated voltage is applied to the primary, therefore, normal iron losses will occur in the transformer core. Cu losses in the primary under no-load condition are negligible as compared with iron losses.
+
+===== SLIDE 38 (images: 3) =====
+Transformer Test Short Circuit test: This test is conducted to determine: ► Full-load copper losses of the transformer and ► R 01 (or R 02 ), X 01 (or X 02 ). In this test (see Figure below), the secondary (usually low-voltage winding) is short-circuited by a thick conductor and variable low voltage is applied to the primary. The low input voltage is gradually raised till at voltage VSC, full-load current I 1 flows in the primary. Then I 2 in the secondary also has full-load value since I 1 /I 2 = N 2 /N 1 . Under such conditions, the copper loss in the windings is the same as that on full load.
+
+===== SLIDE 39 (images: 2) =====
+Transformer Test
+
+===== SLIDE 40 (images: 0) =====
+Parallel operation of Single phase Transformer It is economical to install numbers of smaller rated transformers in parallel than installing a bigger rated electrical power transformers . Conditions for Parallel Operation of Transformers When two or more transformers run in parallel, they must satisfy the following conditions for satisfactory performance. These are the conditions for parallel operation of transformers . 1. Same polarity. 2. Same voltage ratio of transformer . 3. Same percentage impedance. 4. Same phase sequence for the 3-phase transformer
+
+===== SLIDE 41 (images: 4) =====
+Let, a 1 is the turn ratio of the transformer A a 2 is the turn ratio of transformer B Z A is the equivalent impedance of the transformer A referred to secondary Z B is the equivalent impedance of the transformer B referred to secondary Z L is the load impedance across the secondary I A is the current supplied to the load by the secondary of the transformer A I B is the current supplied to the load by the secondary of the transformer B V L is the secondary load voltage I L is the load current Applying Kirchhoff’s Current Law, By Kirchhoff’s Voltage Law, Now putting the value of I B from the equation (1) in equation (3) we will get,
+
+===== SLIDE 42 (images: 1) =====
+Solving equations (2) and (4) we will get, The current I A and I B have two components. The first component represents the transformers share of the load currents and the second component is a circulating current in the secondary windings of the single-phase transformer. The undesirable effects of the circulating currents are as follows They increase the copper loss. The circulating current overloads the one transformer and reduce the permissible load kVA.
+
+===== SLIDE 43 (images: 2) =====
+Equal Voltage Ratio In order to eliminate circulating currents, the voltage ratios must be identical. That is a 1 =a 2 Under this condition, Equating equation (7) and (8) we will get: From the above equation (9), it is clear that the transformer currents are inversely proportional to the transformer impedance. Thus, for the efficient parallel operation of the two single-phase transformers, the potential differences at full load across the transformer internal impedance should be equal.
+
+===== SLIDE 44 (images: 5) =====
+Therefore, we know that, The total load in volt-ampere (VA) is The volt-ampere of transformer A is Similarly, the volt-ampere of transformer B is Hence, the various equations will be written as shown below Equating the equation (11) and (12) we will get Equation (13) tells that the volt-ampere load on each single-phase transformer is inversely proportional to its impedance. Hence, to share the load in proportion to their ratings, the transformers should have the impedance which is inversely proportional to their ratings.
+
+===== SLIDE 45 (images: 0) =====
+Examples A 10 kVA, 2000/400V, single phase transformer at no load, has R1=5.5 Ohm, X1=12 ohm, R2= 0.2 ohm, X2=0.45 ohm. Determine the approximate value of the secondary voltage at full load, 0.8 power factor (lagging), when the primary applied voltage is 2000V. Calculate the regulation of a transformer in which ohmic loss is 1% of the output and the reactance drop is 5% of the voltage when the power factor is (a) 0.8 lagging (b) unity © 0.8 leading. In a 50 KVA, 11kV/400V transformer, the iron and copper losses are 500 W and 600 W respectively under rated conditions. Calculate the efficiency on unity power factor at full load. Find the load for maximum efficiency and the iron and copper losses corresponding to this load. A transformer rated 200/50V, 10 kVA has a core loss of 100 watts. What is the maximum efficiency of the transformer at 0.8 lagging power factor? Assume full-load copper loss as200 watts. At what load this maximum efficiency is obtained?
+
+===== SLIDE 46 (images: 0) =====
+Examples 5. Open circuit and short circuit tests on a  5kVA, 250/500 V transformer has the following test data: Voltage (v)            Current (A)                Power (W) Open  circuit test (LV)         250                      1                             80 Short circuit test (HV)         20                      12                             100 Determine circuit constant and Calculate the efficiency and voltage regulation of the transformer at full load at 0.9 power factor lagging. 6. Single phase transformer gave following test result: Rating 100kVA, 11kV/220V, 50 Hz Open  circuit test (LV)         220 V                 45 A                           2kW Short circuit test (HV)         500V                 9.09 A                         3kW Determine equivalent circuit parameters referred to LV side. 7. Two single-phase transformer with equal turns have impedances of (0.5+j3) ohms and (0.6+j 10) ohms with respect to the secondary. If they operate in parallel, determine how they will share total load of 100 kW at 0.8 pf lagging?
+
+===== SLIDE 47 (images: 0) =====
+Lecture series outcome “ Explain the construction, operating principles, equivalent circuits, voltage regulation, and parallel operation of single-phase and three-phase transformers ”
+
+===== SLIDE 48 (images: 1) =====
+COURSE OUTCOMES MAPPING WITH CO1 &amp; CO2

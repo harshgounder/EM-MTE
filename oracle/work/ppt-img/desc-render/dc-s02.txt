@@ -1,0 +1,47 @@
+YES
+
+**1. Transcription:**
+
+**Manipur University Jaipur** (Logo Text)
+**NAAC A+ GRADE WITH 3.28 SCORE** (Logo Text)
+
+**REFERENCE BOOK**
+1. M. G. Say, *Alternating Current Machines* (5e), ELBS.
+2. 2. E. H. Langsdorf, *Theory of Alternating Current Machine* (2e), TMH.
+3. A. E. Clayton, *Performance and Design of DC Machines* (3e), O& IBH,
+**TEXT BOOKS**
+1. P. S. Bhimbra, “Electrical Machinery”, Seventh Edition, 1995,Khanna Publishers.
+2. I. J. Nagrath, , D. P.Kothari, “Electric Machines”, Third Edition, Tata McGraw-Hill Publishing Company Ltd.
+3. A. E.Fitzgerald, Charles Kingsley, Jr. Stephen D. Umans, “Electric Machinery”, Fifth Edition, Tata McGraw-
+Hill.
+
+**2. Visual Description:**
+The image is a digital presentation slide, likely from PowerPoint.
+*   **Header:** A thick yellow horizontal bar spans the entire width of the slide near the top.
+*   **Logos:** In the top-left corner, there is the "Manipal University Jaipur" logo consisting of a small red emblem and the university name in black text. In the top-right corner, there is a red and gold badge logo for "NAAC" with the text "NAAC A+ GRADE WITH 3.28 SCORE" underneath it.
+*   **Content Layout:** The slide contains two main sections of text, left-aligned, using a serif font (likely Times New Roman).
+*   **Section 1:** Titled "**REFERENCE BOOK**" in bold, uppercase letters. It contains a numbered list (1, 2, 3). The text in this section lists academic references. Note the formatting quirk in item 2 where the number "2." appears twice ("2. 2. E. H. Langsdorf"). Item 3 ends with a comma.
+*   **Section 2:** Titled "**TEXT BOOKS**" in bold, uppercase letters, located directly below the first list. It also contains a numbered list (1, 2, 3). The text lists textbooks. Note formatting quirks: "1995,Khanna" lacks a space after the comma; item 2 has a double comma "Nagrath, , D."; item 3 breaks across two lines with "Hill." on the second line.
+*   **Background:** The background is plain white.
+
+**3. ASCII Art:**
+
+```text
+[ Manipal Logo ]                                             [ NAAC Logo ]
+MANIPAL UNIVERSITY                                           NAAC A+
+JAIPUR                                                       GRADE WITH 3.28 SCORE
+============================================================== (Yellow Bar) =
+
+    REFERENCE BOOK
+        1.  M. G. Say, Alternating Current Machines (5e), ELBS.
+        2.  2. E. H. Langsdorf, Theory of Alternating Current Machine (2e), TMH.
+        3.  A. E. Clayton, Performance and Design of DC Machines (3e), O& IBH,
+
+    TEXT BOOKS
+        1.  P. S. Bhimbra, “Electrical Machinery”, Seventh Edition, 1995,Khanna Publishers.
+        2.  I. J. Nagrath, , D. P.Kothari, “Electric Machines”, Third Edition, Tata McGraw-Hill
+            Publishing Company Ltd.
+        3.  A. E.Fitzgerald, Charles Kingsley, Jr. Stephen D. Umans, “Electric Machinery”,
+            Fifth Edition, Tata McGraw-
+            Hill.
+```

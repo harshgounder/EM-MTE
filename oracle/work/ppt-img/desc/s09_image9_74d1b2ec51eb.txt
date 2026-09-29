@@ -1,0 +1,29 @@
+YES
+
+### Transcribed Text:
+- Primary circuit labels: $\boldsymbol{B}$, $\boldsymbol{I_p}$ (two instances, arrow right), $\boldsymbol{A}$, $\boldsymbol{\bullet}$ (winding dots, 2), $\boldsymbol{G}$, $\boldsymbol{C}$
+- Secondary circuit labels: $\boldsymbol{1}$, $\boldsymbol{I_s}$ (two instances, arrow left), $\boldsymbol{2}$, $\boldsymbol{\bullet}$ (winding dots, 2), $\boldsymbol{3}$, $\boldsymbol{\text{load}}$
+- Lower phasor section:
+  - Label: $\boldsymbol{(b)}$
+  - Left phasor triangle: $\boldsymbol{E_{AB}}$, $\boldsymbol{E_{BC}}$, $\boldsymbol{E_{CA}}$
+  - Right phasor triangle: $\boldsymbol{E_{12}}$, $\boldsymbol{E_{23}}$, $\boldsymbol{E_{31}}$
+
+---
+
+### Diagram Description:
+This is a delta-delta (Δ-Δ) connected transformer circuit (top) with corresponding line-voltage phasor diagrams (bottom, marked $\boldsymbol{(b)}$):
+
+1.  **Primary (left top circuit):**
+    - A generator ($\boldsymbol{G}$) supplies power to three delta-connected transformer windings. Terminals are labeled $\boldsymbol{A, B, C}$, each winding has a polarity dot ($\boldsymbol{\bullet}$) to indicate same-polarity terminals.
+    - Current $\boldsymbol{I_p}$ (arrow pointing right) is shown in two positions: along the top wire from terminal $\boldsymbol{B}$, and flowing through the top winding from $\boldsymbol{B}$ to its connected terminal.
+
+2.  **Secondary (right top circuit):**
+    - Three delta-connected transformer windings, with terminals $\boldsymbol{1, 2, 3}$, each with a polarity dot ($\boldsymbol{\bullet}$).
+    - Current $\boldsymbol{I_s}$ (arrow pointing left) is shown in two positions: along the top wire from terminal $\boldsymbol{1}$, and along the bottom wire from terminal $\boldsymbol{3}$.
+    - These windings connect to a block labeled $\boldsymbol{\text{load}}$ on the far right.
+
+3.  **Phasor diagrams (bottom):**
+    - **Left triangle:** Represents primary line-to-line voltage phasors:
+      $\boldsymbol{E_{AB}}$ (horizontal right arrow, top edge), $\boldsymbol{E_{BC}}$ (down-right arrow, right edge to bottom vertex), $\boldsymbol{E_{CA}}$ (up-left arrow, left edge back to $E_{AB}$ start) form a closed delta phasor.
+    - **Right triangle:** Represents secondary line-to-line voltage phasors:
+      $\boldsymbol{E_{12}}$ (horizontal right arrow, top edge), $\boldsymbol{E_{23}}$ (down-right arrow, right edge to bottom vertex), $\boldsymbol{E_{31}}$ (up-left arrow, left edge back to $E_{12}$ start) form a closed delta phasor, mirroring the primary voltage phase relationship for terminals 1-2-3.

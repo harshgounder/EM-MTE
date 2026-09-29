@@ -1,0 +1,77 @@
+YES
+
+**Text Transcription:**
+
+MANIPAL UNIVERSITY
+JAIPUR
+
+NAAC A+ GRADE WITH 3.28 SCORE
+
+**EMF Equation of DC Generator**
+
+Let:
+
+*   $P$ = number of poles
+*   $\Phi$ = flux produced by each pole in weber (Wb)
+*   $Z$ = total number of armature conductors
+*   $N$ = armature speed in rpm
+*   $A$ = number of parallel paths
+
+Total flux produced by all poles:
+
+$P\Phi$
+
+During **one revolution**, each armature conductor cuts the flux from all $P$ poles. Therefore, flux cut by one conductor per revolution is:
+
+$\boxed{P\Phi}$
+
+If the armature rotates at $N$ rpm, then the time required for one revolution is:
+
+$t = \frac{60}{N} \text{ seconds}$
+
+**Visual Description:**
+
+1.  **Header:** A white background with a university logo on the top left reading "MANIPAL UNIVERSITY JAIPUR" with an emblem to its left. On the top right, there is a "NAAC A+" accreditation badge. A thick yellow horizontal bar separates the header from the main content.
+2.  **Title:** Centered at the top in large, black serif font: "EMF Equation of DC Generator".
+3.  **Body Content:** The main text is left-aligned.
+    *   It starts with "Let:" followed by a bulleted list defining variables ($P$, $\Phi$, $Z$, $N$, $A$).
+    *   Below the list, there is text: "Total flux produced by all poles:" followed by the centered equation $P\Phi$.
+    *   Next is a paragraph starting with "During **one revolution**..." where "one revolution" is bolded.
+    *   Below that paragraph is the centered equation $P\Phi$ enclosed in a rectangular box.
+    *   The next line reads: "If the armature rotates at $N$ rpm, then the time required for one revolution is:"
+    *   Finally, a centered equation: $t = \frac{60}{N} \text{ seconds}$.
+
+**ASCII Art Layout:**
+
+```text
++------------------------------------------------------------------+
+| [Logo] MANIPAL UNIVERSITY         [Badge] NAAC A+ GRADE...       |
+|         JAIPUR                                                       |
+| ================================================================== | (Yellow Bar)
+|                                                                    |
+|              EMF Equation of DC Generator                          |
+|                                                                    |
+|  Let:                                                              |
+|    • P = number of poles                                           |
+|    • Φ = flux produced by each pole in weber (Wb)                  |
+|    • Z = total number of armature conductors                       |
+|    • N = armature speed in rpm                                     |
+|    • A = number of parallel paths                                  |
+|                                                                    |
+|  Total flux produced by all poles:                                 |
+|                                                                    |
+|                        PΦ                                          |
+|                                                                    |
+|  During one revolution, each armature conductor cuts the flux      |
+|  from all P poles. Therefore, flux cut by one conductor per        |
+|  revolution is:                                                    |
+|                                                                    |
+|                        [ PΦ ]                                      |
+|                                                                    |
+|  If the armature rotates at N rpm, then the time required for      |
+|  one revolution is:                                                |
+|                                                                    |
+|                        t = 60/N seconds                            |
+|                                                                    |
++------------------------------------------------------------------+
+```

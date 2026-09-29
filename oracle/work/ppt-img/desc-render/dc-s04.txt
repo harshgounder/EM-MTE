@@ -1,0 +1,61 @@
+YES  
+
+
+### (1) Complete Text Transcription:  
+- **Top Left**: *MANIPAL UNIVERSITY JAIPUR* (with logo)  
+- **Top Right**: Logo with *“A+ NAAC”* and text: *“A+ GRADE WITH 328 SCORE”*  
+- **Title**: *DC Machine Construction*  
+- **Bullet 1 (blue)**: *The stator of the dc machine has poles, which are excited by either dc current or permanent magnets to produce magnetic fields.*  
+- **Bullet 2 (black)**: *In the neutral zone, in the middle between the poles, commutating poles are placed to reduce sparking of the commutator.*  
+- **Bullet 3 (blue)**: *Compensating windings are mounted on the main poles. These reduces flux weakening commutation problems.*  
+
+- **Diagram Labels** (all text in the cross - sectional DC machine diagram):  
+  *q - axis, Commutating pole, Pole shoe, Main pole core, Stator yoke, Brush, Armature core, Armature winding, Rotor shaft, Air gap, Compensating winding, Shunt field winding, d - axis, Series field winding, Commutator, Commutating field winding, N (left main pole), S (right main pole), S (top commutating pole)*  
+
+
+### (2) Visual Elements Description:  
+The diagram is a **cross - sectional view of a DC machine** (motor/generator) showing:  
+- **Stator**: An outer circular ring (*Stator yoke*) with main poles (left: *N* (north), right: *S* (south)) featuring pole shoes, main pole cores, and field windings (series, shunt, compensating) on the main poles. Commutating poles (top, labeled *S*) are also present.  
+- **Rotor**: An inner circular *Armature core* with *Armature windings* (circles marked “+”), a central *Rotor shaft*, an *Air gap* between stator and rotor, a *Commutator* (with segments), and *Brushes* in contact with the commutator.  
+- **Axes**: *d - axis* (horizontal) and *q - axis* (vertical) are labeled.  
+- **Arrows**: A curved arrow (near the commutator) indicates the direction of rotation.  
+
+
+### (3) ASCII Art of the Diagram:  
+```
+                q-axis
+                |
+           Commutating pole
+               |
+            Pole shoe
+               |
+        Main pole core (N)
+               |
+      Stator yoke (outer circle)
+               |
+             Brush
+               |
+        Armature core (inner circle)
+               |
+        Armature winding (circles +)
+               |
+        Rotor shaft (center V)
+               |
+            Air gap
+               |
+        Compensating winding (right pole)
+               |
+        Shunt field winding (right)
+               |
+            d-axis (horizontal)
+               |
+        Series field winding (right)
+               |
+            Commutator (right)
+               |
+        Commutating field winding (right)
+               |
+        [Right pole: S]
+```  
+
+(Note: The left main pole is labeled *N*, the right main pole is labeled *S*, and the top commutating pole is labeled *S* (or similar). The armature windings have “+” signs, and the commutator has segments. Brushes are positioned at the left near the armature.)

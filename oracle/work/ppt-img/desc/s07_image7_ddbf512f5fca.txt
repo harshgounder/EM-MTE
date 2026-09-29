@@ -1,0 +1,21 @@
+YES
+
+Iron core
+Coil
+Ball bearing
+Coil commutator interconnection
+Insulation between segments
+Insulation between segments
+Coil insulation
+Commutator copper segment
+
+The image is a photograph of an electric motor armature (rotor) oriented horizontally. It features a central metal shaft passing through the assembly. On the left side, a ball bearing is visible. The main body of the armature consists of an iron core made of stacked, slotted laminations with copper coils wound around them. To the right of the iron core is the commutator, which is a cylindrical structure made of numerous copper segments separated by insulation. Red-insulated wires serve as interconnections between the coils in the armature and the segments of the commutator. 
+
+Various components are identified by black text labels with arrows pointing to the specific parts:
+*   **Iron core**: Points to the stack of metal laminations.
+*   **Coil**: Points to the copper windings on the left side of the core.
+*   **Ball bearing**: Points to the bearing assembly on the far left.
+*   **Coil commutator interconnection**: Points to the red wires running between the core and the commutator.
+*   **Insulation between segments**: Two separate labels (one at the top right and one at the bottom right) pointing to the insulating material between the copper commutator segments.
+*   **Coil insulation**: Points to the insulation on the coils at the base of the core.
+*   **Commutator copper segment**: Points to a single copper piece within the commutator drum.

@@ -1,0 +1,53 @@
+YES
+
+### (1) Complete Text Transcription
+
+**Top Left:**
+*   MANIPAL UNIVERSITY JAIPUR (accompanied by a circular logo)
+
+**Top Right:**
+*   A+ NAAC (logo badge)
+*   NAAC A+ GRADE WITH 3.28 SCORE
+
+**Center (Title):**
+*   Three Phase Transformer
+
+**Center (Subtitle):**
+*   Electrical machines– ELC2104
+
+---
+
+### (2) Visual Element Description
+
+The image is a title slide for a lecture presentation. It features:
+*   **Header:** Two university accreditation and identification logos are positioned in the top corners. A thick, solid yellow horizontal bar separates the header from the main body of the slide.
+*   **Background:** The main background of the slide is plain white.
+*   **Typography:** The main title "Three Phase Transformer" is written in a large, black, sans-serif font, centered horizontally. Below it, the subtitle "Electrical machines– ELC2104" is written in a smaller, black, sans-serif font, also centered.
+*   **Diagrams/Graphs:** There are no diagrams, circuits, graphs, or phasor diagrams on this slide; it is a text-only title page.
+
+---
+
+### (3) ASCII Art Layout
+
+```text
++------------------------------------------------------------------------------+
+|  [Logo] MANIPAL UNIVERSITY          [Logo Badge]  NAAC A+ GRADE...         |
+|         JAIPUR                        A+ NAAC                               |
++================================ YELL OW BAR =================================+
+|                                                                              |
+|                                                                              |
+|                                                                              |
+|                     Three Phase                                              |
+|                     Transformer                                              |
+|                                                                              |
+|                     Electrical machines– ELC2104                             |
+|                                                                              |
+|                                                                              |
+|                                                                              |
+|                                                                              |
+|                                                                              |
+|                                                                              |
+|                                                                              |
+|                                                                              |
++------------------------------------------------------------------------------+
+```

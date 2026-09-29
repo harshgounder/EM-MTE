@@ -1,0 +1,31 @@
+YES  
+
+(1) Transcription of on - slide text:  
+- Top left (logo text): *MANIPAL UNIVERSITY JAIPUR*  
+- Top right (badge text): *NAAC A+* (and below: *NAAC A+ GRADE WITH 3.28 SCORE*)  
+- Main title: *DC Machine*  
+- Subtitle: *Electrical machines- ELC2104*  
+
+
+(2) Visual elements:  
+- **Top left**: University emblem (logo) with the text “MANIPAL UNIVERSITY JAIPUR” in black.  
+- **Top right**: NAAC accreditation badge (circular, gold - red themed) with “NAAC A+” inside, and below it, the text “NAAC A+ GRADE WITH 3.28 SCORE” in black.  
+- **Yellow bar**: A horizontal yellow bar spans the slide’s width, positioned below the top logos (decorative).  
+- **Main content**: Centered text. “DC Machine” is in large, bold black font; below it, “Electrical machines- ELC2104” is in smaller, regular black font.  
+- **Background**: Solid white.  
+
+
+(3) ASCII art of the layout:  
+```
++-----------------------------------------------------------------+
+| [University Logo] MANIPAL UNIVERSITY JAIPUR   [NAAC Badge] NAAC A+ |
+|                                         NAAC A+ GRADE WITH 3.28 SCORE |
+|<--------------------------- Yellow Horizontal Bar --------------------------->|
+|                                                                   |
+|                                                                   |
+|                       DC Machine                                 |
+|                       Electrical machines- ELC2104               |
+|                                                                   |
+|                                                                   |
++-----------------------------------------------------------------+
+```

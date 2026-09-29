@@ -1,0 +1,125 @@
+===== SLIDE 1 (images: 0) =====
+DC Machine Electrical machines– ELC2104
+
+===== SLIDE 2 (images: 0) =====
+REFERENCE BOOK M. G. Say, Alternating Current Machines (5e) , ELBS. 2. E. H. Langsdorf , Theory of Alternating Current Machine (2e), TMH. 3. A. E. Clayton , Performance and Design of DC Machines (3e), O&amp; IBH, TEXT BOOKS 1. P. S. Bhimbra , “Electrical Machinery”, Seventh Edition, 1995,Khanna Publishers. 2. I. J. Nagrath , , D. P.Kothari , “Electric Machines”, Third Edition, Tata McGraw-Hill Publishing Company Ltd. 3. A. E.Fitzgerald , Charles Kingsley, Jr. Stephen D. Umans , “Electric Machinery”, Fifth Edition, Tata McGraw-Hill.
+
+===== SLIDE 3 (images: 0) =====
+Direct Current (DC) Machines Fundamentals Generator action : An emf (voltage) is induced in a conductor if it moves through a magnetic field. Motor action : A force is induced in a conductor that has a current going through it and placed in a magnetic field. Any DC machine can act either as a generator or as a motor.
+
+===== SLIDE 4 (images: 1) =====
+DC Machine Construction The stator of the dc machine has poles, which are excited by either dc current or permanent magnets to produce magnetic fields. In the neutral zone, in the middle between the poles, commutating poles are placed to reduce sparking of the commutator . Compensating windings are mounted on the main poles.  These reduces flux weakening commutation problems.
+
+===== SLIDE 5 (images: 1) =====
+DC Machine Construction The poles are mounted on an iron core that provides a closed magnetic circuit. The rotor has a ring-shaped laminated iron core with slots. Coils with several turns are placed in the slots.  The distance between the two legs of the coil is about 180 electric degrees.
+
+===== SLIDE 6 (images: 2) =====
+DC Machine Construction The rotor coils are connected in series through the commutator segments. The ends of each coil are connected to a commutator segment. The commutator consists of insulated copper segments mounted on an insulated tube. Two brushes are pressed to the commutator to permit current flow and they are placed in neutral zone.
+
+===== SLIDE 7 (images: 2) =====
+DC Machine Construction The rotor coils are connected in series through the commutator segments. The ends of each coil are connected to a commutator segment. The commutator consists of insulated copper segments mounted on an insulated tube. Two brushes are pressed to the commutator to permit current flow and they are placed in neutral zone.
+
+===== SLIDE 8 (images: 2) =====
+EMF Equation of DC Generator
+
+===== SLIDE 9 (images: 1) =====
+[NO TEXT: figure/diagram/image-only slide]
+
+===== SLIDE 10 (images: 1) =====
+[NO TEXT: figure/diagram/image-only slide]
+
+===== SLIDE 11 (images: 1) =====
+[NO TEXT: figure/diagram/image-only slide]
+
+===== SLIDE 12 (images: 4) =====
+Type of DC GENERATORS There are four major types of DC generators, namely Separately excited generator. Shunt generator. Series generator Compounded generator Cumulative Differential
+
+===== SLIDE 13 (images: 1) =====
+The Equivalent Circuit of a DC Generator Two circuits are involved in DC generators Armature Circuit Field circuit Armature circuit represents Thevenin equivalent of the entire rotor. It cantain an ideal voltage source E A and a resistor R A . . Brush voltage drop is represented by a small battery The field coils, which produce the magnetic flux inductor L F and resistor R F R adj for field current control
+
+===== SLIDE 14 (images: 2) =====
+Magnetizing curve of a DC Generator &amp; performance The internal generated voltage EA of a dc generator is given by E A is directly proportional to the flux The field current is directly proportional to the magnetomotive force and hence E A Brush voltage drop is represented by a small battery Performance of the DC generators are determined by terminal output parameter I L and V T Voltage regulation also determines its performance
+
+===== SLIDE 15 (images: 4) =====
+The Separately Excited Generator A separately excited dc generator is a generator whose field current is supplied by a separate external dc voltage source. By Kirchhoff's voltage law, the terminal 	voltage is Since the internal generated voltage is 	independent of lA the terminal 	characteristic of the separately excited 	generator is a straight line A separately excited dc generator The terminal characteristic (a) with and (b) without compensating windings
+
+===== SLIDE 16 (images: 0) =====
+The Separately Excited Generator Control of Terminal Voltage &gt; two methods Change the speed of rotation E A = KФω ↑ &gt;VT = E A ↑ - l A R A &gt; V T ↑ Change the field current. I F = VF/R F ↓ &gt; I F ↑ &gt; Ф ↑&gt; E A = KФ↑ω &gt; V T = E A ↑ - l A R A &gt; V T ↑ The terminal characteristic (a) with and (b) without compensating windings
+
+===== SLIDE 17 (images: 3) =====
+The Separately Excited Generator It is not possible to predict analytically the value of E A to be expected from a given field current. Magnetization curve of the generator must be  used to calculte E A accurately. Net mmf is                                       and I F equivalent is The magnetization curves for a generator are drawn for a particular 	speed, usually the rated speed of the machine. If the machine is turning at other speeds than the E A in a machine is 	related to speed by
+
+===== SLIDE 18 (images: 3) =====
+The Shunt Generator A shunt dc generator is a dc generator that supplies its own field current by having its field connected directly across the terminals of the machine. The armature current of the machine supplies both the field circuit and 	the load The equivalent circuit of a shunt de generator
+
+===== SLIDE 19 (images: 2) =====
+Shunt Generator Voltage Build up in a Shunt Generator depends on Residual flux I F = V T ↑/R F &gt; E A = KФ↑ω &gt; V T = E A ↑ - l A R A &gt; V T ↑ possible causes for the voltage to fail to build up during starting There may be no residual magnetic flux The direction of rotation of the generator may have been reversed The field resistance may be adjusted to a value greater than the critical 	resistance Voltage buildup on starting in a shunt dc generator
+
+===== SLIDE 20 (images: 1) =====
+Shunt Generator The Terminal Characteristic of a Shunt DC Generator I A = I L ↑ + I F &gt; ( l A R A ) ↑  &gt; V T ↓ = E A - I A ↑ R A I F ↓ = V T ↓ /R F &gt; E A = KФ ↓ ω &gt; V T = E A ↓ - l A R A &gt; V T ↓ Voltage Control for a Shunt DC Generator Change the shaft speed ω of the generator. Change the field resistor of the generator, The terminal characteristic of a shunt dc generator
+
+===== SLIDE 21 (images: 2) =====
+Shunt Generator The Non linear Analysis of Shunt DC Generators The key to understanding the graphical analysis of shunt generators is  	to remember Kirchhoff's voltage law (KVL): The field resistance R F , which is just equal to V T /I F , a straight line At no load  V T = E A The differnce between V T and  E A is l A R A graphical analysis of shunt generators
+
+===== SLIDE 22 (images: 2) =====
+Shunt Generator If armature reaction is present in a shunt generator There is demagnetizing magnetomotive force and l A R A drop graphical analysis of shunt generators with armature reaction
+
+===== SLIDE 23 (images: 1) =====
+SERIES DC GENERATOR A series dc generator is a generator whose field is connected in series with its armature. It has few turns of field coil with thick conductors. The equivalent circuit of a series generator
+
+===== SLIDE 24 (images: 3) =====
+SERIES DC GENERATOR The Terminal Characteristic of a Series Generator At no load As I L ↑= I A = I F &gt; E A ↑ - I A ↑ (R F +R A ) At the beginning E A increases more than the resistive drop Derivation of the terminal characteristic for a series dc generator
+
+===== SLIDE 25 (images: 4) =====
+CUMULATIVELY COMPOUNDED DC GENERATOR A cumulatively compounded dc generator is a dc generator with both series and shunt fields, connected so that the magnetomotive forces from the two fields are additive. Voltage and current relationships for this generator are Since there are series and shunt field coils, the equivalent effective shunt field current for this machine is given by The equivalent circuit of a compound dc generator
+
+===== SLIDE 26 (images: 3) =====
+The Compound Generator The Terminal Characteristic of a Cumulatively Compounded DC Generator Since I A = I F + I L ↑, the armature current I A increases too. At this point two effects occur in the generator: As I A increases, V T ↓ = E A - I A ↑ (R A + R s ). As I A increases,                        , increasing The field resistance R F , which is just equal to V T /I F , a straight line V T = E A ↑- I A (R A + R s ) rise. Terminal characteristics of cumulatively compounded dc generators
+
+===== SLIDE 27 (images: 3) =====
+The Compound Generator Graphical Analysis of Cumulatively Compounded DC Generators The following two equations are the key to graphically describing the terminal characteristics of a cumulatively compounded dc generator. The equivalent shunt field current I eq , a nd the total effective shunt field current This equivalent current Ieq represents a horizontal distance to the left 	or the right of the field resistance line (RF = VT/IF) along the axes of 	the magnetization curve.
+
+===== SLIDE 28 (images: 2) =====
+Commutation Process Commutation is the process of converting the ac voltages and currents in the rotor of a dc machine to dc voltages and currents at its terminals. The 4 loops of this machine are laid into the slots in a special manner.  The “unprimed” end of each loop is the outermost wire in each slot, while the “primed” end of each loop is the innermost wire in the slot directly opposite.
+
+===== SLIDE 29 (images: 2) =====
+Commutation Process The voltage in each of the 1, 2, 3’ and 4’ ends of the loops is given by: e ind = vBl (+out of page) The voltage in each of the 1’, 2’, 3 and 4 ends of the loops is given by: e ind = vBl (+into page) the total voltage at the brushes E=4e The winding’s connections
+
+===== SLIDE 30 (images: 2) =====
+Commutation Process The machine at time ωt=45°.
+
+===== SLIDE 31 (images: 3) =====
+Commutation Process the 1’, 2, 3, and 4’ ends of the loops are under the north pole face the 1, 2’, 3’ and 4 ends of the loops are under the south pole face so the terminal voltage E=4e The machine at time ωt=90°.
+
+===== SLIDE 32 (images: 1) =====
+Problems with Commutation in Real Machines Armature reaction The current though the armature  conductors set up a magnetic field surrounding  it which has the following effects Weakens the main flux Distorts the main flux Neutral plan shift
+
+===== SLIDE 33 (images: 1) =====
+Problems with Commutation in Real Machines L(di/dt) Voltage Occurs in the commutator segments being shorted out by the brushes &gt; inductive kick These effects causes Arcing and sparking at the brushes Flashover Reduce brush life Pitting of the commutator segment
+
+===== SLIDE 34 (images: 0) =====
+Solutions to Problems with Commutation in Real Machines Brush shifting Commutating poles or interpoles Compensating windings
+
+===== SLIDE 35 (images: 1) =====
+Solutions to Problems with Commutation in Real Machines Commutating poles or interpoles It cancels the voltage in the coils undergoing commutation interpole windings are in series with the rotor windings as the rotor current incleases flux produced by interpole also inceases producing an oppssing effect to that of neutral plan shift
+
+===== SLIDE 36 (images: 1) =====
+Solutions to Problems with Commutation in Real Machines Compensating winding Solves the problem of flux weakening and neutral plane shift Compensating windings are in series with the rotor windings placing in slots carved in the faces of the poles parallel to the rotor conductors
+
+===== SLIDE 37 (images: 0) =====
+37 DC Motor
+
+===== SLIDE 38 (images: 5) =====
+The Internal Generated Voltage Equations Of Real Machines The induced voltage in any given machine depends on three factors: The flux Φ in the machine The speed ω of the machine's rotor A constant depending on the construction of the machine The voltage out of a real machine = the number of conductors per current path x the voltage on each conductor the voltage equation in terms of rpm
+
+===== SLIDE 39 (images: 5) =====
+The Induce Torque Equations Of Real Machines The torque in any dc machine depends on three factors: The flux Φ in the machine The armature (or rotor) current I A in the machine A constant depending on the construction of the machine The torque on the armature of a real machine = the number of conductors Z x the torque on each conductor
+
+===== SLIDE 40 (images: 3) =====
+Power Flow and Losses in DC Machines Electrical or copper losses (I 2 R losses) Brush losses Core losses Mechanical losses Stray load losses Armature loss: Field loss: Copper losses Brush losses Core losses the hysteresis losses and eddy current losses occurring in the metal of the motor. These losses vary as B 2 and, for the rotor, as the (n 1.5 )
+
+===== SLIDE 41 (images: 0) =====
+Power Flow and Losses in DC Machines Mechanical losses Friction losses are losses caused by the friction of the bearings in the machine Windage losses are caused by the friction between the moving parts of the machine and the air inside the motor's casing Stray losses Unknown losses By convention to be 1 percent of full load
+
+===== SLIDE 42 (images: 2) =====
+The Power-Flow Diagram Power-flow diagrams for Generator Power-flow diagrams for Motor.

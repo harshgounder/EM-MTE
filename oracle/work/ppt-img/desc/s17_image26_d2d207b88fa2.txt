@@ -1,0 +1,4 @@
+NO
+$\frac{E_A}{E_{A_0}} = \frac{n}{n_0}$
+
+This image contains only a mathematical proportion equation, no diagram/circuit/graph. The equation states that the ratio of $E_A$ to $E_{A_0}$ is equal to the ratio of $n$ to $n_0$, presented as two fractions set equal to one another, with subscripts "A" and "0" on the $E$ terms, and subscript "0" on the right-hand side $n$ term.

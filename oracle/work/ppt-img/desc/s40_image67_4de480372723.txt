@@ -1,0 +1,5 @@
+YES
+
+$P_{BD} = V_{BD} I_A$
+
+The image displays a single mathematical equation centered on a white background. There is no circuit diagram, graph, axis label, or arrow. The text is printed in a dark blue serif font with italicized variables and smaller upright subscripts. The equation consists of the variable $P$ with subscript $BD$, an equals sign, the variable $V$ with subscript $BD$, and the variable $I$ with subscript $A$ (implying multiplication between the latter two terms).

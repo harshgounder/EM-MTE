@@ -1,0 +1,5 @@
+YES
+
+$\mathcal{F}_{net} = N_F I_F - \mathcal{F}_{AR}$
+
+The image contains only a single mathematical equation printed on a white background. There is no diagram, circuit, or graph present to describe.

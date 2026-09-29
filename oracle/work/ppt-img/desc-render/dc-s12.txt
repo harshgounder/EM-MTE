@@ -1,0 +1,95 @@
+### (1) Complete Transcription of On-Slide Text  
+
+**Header:**  
+- Left: `MANIPAL UNIVERSITY JAIPUR`  
+- Right: `NAAC A+ GRADE WITH 3.28 SCORE` (accompanied by a NAAC logo)  
+
+
+**Title:**  
+`Type of DC GENERATORS`  
+
+
+**Body Text:**  
+There are four major types of DC generators, namely  
+- Separately excited generator.  
+- Shunt generator.  
+- Series generator  
+- Compounded generator  
+  - Cumulative  
+  - Differential  
+
+
+**Diagram Labels (Circuit Components):**  
+- Top-right diagram: `R_F` (variable resistor), `L_F` (inductor), `V_F` (voltage source), `E_A` (generator), `R_A` (armature resistance), `I_A` (armature current), `A1 (+)`, `A2 (-)` (terminals), `V_T` (terminal voltage).  
+- Middle-left diagram: `E_A` (generator), `R_A` (armature resistance), `I_A` (armature current), `R_F` (shunt resistance), `I_F` (shunt current), `L_F` (shunt inductor), `I_L` (load current), `V_T` (terminal voltage).  
+- Middle diagram: `E_A` (generator), `R_A` (armature resistance), `I_A` (armature current), `R_S` (series resistance), `I_S` (series current), `L_S` (series inductor), `I_L` (load current), `V_T` (terminal voltage).  
+- Right diagram: `E_A` (generator), `R_A` (armature resistance), `I_A` (armature current), `R_S` (series resistance), `I_S` (series current), `L_S` (series inductor), `I_F` (shunt current), `R_F` (shunt resistance), `L_F` (shunt inductor), `I_L` (load current), `V_T` (terminal voltage), and equation `I_A = I_S + I_F`.  
+
+
+### (2) Description of Visual Elements  
+
+- **Header:** Left has the Manipal University Jaipur logo; right has a NAAC logo with the text “NAAC A+ GRADE WITH 3.28 SCORE.”  
+- **Title:** “Type of DC GENERATORS” is bold and centered.  
+- **Body Text:** Bullet points list four DC generator types, with “Compounded generator” having two sub-bullets (Cumulative, Differential).  
+- **Circuit Diagrams (4 total):**  
+  1. **Top-Right (Separately Excited Generator):** Contains a variable shunt resistor (\( R_F \)), inductor (\( L_F \)), voltage source (\( V_F \)), generator (\( E_A \)), armature resistor (\( R_A \)), armature current (\( I_A \)), terminals \( A1 (+) \) and \( A2 (-) \), and terminal voltage (\( V_T \)).  
+  2. **Middle-Left (Shunt Generator):** Contains generator (\( E_A \)), armature resistor (\( R_A \)), armature current (\( I_A \)), shunt resistor (\( R_F \)), shunt current (\( I_F \)), shunt inductor (\( L_F \)), load current (\( I_L \)), and terminal voltage (\( V_T \)).  
+  3. **Middle (Series Generator):** Contains generator (\( E_A \)), armature resistor (\( R_A \)), armature current (\( I_A \)), series resistor (\( R_S \)), series current (\( I_S \)), series inductor (\( L_S \)), load current (\( I_L \)), and terminal voltage (\( V_T \)).  
+  4. **Right (Compounded Generator):** Contains generator (\( E_A \)), armature resistor (\( R_A \)), armature current (\( I_A \)), series resistor (\( R_S \)), series current (\( I_S \)), series inductor (\( L_S \)), shunt resistor (\( R_F \)), shunt current (\( I_F \)), shunt inductor (\( L_F \)), load current (\( I_L \)), terminal voltage (\( V_T \)), and the equation \( I_A = I_S + I_F \).  
+
+
+### (3) ASCII Art of Each Diagram  
+
+#### Diagram 1 (Top-Right: Separately Excited Generator)  
+```
+       +---+---R_F---+
+       |   |         |
+     V_F (variable)  L_F
+       |   |         |
+       +---+---------+
+             |
+           E_A (+)---R_A---I_A---> A1 (+)
+             |                  |
+           E_A (-)--------------- A2 (-)
+                                 |
+                                 V_T (A1 → A2)
+```  
+
+
+#### Diagram 2 (Middle-Left: Shunt Generator)  
+```
+     E_A (+)---R_A---I_A--+
+     |                   |
+   E_A (-)---+---R_F---I_F---+
+             |           |
+             |           L_F
+             |           |
+             +---I_L---V_T (right: +, left: -)
+```  
+
+
+#### Diagram 3 (Middle: Series Generator)  
+```
+     E_A (+)---R_A---I_A---R_S---I_S---L_S---I_L---V_T (right: +, left: -)
+     |
+   E_A (-)-----------------------------------V_T (-)
+```  
+
+
+#### Diagram 4 (Right: Compounded Generator)  
+```
+     E_A (+)---R_A---I_A---R_S---I_S---L_S---I_L---V_T (right: +, left: -)
+     |                   |
+   E_A (-)---+---R_F---I_F---+
+             |           |
+             |           L_F
+             |           |
+             +-----------+---I_L
+             |
+             I_A = I_S + I_F
+```  
+
+
+### Final Confirmation  
+- **Did I receive and see the image?** YES.  
+- All text, labels, and diagram elements are transcribed/described exactly as printed.

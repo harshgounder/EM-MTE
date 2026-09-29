@@ -1,0 +1,5 @@
+YES
+
+$\mathcal{F}_{SE} = N_{SE} I_{A}$
+
+The image contains a single mathematical equation written in a serif font with the first character in a calligraphic style (likely a script 'F'). There is no diagram, circuit, or graph present. The text is black on a white background.

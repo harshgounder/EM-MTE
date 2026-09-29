@@ -1,0 +1,65 @@
+YES
+
+### 1. On-slide Text Transcription
+
+**Top Left Header:**
+MANIPAL UNIVERSITY JAIPUR
+
+**Top Right Header:**
+A+
+NAAC
+NAAC A+ GRADE WITH 3.28 SCORE
+
+**Title:**
+Transformer Bank
+
+**Main Text:**
+In the operation of power systems, transformers are required to change the voltage levels throughout the network
+- three-phase circuits use three-phase transformers
+  * can be achieved by using a bank of three single-phase transformers
+  * may be a 3-phase unit having three primary windings and three secondary windings on a 3-legged core
+  * using a bank of three single phase transformers, the windings may be connected in a variety of ways
+  * the primary side may be connected in a wye or delta configuration independent of the secondary connection
+  * the secondary side may be connected in a wye or delta configuration independent of the primary connection
+
+---
+
+### 2. Visual Element Description
+
+*   **Header Section:** A horizontal yellow bar spans the width of the slide just below the logos.
+    *   **Top Left:** The Manipal University Jaipur logo, featuring a crest with an open book and a flame, followed by the university name in two lines.
+    *   **Top Right:** The NAAC (National Assessment and Accreditation Council) logo, showing a shield with "A+" and a ribbon. Below it is the text "NAAC A+ GRADE WITH 3.28 SCORE" in a very small font.
+*   **Title:** "Transformer Bank" is centered near the top of the white content area in a large, serif font.
+*   **Body Text:** The slide contains only text, organized into a bolded introductory statement, a bolded sub-header with a dash, and a bulleted list of five items. There are no diagrams, circuits, or graphs.
+*   **Background:** Solid white background for the main content area.
+
+---
+
+### 3. ASCII Art Layout
+
+```text
++--------------------------------------------------------------------------------------+
+| [MANIPAL UNIVERSITY                      [A+]                                      |
+|  JAIPUR LOGO]                             [NAAC                                     |
+|                                           LOGO]   NAAC A+ GRADE WITH 3.28 SCORE      |
++--------------------------------------------------------------------------------------+
+|▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓|
++--------------------------------------------------------------------------------------+
+|                                                                                      |
+|                                 Transformer Bank                                     |
+|                                                                                      |
+|   In the operation of power systems, transformers are required to change the         |
+|   voltage levels throughout the network                                              |
+|   - three-phase circuits use three-phase transformers                                |
+|       • can be achieved by using a bank of three single-phase transformers           |
+|       • may be a 3-phase unit having three primary windings and three secondary      |
+|         windings on a 3-legged core                                                  |
+|       • using a bank of three single phase transformers, the windings may be         |
+|         connected in a variety of ways                                               |
+|       • the primary side may be connected in a wye or delta configuration            |
+|         independent of the secondary connection                                      |
+|       • the secondary side may be connected in a wye or delta configuration          |
+|         independent of the primary connection                                        |
+|                                                                                      |
++--------------------------------------------------------------------------------------+
+```

@@ -1,0 +1,64 @@
+YES
+
+**Transcription of on-slide text:**
+
+*   **Header (Left):** MANIPAL UNIVERSITY JAIPUR (with logo)
+*   **Header (Right):** A+ (with logo), NAAC A+ GRADE WITH 3.28 SCORE
+*   **Title:** Star- Star Connection
+*   **Body Text:**
+    *   • Three single-phase transformers connected wye-wye
+        *   –This type of transformer is most economical for small current and high voltage transformer.
+        *   –The number of turns per phase and the amount of insulation is minimum because phase voltage 1/√3 of line voltage.
+        *   –There is no phase displacement between the primary and secondary voltages.
+        *   –the primary-side phase voltage is transformed to the secondary-side phase voltage
+        *   –the neutral terminal of the primary side of the transformer must be connected back to the source with a low impedance path to avoid secondary voltage magnitude distortion with unbalanced loads
+*   **Diagram Labels:**
+    *   ac source
+    *   A, B, C
+    *   N1 (with ground symbol)
+    *   N2
+    *   1, 2, 3
+
+**Visual Element Description:**
+
+The slide features a yellow horizontal bar separating the header from the content. The main content consists of a bulleted list describing the Star-Star (Wye-Wye) transformer connection followed by a schematic circuit diagram at the bottom.
+
+The circuit diagram depicts a three-phase system layout from left to right:
+1.  **Source:** On the far left, a dashed circle labeled "ac source" encloses a Y-connected (Wye) source with a grounded center. Three lines emerge from this circle, labeled A, B, and C.
+2.  **Primary Side:** The lines A, B, and C connect to the outer terminals of three inductor coils arranged in a star pattern. The common center point of these coils is labeled "N1" and is connected to a ground symbol.
+3.  **Secondary Side:** To the right of the primary side, there is a separate set of three inductor coils arranged in a star pattern with a common center point labeled "N2" (which is not explicitly grounded in the drawing). The outer terminals of these coils connect to output terminals labeled "1", "2", and "3".
+
+**ASCII Art of Layout:**
+
+```text
++--------------------------------------------------+
+| [Logo] MANIPAL UNIVERSITY         [Logo] A+       |
+|        JAIPUR                       NAAC A+ GRADE|
+|                                          WITH 3.28|
++==================================================+
+|                                                  |
+|              Star- Star Connection               |
+|                                                  |
+|   * Three single-phase transformers connected    |
+|     wye-wye                                      |
+|       -This type of transformer is most ...      |
+|       -The number of turns per phase ...         |
+|       -There is no phase displacement ...        |
+|       -the primary-side phase voltage ...        |
+|       -the neutral terminal of the primary ...   |
+|                                                  |
+|                                                  |
+| Diagram:                                         |
+|                                                  |
+|  A          _________N1                          |
+|             /  o      \     O----1               |
+|            /           \   /                     |
+| [ac source]----------B--| N2-----3               |
+|  (dashed)  \           /                         |
+|    circle   \_________/                          |
+|             |            \                       |
+|  C          |             O----2                 |
+|   \_________|                                     |
+|                                                  |
++--------------------------------------------------+
+```

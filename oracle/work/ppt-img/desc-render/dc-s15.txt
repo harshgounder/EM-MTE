@@ -1,0 +1,80 @@
+**YES**
+
+### (1) On-Slide Transcription
+
+**Header:**
+*   **Left:** MANIPAL UNIVERSITY JAIPUR
+*   **Right:** A+ NAAC, NAAC A+ GRADE WITH 3.28 SCORE
+
+**Title:**
+The Separately Excited Generator
+
+**Main Text (Bullet Points):**
+*   A separately excited dc generator is a generator whose field current is supplied by a separate external dc voltage source.
+*   By Kirchhoff's voltage law, the terminal      voltage
+    is          $V_T = E_A - I_A R_A$
+*   Since the internal generated voltage is independent of IA the terminal characteristic of the separately excited generator is a straight line
+
+**Circuit Diagram Labels:**
+*   Left circuit (Field): $V_F$ (with + and - signs), $I_F$, $R_F$ (variable resistor symbol), $L_F$
+*   Right circuit (Armature): $I_A$, $R_A$, $E_A$ (with + and - signs), $I_L$, $V_T$ (with + and - signs)
+*   Equations below the circuits:
+    *   $I_L = I_A$
+    *   $V_T = E_A - I_A R_A$
+    *   $I_F = \frac{V_F}{R_F}$
+*   Caption below circuits: A separately excited dc generator
+
+**Graphs (Bottom Right):**
+*   **Graph (a):** Vertical axis label: $V_T$, $E_A$. Horizontal axis label: $I_L$. Annotations: $I_A R_A$ drop (indicated by a bracket). Bottom label: (a)
+*   **Graph (b):** Vertical axis label: $V_T$, $E_{A nf}$. Horizontal axis label: $I_L$. Annotations: $I_A R_A$ drop, AR drop (indicated by brackets). Bottom label: (b)
+
+**Bottom Caption:**
+The terminal characteristic (a) with and (b) without compensating windings
+
+---
+
+### (2) Visual Elements Description
+
+*   **Header Bar:** Contains a university logo (left) and a NAAC accreditation seal (right).
+*   **Circuit Diagrams:** Located at the top right. 
+    *   The **field circuit** (left of the two) shows an external DC voltage source ($V_F$), a variable resistor ($R_F$), and an inductor ($L_F$) in series, representing the field winding. 
+    *   The **armature circuit** (right of the two) shows a generated EMF source ($E_A$) in series with an armature resistance ($R_A$), leading to output terminals where terminal voltage ($V_T$) and load current ($I_L$) are measured.
+*   **Graphs:** Two vertical plots at the bottom right.
+    *   **Graph (a)** shows a linear drop in terminal voltage ($V_T$) as load current ($I_L$) increases. The difference between the constant internal voltage ($E_A$) and the terminal voltage is labeled as the resistive drop ($I_A R_A$ drop).
+    *   **Graph (b)** shows a slightly more pronounced drop. It includes the resistive drop ($I_A R_A$ drop) and an additional drop labeled "AR drop" (Armature Reaction drop), indicating how flux distortion affects the voltage when compensating windings are absent.
+*   **Layout:** The slide is divided into a text-heavy left side and a diagram-heavy right side, with a large centered title.
+
+---
+
+### (3) ASCII Art Layout
+
+```text
+[Logo: MANIPAL UNIVERSITY JAIPUR]             [Logo: NAAC A+ Seal]
+____________________________________________________________________________
+                    The Separately Excited Generator
+____________________________________________________________________________
+                                                                                 |   (Field Circuit)        (Armature Circuit)
+ • A separately excited dc generator is a generator                                |      +                  +-- R_A --+
+   whose field current is supplied by a separate                                   |      |   I_F             |         | I_L ->
+   external dc voltage source.                                                     |     [V_F]  >-- R_F      |      [E_A] 
+                                                                                 |      |     ~ L_F         |         | 
+ • By Kirchhoff's voltage law, the terminal     voltage                            |      -                  +---------+ V_T
+   is          V_T = E_A - I_A R_A                                                 |                             I_L = I_A
+                                                                                 |                             V_T = E_A - I_A R_A
+ • Since the internal generated voltage is                                         |                             I_F = V_F / R_F
+   independent of IA the terminal characteristic of                                |
+   the separately excited        generator is a straight                           |      A separately excited dc generator
+   line                                                                            |                                           | V_T        V_T
+                                                                                 |       |               E_A       |        |           E_A_nf
+                                                                                 |       |         .-------------|        |     .------..
+                                                                                 |       |       /               |        |   /      \
+                                                                                 |       |     /                 |        |  /        \
+                                                                                 |       |___/                   |        | /          |
+                                                                                 |          I_A R_A drop         |        |/           | I_A R_A drop
+                                                                                 |                              |        |            | AR drop
+                                                                                 |____________________________  |        |____________|
+                                                                                 |             (a)  -> I_L      |             (b)  -> I_L
+                                                                                 |
+_______________________________________________________________________________
+            The terminal characteristic (a) with and (b) without compensating windings
+```

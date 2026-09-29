@@ -1,0 +1,5 @@
+YES
+
+$V_T = E_A - I_A R_A$
+
+There is no diagram, circuit, or graph in this image; only the above equation, which represents the terminal voltage of a DC machine, such as a generator or motor: $V_T$, terminal voltage, equals $E_A$, the induced armature EMF, minus $I_A R_A$, the voltage drop across the armature resistance, where $I_A$ is armature current and $R_A$ is armature resistance.

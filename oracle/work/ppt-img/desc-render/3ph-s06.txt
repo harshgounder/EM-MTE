@@ -1,0 +1,126 @@
+### 1. YES  
+
+
+### 2. Complete Transcription of On-Slide Text  
+
+#### Header/Branding:  
+- Top-left: `MANIPAL UNIVERSITY JAIPUR`  
+- Top-right: NAAC logo with text: `NAAC A+ GRADE WITH 3.28 SCORE`  
+
+
+#### Title:  
+`Delta-Star Connection`  
+
+
+#### Bullet Points:  
+- `Three single-phase transformers connected in delta-wye`  
+  - `This type of connection is generally used where it is necessary to step up the voltage (generating Points).`  
+  - `In this system the line voltage ratio is √3 times of transformer turn-ratio.`  
+  - `the primary-side line voltage is transformed to the secondary-side phase voltage`  
+  - `the delta-wye connection produces a 30° phase shift between the primary and secondary voltages and currents`  
+
+
+#### Diagram Labels (all text in diagrams):  
+- **Top-right circuit**: `P`, `Q`, `R`, `A`, `B`, `C`, `1`, `2`, `3`, `N`, `balanced three-phase load`, `H₁`, `H₂`, `X₁`, `X₂`  
+- **Middle-left (primary delta)**: `B`, `A`, `C`, `G`, `H₁`, `H₂`, `primary of P`, `primary of Q`, `primary of R`, `1.73 Ip`, `Ip`  
+- **Middle-right (secondary star)**: `1`, `2`, `3`, `N`, `X₁`, `X₂`, `secondary of P`, `secondary of Q`, `secondary of R`, `Is`, `load`  
+- **Bottom phasors**: `E_AB`, `E_BC`, `E_CA`, `E₁₂`, `E₂₃`, `E₃₁`  
+
+
+### 3. Visual Element Description  
+
+#### 1. Top Circuit Diagram (Transformers + Load):  
+- **Components**: Three single-phase transformers (`P`, `Q`, `R`), input terminals `A/B/C`, output terminals `1/2/3`, neutral `N`, and a dashed box labeled `balanced three-phase load`.  
+- **Connections**:  
+  - Primary: `A→P(H₁/X₁)`, `B→Q(H₁/X₁)`, `C→R(H₁/X₁)`; `P(H₂/X₂)→N`, `Q(H₂/X₂)→N`, `R(H₂/X₂)→N`.  
+  - Secondary: `P(X₁)→1`, `Q(X₁)→2`, `R(X₁)→3`, `N` connects to the load.  
+
+
+#### 2. Middle-Left Diagram (Primary Delta Connection):  
+- **Components**: Generator `G`, terminals `A/B/C`, three transformer primaries (`P/Q/R`) with `H₁/H₂` labels.  
+- **Connections**:  
+  - Delta (triangle) formation: `P(H₁)→B`, `P(H₂)→A`; `Q(H₁)→C`, `Q(H₂)→B`; `R(H₁)→A`, `R(H₂)→C`.  
+  - Currents: `1.73 Ip` (on `B-A` line), `Ip` (on `C-B` line).  
+
+
+#### 3. Middle-Right Diagram (Secondary Star Connection):  
+- **Components**: Three transformer secondaries (`P/Q/R`) with `X₁/X₂` labels, terminals `1/2/3`, neutral `N`, and a `load` box.  
+- **Connections**:  
+  - Star (wye) formation: `P(X₁)→1`, `P(X₂)→N`; `Q(X₁)→2`, `Q(X₂)→N`; `R(X₁)→3`, `R(X₂)→N`.  
+  - Current: `Is` flows to the load.  
+
+
+#### 4. Bottom Phasor Diagrams:  
+- **Left (Delta)**: Triangle with phasors `E_AB` (top), `E_BC` (right), `E_CA` (left) (arrows indicate direction).  
+- **Right (Star)**: Triangle with phasors `E₁₂` (top), `E₂₃` (right), `E₃₁` (left) (arrows indicate direction).  
+
+
+### 4. ASCII Art of Diagrams  
+
+#### Top Circuit Diagram:  
+```
+  A ──── P (H₁ X₁) ──── 1
+  │      │ (H₂ X₂) ──── N
+  B ──── Q (H₁ X₁) ──── 2
+  │      │ (H₂ X₂) ──── N
+  C ──── R (H₁ X₁) ──── 3
+  │      │ (H₂ X₂) ──── N
+         │
+    balanced three-phase load
+```  
+
+
+#### Middle-Left (Primary Delta):  
+```
+        B
+       / \
+      /   \
+     H₁   H₂
+      \   /
+       \ /
+        A
+        |
+        G
+        |
+        C
+      (currents: 1.73 Ip, Ip)
+```  
+
+
+#### Middle-Right (Secondary Star):  
+```
+        X₁ (1)
+        |
+        X₂ (N)
+        |
+        X₁ (2)
+        |
+        X₂ (N)
+        |
+        X₁ (3)
+        |
+        X₂ (N)
+        |
+        load
+```  
+
+
+#### Bottom Phasors:  
+- **Left (Delta)**:  
+```
+    E_AB
+   /     \
+  E_CA    E_BC
+ (triangle)
+```  
+
+- **Right (Star)**:  
+```
+    E₁₂
+   /     \
+  E₃₁    E₂₃
+ (triangle)
+```  
+
+
+All text, visual elements, and diagrams are transcribed/described as printed.

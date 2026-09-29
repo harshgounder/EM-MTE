@@ -1,0 +1,59 @@
+### 1. Confirmation
+YES, I received and saw the image.
+
+### 2. Complete On-Slide Text (Exact Transcription)
+- Top Left: **MANIPAL UNIVERSITY JAIPUR** (with circular logo above)
+- Top Right: **A+ NAAC** (logo), *NAAC A+ GRADE WITH 3.28 SCORE*
+- Main Title: `Shunt Generator`
+- Subtitle: `The Terminal Characteristic of a Shunt DC Generator`
+- Bullet Points:
+  - $\boldsymbol{I_A = I_L \uparrow + I_F > (I_A R_A ) \uparrow > V_T \downarrow = E_A - I_A \uparrow R_A}$
+  - $\boldsymbol{I_F \downarrow = V_T \downarrow / R_F > E_A = K\Phi \downarrow \omega}$
+  - $\boldsymbol{V_T = E_A \downarrow - I_A R_A > V_T \downarrow}$
+- Voltage Control Section:
+  `Voltage Control for a Shunt DC Gener` (partially cut off, "Generator" partial)
+  - `Change the shaft speed ω of th` (partially cut off, "the generator" partial)
+  - `Change the field resistor of th` (partially cut off, "the generator" partial)
+- Graph Caption: `The terminal characteristic of a shunt dc generator`
+- Graph Axis/Annotations:
+  - Vertical axis: $\boldsymbol{V_T}$
+  - Horizontal axis: $\boldsymbol{I_L}$
+  - Annotation 1: $\boldsymbol{I_A R_A}$
+  - Annotation 2: `Field weakening effect`
+
+### 3. Visual Element Description
+1.  **Logos**:
+    - Left: Circular Manipal University Jaipur emblem, with text branding below.
+    - Right: Gold/red circular NAAC A+ accreditation badge, with grading text below.
+2.  **Text Content**: Lecture-style slide with mathematical bullet points defining shunt generator terminal behavior, plus voltage control methods, partially overlapped by a graph.
+3.  **Graph (Right, overlapping text)**:
+    - A 2-axis plot:
+      - Vertical axis = Terminal Voltage ($V_T$), Horizontal axis = Load Current ($I_L$)
+      - **Dashed top line**: Represents the constant induced voltage $E_A$, the no-load voltage, before drops.
+      - **Solid curve**: Starts at the same top point as the dashed line, slopes downward, then curves steeper downward as $I_L$ increases, showing terminal voltage drop.
+      - **$I_A R_A$**: Vertical gap between the top dashed line and upper solid curve, armature resistance voltage drop.
+      - **Field weakening effect**: Vertical gap between upper solid curve segment and steeper lower segment, additional voltage drop from reduced field flux at higher load.
+    - Caption below the graph confirms it is the shunt DC generator terminal characteristic.
+
+### 4. ASCII Art of the Graph
+```
+          V_T
+          ^
+          |=================================== (Dashed Line: E_A)
+          |
+          |\
+          | \  <-- Gap labeled I_A R_A
+          |  \
+          |   \
+          |    \
+          |     \
+          |      \
+          |       \ <-- Steeper drop: Field weakening effect
+          |        \
+          |_________\
+          |          \
+          |           \
+          |____________\_________________________________>
+                                      I_L
+```
+```

@@ -1,0 +1,29 @@
+YES
+
+**Transcription:**
+
+Mica Insulation
+between segments
+
+Copper
+segment
+
+Mica
+insulation
+
+Copper
+conductors
+
+**Description:**
+
+The image displays a close-up photograph of the armature (rotor) of an electrical machine, likely a DC motor or generator.
+
+*   **Components:**
+    *   **Commutator:** On the right side, there is a cylindrical component consisting of longitudinal copper bars (labeled "Copper segment") separated by thin, dark strips of insulating material (labeled "Mica Insulation between segments").
+    *   **Windings:** On the left, the wire coils are visible, wrapped in yellowish insulation tape.
+    *   **Conductors:** Red enameled copper wires (labeled "Copper conductors") extend from the windings and are soldered or welded to tabs on the end of each commutator segment.
+*   **Annotations:** Four white text labels with white arrows point to specific features:
+    *   An arrow points to the mica insulation separating the commutator bars.
+    *   An arrow points to a single copper bar on the commutator.
+    *   An arrow points to the insulation material covering the wire connections at the windings (labeled "Mica insulation").
+    *   An arrow points to one of the red copper wires.

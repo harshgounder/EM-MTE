@@ -1,0 +1,5 @@
+YES
+
+$K = \frac{ZP}{2\pi a}$
+
+The image displays a single mathematical equation printed in blue serif font on a white background. The equation defines a variable $K$ as equal to a fraction. The numerator of the fraction consists of the product of the variables $Z$ and $P$. The denominator consists of the number 2, the Greek letter $\pi$, and the variable $a$. There are no diagrams, circuits, graphs, axes, or other visual elements present.

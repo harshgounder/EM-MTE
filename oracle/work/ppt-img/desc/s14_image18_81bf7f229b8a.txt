@@ -1,0 +1,7 @@
+YES
+
+**Transcription:**
+$E_A = K \Phi \omega$
+
+**Description:**
+The image displays a single mathematical equation printed in black text on a white background. It contains no diagram, circuit, graph, axis labels, or phasor relationships. The formula appears to represent an electromotive force (EMF) equation for a DC motor or generator, where $E_A$ is likely the armature EMF, $K$ is a constant, $\Phi$ is the magnetic flux, and $\omega$ is the angular velocity.

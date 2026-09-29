@@ -1,0 +1,21 @@
+YES
+
+**For Lap winding**
+For a simplex lap winding:
+$$A = P$$
+Therefore,
+$$E_g = \frac{\Phi ZN}{60}$$
+
+**For Wave winding**
+For a simplex wave winding:
+$$A = 2$$
+Therefore,
+$$E_g = \frac{P \Phi ZN}{120}$$
+
+**Description:**
+The image is a white slide containing text and mathematical formulas, divided into two vertical sections. There is no circuit diagram, graph, or phasor diagram present.
+
+1.  **Top Section:** Titled "**For Lap winding**" in bold text. Below it is the text "For a simplex lap winding:", followed by the centered equation $A = P$. Below that is the word "Therefore," followed by the equation $E_g = \frac{\Phi ZN}{60}$ enclosed in a thin rectangular box.
+2.  **Bottom Section:** Titled "**For Wave winding**" in bold text. Below it is the text "For a simplex wave winding:", followed by the centered equation $A = 2$. Below that is the word "Therefore," followed by the equation $E_g = \frac{P \Phi ZN}{120}$ enclosed in a thin rectangular box.
+
+There are no axis labels, arrow directions, or phasor relationships as this is a text-based formula sheet.

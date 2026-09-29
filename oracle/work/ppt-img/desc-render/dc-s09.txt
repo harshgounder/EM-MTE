@@ -1,0 +1,49 @@
+YES
+
+(1) Complete on-slide transcription (exact as printed):
+Top-left header:
+MANIPAL UNIVERSITY
+JAIPUR
+Top-right badge text:
+NAAC A+ GRADE WITH 3.28 SCORE
+Main content:
+According to Faraday's law:
+$$e = \frac{\text{Flux cut}}{\text{Time}}$$
+Therefore,
+$$e = \frac{P\Phi}{60/N}$$
+$$e = \frac{P\Phi N}{60}$$
+Thus, the EMF induced in **one conductor** is:
+$$e = \frac{P\Phi N}{60}$$
+*This final formula is enclosed in a black rectangular box*
+
+(2) Visual element details:
+1.  **Header elements**: A university logo (circular, with a red classical building inside a wreath) at top-left; a NAAC accreditation badge (gold circular logo with "A+" inside, text below it) at top-right, both above a full-width horizontal yellow bar.
+2.  **Content block**: A light gray rectangular area holds all the derivation text and math formulas. All math formulas are centered horizontally within this block, and the final formula is wrapped in a thin black rectangular border.
+3.  No graphs, circuits, phasor diagrams, or other technical illustrations are present on this slide.
+
+(3) ASCII layout art:
+```
++--------------------------------------------------------------------------------+
+| [Uni Logo] MANIPAL UNIVERSITY                    [NAAC Badge]                  |
+|                 JAIPUR                                                         |
++---------------------------------YELLOW BAR-------------------------------------+
+|                                                                                |
+|  +--------------------------------------------------------------------------+  |
+|  | According to Faraday's law:                                              |  |
+|  |                                                                          |  |
+|  |                     e = Flux cut / Time                                  |  |
+|  |                                                                          |  |
+|  | Therefore,                                                               |  |
+|  |                                                                          |  |
+|  |                     e = PΦ / (60/N)                                      |  |
+|  |                                                                          |  |
+|  |                     e = PΦN / 60                                         |  |
+|  |                                                                          |  |
+|  | Thus, the EMF induced in **one conductor** is:                          |  |
+|  |                              +--------------------+                     |  |
+|  |                              | e = PΦN / 60       |                     |  |
+|  |                              +--------------------+                     |  |
+|  +--------------------------------------------------------------------------+  |
+|                                                                                |
++--------------------------------------------------------------------------------+
+```

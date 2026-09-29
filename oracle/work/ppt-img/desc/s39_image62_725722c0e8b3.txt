@@ -1,0 +1,5 @@
+YES
+
+$Z = 2CN_c$
+
+The image contains only the mathematical equation $Z = 2CN_c$ displayed in black text against a white background. There are no diagrams, circuits, graphs, or other visual elements present.

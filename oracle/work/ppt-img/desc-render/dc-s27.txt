@@ -1,0 +1,91 @@
+YES
+
+**(1) Transcription of On-Slide Text**
+
+**Header:**
+MANIPAL UNIVERSITY
+JAIPUR
+(Logo text above: UNIQUE BY LAN)
+(Logo text below: NAAC A+ GRADE WITH 3.28 SCORE)
+A+ NAAC (Logo)
+
+**Title:**
+The Compound Generator
+
+**Subtitle:**
+Graphical Analysis of Cumulatively Compounded DC Generators
+
+**Body Text:**
+The following two equations are the key to graphically describing the terminal characteristics of a cumulatively compounded dc generator.
+
+**Bullet Points:**
+*   The equivalent shunt field current $\mathbf{I_{eq}}$ ,
+*   the total effective shunt field current
+*   This equivalent current Ieq represents a horizontal distance to the left   or the right of the field resistance line (RF = VT/IF) along the axes of           the magnetization curve.
+
+**Equations:**
+$$I_{eq} = \frac{N_{SE}}{N_F} I_A - \frac{\mathcal{F}_{AR}}{N_F}$$
+$$I_F^* = I_F - I_{eq}$$
+and
+
+**Graph Labels (Figure 5-26):**
+*   y-axis label: $E_A$ and $V_T$
+*   x-axis label: $I_F$
+*   Top curve label: Magnetization curve ($E_A$ versus $I_F$)
+*   Horizontal line label: $E_A$ loaded
+*   Lower horizontal line label: $E_A$ and $V_T$, no load
+*   Lowest horizontal line label: $V_T$, loaded
+*   Vertical bracket label: IR drop
+*   Line label: $R_F = \frac{V_T}{I_F}$
+*   Horizontal dimension label: $I_{eq}$
+*   Figure caption: FIGURE 5-26
+
+**(2) Description of Visual Elements**
+
+*   **Header:** Top left features the logo and text "MANIPAL UNIVERSITY JAIPUR". Top right features a circular logo with "A+ NAAC" and text below regarding NAAC grade.
+*   **Title Bar:** A yellow horizontal bar separates the header from the main content.
+*   **Text Content:** The slide contains a blue title "Graphical Analysis..." and black body text. There are three bullet points.
+*   **Equations:** To the right of the first two bullet points, there are two mathematical equations involving $I_{eq}$, $N_{SE}$, $N_F$, $I_A$, $\mathcal{F}_{AR}$, $I_F^*$, and $I_F$. The equations appear to be images pasted in rather than typed text, showing some compression artifacts.
+*   **Graph (Bottom Right):**
+    *   **Type:** A line graph plotting voltage ($E_A$ and $V_T$) against field current ($I_F$).
+    *   **Curves:**
+        *   A rising curve representing the magnetization curve ($E_A$ versus $I_F$).
+        *   A straight line originating from the origin representing the field resistance line ($R_F = V_T/I_F$).
+        *   Horizontal lines indicating different voltage levels: "$E_A$ and $V_T$, no load", "$V_T$, loaded", and "$E_A$ loaded".
+    *   **Annotations:**
+        *   A vertical bracket indicating "IR drop" between the loaded induced EMF and terminal voltage.
+        *   A horizontal dimension indicating "$I_{eq}$" between the intersection of the resistance line and the magnetization curve.
+    *   **Label:** "FIGURE 5-26" is in the bottom left corner of the graph area.
+
+**(3) ASCII Art Layout**
+
+```text
++-----------------------------------------------------------------+
+| [LOGO] MANIPAL UNIVERSITY JAIPUR          [LOGO] NAAC A+        |
++---------------------------Y---------------------------------------+
+|                       The Compound Generator                       |
+|                                                                   |
+|  Graphical Analysis of Cumulatively Compounded DC                  |
+|  Generators                                                        |
+|                                                                   |
+|  The following two equations are the key to graphically            |
+|  describing the terminal characteristics of a cumulatively         |
+|  compounded dc generator.                                          |
+|                                                                   |
+|  * The equivalent shunt field current Ieq,      [EQUATION 1]       |
+|  * the total effective shunt field current      [EQUATION 2] and   |
+|  * This equivalent current Ieq represents a                        |
+|    horizontal distance to the left or the right                    |
+|    of the field resistance line (RF = VT/IF)                       |
+|    along the axes of           the                                |
+|    magnetization curve.                                            |
+|                                         +-----------+              |
+|                                         | GRAPH     |              |
+|                                         | Fig 5-26  |              |
+|                                         |           |              |
+|                                         |  / curve  |              |
+|                                         | /         |              |
+|                                         |/ line     |              |
+|                                         +-----------+              |
++-----------------------------------------------------------------+
+```

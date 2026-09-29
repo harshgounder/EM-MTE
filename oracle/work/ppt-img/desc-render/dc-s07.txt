@@ -1,0 +1,92 @@
+YES, I received and can see the image.
+
+### 1. Complete Text Transcription
+#### Header/Institution:
+- `MANIPAL UNIVERSITY JAIPUR` with its official logo left side
+- `NAAC A+ GRADE WITH 3.28 SCORE` with NAAC logo right side
+
+#### Title:
+`DC Machine Construction`
+
+#### Bullet Points:
+- ● The rotor coils are connected in series through the commutator segments.
+- ● The ends of each coil are connected to a commutator segment.
+- ● The commutator consists of insulated copper segments mounted on an insulated tube.
+- ● Two brushes are pressed to the commutator to permit current flow and they are placed in neutral zone.
+
+#### Labels on Top Rotor Photograph:
+- `Iron core`
+- `Coil`
+- `Ball bearing`
+- `Coil commutator interconnection`
+- `Insulation between segments` upper right, lower right
+- `Commutator copper segment`
+- `Coil insulation`
+- `Insulation between segments` lower right
+
+#### Labels on Bottom Cross-Section Diagram:
+- `Rotation`
+- $I_{r\_dc}/2$ top left, top right
+- `Brush`
+- $I_{r\_dc}$ top center, bottom center
+- `Shaft`
+- `Pole winding`
+- $N$ left pole
+- $S$ right pole
+- Numbered segments: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`
+- `Insulation`
+- `Rotor Winding`
+- `Copper segment`
+
+---
+
+### 2. Visual Element Description
+1.  **Top Image (Rotor Assembly Photograph):**
+    A real-world photo of a DC machine rotor: a cylindrical iron core with copper windings coils wrapped around its outer surface on the left, connected via electrical leads to a segmented commutator on the right, made of insulated copper segments separated by dielectric insulation. A ball bearing sits on the left end of the central shaft, supporting the rotor. Annotations with text labels point directly to each component: core, coils, bearing, commutator parts, insulation layers.
+
+2.  **Bottom Image (DC Machine Cross-Section Schematic):**
+    A schematic cross-section of a DC machine:
+    - Two magnetic poles: left pole labeled `N` north, right pole `S` south, each with pole windings represented by red dots.
+    - A circular rotor at center with 8 segmented commutator segments numbered 1-8 separated by insulation gaps.
+    - Two brushes pressing against the top of the commutator, connected to a central DC current source $I_{r\_dc}$ that splits into two paths $I_{r\_dc}/2$ to each brush.
+    - A central shaft labeled `Shaft` supports the rotor.
+    - Arrows indicate clockwise rotation `Rotation` and current flow paths: current enters top brushes, flows through rotor windings, and exits as $I_{r\_dc}$ at the bottom.
+    - Labels identify rotor windings, copper segments, insulation, and poles.
+
+---
+
+### 3. ASCII Art for Diagrams
+#### Top Rotor Assembly:
+```
+          Iron core
+             |
+  /-----------------------------\
+  |                             |
+  |  [Wound copper coils]       |
+  |-----------------------------|
+  | [Insulated copper segments] |
+  |    (commutator, connected)  |
+  \-----------------------------/
+             |
+   [Ball bearing] -- Shaft
+```
+
+#### Bottom Cross-Section Diagram:
+```
+                   Rotation (clockwise)
+                I_r_dc/2         I_r_dc/2
+                   ↓                 ↓
+                [Brush]----------[Brush]
+                        | Shaft |
+                        |  (1-8) |
+    (N Pole, winding)   |-------|   (S Pole, winding)
+    ====================| commutator |================
+                        | segments  |
+                        | 8 7 6 5 4 3 2 1 |
+                        |-------|
+                        ↑
+                    I_r_dc (current)
+                  [Rotor Winding]
+    |--------------------------------------|
+                    Insulation
+```

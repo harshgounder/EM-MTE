@@ -1,0 +1,95 @@
+YES
+
+### (1) Complete Exact Transcription of On-Slide Text:
+```
+MANIPAL UNIVERSITY
+JAIPUR
+
+NAAC A+
+NAAC A+ GRADE WITH 3.28 SCORE
+
+Commutation Process
+
+The machine at time ωt=90°
+
+• the 1', 2, 3, and 4' ends of the loops are under the north pole face
+
+• the 1, 2', 3' and 4 ends of the loops are under the south pole face
+
+• so the terminal voltage E=4e
+
+--- Top Diagram (Circle Machine) ---
+N, S, ω, B, ωt=90°, e, x, y, a, b, d, 1', 2, 3, 4', 1, 2', 3, 4, E
+
+--- Middle Diagram (Bridge Circuit) ---
+2', 3, 3', 4, 1, 4', 2, 1', e, +, -, E, x, y, b, d, a, E=4e
+
+--- Bottom Diagram (Waveform Graph) ---
+E, volts; e, 2e, 3e, 4e, 5e; 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°, 360°; ωt
+```
+
+---
+
+### (2) Visual Element Description:
+1.  **Top Right Circular Machine Diagram**:
+    - A circular DC machine cross-section:
+      - Left side marked `N` (North Pole), right side marked `S` (South Pole).
+      - Top has a clockwise arrow labeled `ω` (rotation direction), with label `B` above, and `ωt=90°` at top right.
+      - Inner circle labels: `e` (top), `x y` (center), `a` (bottom), `b` (left inner), `d` (right inner), with commutator segments marked `E`.
+      - Outer loop terminals: `1', 2` on north pole (left upper), `3, 4'` on north pole (right upper); `1, 4` on south pole (right lower), `2', 3` on south pole (left lower).
+
+2.  **Middle Right Bridge Circuit Diagram**:
+    - A square bridge (closed loop) circuit:
+      - Nodes: Top `2' 3`, Right `3' 4`, Bottom `1 4'`, Left `2 1'`.
+      - Each side of the square has an inductive coil symbol (spring-like), marked with `+` (positive) and `-` (negative) polarity labels for current direction.
+      - Central circle contains `E` (terminal voltage), `x y` (axis), with labels `b` (left inner), `d` (right inner), `a` (bottom inner).
+      - Right-side annotation: `E=4e`.
+
+3.  **Bottom Right Voltage Waveform Graph**:
+    - Y-axis: `E, volts` with tick marks `e, 2e, 3e, 4e, 5e` (bottom to top).
+    - X-axis: `ωt` (angle in degrees) with tick marks `0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°, 360°`.
+    - Curve: A "square-like" periodic waveform, staying at ~`4e` for most of the cycle, with sharp dips to ~`1e` at `45°, 135°, 225°, 315°`.
+
+---
+
+### (3) ASCII Art of Each Diagram:
+#### Top Circular Machine:
+```
+            (ωt=90°)
+               B
+               ω ↓
+         3'    ○    4
+    N  1'--|--2     3--4'  S
+       |  [E]       [E] |
+       2 1     b   d  3
+       2'      x y     1
+               a
+```
+
+#### Middle Bridge Circuit:
+```
+        2'   3
+       /  \ /  \
+      +  e   +  e+
+     2  e     3  e    4'
+     |   |     |   |
+     e+  E     e-  e+
+     |   |     |   |
+     1'  x y    d   4
+      \  \ /  /
+       -  e   -  e-
+        1   4'
+```
+
+#### Bottom Waveform Graph:
+```
+E,v
+5e ┤
+4e ┤    ┌───┐   ┌───┐   ┌───┐   ┌───┐   ┌───┐
+3e ┤    │   │   │   │   │   │   │   │   │
+2e ┤    │   │   │   │   │   │   │   │   │
+1e ┤ ┌──┘   └───┘   └───┘   └───┘   └───┘──
+ e ┤ │     │     │     │     │     │     │
+   └─────────────────────────────────────────ωt
+    0  45  90 135 180 225 270 315 360
+```

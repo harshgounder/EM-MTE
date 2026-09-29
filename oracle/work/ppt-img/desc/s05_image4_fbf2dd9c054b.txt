@@ -1,0 +1,24 @@
+YES
+
+**Transcription:**
+
+*   Motor house
+*   Field winding
+*   Pole
+*   Pole
+*   Iron core
+
+**Description:**
+
+The image is a photograph of the stator assembly of an electric motor (likely a DC motor) that has been opened for display.
+
+*   **Components:**
+    *   **Motor house:** A grey, cylindrical metal casing that forms the exterior of the motor. An arrow points from the text "Motor house" to this outer shell.
+    *   **Field winding:** There are multiple coils of copper wire wrapped around the poles. They are covered in black insulating tape. An arrow points from the text "Field winding" to the coil on the left side.
+    *   **Pole:** There are metal pole pieces extending inward from the casing. The text "Pole" appears twice, with arrows pointing to the left pole structure and the right pole structure.
+    *   **Iron core:** The inner surface of the stator, which appears as a smooth grey cylinder inside the poles. An arrow points from the text "Iron core" to this inner surface.
+    *   **Wiring:** Several insulated wires (red, blue, orange, and black) are connected to the windings and exit from the bottom of the motor housing through a mounting bracket.
+
+*   **Annotations:**
+    *   The labels "Motor house", "Field winding", "Pole", "Pole", and "Iron core" are printed in white, sans-serif text.
+    *   Black arrows connect each label to its corresponding component.

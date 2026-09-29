@@ -1,0 +1,5 @@
+YES
+
+$E_A = K \Phi_{res} \omega$
+
+There is no diagram, circuit, or graph in this image. It contains only a single mathematical equation. There are no arrow directions, phasor relationships, or other annotations to describe.

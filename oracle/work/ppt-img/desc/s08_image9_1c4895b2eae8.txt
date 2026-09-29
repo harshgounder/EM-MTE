@@ -1,0 +1,6 @@
+YES
+
+If the armature rotates at $N$ rpm, then the time required for one revolution is:
+$t = \frac{60}{N}$ seconds
+
+The image does not contain a diagram, circuit, or graph. It consists solely of a single sentence of text and a mathematical formula. The text states that for an armature rotating at $N$ rpm, the time $t$ required for one revolution is $60/N$ seconds. There are no axis labels, arrow directions, or phasor relationships.

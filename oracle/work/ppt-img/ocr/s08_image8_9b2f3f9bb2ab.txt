@@ -1,0 +1,36 @@
+Let:
+
+« P = number of poles
+
+o ® = flux produced by each pole in weber (Wb)
+
+«  Z = total number of armature conductors
+
+« N = armature speed in rpm
+
+A= number of parallel paths
+Total flux produced by all poles:
+
+P&
+
+During one revolution, each armature conductor cuts the flux from all P poles. Therefore, flux cut by one
+conductor per revolution is:
+Let:
+
+« P = number of poles
+
+o ® = flux produced by each pole in weber (Wb)
+«  Z = total number of armature conductors
+
+« N = armature speed in rpm
+
+A= number of parallel paths
+
+Total flux produced by all poles:
+P&
+
+During one revolution, each armature conductor cuts the flux from all P poles. Therefore, flux cut by one
+conductor per revolution is:
+
+P
+

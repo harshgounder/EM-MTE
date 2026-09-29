@@ -1,0 +1,66 @@
+YES
+
+**Transcription:**
+
+**Top Left Logo:**
+MANIPAL UNIVERSITY
+JAIPUR
+
+**Top Right Logo:**
+A+
+NAAC
+NAAC A+ GRADE WITH 3.28 SCORE
+
+**Slide Title:**
+Power Flow and Losses in DC Machines
+
+**Body Text:**
+**Mechanical losses**
+•Friction losses are losses caused by the friction of the bearings in the machine
+
+•Windage losses are caused by the friction between the moving parts of the machine and the air inside the motor's casing
+**Stray losses**
+● Unknown losses
+● By convention to be 1 percent of full load
+
+**(Note: The heading "Stray losses" overlaps with the word "casing" from the previous sentence.)**
+
+**Visual Elements Description:**
+*   **Logos:** Two logos are present at the top corners. The top-left logo is for Manipal University Jaipur, featuring an emblem and text. The top-right logo is the NAAC accreditation logo, featuring an "A+" seal and text regarding the grade score.
+*   **Separator:** A thick horizontal yellow/gold line runs across the top of the slide, separating the logos from the main content area. It appears to sit slightly behind or near the title.
+*   **Typography:**
+    *   The title "Power Flow and Losses in DC Machines" is centered at the top in large black font.
+    *   Section headers ("Mechanical losses", "Stray losses") are in a bold blue color.
+    *   The first bullet point regarding friction is in black.
+    *   The second bullet point regarding windage is in blue, matching the header color.
+    *   The bullet points under "Stray losses" are black.
+    *   There is a visible formatting error where the text "casing" and the header "Stray losses" overlap, causing the words to print on top of each other.
+*   **Layout:** The text is primarily left-aligned but positioned towards the center of the slide horizontally. There are no diagrams, graphs, or images other than the logos.
+
+**ASCII Art Layout:**
+
+```text
++------------------------------------------------------------+
+| [MUJ Logo] MANIPAL UNIVERSITY          [NAAC Logo] A+      |
+|               JAIPUR                       NAAC A+ GRADE...|
+|===================YELLOW HORIZONTAL LINE===================|
+|                                                            |
+|          Power Flow and Losses in DC Machines              |
+|                                                            |
+|               Mechanical losses                            |
+|               •Friction losses are losses                  |
+|                 caused by the friction of the              |
+|                 bearings in the machine                    |
+|                                                            |
+|               •Windage losses are caused by                |
+|                 the friction between the                   |
+|                 moving parts of the machine                |
+|                 and the air inside the motor's             |
+|                 casing [OVERLAPS]                          |
+|                 Stray losses                               |
+|               ● Unknown losses                             |
+|               ● By convention to be 1 percent              |
+|                 of full load                               |
+|                                                            |
++------------------------------------------------------------+
+```

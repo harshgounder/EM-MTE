@@ -1,0 +1,15 @@
+**YES**, I received and saw the image.
+
+### (1) On-slide text transcription:
+
+**Header/Logos:**
+*   **Top Left:** MANIPAL UNIVERSITY JAIPUR
+*   **Top Right:** A+ NAAC (inside seal), NAAC A+ GRADE WITH 3.28 SCORE
+
+**Titles:**
+*   **Main Title:** SERIES DC GENERATOR
+*   **Subtitle:** The Terminal Characteristic of a Series Generator
+
+**Bullet Points:**
+*   • $V_T = E_A - I_A(R_F + R_A)$
+*   •

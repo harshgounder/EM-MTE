@@ -1,0 +1,63 @@
+YES
+
+**1. Complete and Exact Transcription**
+
+*   **Header:**
+    *   [Logo] MANIPAL UNIVERSITY JAIPUR
+    *   [Logo] A+ NAAC
+    *   NAAC A+ GRADE WITH 3.28 SCORE
+
+*   **Title:**
+    *   The Separately Excited Generator
+
+*   **Body Text:**
+    *   Control of Terminal Voltage > two methods
+    *   • Change the speed of rotation
+    *   • $E_A = K\Phi\omega \uparrow >VT = E_A \uparrow - I_A R_A > V_T \uparrow$
+    *   • Change the field current.
+    *   • $I_F = VF/R_F\downarrow > I_F \uparrow > \Phi \uparrow > E_A = K\Phi \uparrow \omega >$
+    *   • $V_T = E_A \uparrow - I_A R_A > V_T \uparrow$ (Note: The `>` symbol before the final $V_T$ is colored blue).
+
+*   **Footer:**
+    *   The terminal characteristic (a) with and (b) without compensating windings
+
+**2. Visual Description**
+
+The image is a lecture slide with a white background and a thin yellow horizontal bar running across the very top.
+*   **Top Left:** The seal/logo for Manipal University Jaipur with the university name next to it in black capital letters.
+*   **Top Right:** An accreditation badge showing "A+ NAAC" inside a seal, with the text "NAAC A+ GRADE WITH 3.28 SCORE" underneath.
+*   **Main Title:** "The Separately Excited Generator" centered at the top in large black sans-serif font.
+*   **Bullet Points:**
+    *   The first subheading "Control of Terminal Voltage > two methods" is in blue.
+    *   The first method "Change the speed of rotation" is a black bullet point followed by a black mathematical expression involving $E_A$, $\Phi$, $\omega$, and $V_T$.
+    *   The second method "Change the field current." is a blue bullet point. The subsequent mathematical expressions are primarily black. The line containing $I_F$ shows a causal chain using `>` symbols.
+    *   The final equation for $V_T$ has a specific blue `>` symbol used as a separator/arrow.
+*   **Footer:** Small black centered text referring to terminal characteristics.
+*   **No Diagrams:** There are no circuit diagrams, graphs, or phasor diagrams present on this slide.
+
+**3. ASCII Art of Layout**
+
+```
++------------------------------------------------------------------------------------------+
+| [Logo] MANIPAL UNIVERSITY                             [Logo A+ NAAC]                    |
+|           JAIPUR                                        NAAC A+ GRADE WITH 3.28 SCORE    |
++==========================================================================================+
+|                                                                                          |
+|                       The Separately Excited Generator                                   |
+|                                                                                          |
+|   Control of Terminal Voltage > two methods                                              |
+|                                                                                          |
+|     • Change the speed of rotation                                                       |
+|                                                                                          |
+|     • E_A = KΦω ↑ >VT = E_A ↑ - I_A R_A > V_T ↑                                         |
+|                                                                                          |
+|     • Change the field current.                                                          |
+|                                                                                          |
+|     • I_F = VF/R_F↓ > I_F ↑ > Φ ↑ > E_A = KΦ ↑ ω >                                      |
+|                                                                                          |
+|     • V_T = E_A ↑ - I_A R_A > V_T ↑                                                     |
+|                                                                                          |
+|            The terminal characteristic (a) with (b) without compensating windings        |
+|                                                                                          |
++------------------------------------------------------------------------------------------+
+```

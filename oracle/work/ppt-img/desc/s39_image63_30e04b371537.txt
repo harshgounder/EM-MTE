@@ -1,0 +1,5 @@
+YES
+
+$a = mP$ for lap winding
+
+The image consists solely of a line of text and a mathematical formula. There is no diagram, circuit, graph, or phasor relationship present. The formula is printed in a serif-style font with the variable $a$ equal to the product of $m$ and $P$, followed by the explanatory phrase "for lap winding" in italics.

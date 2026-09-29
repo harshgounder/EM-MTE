@@ -1,0 +1,6 @@
+YES
+
+$K' = \frac{ZP}{60a}$
+
+**Description:**
+The image contains a single mathematical formula. It consists of the variable $K'$ followed by an equals sign and a fraction. The numerator of the fraction is the product $ZP$, and the denominator is $60a$. There is a horizontal fraction bar. The characters $K'$, $=$, $Z$, and $60$ are printed in black, while the characters $P$ and $a$ are printed in blue. There are no other graphical elements, diagrams, circuits, or annotations present.

@@ -1,0 +1,5 @@
+YES
+
+$I_F^* = I_F - \mathcal{F}_{AR} / N_F$
+
+The image contains a single line of mathematical text and no diagram, circuit, or graph. The equation is printed in a serif font on a white background. The symbols consist of $I_F^*$ (the letter $I$ with subscript $F$ and a superscript asterisk), an equals sign ($=$), $I_F$ (the letter $I$ with subscript $F$), a minus sign ($-$), $\mathcal{F}_{AR}$ (a calligraphic or script $F$ with subscript $AR$), a division slash ($/$), and $N_F$ (the letter $N$ with subscript $F$). There are no arrows, phasors, or additional annotations.
